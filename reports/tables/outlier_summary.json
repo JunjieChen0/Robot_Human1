@@ -1,0 +1,71 @@
+{
+  "fields": {
+    "Age": {
+      "domain_limit": [
+        14.0,
+        70.0
+      ],
+      "out_of_domain": 0,
+      "iqr_low": 10.867980000000003,
+      "iqr_high": 35.079212,
+      "iqr_outliers": 168
+    },
+    "Height": {
+      "domain_limit": [
+        1.4,
+        2.2
+      ],
+      "out_of_domain": 0,
+      "iqr_low": 1.4223039999999996,
+      "iqr_high": 1.9761600000000001,
+      "iqr_outliers": 1
+    },
+    "Weight": {
+      "domain_limit": [
+        30.0,
+        200.0
+      ],
+      "out_of_domain": 0,
+      "iqr_low": 2.537334499999993,
+      "iqr_high": 170.3666905,
+      "iqr_outliers": 1
+    },
+    "FCVC": {
+      "domain_limit": [
+        1.0,
+        3.0
+      ],
+      "out_of_domain": 0
+    },
+    "NCP": {
+      "domain_limit": [
+        1.0,
+        4.0
+      ],
+      "out_of_domain": 0
+    },
+    "CH2O": {
+      "domain_limit": [
+        1.0,
+        3.0
+      ],
+      "out_of_domain": 0
+    },
+    "FAF": {
+      "domain_limit": [
+        0.0,
+        3.0
+      ],
+      "out_of_domain": 0
+    },
+    "TUE": {
+      "domain_limit": [
+        0.0,
+        2.0
+      ],
+      "out_of_domain": 0
+    }
+  },
+  "total_out_of_domain": 0,
+  "conclusion": "数据为问卷 + SMOTE 合成样本的混合：问卷字段取值均在语义范围内，无领域非法值；连续字段的 IQR 离群点属于分布尾部而非数据错误，因此保留全部样本，不做删除或截尾。"
+}

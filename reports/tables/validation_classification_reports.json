@@ -1,116 +1,116 @@
 {
   "LogisticRegression": {
     "Insufficient_Weight": {
-      "precision": 0.9,
-      "recall": 0.9818181818181818,
-      "f1-score": 0.9391304347826087,
-      "support": 55.0
+      "precision": 0.8333333333333334,
+      "recall": 0.9649122807017544,
+      "f1-score": 0.8943089430894309,
+      "support": 57.0
     },
     "Normal_Weight": {
-      "precision": 0.8333333333333334,
-      "recall": 0.7894736842105263,
-      "f1-score": 0.8108108108108109,
+      "precision": 0.8372093023255814,
+      "recall": 0.631578947368421,
+      "f1-score": 0.72,
       "support": 57.0
     },
     "Overweight_Level_I": {
-      "precision": 0.7096774193548387,
-      "recall": 0.7586206896551724,
-      "f1-score": 0.7333333333333333,
-      "support": 58.0
+      "precision": 0.734375,
+      "recall": 0.8545454545454545,
+      "f1-score": 0.7899159663865546,
+      "support": 55.0
     },
     "Overweight_Level_II": {
-      "precision": 0.7307692307692307,
-      "recall": 0.6551724137931034,
-      "f1-score": 0.6909090909090909,
+      "precision": 0.7818181818181819,
+      "recall": 0.7413793103448276,
+      "f1-score": 0.7610619469026548,
       "support": 58.0
     },
     "Obesity_Type_I": {
-      "precision": 0.8857142857142857,
-      "recall": 0.8857142857142857,
-      "f1-score": 0.8857142857142857,
+      "precision": 0.9242424242424242,
+      "recall": 0.8714285714285714,
+      "f1-score": 0.8970588235294118,
       "support": 70.0
     },
     "Obesity_Type_II": {
-      "precision": 0.95,
-      "recall": 0.9661016949152542,
-      "f1-score": 0.957983193277311,
+      "precision": 0.9516129032258065,
+      "recall": 1.0,
+      "f1-score": 0.9752066115702479,
       "support": 59.0
     },
     "Obesity_Type_III": {
       "precision": 1.0,
-      "recall": 0.9846153846153847,
-      "f1-score": 0.9922480620155039,
+      "recall": 1.0,
+      "f1-score": 1.0,
       "support": 65.0
     },
-    "accuracy": 0.8625592417061612,
+    "accuracy": 0.8693586698337292,
     "macro avg": {
-      "precision": 0.8584991813102413,
-      "recall": 0.860216619245987,
-      "f1-score": 0.8585898872632777,
-      "support": 422.0
+      "precision": 0.866084449277904,
+      "recall": 0.8662635091984328,
+      "f1-score": 0.8625074702111857,
+      "support": 421.0
     },
     "weighted avg": {
-      "precision": 0.8616016722919337,
-      "recall": 0.8625592417061612,
-      "f1-score": 0.8613544624874157,
-      "support": 422.0
+      "precision": 0.8712568664259025,
+      "recall": 0.8693586698337292,
+      "f1-score": 0.8668263386161887,
+      "support": 421.0
     }
   },
   "RandomForest": {
     "Insufficient_Weight": {
       "precision": 1.0,
-      "recall": 0.9454545454545454,
-      "f1-score": 0.9719626168224299,
-      "support": 55.0
+      "recall": 0.9473684210526315,
+      "f1-score": 0.972972972972973,
+      "support": 57.0
     },
     "Normal_Weight": {
-      "precision": 0.8208955223880597,
+      "precision": 0.8333333333333334,
       "recall": 0.9649122807017544,
-      "f1-score": 0.8870967741935484,
+      "f1-score": 0.8943089430894309,
       "support": 57.0
     },
     "Overweight_Level_I": {
-      "precision": 0.8813559322033898,
-      "recall": 0.896551724137931,
-      "f1-score": 0.8888888888888888,
-      "support": 58.0
+      "precision": 0.9285714285714286,
+      "recall": 0.9454545454545454,
+      "f1-score": 0.9369369369369369,
+      "support": 55.0
     },
     "Overweight_Level_II": {
-      "precision": 0.9607843137254902,
-      "recall": 0.8448275862068966,
-      "f1-score": 0.8990825688073395,
+      "precision": 0.9636363636363636,
+      "recall": 0.9137931034482759,
+      "f1-score": 0.9380530973451328,
       "support": 58.0
     },
     "Obesity_Type_I": {
-      "precision": 0.9436619718309859,
-      "recall": 0.9571428571428572,
-      "f1-score": 0.950354609929078,
+      "precision": 0.9848484848484849,
+      "recall": 0.9285714285714286,
+      "f1-score": 0.9558823529411765,
       "support": 70.0
     },
     "Obesity_Type_II": {
       "precision": 1.0,
-      "recall": 0.9830508474576272,
-      "f1-score": 0.9914529914529915,
+      "recall": 1.0,
+      "f1-score": 1.0,
       "support": 59.0
     },
     "Obesity_Type_III": {
       "precision": 1.0,
-      "recall": 0.9846153846153847,
-      "f1-score": 0.9922480620155039,
+      "recall": 1.0,
+      "f1-score": 1.0,
       "support": 65.0
     },
-    "accuracy": 0.9407582938388626,
+    "accuracy": 0.9572446555819477,
     "macro avg": {
-      "precision": 0.9438139628782751,
-      "recall": 0.9395078893881424,
-      "f1-score": 0.9401552160156829,
-      "support": 422.0
+      "precision": 0.9586270871985157,
+      "recall": 0.9571571113183766,
+      "f1-score": 0.9568791861836644,
+      "support": 421.0
     },
     "weighted avg": {
-      "precision": 0.94476662812361,
-      "recall": 0.9407582938388626,
-      "f1-score": 0.9413305161668646,
-      "support": 422.0
+      "precision": 0.9605741843271535,
+      "recall": 0.9572446555819477,
+      "f1-score": 0.9579226724441534,
+      "support": 421.0
     }
   }
 }
