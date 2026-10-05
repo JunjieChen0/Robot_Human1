@@ -75,3 +75,15 @@ def test_validate_weight_log_sorts_by_date():
     log, errors, _ = validate_weight_log(frame)
     assert not errors
     assert log["weight_kg"].tolist() == [71.0, 70.0]
+
+
+def test_validate_weight_log_warns_on_duplicate_dates():
+    frame = pd.DataFrame(
+        [
+            {"date": "2026-09-01", "weight_kg": 70.0},
+            {"date": "2026-09-01", "weight_kg": 69.5},
+        ]
+    )
+    log, errors, warnings = validate_weight_log(frame)
+    assert not errors
+    assert any("同一天" in warning for warning in warnings)

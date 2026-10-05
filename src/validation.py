@@ -115,5 +115,5 @@ def validate_weight_log(frame: pd.DataFrame | None) -> tuple[pd.DataFrame, list[
     if not errors and len(log) < 2:
         errors.append("至少需要 2 条体重记录才能分析趋势。")
     if not errors and log["date"].duplicated().any():
-        warnings.append("存在同一天的多条记录，仅保留排序后的全部记录用于绘图。")
+        warnings.append("存在同一天的多条记录，绘图时保留排序后的全部记录。")
     return log, errors, warnings

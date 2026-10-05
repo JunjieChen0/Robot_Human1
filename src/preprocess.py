@@ -95,20 +95,6 @@ def _quality_report(frame: pd.DataFrame) -> dict[str, object]:
     }
 
 
-def _raw_ranges(frame: pd.DataFrame, split_name: str = "train") -> dict[str, dict[str, float]]:
-    train_values = frame.loc[frame["split"].eq(split_name), list(NUMERIC_FEATURES)]
-    if train_values.empty:
-        raise ValueError(f"没有找到 {split_name} 数据，无法计算取值范围。")
-    return {
-        column: {
-            "min": float(train_values[column].min()),
-            "max": float(train_values[column].max()),
-            "median": float(train_values[column].median()),
-        }
-        for column in NUMERIC_FEATURES
-    }
-
-
 def build_processed_dataset() -> pd.DataFrame:
     for directory in (PROCESSED_DIR, SAMPLE_DIR, REPORT_TABLES_DIR):
         directory.mkdir(parents=True, exist_ok=True)
@@ -126,10 +112,8 @@ def build_processed_dataset() -> pd.DataFrame:
     (PROCESSED_DIR / "data_quality.json").write_text(
         json.dumps(quality, ensure_ascii=False, indent=2), encoding="utf-8"
     )
-    ranges = _raw_ranges(frame)
-    (PROCESSED_DIR / "raw_ranges.json").write_text(
-        json.dumps(ranges, ensure_ascii=False, indent=2), encoding="utf-8"
-    )
+    # 注意：训练/验证集的取值范围由 src.train 写入 models/raw_ranges.json，
+    # 这里不再重复产出 data/processed/raw_ranges.json，避免双份维护。
 
     template = {column: float(frame.loc[frame["split"].eq("train"), column].median())
                 for column in NUMERIC_FEATURES}

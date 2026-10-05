@@ -150,7 +150,12 @@ def evaluate_final_model() -> dict[str, object]:
     _save_class_distribution(test_frame)
     _save_demo_profiles(test_frame, predictions)
 
-    probability_frame = pd.DataFrame(probabilities, columns=[f"prob_{name}" for name in LABEL_ORDER])
+    # predict_proba 的列按分类器 classes_ 顺序排列（字母序），必须用 classes_ 命名，
+    # 不能用 LABEL_ORDER（语义序），否则概率列名与数值错位。
+    probability_frame = pd.DataFrame(
+        probabilities,
+        columns=[f"prob_{name}" for name in model.named_steps["classifier"].classes_],
+    )
     prediction_frame = pd.concat(
         [
             test_frame[[LABEL_COLUMN]].reset_index(drop=True),
