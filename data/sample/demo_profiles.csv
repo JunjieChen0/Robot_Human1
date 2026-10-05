@@ -1,0 +1,8 @@
+sample_id,label,Age,Height,Weight,FCVC,NCP,CH2O,FAF,TUE,Gender,family_history_with_overweight,FAVC,SMOKE,SCC,CAEC,CALC,MTRANS
+demo_insufficient_weight,Insufficient_Weight,19.0,1.6,45.0,3.0,3.0,3.0,2.0,0.0,Female,no,no,no,yes,no,no,Walking
+demo_normal_weight,Normal_Weight,29.0,1.62,53.0,2.0,3.0,2.0,0.0,0.0,Male,no,yes,no,no,Sometimes,Sometimes,Automobile
+demo_overweight_level_i,Overweight_Level_I,34.0,1.68,75.0,3.0,1.0,1.0,0.0,0.0,Female,no,yes,no,no,Sometimes,Sometimes,Automobile
+demo_overweight_level_ii,Overweight_Level_II,22.0,1.65,80.0,2.0,3.0,2.0,3.0,2.0,Male,yes,no,no,no,Sometimes,no,Walking
+demo_obesity_type_i,Obesity_Type_I,26.0,1.85,105.0,3.0,3.0,3.0,2.0,2.0,Male,yes,yes,no,no,Frequently,Sometimes,Public_Transportation
+demo_obesity_type_ii,Obesity_Type_II,41.0,1.75,118.0,2.0,3.0,2.0,0.0,0.0,Male,yes,yes,no,no,Sometimes,Sometimes,Bike
+demo_obesity_type_iii,Obesity_Type_III,25.196,1.686,104.573,3.0,3.0,1.153,0.319,1.0,Female,yes,yes,no,no,Sometimes,Sometimes,Public_Transportation

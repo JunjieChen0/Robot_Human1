@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.streamlit/
+
+# 公开原始数据和压缩包通过脚本下载，不提交大文件
+data/raw/
+
+# 本地生成的处理数据和模型可由脚本重新生成
+data/processed/*.csv
+data/processed/*.json
+models/*.joblib
+models/*.json
+
+# 临时输出
+*.log
