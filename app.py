@@ -195,12 +195,91 @@ def show_trend(log: pd.DataFrame, clean: dict, intake: float) -> None:
     )
 
 
+def render_profile_inputs(defaults: dict) -> None:
+    """渲染身体与行为录入字段（作为主表单的一部分）。"""
+
+    st.subheader("身体与行为录入")
+    for start in range(0, len(NUMERIC_FEATURES), 4):
+        cols = st.columns(4)
+        for column, col in zip(NUMERIC_FEATURES[start : start + 4], cols):
+            step, fmt = NUMBER_STEPS[column]
+            col.number_input(
+                FIELD_DESCRIPTIONS_ZH[column],
+                step=step,
+                format=fmt,
+                key=column,
+                value=defaults[column],
+            )
+    for start in range(0, len(BINARY_FEATURES), 4):
+        cols = st.columns(4)
+        for column, col in zip(BINARY_FEATURES[start : start + 4], cols):
+            options = ["Male", "Female"] if column == "Gender" else ["no", "yes"]
+            col.selectbox(
+                FIELD_DESCRIPTIONS_ZH[column],
+                options,
+                key=column,
+                index=options.index(defaults[column]),
+            )
+    cols = st.columns(4)
+    for column, col in zip(ORDINAL_FEATURES, cols):
+        options = list(ORDINAL_LEVELS)
+        col.selectbox(
+            FIELD_DESCRIPTIONS_ZH[column],
+            options,
+            key=column,
+            index=options.index(defaults[column]),
+        )
+    cols[2].selectbox(
+        FIELD_DESCRIPTIONS_ZH[NOMINAL_FEATURE],
+        [NOMINAL_BASELINE, *NOMINAL_DUMMIES],
+        key=NOMINAL_FEATURE,
+        index=0,
+    )
+
+
+def render_weight_log_inputs() -> tuple[pd.DataFrame, float]:
+    """渲染体重记录与饮食录入字段（作为主表单的一部分）。"""
+
+    st.subheader("体重记录与饮食录入")
+    st.caption("日期格式 YYYY-MM-DD；至少两条记录才能分析趋势。")
+    log_input = st.data_editor(
+        pd.DataFrame(
+            [
+                {"date": "2026-09-01", "weight_kg": 72.0},
+                {"date": "2026-09-15", "weight_kg": 71.2},
+                {"date": "2026-10-01", "weight_kg": 70.5},
+            ]
+        ),
+        hide_index=True,
+        num_rows="dynamic",
+        width="stretch",
+    )
+    intake = st.number_input(
+        "每日摄入热量（kcal）",
+        min_value=0.0,
+        step=50.0,
+        value=1800.0,
+        format="%.0f",
+    )
+    return log_input, intake
+
+
 def main() -> None:
     st.title("⚖️ 减重趋势分析原型")
     st.write("录入身高体重、运动与饮食信息，查看肥胖等级估计、体重趋势和能量平衡外推。")
     st.info(
         "课程实验声明：模型概率不是绝对正确率，结果不代表医学诊断、疾病筛查或健康风险结论。"
     )
+
+    with st.expander("📖 使用说明"):
+        st.markdown(
+            """1. **录入身体与行为信息**：填写年龄、身高、体重、饮食习惯与运动情况；
+2. **估计肥胖等级**：提交表单后，页面展示 7 个等级的模型概率分布，以及最高/次高概率差值；
+3. **录入体重记录**：在表格中按 `YYYY-MM-DD` 输入至少两条体重记录，并填写每日摄入热量；
+4. **查看趋势与外推**：页面绘制记录期体重变化，并按能量平衡模型外推未来 90 天；
+5. **理解概率**：模型概率是对当前录入的类别估计，不是绝对正确率，也不是医学诊断；
+6. **适用范围**：模型基于 UCI 544 公开数据集训练，录入值超出训练范围时会给出提示，结果仅用于课程学习。"""
+        )
 
     required_paths = [
         MODELS_DIR / "final_model.joblib",
@@ -221,6 +300,7 @@ def main() -> None:
 
     st.sidebar.header("演示档案")
     selected = st.sidebar.selectbox("选择演示档案", demo_profiles["sample_id"].tolist())
+    st.sidebar.caption("演示档案取自训练集，仅用于展示表单操作流程。")
     if st.sidebar.button("载入到表单"):
         row = demo_profiles.loc[demo_profiles["sample_id"].eq(selected)].iloc[0]
         for column in FIELD_DESCRIPTIONS_ZH:
@@ -228,52 +308,24 @@ def main() -> None:
         st.sidebar.caption("已载入，回到主页面查看表单。")
 
     defaults = default_profile()
-    with st.form("profile_form"):
-        st.subheader("身体与行为录入")
-        for start in range(0, len(NUMERIC_FEATURES), 4):
-            cols = st.columns(4)
-            for column, col in zip(NUMERIC_FEATURES[start : start + 4], cols):
-                step, fmt = NUMBER_STEPS[column]
-                col.number_input(
-                    FIELD_DESCRIPTIONS_ZH[column],
-                    step=step,
-                    format=fmt,
-                    key=column,
-                    value=defaults[column],
-                )
-        for start in range(0, len(BINARY_FEATURES), 4):
-            cols = st.columns(4)
-            for column, col in zip(BINARY_FEATURES[start : start + 4], cols):
-                options = ["Male", "Female"] if column == "Gender" else ["no", "yes"]
-                col.selectbox(
-                    FIELD_DESCRIPTIONS_ZH[column],
-                    options,
-                    key=column,
-                    index=options.index(defaults[column]),
-                )
-        cols = st.columns(4)
-        for column, col in zip(ORDINAL_FEATURES, cols):
-            options = list(ORDINAL_LEVELS)
-            col.selectbox(
-                FIELD_DESCRIPTIONS_ZH[column],
-                options,
-                key=column,
-                index=options.index(defaults[column]),
-            )
-        cols[2].selectbox(
-            FIELD_DESCRIPTIONS_ZH[NOMINAL_FEATURE],
-            [NOMINAL_BASELINE, *NOMINAL_DUMMIES],
-            key=NOMINAL_FEATURE,
-            index=0,
-        )
-        submitted = st.form_submit_button("估计 / 重新估计", type="primary")
+    with st.form("main_form"):
+        render_profile_inputs(defaults)
+        st.divider()
+        log_input, intake = render_weight_log_inputs()
+        submitted = st.form_submit_button("估计并分析趋势", type="primary")
 
     if submitted:
-        clean, errors = validate_profile(profile_from_session())
-        if errors:
-            for error in errors:
-                st.error(error)
-        else:
+        clean, profile_errors = validate_profile(profile_from_session())
+        log, log_errors, log_warnings = validate_weight_log(log_input)
+
+        for error in profile_errors:
+            st.error(error)
+        for error in log_errors:
+            st.error(error)
+        for warning in log_warnings:
+            st.warning(warning)
+
+        if not profile_errors:
             warnings = warn_outside_training_range(clean, ranges)
             result = predict_profile(model, clean)
             previous = st.session_state.get("last_profile_result")
@@ -282,6 +334,9 @@ def main() -> None:
             show_profile_result(result, warnings, metadata)
             if previous is not None:
                 show_comparison(previous, result)
+
+        if not profile_errors and not log_errors:
+            show_trend(log, clean, intake)
 
     current_result = st.session_state.get("last_profile_result")
     if not submitted and current_result is not None:
@@ -292,41 +347,6 @@ def main() -> None:
             ),
             metadata,
         )
-
-    st.divider()
-    clean = st.session_state.get("last_profile_clean", default_profile())
-    with st.form("trend_form"):
-        st.subheader("体重记录与饮食录入")
-        st.caption("日期格式 YYYY-MM-DD；至少两条记录才能分析趋势。")
-        log_input = st.data_editor(
-            pd.DataFrame(
-                [
-                    {"date": "2026-09-01", "weight_kg": 72.0},
-                    {"date": "2026-09-15", "weight_kg": 71.2},
-                    {"date": "2026-10-01", "weight_kg": 70.5},
-                ]
-            ),
-            hide_index=True,
-            num_rows="dynamic",
-            width="stretch",
-        )
-        intake = st.number_input(
-            "每日摄入热量（kcal）",
-            min_value=0.0,
-            step=50.0,
-            value=1800.0,
-            format="%.0f",
-        )
-        submitted_trend = st.form_submit_button("分析趋势", type="primary")
-
-    if submitted_trend:
-        log, log_errors, log_warnings = validate_weight_log(log_input)
-        for error in log_errors:
-            st.error(error)
-        for warning in log_warnings:
-            st.warning(warning)
-        if not log_errors:
-            show_trend(log, clean, intake)
 
 
 if __name__ == "__main__":

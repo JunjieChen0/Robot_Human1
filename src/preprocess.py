@@ -196,13 +196,6 @@ def build_processed_dataset() -> pd.DataFrame:
     # 注意：训练/验证集的取值范围由 src.train 写入 models/raw_ranges.json，
     # 这里不再重复产出 data/processed/raw_ranges.json，避免双份维护。
 
-    template = {column: float(frame.loc[frame["split"].eq("train"), column].median())
-                for column in NUMERIC_FEATURES}
-    template.update({column: 0.0 for column in BINARY_FEATURES})
-    template.update({column: 1.0 for column in ORDINAL_FEATURES})
-    template.update({f"{NOMINAL_FEATURE}_{level}": 0.0 for level in NOMINAL_DUMMIES})
-    pd.DataFrame([template]).to_csv(SAMPLE_DIR / "input_template.csv", index=False)
-
     print(f"处理完成：{PROCESSED_DIR / 'features.csv'}")
     print(json.dumps(quality, ensure_ascii=False, indent=2))
     return frame

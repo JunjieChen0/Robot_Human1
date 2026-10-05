@@ -102,15 +102,19 @@ def _decode_profile(row: pd.Series) -> dict[str, object]:
     return profile
 
 
-def _save_demo_profiles(test_frame: pd.DataFrame, predictions: np.ndarray) -> None:
-    """每个类别取测试集中第一个被判对的样本作为原型演示档案。"""
+def _save_demo_profiles(frame: pd.DataFrame, predictions: np.ndarray) -> None:
+    """每个类别取指定数据集中第一个被判对的样本作为原型演示档案。
 
-    correct = test_frame.loc[test_frame[LABEL_COLUMN].to_numpy() == predictions]
+    演示档案仅用于原型演示表单操作流程；为避免把留出测试集当作演示池，
+    调用方应传入训练集。
+    """
+
+    correct = frame.loc[frame[LABEL_COLUMN].to_numpy() == predictions]
     rows = []
     for label in LABEL_ORDER:
         candidates = correct[correct[LABEL_COLUMN].eq(label)]
         if candidates.empty:
-            raise ValueError(f"测试集中没有类别 {label} 被判对的样本，无法生成演示档案。")
+            raise ValueError(f"数据集中没有类别 {label} 被判对的样本，无法生成演示档案。")
         profile = _decode_profile(candidates.iloc[0])
         rows.append({"sample_id": f"demo_{label.lower()}", "label": label, **profile})
     pd.DataFrame(rows).to_csv(SAMPLE_DIR / "demo_profiles.csv", index=False)
@@ -127,6 +131,7 @@ def evaluate_final_model() -> dict[str, object]:
 
     frame = pd.read_csv(data_path)
     test_frame = frame[frame["split"].eq("test")].copy()
+    train_frame = frame[frame["split"].eq("train")].copy()
     model = joblib.load(model_path)
     y_true = test_frame[LABEL_COLUMN].to_numpy()
     predictions = model.predict(test_frame[FEATURE_NAMES])
@@ -149,6 +154,9 @@ def evaluate_final_model() -> dict[str, object]:
     _save_confusion_matrix(normalized_matrix, normalized=True)
     _save_class_distribution(test_frame)
     _save_demo_profiles(test_frame, predictions)
+    # 演示档案改从训练集选取，避免把测试集当作演示池（测试集仅用于最终评价）
+    train_predictions = model.predict(train_frame[FEATURE_NAMES])
+    _save_demo_profiles(train_frame, train_predictions)
 
     # predict_proba 的列按分类器 classes_ 顺序排列（字母序），必须用 classes_ 命名，
     # 不能用 LABEL_ORDER（语义序），否则概率列名与数值错位。
