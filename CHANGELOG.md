@@ -191,12 +191,38 @@
 
 ---
 
-## 当前状态（迭代 7 完成后）
+## 迭代 7.1：修复提交路径 NameError 并补冒烟测试（2026-10-06）
+
+**问题**：迭代 7 重构时，`render_weight_log_inputs()` 的返回值未被接收（写作 `render_weight_log_inputs()` 而非 `log_input, intake = render_weight_log_inputs()`），导致用户**点击提交按钮**时报 `NameError: name 'log_input' is not defined`。页面加载正常，因此初始加载检查无法发现。
+
+**修复**：
+- `app.py`：补上返回值接收 `log_input, intake = render_weight_log_inputs()`
+
+**新增回归测试**（`tests/test_app.py`，用 Streamlit 官方 `AppTest` 无头运行）：
+1. 应用加载无异常，且存在提交按钮
+2. **点击提交后无异常**，且指标卡同时包含等级估计区（估计等级/最高类别概率/差值）与趋势区（最新体重/每日能量差）——直接覆盖本次漏掉的提交路径
+3. 点击侧边栏「载入到表单」无异常
+
+**验证**：
+
+| 项 | 结果 |
+| --- | --- |
+| 未定义名字静态扫描（symtable） | 无问题 |
+| AppTest 初始加载 | 无异常 |
+| AppTest 提交后 | 无异常，预测「正常体重 47.0%」，趋势「70.5 kg / 轻度活动 / 2037 kcal」 |
+| pytest | 19 → **22 passed**（新增 3 条原型冒烟测试） |
+| 服务冒烟 | `/_stcore/health` = ok |
+
+**复盘**：该 bug 属于"只在交互路径才触发"的类型，仅靠语法检查和单元测试无法发现。新增的 `AppTest` 冒烟测试已覆盖加载、提交、载入三个关键交互路径，后续界面改动都会有回归保护。
+
+---
+
+## 当前状态（迭代 7.1 完成后）
 
 | 维度 | 状态 |
 | --- | --- |
 | 流水线 | 可一键复现（preprocess → train → evaluate → error_analysis） |
-| 自动测试 | 19 passed |
+| 自动测试 | **22 passed**（含 3 条原型 AppTest 冒烟测试） |
 | 概率列正确性 | argmax 还原 `predicted` 100% |
 | 重复组泄漏 | 0 组跨 split |
 | 异常值处理 | 检测 + 论证保留，报告齐全 |

@@ -432,7 +432,7 @@ def main() -> None:
     defaults = default_profile()
     with st.form("main_form"):
         render_profile_inputs(defaults)
-        render_weight_log_inputs()
+        log_input, intake = render_weight_log_inputs()
         st.caption("一次提交即可完成「肥胖等级估计」与「体重趋势分析」。")
         submitted = st.form_submit_button("🔍 估计并分析趋势", type="primary", width="stretch")
 
