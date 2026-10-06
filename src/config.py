@@ -69,7 +69,7 @@ FIELD_DESCRIPTIONS_ZH = {
     "Age": "年龄（岁）",
     "Height": "身高（米）",
     "Weight": "体重（千克）",
-    "FCVC": "每餐蔬菜份数",
+    "FCVC": "蔬菜摄入量（1–3 分）",
     "NCP": "每日主餐次数",
     "CH2O": "每日饮水量（升）",
     "FAF": "每周运动小时数",
@@ -82,6 +82,28 @@ FIELD_DESCRIPTIONS_ZH = {
     "CAEC": "两餐之间加餐频率",
     "CALC": "饮酒频率",
     "MTRANS": "主要出行方式",
+}
+
+# 原型表单不采集的数值字段：模型训练时包含这两项，预测时用训练集中位数填充，
+# 以保证输入仍为完整的 19 维特征，同时简化用户录入。
+IMPUTED_NUMERIC_FEATURES = ("CH2O", "TUE")
+
+# 原型表单实际采集的数值字段
+FORM_NUMERIC_FEATURES = tuple(
+    column for column in NUMERIC_FEATURES if column not in IMPUTED_NUMERIC_FEATURES
+)
+
+# 表单字段的详细说明（原型中的问号提示）
+FIELD_HELP_ZH = {
+    "FCVC": (
+        "数据集的蔬菜摄入评分，取值 1–3："
+        "1 = 很少吃蔬菜，2 = 适量，3 = 每餐都吃较多蔬菜。"
+        "介于两档之间可填 0.5 的中间值（如 1.5、2.5）。"
+    ),
+    "FAVC": (
+        "高热量食物指油炸食品、甜点、含糖饮料、肥肉等。"
+        "选「是」表示多数日子都会摄入这类食物；选「否」表示偶尔或不常吃。"
+    ),
 }
 
 RANDOM_STATE = 42

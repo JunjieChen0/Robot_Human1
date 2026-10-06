@@ -1,6 +1,12 @@
 import pandas as pd
 
-from src.config import FEATURE_NAMES, LABEL_COLUMN
+from src.config import (
+    FEATURE_NAMES,
+    FORM_NUMERIC_FEATURES,
+    IMPUTED_NUMERIC_FEATURES,
+    LABEL_COLUMN,
+    NUMERIC_FEATURES,
+)
 from src.preprocess import assign_splits, detect_outliers, encode_features
 
 
@@ -117,3 +123,19 @@ def test_assign_splits_keeps_duplicate_groups_in_same_split():
     assert groups.ngroups == 2
     for _, group in groups:
         assert group["split"].nunique() == 1
+
+
+def test_form_and_imputed_features_cover_all_numeric_features():
+    """原型表单采集的字段 + 模型填充的字段必须恰好覆盖全部数值特征。
+
+    原型不采集 CH2O/TUE，由模型按训练集中位数填充，因此两者不能重叠，
+    合起来必须等于 NUMERIC_FEATURES，否则模型输入维度会不完整。
+    """
+
+    assert not set(FORM_NUMERIC_FEATURES) & set(IMPUTED_NUMERIC_FEATURES)
+    assert (
+        set(FORM_NUMERIC_FEATURES) | set(IMPUTED_NUMERIC_FEATURES)
+    ) == set(NUMERIC_FEATURES)
+    assert len(FORM_NUMERIC_FEATURES) + len(IMPUTED_NUMERIC_FEATURES) == len(
+        NUMERIC_FEATURES
+    )

@@ -12,12 +12,14 @@ import streamlit as st
 from src.config import (
     BINARY_FEATURES,
     FIELD_DESCRIPTIONS_ZH,
+    FIELD_HELP_ZH,
+    FORM_NUMERIC_FEATURES,
+    IMPUTED_NUMERIC_FEATURES,
     LABEL_NAMES_ZH,
     MODELS_DIR,
     NOMINAL_BASELINE,
     NOMINAL_DUMMIES,
     NOMINAL_FEATURE,
-    NUMERIC_FEATURES,
     ORDINAL_FEATURES,
     ORDINAL_LEVELS,
     SAMPLE_DIR,
@@ -35,10 +37,14 @@ NUMBER_STEPS = {
     "Weight": (0.1, "%.1f"),
     "FCVC": (0.5, "%.1f"),
     "NCP": (1.0, "%.0f"),
-    "CH2O": (0.5, "%.1f"),
     "FAF": (0.5, "%.1f"),
-    "TUE": (0.5, "%.1f"),
 }
+
+# 原型表单采集的字段（不含由模型用训练集中位数填充的 CH2O / TUE）
+FORM_FIELDS = tuple(
+    column for column in FIELD_DESCRIPTIONS_ZH
+    if column not in IMPUTED_NUMERIC_FEATURES
+)
 
 
 @st.cache_resource
@@ -60,14 +66,14 @@ def load_demo_profiles() -> pd.DataFrame:
 
 
 def default_profile() -> dict:
+    """表单默认值，只包含原型实际采集的字段。"""
+
     return {
         **{column: 25.0 if column == "Age" else 1.7 if column == "Height" else 70.0
            for column in ("Age", "Height", "Weight")},
         "FCVC": 2.0,
         "NCP": 3.0,
-        "CH2O": 2.0,
         "FAF": 1.0,
-        "TUE": 1.0,
         "Gender": "Female",
         **{column: "no" for column in BINARY_FEATURES if column != "Gender"},
         **{column: "Sometimes" for column in ORDINAL_FEATURES},
@@ -76,7 +82,18 @@ def default_profile() -> dict:
 
 
 def profile_from_session() -> dict:
-    return {column: st.session_state[column] for column in FIELD_DESCRIPTIONS_ZH}
+    """读取原型表单实际采集的字段。"""
+
+    return {column: st.session_state[column] for column in FORM_FIELDS}
+
+
+def fill_imputed_features(profile: dict, ranges: dict) -> dict:
+    """用训练集中位数补齐原型未采集的字段，保证模型输入为完整的 19 维特征。"""
+
+    filled = dict(profile)
+    for column in IMPUTED_NUMERIC_FEATURES:
+        filled[column] = float(ranges[column]["median"])
+    return filled
 
 
 def predict_profile(model, clean: dict) -> dict:
@@ -133,6 +150,8 @@ def show_profile_result(result: dict, warnings: list[str], metadata: dict) -> No
         st.dataframe(
             top[["feature", "说明", "importance"]], hide_index=True, width="stretch"
         )
+        imputed_labels = "、".join(FIELD_DESCRIPTIONS_ZH[c] for c in IMPUTED_NUMERIC_FEATURES)
+        st.caption(f"注：{imputed_labels}不在表单中采集，按训练集中位数填充。")
 
 
 def show_comparison(previous: dict, current: dict) -> None:
@@ -199,9 +218,14 @@ def render_profile_inputs(defaults: dict) -> None:
     """渲染身体与行为录入字段（作为主表单的一部分）。"""
 
     st.subheader("身体与行为录入")
-    for start in range(0, len(NUMERIC_FEATURES), 4):
+    imputed_labels = "、".join(FIELD_DESCRIPTIONS_ZH[c] for c in IMPUTED_NUMERIC_FEATURES)
+    st.caption(
+        f"{imputed_labels}不在表单中采集，模型按训练集中位数填充；"
+        "带问号的字段可查看详细说明。"
+    )
+    for start in range(0, len(FORM_NUMERIC_FEATURES), 4):
         cols = st.columns(4)
-        for column, col in zip(NUMERIC_FEATURES[start : start + 4], cols):
+        for column, col in zip(FORM_NUMERIC_FEATURES[start : start + 4], cols):
             step, fmt = NUMBER_STEPS[column]
             col.number_input(
                 FIELD_DESCRIPTIONS_ZH[column],
@@ -209,6 +233,7 @@ def render_profile_inputs(defaults: dict) -> None:
                 format=fmt,
                 key=column,
                 value=defaults[column],
+                help=FIELD_HELP_ZH.get(column),
             )
     for start in range(0, len(BINARY_FEATURES), 4):
         cols = st.columns(4)
@@ -219,6 +244,7 @@ def render_profile_inputs(defaults: dict) -> None:
                 options,
                 key=column,
                 index=options.index(defaults[column]),
+                help=FIELD_HELP_ZH.get(column),
             )
     cols = st.columns(4)
     for column, col in zip(ORDINAL_FEATURES, cols):
@@ -228,12 +254,14 @@ def render_profile_inputs(defaults: dict) -> None:
             options,
             key=column,
             index=options.index(defaults[column]),
+            help=FIELD_HELP_ZH.get(column),
         )
     cols[2].selectbox(
         FIELD_DESCRIPTIONS_ZH[NOMINAL_FEATURE],
         [NOMINAL_BASELINE, *NOMINAL_DUMMIES],
         key=NOMINAL_FEATURE,
         index=0,
+        help=FIELD_HELP_ZH.get(NOMINAL_FEATURE),
     )
 
 
@@ -274,11 +302,14 @@ def main() -> None:
     with st.expander("📖 使用说明"):
         st.markdown(
             """1. **录入身体与行为信息**：填写年龄、身高、体重、饮食习惯与运动情况；
-2. **估计肥胖等级**：提交表单后，页面展示 7 个等级的模型概率分布，以及最高/次高概率差值；
-3. **录入体重记录**：在表格中按 `YYYY-MM-DD` 输入至少两条体重记录，并填写每日摄入热量；
-4. **查看趋势与外推**：页面绘制记录期体重变化，并按能量平衡模型外推未来 90 天；
-5. **理解概率**：模型概率是对当前录入的类别估计，不是绝对正确率，也不是医学诊断；
-6. **适用范围**：模型基于 UCI 544 公开数据集训练，录入值超出训练范围时会给出提示，结果仅用于课程学习。"""
+2. **蔬菜摄入量（1–3 分）**：1 = 很少吃蔬菜，2 = 适量，3 = 每餐都吃较多蔬菜；介于两档之间可填 0.5 的中间值（如 1.5、2.5）；
+3. **经常高热量饮食**：高热量食物指油炸食品、甜点、含糖饮料、肥肉等；选「是」表示多数日子都会摄入，选「否」表示偶尔或不常吃；
+4. **估计肥胖等级**：提交表单后，页面展示 7 个等级的模型概率分布，以及最高/次高概率差值；
+5. **录入体重记录**：在表格中按 `YYYY-MM-DD` 输入至少两条体重记录，并填写每日摄入热量；
+6. **查看趋势与外推**：页面绘制记录期体重变化，并按能量平衡模型外推未来 90 天；
+7. **理解概率**：模型概率是对当前录入的类别估计，不是绝对正确率，也不是医学诊断；
+8. **采集范围**：每日饮水量与电子设备使用时间不在表单中采集，由模型按训练集中位数填充（模型训练时包含这两项，输入维度保持完整）；
+9. **适用范围**：模型基于 UCI 544 公开数据集训练，录入值超出训练范围时会给出提示，结果仅用于课程学习。"""
         )
 
     required_paths = [
@@ -303,7 +334,7 @@ def main() -> None:
     st.sidebar.caption("演示档案取自训练集，仅用于展示表单操作流程。")
     if st.sidebar.button("载入到表单"):
         row = demo_profiles.loc[demo_profiles["sample_id"].eq(selected)].iloc[0]
-        for column in FIELD_DESCRIPTIONS_ZH:
+        for column in FORM_FIELDS:
             st.session_state[column] = row[column]
         st.sidebar.caption("已载入，回到主页面查看表单。")
 
@@ -315,7 +346,8 @@ def main() -> None:
         submitted = st.form_submit_button("估计并分析趋势", type="primary")
 
     if submitted:
-        clean, profile_errors = validate_profile(profile_from_session())
+        profile = fill_imputed_features(profile_from_session(), ranges)
+        clean, profile_errors = validate_profile(profile)
         log, log_errors, log_warnings = validate_weight_log(log_input)
 
         for error in profile_errors:
