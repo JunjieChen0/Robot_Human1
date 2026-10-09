@@ -19,12 +19,18 @@ def bmr_mifflin_st_jeor(weight_kg: float, height_m: float, age_years: float, mal
     return base + (5.0 if male else -161.0)
 
 
-def activity_level_from_exercise(hours_per_week: float) -> str:
-    if hours_per_week < 1.0:
+def activity_level_from_exercise(activity_score: float) -> str:
+    """把运动频率等级（FAF，取值 0–3）映射到活动水平。
+
+    档位阈值沿用 1/3/5 的刻度，而 FAF 上限为 3，因此「高度活动」在当前
+    录入范围内不可达，界面据此披露活动水平的上限。
+    """
+
+    if activity_score < 1.0:
         return "久坐"
-    if hours_per_week < 3.0:
+    if activity_score < 3.0:
         return "轻度活动"
-    if hours_per_week < 5.0:
+    if activity_score < 5.0:
         return "中度活动"
     return "高度活动"
 

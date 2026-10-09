@@ -153,8 +153,7 @@ def evaluate_final_model() -> dict[str, object]:
     _save_confusion_matrix(matrix, normalized=False)
     _save_confusion_matrix(normalized_matrix, normalized=True)
     _save_class_distribution(test_frame)
-    _save_demo_profiles(test_frame, predictions)
-    # 演示档案改从训练集选取，避免把测试集当作演示池（测试集仅用于最终评价）
+    # 演示档案只取自训练集：测试集仅用于最终评价，不作为演示池
     train_predictions = model.predict(train_frame[FEATURE_NAMES])
     _save_demo_profiles(train_frame, train_predictions)
 

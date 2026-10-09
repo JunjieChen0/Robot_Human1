@@ -90,19 +90,34 @@ def warn_outside_training_range(clean: dict[str, Any], ranges: dict[str, dict[st
     return warnings
 
 
+def _blank_row_mask(frame: pd.DataFrame) -> pd.Series:
+    """识别 data_editor 动态新增、日期与体重都未填写的空行。"""
+
+    date = frame.get("date")
+    weight = pd.to_numeric(frame.get("weight_kg"), errors="coerce")
+    date_blank = date.isna() | date.astype(str).str.strip().eq("")
+    return date_blank & weight.isna()
+
+
 def validate_weight_log(frame: pd.DataFrame | None) -> tuple[pd.DataFrame, list[str], list[str]]:
     """校验体重记录表，返回按日期排序的记录、错误和警告。"""
 
     errors: list[str] = []
     warnings: list[str] = []
     empty = pd.DataFrame(columns=["date", "weight_kg"])
+    not_enough = "至少需要 2 条体重记录才能分析趋势。"
     if frame is None or frame.empty:
-        return empty, ["至少需要 2 条体重记录才能分析趋势。"], warnings
+        return empty, [not_enough], warnings
+
+    # 空白行若参与校验，会同时报出日期与体重两条误导性错误，因此先行丢弃
+    filled = frame.loc[~_blank_row_mask(frame)]
+    if filled.empty:
+        return empty, [not_enough], warnings
 
     log = pd.DataFrame(
         {
-            "date": pd.to_datetime(frame.get("date"), format="%Y-%m-%d", errors="coerce"),
-            "weight_kg": pd.to_numeric(frame.get("weight_kg"), errors="coerce"),
+            "date": pd.to_datetime(filled.get("date"), format="%Y-%m-%d", errors="coerce"),
+            "weight_kg": pd.to_numeric(filled.get("weight_kg"), errors="coerce"),
         }
     )
     if log["date"].isna().any():

@@ -87,3 +87,25 @@ def test_validate_weight_log_warns_on_duplicate_dates():
     log, errors, warnings = validate_weight_log(frame)
     assert not errors
     assert any("同一天" in warning for warning in warnings)
+
+
+def test_validate_weight_log_ignores_blank_rows():
+    """data_editor 动态新增的空白行不应产生日期/体重两条误导性错误。"""
+
+    frame = pd.DataFrame(
+        [
+            {"date": "2026-09-01", "weight_kg": 71.0},
+            {"date": "2026-09-08", "weight_kg": 70.5},
+            {"date": "", "weight_kg": None},
+        ]
+    )
+    log, errors, warnings = validate_weight_log(frame)
+    assert not errors
+    assert not warnings
+    assert log["weight_kg"].tolist() == [71.0, 70.5]
+
+
+def test_validate_weight_log_reports_too_few_rows_when_all_blank():
+    log, errors, _ = validate_weight_log(pd.DataFrame([{"date": "", "weight_kg": None}]))
+    assert log.empty
+    assert errors == ["至少需要 2 条体重记录才能分析趋势。"]
