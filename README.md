@@ -102,20 +102,70 @@
 - [x] 错误案例分析：脚本 `src/error_analysis.py` 与报告 `reports/tables/error_analysis.md`（迭代 3）。
 - [x] 用户测试材料已按本原型重写（`user_test/`），**实际测试（≥3 人）待课程小组线下完成**。
 
-## 5. 运行计划
+## 5. 运行说明
+
+### 5.1 环境要求
+
+| 项 | 要求 | 实测通过版本（2026-10-09） |
+| --- | --- | --- |
+| Python | 3.11 | 3.11.15 |
+| 依赖 | 见 `requirements.txt`（范围约束，未提供 lock 文件） | streamlit 1.65.0、scikit-learn 1.9.0、pandas 2.3.3 |
+| 网络 | **首次运行需要联网**访问 `archive.ics.uci.edu` 下载数据集；离线兜底见 §5.5 | — |
+
+### 5.2 仓库不含的产物（克隆后必须重建）
+
+`.gitignore` 排除了三类可由脚本重建的本地产物，**克隆仓库后它们不存在，必须按 §5.3 顺序跑完整流水线**：
+
+| 路径 | 内容 | 由哪一步生成 |
+| --- | --- | --- |
+| `data/raw/` | UCI 544 官方压缩包与原始 CSV | `python -m src.download_data` |
+| `data/processed/` | `features.csv`（19 维编码 + `split` 列）、`data_quality.json` | `python -m src.preprocess` |
+| `models/` | `final_model.joblib`、`model_metadata.json`、`raw_ranges.json` | `python -m src.train` |
+
+已入库、无需重建的产物：`reports/tables/*`、`reports/figures/*`、`data/sample/demo_profiles.csv`。
+缺少模型文件时 `app.py` 会打印缺失清单与重建命令后停止，不会崩溃。
+
+### 5.3 运行步骤
 
 ```powershell
 py -3.11 -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install -r requirements.txt
 
-python -m src.download_data   # 下载并解压 UCI 544
-python -m src.preprocess      # 编码、质量检查、异常值报告、分层划分
-python -m src.train           # LR vs RF 验证集比较，保存最终模型
-python -m src.evaluate        # 测试集指标、混淆矩阵、演示档案
-python -m src.error_analysis  # 生成错误案例分析报告
-streamlit run app.py          # 启动交互原型
+python -m src.download_data   # 下载并解压 UCI 544        → data/raw/
+python -m src.preprocess      # 编码、质量检查、异常值报告、分层划分 → data/processed/
+python -m src.train           # LR vs RF 验证集比较，保存最终模型   → models/
+python -m src.evaluate        # 测试集指标、混淆矩阵、演示档案      → reports/
+python -m src.error_analysis  # 错误案例分析报告            → reports/tables/error_analysis.md
+streamlit run app.py          # 启动交互原型（默认 http://localhost:8501）
 pytest -q                     # 运行自动测试
 ```
 
-迭代过程记录见 `CHANGELOG.md`（基线快照 → 正确性修复 → 数据处理规范性 → 效果评价补全 → 原型改进 → 文档汇总 → 精简录入项 → 界面重设计 → 提交路径修复 → 字段口径修正），每次迭代（含小版本修复）都会追加条目并同步文末「当前状态」表。
+步骤有先后依赖：`train` 读 `data/processed/features.csv`，`evaluate` 与 `error_analysis` 读 `models/final_model.joblib`，`error_analysis` 还读 `evaluate` 产出的 `reports/tables/test_predictions.csv`。`pytest -q` 与 `streamlit run app.py` 需要 `models/` 与 `data/sample/` 已就位。
+
+### 5.4 成功判据
+
+| 检查项 | 期望结果 |
+| --- | --- |
+| `pytest -q` | **24 passed**，退出码 0 |
+| `python -m src.train` 标准输出 | RandomForest macro-F1 **0.9569** > LogisticRegression **0.8625**，最终模型为 RandomForest |
+| `python -m src.evaluate` 标准输出 | accuracy **0.9452**、测试样本 **420**、错误 **23**（macro-F1 0.9438 见 `reports/tables/test_classification_report.csv`） |
+| 原型服务 | `http://localhost:8501/_stcore/health` 返回 `ok` |
+| 原型端到端（默认档案直接提交） | 正常体重 / 最高概率 47.0% / 差值 12.3% / 轻度活动 / 每日消耗 2037 kcal / 能量差 +237 kcal |
+
+`RANDOM_STATE = 42`（`src/config.py`）固定了划分与训练随机性，按上述顺序重跑应复现同样的指标。
+
+### 5.5 离线环境兜底
+
+无网络时 `src.download_data` 会重试 3 次后失败，并在报错信息中给出手动步骤：
+
+1. 从 §2.1 表中的 UCI 544 官方链接下载压缩包；
+2. 保存为 `data/raw/uci544.zip`；
+3. 重新运行 `python -m src.download_data`——脚本检测到有效压缩包后跳过下载，直接解压到 `data/raw/uci544/`；
+4. 解压后必须存在 `data/raw/uci544/ObesityDataSet_raw_and_data_sinthetic.csv`；若压缩包内部结构不同，脚本会报错并打印该期望路径，按路径手动放置即可。
+
+数据就位后，`src.preprocess` 及之后的所有步骤都是本地计算，不再需要网络。
+
+---
+
+迭代过程记录见 `CHANGELOG.md`（基线快照 → 正确性修复 → 数据处理规范性 → 效果评价补全 → 原型改进 → 文档汇总 → 精简录入项 → 界面重设计 → 提交路径修复 → 字段口径修正 → 运行说明补全），每次迭代（含小版本修复）都会追加条目并同步文末「当前状态」表。

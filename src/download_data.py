@@ -50,7 +50,12 @@ def download_and_extract(force: bool = False) -> Path:
                 if attempt < 3:
                     time.sleep(attempt)
         else:
-            raise RuntimeError("数据下载失败，请检查网络或手动下载官方压缩包。") from last_error
+            raise RuntimeError(
+                "数据下载失败（已重试 3 次）。请检查网络，或手动下载官方压缩包："
+                f"{DATA_URL}\n"
+                f"保存为 {archive_path} 后重新运行 python -m src.download_data，"
+                f"脚本会跳过下载直接解压到 {RAW_DIR / 'uci544'}。"
+            ) from last_error
         print(f"压缩包已保存：{archive_path}")
 
     print("正在解压数据集……")
@@ -58,7 +63,10 @@ def download_and_extract(force: bool = False) -> Path:
         archive.extractall(RAW_DIR / "uci544")
 
     if not dataset_is_ready():
-        raise FileNotFoundError("解压后没有找到预期的 CSV 文件。")
+        raise FileNotFoundError(
+            f"解压后没有找到预期的 CSV 文件：{RAW_CSV}\n"
+            "请确认压缩包为 UCI 544 官方文件，且解压后 CSV 位于该路径。"
+        )
     print(f"数据集准备完成：{RAW_CSV}")
     return RAW_CSV
 
