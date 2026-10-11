@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+from math import isfinite
 from typing import Any
 
 import pandas as pd
@@ -22,10 +23,10 @@ HARD_LIMITS = {
     "Age": (10.0, 100.0),
     "Height": (1.0, 2.5),
     "Weight": (20.0, 300.0),
-    "FCVC": (1.0, 10.0),
-    "NCP": (1.0, 6.0),
+    "FCVC": (1.0, 3.0),
+    "NCP": (1.0, 4.0),
     "CH2O": (0.0, 10.0),
-    "FAF": (0.0, 40.0),
+    "FAF": (0.0, 3.0),
     "TUE": (0.0, 24.0),
 }
 BINARY_VALUES = {"yes", "no"}
@@ -124,6 +125,8 @@ def validate_weight_log(frame: pd.DataFrame | None) -> tuple[pd.DataFrame, list[
         errors.append("存在无法解析的日期。")
     if log["weight_kg"].isna().any():
         errors.append("存在非数值体重。")
+    if not log["weight_kg"].dropna().map(isfinite).all():
+        errors.append("体重必须为有限数值。")
     if (log["weight_kg"] <= 0).any():
         errors.append("体重必须为正数。")
     log = log.dropna().sort_values("date").reset_index(drop=True)

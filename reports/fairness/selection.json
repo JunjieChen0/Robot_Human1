@@ -1,0 +1,51 @@
+{
+  "selected": "eo_0.01",
+  "constraint_bound": 0.01,
+  "random_seed": 42,
+  "bounds": [
+    0.01,
+    0.02,
+    0.05,
+    0.1,
+    0.2
+  ],
+  "positive_labels": [
+    "Obesity_Type_I",
+    "Obesity_Type_II",
+    "Obesity_Type_III"
+  ],
+  "sensitive_attribute": "Gender",
+  "selection_rule": "验证集平衡准确率与F1下降均不超过0.02，优先EO差值最小；无合格项时报告最大性能损失最小的尝试，不推荐替换。并列按平衡准确率、约束上限排序。",
+  "within_validation_tolerance": true,
+  "training_samples": 1270,
+  "validation_samples": 421,
+  "fit_includes_validation": false,
+  "preprocessing_fit_split": "train",
+  "feature_names": [
+    "Age",
+    "Height",
+    "Weight",
+    "FCVC",
+    "NCP",
+    "CH2O",
+    "FAF",
+    "TUE",
+    "Gender",
+    "family_history_with_overweight",
+    "FAVC",
+    "SMOKE",
+    "SCC",
+    "CAEC",
+    "CALC",
+    "MTRANS_Bike",
+    "MTRANS_Motorbike",
+    "MTRANS_Public_Transportation",
+    "MTRANS_Walking"
+  ],
+  "processed_sha256": "3f81ed49c31108173a43f3ad71d9b9199de5d3cbfbedc87cb06af615ef655cb7",
+  "prediction_policy": "基线默认0.5判定；EG调用predict(random_state=42)，保持随机混合策略，不将混合概率另行阈值化。",
+  "predeclared_selection": {
+    "balanced_accuracy_drop_limit": 0.02,
+    "f1_drop_limit": 0.02
+  }
+}

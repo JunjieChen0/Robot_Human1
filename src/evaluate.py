@@ -14,6 +14,7 @@ from sklearn.metrics import accuracy_score, classification_report, confusion_mat
 from src.config import (
     BINARY_FEATURES,
     FEATURE_NAMES,
+    IMPUTED_NUMERIC_FEATURES,
     LABEL_COLUMN,
     LABEL_NAMES_ZH,
     LABEL_ORDER,
@@ -136,6 +137,28 @@ def evaluate_final_model() -> dict[str, object]:
     y_true = test_frame[LABEL_COLUMN].to_numpy()
     predictions = model.predict(test_frame[FEATURE_NAMES])
     probabilities = model.predict_proba(test_frame[FEATURE_NAMES])
+
+    # 固定最终模型，另按界面省略两项输入的方式评价；不据此调参或选型。
+    ranges = json.loads((MODELS_DIR / "raw_ranges.json").read_text(encoding="utf-8"))
+    prototype_features = test_frame[FEATURE_NAMES].copy()
+    for column in IMPUTED_NUMERIC_FEATURES:
+        prototype_features[column] = ranges[column]["median"]
+    prototype_predictions = model.predict(prototype_features)
+    prototype_report = classification_report(
+        y_true, prototype_predictions, labels=LABEL_ORDER, output_dict=True, zero_division=0
+    )
+    prototype_metrics = {
+        "test_samples": int(len(test_frame)),
+        "error_samples": int((y_true != prototype_predictions).sum()),
+        "accuracy": float(prototype_report["accuracy"]),
+        "precision_macro": float(prototype_report["macro avg"]["precision"]),
+        "recall_macro": float(prototype_report["macro avg"]["recall"]),
+        "f1_macro": float(prototype_report["macro avg"]["f1-score"]),
+        "imputed_values": {column: ranges[column]["median"] for column in IMPUTED_NUMERIC_FEATURES},
+    }
+    (REPORT_TABLES_DIR / "prototype_input_metrics.json").write_text(
+        json.dumps(prototype_metrics, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
 
     report = classification_report(
         y_true,

@@ -13,5 +13,8 @@ data/processed/*.json
 models/*.joblib
 models/*.json
 
+# 本地作业提交材料（文档、导出文件与代码包均不入库）
+commit/
+
 # 临时输出
 *.log

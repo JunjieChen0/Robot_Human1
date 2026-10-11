@@ -26,7 +26,7 @@ from src.config import (
 )
 from src.energy import activity_level_from_exercise, project_weight, tdee
 from src.preprocess import encode_features
-from src.validation import validate_profile, validate_weight_log, warn_outside_training_range
+from src.validation import HARD_LIMITS, validate_profile, validate_weight_log, warn_outside_training_range
 
 
 st.set_page_config(
@@ -192,6 +192,8 @@ def render_field(column: str, container, defaults: dict) -> None:
         step, fmt = NUMBER_STEPS[column]
         container.number_input(
             label,
+            min_value=HARD_LIMITS[column][0],
+            max_value=HARD_LIMITS[column][1],
             step=step,
             format=fmt,
             key=column,
@@ -220,13 +222,18 @@ def render_field(column: str, container, defaults: dict) -> None:
     )
 
 
-def show_profile_result(result: dict, warnings: list[str], metadata: dict) -> None:
+def show_profile_result(result: dict, warnings: list[str], metadata: dict, clean: dict) -> None:
     st.subheader("肥胖等级估计")
     col1, col2, col3 = st.columns(3)
     col1.metric("估计等级", LABEL_NAMES_ZH[result["label"]])
     col2.metric("最高类别概率", f"{result['top_probability']:.1%}")
     col3.metric("最高与第二高差值", f"{result['top_probability'] - result['second_probability']:.1%}")
     st.caption(f"英文标签：{result['label']}。该结果仅表示模型对当前录入的类别估计。")
+    st.caption(
+        f"分类档案体重 {clean['Weight']:.1f} kg，身高 {clean['Height']:.2f} m，"
+        f"年龄 {clean['Age']:.0f} 岁，运动频率评分 {clean['FAF']:g}。"
+        "类别概率未经校准，不表示减重成功率。"
+    )
 
     table = pd.DataFrame(
         [
@@ -316,6 +323,9 @@ def show_trend(log: pd.DataFrame, clean: dict, intake: float) -> None:
     col2.metric("活动水平", activity)
     col3.metric("每日消耗估算", f"{expenditure:.0f} kcal")
     col4.metric("每日能量差", f"{deficit:+.0f} kcal")
+    st.caption("每日能量差 = 消耗 − 摄入；正值对应能量缺口，负值对应能量盈余。")
+    if abs(latest["weight_kg"] - clean["Weight"]) > 0.05:
+        st.info("趋势从日志中的最新体重起算，与分类档案体重不同；如需一致，请修改相应输入后重新提交。")
     st.line_chart(chart, x="day", y="weight_kg", color="segment")
     span_days = max(int((latest["date"] - first["date"]).days), 1)
     slope_week = (latest["weight_kg"] - first["weight_kg"]) / span_days * 7
@@ -357,6 +367,7 @@ def render_weight_log_inputs() -> tuple[pd.DataFrame, float]:
             "📉 体重记录",
             "日期格式 YYYY-MM-DD；至少两条记录才能分析趋势。",
         )
+        st.caption("下方为演示记录。档案体重用于等级分类，日志最新体重用于趋势，两处需分别填写。")
         log_input = st.data_editor(
             pd.DataFrame(
                 [
@@ -382,6 +393,12 @@ def render_weight_log_inputs() -> tuple[pd.DataFrame, float]:
 
 def main() -> None:
     st.markdown(PAGE_STYLE, unsafe_allow_html=True)
+    page = st.sidebar.radio("页面", ["体重管理原型", "模型公平性审核"], key="main_page")
+    if page == "模型公平性审核":
+        from src.fairness_ui import render_fairness_page
+
+        render_fairness_page()
+        return
     st.title("⚖️ 减重趋势分析原型")
     st.caption("录入身高体重、运动与饮食信息，查看肥胖等级估计、体重趋势与能量平衡外推。")
     st.info(
@@ -391,7 +408,7 @@ def main() -> None:
     with st.expander("📖 使用说明"):
         st.markdown(
             """1. **录入身体与行为信息**：填写年龄、身高、体重、饮食习惯与运动情况；
-2. **蔬菜摄入量（1–3 分）**：1 = 很少吃蔬菜，2 = 适量，3 = 每餐都吃较多蔬菜；介于两档之间可填 0.5 的中间值（如 1.5、2.5）；
+2. **蔬菜摄入评分（1–3）**：1 = 很少吃蔬菜，2 = 适量，3 = 每餐都吃较多蔬菜；介于两档之间可填 0.5 的中间值（如 1.5、2.5）；
 3. **经常高热量饮食**：高热量食物指油炸食品、甜点、含糖饮料、肥肉等；选「是」表示多数日子都会摄入，选「否」表示偶尔或不常吃；
 4. **估计肥胖等级**：提交表单后，页面展示 7 个等级的模型概率分布，以及最高/次高概率差值；
 5. **录入体重记录**：在表格中按 `YYYY-MM-DD` 输入至少两条体重记录，并填写每日摄入热量；
@@ -399,6 +416,19 @@ def main() -> None:
 7. **理解概率**：模型概率是对当前录入的类别估计，不是绝对正确率，也不是医学诊断；
 8. **采集范围**：每日饮水量与电子设备使用时间不在表单中采集，由模型按训练集中位数填充（模型训练时包含这两项，输入维度保持完整）；
 9. **适用范围**：模型基于 UCI 544 公开数据集训练，录入值超出训练范围时会给出提示，结果仅用于课程学习。"""
+        )
+
+    with st.expander("数据来源与适用范围"):
+        st.markdown(
+            "训练数据来自 [UCI 544 肥胖等级数据集]"
+            "(https://archive.ics.uci.edu/dataset/544/estimation+of+obesity+levels+based+on+eating+habits+and+physical+condition)，"
+            "共 2111 条记录、16 个特征，涉及墨西哥、秘鲁和哥伦比亚；"
+            "约 23% 为直接采集记录，77% 为 SMOTE 合成记录，许可为 CC BY 4.0。"
+        )
+        st.write(
+            "本原型用于课程中的体重管理演示，尚未验证对其他国家、年龄层或特殊生理状况人群的适用性。"
+            "饮水量和屏幕时间按训练集中位数填充。等级分类与能量平衡外推是两个独立模块，"
+            "分类成绩不能证明未来体重预测准确。"
         )
 
     required_paths = [
@@ -455,7 +485,7 @@ def main() -> None:
             previous = st.session_state.get("last_profile_result")
             st.session_state["last_profile_result"] = result
             st.session_state["last_profile_clean"] = clean
-            show_profile_result(result, warnings, metadata)
+            show_profile_result(result, warnings, metadata, clean)
             if previous is not None:
                 show_comparison(previous, result)
 
@@ -465,12 +495,14 @@ def main() -> None:
     current_result = st.session_state.get("last_profile_result")
     if not submitted and current_result is not None:
         st.divider()
+        st.info("以下为上次提交的分类结果。修改表单或载入新档案后，请点击“估计并分析趋势”更新。")
         show_profile_result(
             current_result,
             warn_outside_training_range(
                 st.session_state.get("last_profile_clean", {}), ranges
             ),
             metadata,
+            st.session_state["last_profile_clean"],
         )
 
 

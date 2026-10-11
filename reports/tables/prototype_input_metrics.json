@@ -1,0 +1,12 @@
+{
+  "test_samples": 420,
+  "error_samples": 29,
+  "accuracy": 0.930952380952381,
+  "precision_macro": 0.9317866114910449,
+  "recall_macro": 0.9277932089162261,
+  "f1_macro": 0.9292748480070749,
+  "imputed_values": {
+    "CH2O": 2.0,
+    "TUE": 0.634378
+  }
+}

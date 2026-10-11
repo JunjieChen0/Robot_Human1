@@ -50,7 +50,10 @@ def project_weight(
 
     daily_deficit = daily_expenditure_kcal - daily_intake_kcal
     points = [{"day": 0.0, "weight_kg": round(current_kg, 2)}]
-    for day in range(step_days, days + 1, step_days):
+    projection_days = list(range(step_days, days + 1, step_days))
+    if days > 0 and days % step_days:
+        projection_days.append(days)
+    for day in projection_days:
         projected = current_kg - daily_deficit * day / KCAL_PER_KG
         points.append({"day": float(day), "weight_kg": round(projected, 2)})
     return points

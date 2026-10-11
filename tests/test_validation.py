@@ -30,6 +30,24 @@ def test_validate_profile_accepts_valid_input():
     assert clean["Weight"] == 70.0
 
 
+def test_validate_profile_enforces_questionnaire_score_limits():
+    for column, maximum in (("FCVC", 3.0), ("FAF", 3.0), ("NCP", 4.0)):
+        row = valid_row()
+        row[column] = maximum
+        assert not validate_profile(row)[1]
+        row[column] = maximum + 0.5
+        assert validate_profile(row)[1], column
+
+
+def test_validate_weight_log_rejects_infinite_weights():
+    for value in (float("inf"), float("-inf")):
+        frame = pd.DataFrame([
+            {"date": "2026-09-01", "weight_kg": 70.0},
+            {"date": "2026-09-08", "weight_kg": value},
+        ])
+        assert any("有限" in error for error in validate_weight_log(frame)[1])
+
+
 def test_validate_profile_rejects_out_of_range_and_bad_category():
     row = valid_row()
     row["Age"] = 300.0

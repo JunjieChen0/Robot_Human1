@@ -37,7 +37,7 @@ def _confusion_error_table(errors: pd.DataFrame) -> pd.DataFrame:
 def _feature_profile(frame: pd.DataFrame, indices, title: str) -> pd.Series:
     """计算指定行在数值特征上的均值。"""
 
-    return frame.loc[indices, NUMERIC_FEATURES].mean().rename(title).round(3)
+    return frame.loc[indices, NUMERIC_FEATURES].mean().rename(title)
 
 
 def build_error_analysis() -> str:
@@ -120,23 +120,21 @@ def build_error_analysis() -> str:
             f"- 错误最多的真实类别：{_label_zh(worst_true)}"
             f"（{int((errors[LABEL_COLUMN] == worst_true).sum())} 条）"
         )
-        diff = compare["差异"].abs().sort_values(ascending=False)
-        top_feature = diff.index[0]
         lines.append(
-            f"- 错误样本与正确样本差异最大的特征：{FIELD_DESCRIPTIONS_ZH[top_feature]}"
-            f"（均值差 {compare.loc[top_feature, '差异']:+.3f}）"
+            f"- 错误样本与正确样本的体重均值差为 {compare.loc['Weight', '差异']:+.3f} kg。"
+            "两组类别构成不同，不能将均值差解释为误判原因；不同单位字段也不能据此比较重要性。"
         )
         mid_prob_share = float(
             error_with_prob["top_prob"].between(0.4, 0.7).mean()
         )
         lines.append(
             f"- 约 {mid_prob_share:.0%} 的错误样本最高概率落在 40%–70% 区间，"
-            "说明模型在这些样本上置信度不足。"
+            "这一比例只描述错误子集，不能据此推断该概率区间的总体错误率。"
         )
     lines.append("")
     lines.append("### 可能原因（供实验报告引用）")
     lines.append("")
-    lines.append("- 类别边界样本：真实类别与预测类别在 BMI 等级上相邻（如正常体重与超重 I 级），其特征组合落在决策边界附近。")
+    lines.append("- 相邻等级的错误较多（如正常体重与超重 I 级），可能与类别边界附近的特征组合重叠有关，仍需逐例检查。")
     lines.append("- 数据为问卷 + SMOTE 合成样本的混合，合成部分的边界模式可能不完全反映真实人群，导致边界样本易混淆。")
     lines.append("- 概率分布平坦：最高概率与次高概率接近时，类别归属本身不确定，轻微特征变化即可改变预测。")
     lines.append("")

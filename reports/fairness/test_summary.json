@@ -1,0 +1,123 @@
+{
+  "selection": {
+    "selected": "eo_0.01",
+    "constraint_bound": 0.01,
+    "random_seed": 42,
+    "bounds": [
+      0.01,
+      0.02,
+      0.05,
+      0.1,
+      0.2
+    ],
+    "positive_labels": [
+      "Obesity_Type_I",
+      "Obesity_Type_II",
+      "Obesity_Type_III"
+    ],
+    "sensitive_attribute": "Gender",
+    "selection_rule": "验证集平衡准确率与F1下降均不超过0.02，优先EO差值最小；无合格项时报告最大性能损失最小的尝试，不推荐替换。并列按平衡准确率、约束上限排序。",
+    "within_validation_tolerance": true,
+    "training_samples": 1270,
+    "validation_samples": 421,
+    "fit_includes_validation": false,
+    "preprocessing_fit_split": "train",
+    "feature_names": [
+      "Age",
+      "Height",
+      "Weight",
+      "FCVC",
+      "NCP",
+      "CH2O",
+      "FAF",
+      "TUE",
+      "Gender",
+      "family_history_with_overweight",
+      "FAVC",
+      "SMOKE",
+      "SCC",
+      "CAEC",
+      "CALC",
+      "MTRANS_Bike",
+      "MTRANS_Motorbike",
+      "MTRANS_Public_Transportation",
+      "MTRANS_Walking"
+    ],
+    "processed_sha256": "3f81ed49c31108173a43f3ad71d9b9199de5d3cbfbedc87cb06af615ef655cb7",
+    "prediction_policy": "基线默认0.5判定；EG调用predict(random_state=42)，保持随机混合策略，不将混合概率另行阈值化。",
+    "predeclared_selection": {
+      "balanced_accuracy_drop_limit": 0.02,
+      "f1_drop_limit": 0.02
+    }
+  },
+  "test_samples": 420,
+  "test_metrics": [
+    {
+      "model": "baseline",
+      "n": 420.0,
+      "positive": 195.0,
+      "negative": 225.0,
+      "label_rate": 0.4642857142857143,
+      "accuracy": 0.9928571428571429,
+      "balanced_accuracy": 0.9926495726495727,
+      "f1": 0.9922879177377892,
+      "tpr": 0.9897435897435898,
+      "fnr": 0.01025641025641022,
+      "fpr": 0.0044444444444444444,
+      "selection_rate": 0.46190476190476193,
+      "tp": 193.0,
+      "fn": 2.0,
+      "fp": 1.0,
+      "tn": 224.0,
+      "equalized_odds_difference": 0.02083333333333337,
+      "demographic_parity_difference": 0.045479302832243995,
+      "tpr_difference": 0.02083333333333337,
+      "fpr_difference": 0.008333333333333333,
+      "balanced_accuracy_difference": 0.014583333333333393,
+      "f1_difference": 0.015706806282722474
+    },
+    {
+      "model": "mitigated",
+      "n": 420.0,
+      "positive": 195.0,
+      "negative": 225.0,
+      "label_rate": 0.4642857142857143,
+      "accuracy": 0.9928571428571429,
+      "balanced_accuracy": 0.9926495726495727,
+      "f1": 0.9922879177377892,
+      "tpr": 0.9897435897435898,
+      "fnr": 0.01025641025641022,
+      "fpr": 0.0044444444444444444,
+      "selection_rate": 0.46190476190476193,
+      "tp": 193.0,
+      "fn": 2.0,
+      "fp": 1.0,
+      "tn": 224.0,
+      "equalized_odds_difference": 0.02083333333333337,
+      "demographic_parity_difference": 0.045479302832243995,
+      "tpr_difference": 0.02083333333333337,
+      "fpr_difference": 0.008333333333333333,
+      "balanced_accuracy_difference": 0.014583333333333393,
+      "f1_difference": 0.015706806282722474
+    }
+  ],
+  "bootstrap_delta_mitigated_minus_baseline": {
+    "balanced_accuracy": {
+      "low": 0.0,
+      "high": 0.0,
+      "valid_repeats": 1000
+    },
+    "f1": {
+      "low": 0.0,
+      "high": 0.0,
+      "valid_repeats": 1000
+    },
+    "equalized_odds_difference": {
+      "low": 0.0,
+      "high": 0.0,
+      "valid_repeats": 1000
+    }
+  },
+  "bootstrap_note": "固定训练模型和seed=42测试预测，按性别组内成对重采样1000次，百分位95%区间。未覆盖重训波动、合成样本相关性、标签偏差与新用户外推。",
+  "model_sha256": "7c527f86246659fc01225d7745b2be22a8abf0ee45b21695ef0e3853bb59cd09"
+}

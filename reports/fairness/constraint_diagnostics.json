@@ -1,0 +1,10 @@
+{
+  "baseline_max_group_to_overall_deviation": 0.003430531732418666,
+  "constraint_bound": 0.01,
+  "weights": {
+    "0": 0.0,
+    "1": 1.0
+  },
+  "best_gap": 0.0,
+  "oracle_calls": 38
+}

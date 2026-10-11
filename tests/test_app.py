@@ -52,3 +52,13 @@ def test_load_demo_profile_runs_without_exception():
     app.run()
     find_button(app, "载入").click().run()
     assert not app.exception
+
+
+def test_saved_result_explains_submission_and_data_source():
+    app = build_app().run()
+    assert "数据来源与适用范围" in [item.label for item in app.expander]
+    find_button(app, "估计").click().run()
+    find_button(app, "载入").click().run()
+    assert not app.exception
+    assert any("上次提交" in item.value for item in app.info)
+    assert any("分类档案体重" in item.value for item in app.caption)

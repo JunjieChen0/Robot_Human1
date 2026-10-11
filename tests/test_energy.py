@@ -29,3 +29,9 @@ def test_energy_deficit_reduces_projected_weight():
 def test_energy_surplus_increases_projected_weight():
     points = project_weight(70.0, 3340.0, 2570.0, 10, step_days=10)
     assert points[-1]["weight_kg"] > 70.0
+
+
+def test_projection_includes_the_requested_horizon():
+    points = project_weight(70.0, 1800.0, 2570.0, 90)
+    assert [point["day"] for point in points] == [float(day) for day in range(0, 85, 7)] + [90.0]
+    assert points[-1]["weight_kg"] == 61.0
