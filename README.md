@@ -2,6 +2,11 @@
 
 **人机交互课程作业选题 2：减重趋势分析原型**
 
+> **受邀参加第二次作业测试的同学，请从这里开始：**
+> [公平性页面测试指南](user_test/fairness_test_guide.md)包含启动方法、四项任务和报告提交要求。
+> 复制[个人测试报告模板](user_test/fairness_report_template.md)，完成后把填写的 Markdown 文件发回邀请你测试的同学即可。
+> 只测试该页面不需要下载数据或训练模型。请先按指南测试，再阅读下方实验结果，避免影响首次回答。
+
 用户自报身高、体重记录、运动量和饮食，原型展示体重趋势、能量平衡估算和肥胖等级估计，并说明预测的适用范围与不确定性。
 
 > **当前进度：原型和性别公平性审核页均已实现，自动测试共 34 条通过。**
@@ -116,9 +121,9 @@
 | 依赖 | 见 `requirements.txt`（范围约束，未提供 lock 文件） | streamlit 1.65.0、scikit-learn 1.9.0、pandas 2.3.3 |
 | 网络 | **首次运行需要联网**访问 `archive.ics.uci.edu` 下载数据集；离线兜底见 §5.5 | — |
 
-### 5.2 仓库不含的产物（克隆后必须重建）
+### 5.2 运行体重管理原型需要重建的产物
 
-`.gitignore` 排除了三类可由脚本重建的本地产物，**克隆仓库后它们不存在，必须按 §5.3 顺序跑完整流水线**：
+`.gitignore` 排除了三类可由脚本重建的本地产物。克隆后若要使用体重管理页面或复现实验，按 §5.3 重建；只参加公平性页面用户测试时，按[测试指南](user_test/fairness_test_guide.md)安装依赖并启动即可：
 
 | 路径 | 内容 | 由哪一步生成 |
 | --- | --- | --- |
@@ -145,7 +150,7 @@ streamlit run app.py          # 启动交互原型（默认 http://localhost:850
 pytest -q                     # 运行自动测试
 ```
 
-步骤有先后依赖：`train` 读 `data/processed/features.csv`，`evaluate` 与 `error_analysis` 读 `models/final_model.joblib`，`error_analysis` 还读 `evaluate` 产出的 `reports/tables/test_predictions.csv`。`pytest -q` 与 `streamlit run app.py` 需要 `models/` 与 `data/sample/` 已就位。
+步骤有先后依赖：`train` 读 `data/processed/features.csv`，`evaluate` 与 `error_analysis` 读 `models/final_model.joblib`，`error_analysis` 还读 `evaluate` 产出的 `reports/tables/test_predictions.csv`。完整自动测试和体重管理页面需要 `models/` 与 `data/sample/` 已就位；公平性审核页面只读取已入库的 `reports/fairness/`，无需这些模型文件。
 
 ### 5.4 成功判据
 
@@ -175,6 +180,8 @@ pytest -q                     # 运行自动测试
 迭代过程记录见 `CHANGELOG.md`（基线快照 → 正确性修复 → 数据处理规范性 → 效果评价补全 → 原型改进 → 文档汇总 → 精简录入项 → 界面重设计 → 提交路径修复 → 字段口径修正 → 运行说明补全 → 交付文档汇编 → 交付文档改本地件），每次迭代（含小版本修复）都会追加条目并同步文末「当前状态」表。
 
 ## 公平性扩展作业
+
+参加用户测试请按[公平性页面测试指南](user_test/fairness_test_guide.md)操作，并返回[个人测试报告](user_test/fairness_report_template.md)。[记录者说明](user_test/fairness_facilitator_guide.md)含核对依据，由组织测试的同学使用。以下内容用于实验复现，不是测试者必须执行的步骤。
 
 侧栏选择“模型公平性审核”可查看分组样本、基线与约束方案、漏判率与误判率、区间及解释。该实验将肥胖 I–III 型合并为正类，按原数据的性别分组；它是独立的二分类审核，不替代原七分类和能量外推。
 
