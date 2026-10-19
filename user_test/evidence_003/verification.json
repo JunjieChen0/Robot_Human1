@@ -1,0 +1,23 @@
+{
+  "checks": {
+    "preexisting_files_unchanged": true,
+    "report_links_valid": true,
+    "evidence_hashes_match": true,
+    "first_run_failure_preserved": true,
+    "T1_to_T5_completed": true,
+    "T6_retry_completed": true,
+    "no_browser_page_errors": true,
+    "return_preserves_metrics": true,
+    "download_matches_frozen_metrics": true,
+    "feedback_score_matches_report": true,
+    "no_unfilled_placeholders": true,
+    "identity_disclosed": true
+  },
+  "changed_preexisting_files": [],
+  "invalid_links": [],
+  "invalid_hashes": [],
+  "report_sha256": "de0e8706d246d701b863ce23b03818a60d213b0107fab3ce384f3ef37f628d2a",
+  "first_started_at": "2026-10-19T16:06:21+08:00",
+  "first_finished_at": "2026-10-19T16:07:13+08:00",
+  "human_record_table_unchanged": true
+}

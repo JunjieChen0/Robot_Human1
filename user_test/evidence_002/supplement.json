@@ -1,0 +1,9 @@
+{
+  "kind": "AI supplementary visual check in a second browser session",
+  "reason": "Capture expanded text after transition",
+  "files": [
+    "15_scope_settled.png",
+    "16_uncertainty_settled.png"
+  ],
+  "no_human_timing": true
+}

@@ -1,0 +1,13 @@
+{
+  "report": "user_test/feedback_004.md",
+  "unfilled_placeholders": false,
+  "task_rows": 6,
+  "local_links_checked": 26,
+  "missing_links": [],
+  "feedback_matches_rating": true,
+  "recorded_timings_match": true,
+  "page_evidence_matches_report": true,
+  "source_hashes_still_match": true,
+  "screenshot_count": 32,
+  "text_capture_count": 32
+}

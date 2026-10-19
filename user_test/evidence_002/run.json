@@ -1,0 +1,172 @@
+{
+  "kind": "AI automated browser walkthrough; not a human participant",
+  "participant": "002",
+  "date": "2026-10-19",
+  "prior_exposure": "Read project documentation, task guide and source before execution; not blind first understanding.",
+  "url": "http://127.0.0.1:8502",
+  "browser_driver_python": "3.13.6",
+  "server_python": "3.11.15",
+  "server_sklearn": "1.9.0",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "viewport": {
+    "width": 1440,
+    "height": 1000
+  },
+  "timing": "Automation elapsed time only, including evidence capture; not human task time.",
+  "git_head": "0e2963bd0401fb230e84107a7166caf038bfdaa8",
+  "git_status_before": " M .gitignore\n M CHANGELOG.md\n M README.md\n M app.py\n M src/config.py\n M src/fairness_ui.py\n M src/validation.py\n M tests/test_app.py\n M tests/test_validation.py\n?? data/sample/profile_template.csv\n?? reports/ui/\n?? scripts/\n?? src/profile_io.py\n?? tests/test_profile_io.py\n?? user_test/feedback_001.md\n?? user_test/interaction_iteration.md\n?? user_test/interaction_records.csv\n?? user_test/interaction_test_guide.md\n?? \"user_test/\\347\\234\\237\\344\\272\\272\\346\\265\\213\\350\\257\\225\\345\\241\\253\\345\\206\\231\\346\\250\\241\\346\\235\\277.md\"\n?? \"user_test/\\347\\234\\237\\344\\272\\272\\346\\265\\213\\350\\257\\225\\347\\256\\200\\347\\211\\210\\350\\257\\264\\346\\230\\216.md\"\n",
+  "tasks": {
+    "T1": {
+      "status": "completed",
+      "automation_seconds": 0.708,
+      "height": "1.70",
+      "weight": "70.0",
+      "source": "Repository sample CSV, not personal health data"
+    },
+    "T2": {
+      "status": "completed",
+      "automation_seconds": 2.247,
+      "metrics": [
+        "档案体重\n\n70.0 kg",
+        "身高\n\n1.70 m",
+        "运动频率评分\n\n1 / 3",
+        "估计等级\n\n正常体重",
+        "最高类别概率\n\n47.0%",
+        "最高与第二高差值\n\n12.3%",
+        "最新体重\n\n70.5 kg",
+        "活动水平\n\n轻度活动",
+        "每日消耗估算\n\n2037 kcal",
+        "每日能量差\n\n+237 kcal"
+      ],
+      "answer": "Estimates the obesity category of current input; trend uses separate simulated records and energy extrapolation."
+    },
+    "T3": {
+      "status": "completed",
+      "automation_seconds": 0.248,
+      "answer": "80% category probability is neither illness risk nor absolute accuracy. No external validation supports generalizing health conclusions to all university students.",
+      "prior_exposure": true
+    },
+    "T4": {
+      "status": "completed",
+      "automation_seconds": 1.132,
+      "before": [
+        "档案体重\n\n70.0 kg",
+        "身高\n\n1.70 m",
+        "运动频率评分\n\n1 / 3",
+        "估计等级\n\n正常体重",
+        "最高类别概率\n\n47.0%",
+        "最高与第二高差值\n\n12.3%",
+        "最新体重\n\n70.5 kg",
+        "活动水平\n\n轻度活动",
+        "每日消耗估算\n\n2037 kcal",
+        "每日能量差\n\n+237 kcal"
+      ],
+      "stale": [
+        "档案体重\n\n80.0 kg",
+        "身高\n\n1.70 m",
+        "运动频率评分\n\n1 / 3",
+        "估计等级\n\n正常体重",
+        "最高类别概率\n\n47.0%",
+        "最高与第二高差值\n\n12.3%",
+        "最新体重\n\n70.5 kg",
+        "活动水平\n\n轻度活动",
+        "每日消耗估算\n\n2037 kcal",
+        "每日能量差\n\n+237 kcal"
+      ],
+      "after": [
+        "档案体重\n\n80.0 kg",
+        "身高\n\n1.70 m",
+        "运动频率评分\n\n1 / 3",
+        "估计等级\n\n正常体重",
+        "最高类别概率\n\n32.7%",
+        "最高与第二高差值\n\n2.0%",
+        "最新体重\n\n70.5 kg",
+        "活动水平\n\n轻度活动",
+        "每日消耗估算\n\n2037 kcal",
+        "每日能量差\n\n+237 kcal"
+      ],
+      "weight_after": "80.0"
+    },
+    "T5": {
+      "status": "completed",
+      "automation_seconds": 1.426,
+      "invalid_metrics": [
+        "档案体重\n\n80.0 kg",
+        "身高\n\n1.70 m",
+        "运动频率评分\n\n1 / 3",
+        "估计等级\n\n正常体重",
+        "最高类别概率\n\n32.7%",
+        "最高与第二高差值\n\n2.0%"
+      ],
+      "recovered_metrics": [
+        "档案体重\n\n80.0 kg",
+        "身高\n\n1.70 m",
+        "运动频率评分\n\n1 / 3",
+        "估计等级\n\n正常体重",
+        "最高类别概率\n\n32.7%",
+        "最高与第二高差值\n\n2.0%",
+        "最新体重\n\n70.5 kg",
+        "活动水平\n\n轻度活动",
+        "每日消耗估算\n\n2037 kcal",
+        "每日能量差\n\n+237 kcal"
+      ],
+      "prescribed_zero_intake_is_not_user_error": true
+    },
+    "T6": {
+      "status": "completed",
+      "automation_seconds": 5.393,
+      "downloaded_feedback": {
+        "analysis_time": "2026-10-19T15:39:59+08:00",
+        "feedback_time": "2026-10-19T15:40:00+08:00",
+        "ease_1_to_5": 4,
+        "answer": "根据当前输入估计的肥胖等级",
+        "understood_classification": true,
+        "comment": "002，AI 实际浏览器走查，非真人用户测试。建议将档案体重与趋势日志体重并列展示，并把前后对比移到结果顶部。"
+      },
+      "fairness_metrics": [
+        "基线平衡准确率\n\n99.26%",
+        "约束方案平衡准确率\n\n99.26%",
+        "错误率群体差值 EO\n\n0.0208"
+      ],
+      "groups_switched": [
+        "女性",
+        "男性",
+        "全部群体"
+      ],
+      "metrics_switched": [
+        "漏判率 FNR",
+        "误判率 FPR"
+      ],
+      "fairness_answer": "This constraint scheme did not improve EO; zero observed female errors does not guarantee fairness or no future errors.",
+      "returned_metrics": [
+        "档案体重\n\n80.0 kg",
+        "身高\n\n1.70 m",
+        "运动频率评分\n\n1 / 3",
+        "估计等级\n\n正常体重",
+        "最高类别概率\n\n32.7%",
+        "最高与第二高差值\n\n2.0%",
+        "最新体重\n\n70.5 kg",
+        "活动水平\n\n轻度活动",
+        "每日消耗估算\n\n2037 kcal",
+        "每日能量差\n\n+237 kcal"
+      ]
+    }
+  },
+  "page_errors": [],
+  "source_hashes_before": {
+    "app.py": "493d0e67c95c722a56406445ea77247169bc8da7657d43dddb2dd8651acbfe0b",
+    "src/fairness_ui.py": "d3d2a9a0a2b0bc25203b1d80fa9cbaf9cba41d95df054c3edbe73479510d952b",
+    "data/sample/profile_template.csv": "92ad965498c172cadc484c20f5b1be51e9e7ede92ef97ce067e0eea194f81904",
+    "user_test/真人测试填写模板.md": "016191be0b4568076912593f16dbd66a9eb9bd8a0b92dc6ae72f10518491e612"
+  },
+  "browser": "Google Chrome 150.0.7871.127",
+  "fairness_answer_before_self_test": "This constraint scheme did not improve EO; zero observed female errors does not guarantee fairness or no future errors.",
+  "source_hashes_after": {
+    "app.py": "493d0e67c95c722a56406445ea77247169bc8da7657d43dddb2dd8651acbfe0b",
+    "src/fairness_ui.py": "d3d2a9a0a2b0bc25203b1d80fa9cbaf9cba41d95df054c3edbe73479510d952b",
+    "data/sample/profile_template.csv": "92ad965498c172cadc484c20f5b1be51e9e7ede92ef97ce067e0eea194f81904",
+    "user_test/真人测试填写模板.md": "016191be0b4568076912593f16dbd66a9eb9bd8a0b92dc6ae72f10518491e612"
+  },
+  "source_unchanged": true,
+  "completed": true
+}

@@ -1,0 +1,14 @@
+{
+  "feedback_download_parses": true,
+  "feedback_saved_ease": 4,
+  "female_male_all_captured": true,
+  "fnr_fpr_captured": true,
+  "returned_profile_weight": "80.0",
+  "returned_calories": "1800",
+  "returned_classification_weight": "分类采用档案体重\n\n80.0 kg",
+  "returned_trend_weight": "趋势采用日志体重\n\n70.5 kg",
+  "returned_feedback_download": true,
+  "no_unsubmitted_change_warning": true,
+  "page_errors": [],
+  "application_sources_unchanged": true
+}

@@ -1,0 +1,13 @@
+来源：本次独立启动的 8502 端口 Streamlit 服务，在停止该测试服务时读取到的运行输出摘录。
+此文件仅摘录实际警告及其应用调用位置，不是完整日志。
+
+2026-10-19 15:39:53.825 The widget with key "Gender" was created with a default value but also had its value set via the Session State API.
+
+  File "E:\Robot_Human1\app.py", line 600, in main
+    render_profile_inputs(defaults)
+  File "E:\Robot_Human1\app.py", line 407, in render_profile_inputs
+    render_field(column, col, defaults)
+  File "E:\Robot_Human1\app.py", line 244, in render_field
+    container.selectbox(
+
+观察范围：该警告未阻断本次 T1–T6；页面结果与下载文件另见 run.json。未修改应用或验证其他会话中的影响。

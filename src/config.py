@@ -93,6 +93,10 @@ FORM_NUMERIC_FEATURES = tuple(
     column for column in NUMERIC_FEATURES if column not in IMPUTED_NUMERIC_FEATURES
 )
 
+FORM_FIELDS = tuple(
+    column for column in FIELD_DESCRIPTIONS_ZH if column not in IMPUTED_NUMERIC_FEATURES
+)
+
 # 表单字段的详细说明（原型中的问号提示）
 FIELD_HELP_ZH = {
     "FCVC": (

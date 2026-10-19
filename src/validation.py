@@ -44,6 +44,9 @@ def validate_profile(row: dict[str, Any]) -> tuple[dict[str, Any], list[str]]:
     errors: list[str] = []
     clean: dict[str, Any] = {}
     for column in NUMERIC_FEATURES:
+        if row.get(column) is None or pd.isna(row.get(column)) or str(row.get(column)).strip() == "":
+            errors.append(f"{_label(column)} 不能为空。")
+            continue
         try:
             value = float(row.get(column))
         except (TypeError, ValueError):
@@ -111,6 +114,9 @@ def validate_weight_log(frame: pd.DataFrame | None) -> tuple[pd.DataFrame, list[
         return empty, [not_enough], warnings
 
     # 空白行若参与校验，会同时报出日期与体重两条误导性错误，因此先行丢弃
+    missing = [column for column in ("date", "weight_kg") if column not in frame.columns]
+    if missing:
+        return empty, ["体重记录缺少列：" + "、".join(missing)], warnings
     filled = frame.loc[~_blank_row_mask(frame)]
     if filled.empty:
         return empty, [not_enough], warnings

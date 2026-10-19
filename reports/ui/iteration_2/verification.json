@@ -1,0 +1,118 @@
+{
+  "verified_at": "2026-10-19T16:36:36+08:00",
+  "application_tests": {
+    "command": "python -m pytest -q --tb=short",
+    "passed": 54,
+    "failed": 0,
+    "elapsed_seconds": 31.52,
+    "note": "完整测试后仅移除比较提示中的 Markdown 符号；最终浏览器冒烟再次核对分析、修改重算及比较。"
+  },
+  "browser_checks": {
+    "passed": 21,
+    "total": 21,
+    "browser": "150.0.7871.127",
+    "record": "browser_checks.json",
+    "measurements": {
+      "primary_contrast": 7.845123434042659,
+      "caption_on_white_contrast": 7.80790272579249,
+      "primary_height_px": 44,
+      "caption_effective_opacity": 1
+    },
+    "page_errors": []
+  },
+  "final_presentation_smoke": true,
+  "source_sha256": {
+    "app.py": "ae34071d4e4236fe41d8bc9cffa8f921d07086776b72953c0cf35db928067b0b",
+    "src/fairness_ui.py": "6d49ee9f0c78f0ea2f2e14be78beaa5e7dc0a82e1a5fe5df8b494a856aae81c0",
+    "tests/test_app.py": "2a1c238ccd4b3ebc845c7e31919556704a4efaf2363e2c18d86a9c1b5b6d6f12",
+    "tests/test_fairness_app.py": "6faea6778ea20ed6e3e71aa9343da9356037891473b8334c99079a41384beb4e",
+    "scripts/capture_ui.py": "5a21fffc39b46b137e53864ae197e18ff23e7eb621b39a93102f9a4528929abe"
+  },
+  "preservation": {
+    "checked_files": 111,
+    "changed_files": 0,
+    "scope": "模型、冻结公平性结果、002/003 原始操作证据及 003 来稿"
+  },
+  "feedback_records": {
+    "participants": [
+      "002",
+      "003",
+      "004"
+    ],
+    "pending_participants": [],
+    "task_rows": 18,
+    "retest_rows": 12,
+    "score_scope": "第二轮界面：002复测、003复测、004首测",
+    "ease_scores": [
+      4,
+      4,
+      4
+    ],
+    "clarity_scores": [
+      4,
+      4,
+      4
+    ],
+    "ease_mean": 4.0,
+    "clarity_mean": 4.0,
+    "paired_before": {
+      "participants": [
+        "002",
+        "003"
+      ],
+      "ease_scores": [
+        4,
+        3
+      ],
+      "clarity_scores": [
+        4,
+        3
+      ],
+      "ease_mean": 3.5,
+      "clarity_mean": 3.5
+    },
+    "final_action_coverage": {
+      "completed": 18,
+      "total": 18,
+      "includes_retries_and_recovery": true,
+      "first_independent_success_rate": null
+    },
+    "missing_full_task_times": [],
+    "note": "三份任务记录已收到。初次任务表跨版本；004首测不加入修改前均值。计时范围不同，不合并平均；资料暴露下的定性理解不作为首次理解率。",
+    "task_timings": [
+      {
+        "participant": "004",
+        "task": "T1",
+        "seconds": 1.75
+      }
+    ]
+  },
+  "human_retest": "已收到002、003更新后复测及004新版首测，详见user_test/interaction_iteration.md；原技术验证时间和测试结果不变，本次未重跑应用或浏览器测试。",
+  "service_url": "http://127.0.0.1:8501/",
+  "screenshot_files": [
+    "01_input.png",
+    "02_import_error.png",
+    "03_result.png",
+    "04_stale.png",
+    "05_feedback.png",
+    "06_fairness.png",
+    "07_mobile.png",
+    "08_trend.png",
+    "09_fairness_groups.png",
+    "10_summary_comparison.png",
+    "11_mobile_result.png"
+  ],
+  "feedback_updated_at": "2026-10-19T19:40:49+08:00",
+  "human_retest_at_technical_check": "修改后真人复测尚未开展；自动化检查不代表满意度或理解提升。",
+  "feedback_update_validation": {
+    "at": "2026-10-19T19:40:49+08:00",
+    "protected_files_unchanged": 113,
+    "scope": "应用、源码、测试、模型、冻结公平性结果及004原始工具证据",
+    "initial_attachment_preserved": true,
+    "current_report_sha256": "34a086f305504f79699dcb712104efc87cde63efb47474f1641e103beef2684b",
+    "primary_task_rows": 18,
+    "retest_rows": 12,
+    "application_tests_rerun": false,
+    "browser_tests_rerun": false
+  }
+}

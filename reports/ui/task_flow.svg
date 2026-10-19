@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="900" viewBox="0 0 1100 900" role="img" aria-labelledby="title desc">
+  <title id="title">WeightTrend 核心任务流程</title>
+  <desc id="desc">录入或导入、校验、查看概览、运行模型、结果解释、反馈与修改重算。校验错误返回输入，运行失败保留结果并重试。公平性审核使用独立入口。</desc>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#174ea6"/></marker></defs>
+  <rect width="1100" height="900" fill="#f5f8fc"/>
+  <g font-family="Microsoft YaHei, sans-serif" text-anchor="middle" fill="#152a43">
+    <text x="550" y="52" font-size="28" font-weight="bold">WeightTrend · 从输入到反馈</text>
+    <text x="550" y="84" font-size="16">大学生课堂体验 / 审核人员独立查看公平性</text>
+    <g fill="#ffffff" stroke="#b3c5e0" stroke-width="2">
+      <rect x="320" y="115" width="460" height="65" rx="14"/>
+      <rect x="320" y="225" width="460" height="65" rx="14"/>
+      <rect x="320" y="335" width="460" height="65" rx="14"/>
+      <rect x="320" y="445" width="460" height="65" rx="14"/>
+      <rect x="320" y="555" width="460" height="80" rx="14"/>
+      <rect x="320" y="680" width="460" height="65" rx="14"/>
+      <rect x="320" y="790" width="460" height="65" rx="14"/>
+      <rect x="25" y="225" width="245" height="80" rx="14" fill="#fff5df"/>
+      <rect x="830" y="445" width="245" height="80" rx="14" fill="#fff5df"/>
+      <rect x="830" y="115" width="245" height="105" rx="14" fill="#e8f0fc"/>
+    </g>
+    <g font-size="20">
+      <text x="550" y="155">① 手动录入 / 演示档案 / 单人 CSV</text>
+      <text x="550" y="265">② 校验名称、单位、缺失值与格式</text>
+      <text x="550" y="375">③ 查看当前输入概览及数据来源</text>
+      <text x="550" y="485">④ 点击分析 · 加载已训练模型</text>
+      <text x="550" y="587">⑤ 七分类结果、概率与局限说明</text>
+      <text x="550" y="616" font-size="16">可选：记录趋势 + 独立能量平衡外推</text>
+      <text x="550" y="720">⑥ 理解自测 · 匿名反馈 · 下载</text>
+      <text x="550" y="830">修改输入 → 标记旧结果 → 重算比较</text>
+    </g>
+    <g font-size="17">
+      <text x="147" y="258">输入有误：指出字段</text><text x="147" y="286">保留内容，修正后再试</text>
+      <text x="952" y="478">分析失败：保留快照</text><text x="952" y="506">检查文件或依赖后重试</text>
+      <text x="952" y="148">独立公平性审核入口</text><text x="952" y="179">群体规模 / 错误 / 区间</text><text x="952" y="205">比较前后，不宣称完全公平</text>
+    </g>
+  </g>
+  <g fill="none" stroke="#174ea6" stroke-width="2" marker-end="url(#arrow)">
+    <path d="M550 180 V222"/><path d="M550 290 V332"/><path d="M550 400 V442"/><path d="M550 510 V552"/><path d="M550 635 V677"/><path d="M550 745 V787"/>
+    <path d="M320 257 H273"/><path d="M147 225 V147 H317"/>
+    <path d="M780 477 H827"/><path d="M952 525 V550 H800 V495 H783"/>
+    <path d="M780 147 H827" stroke-dasharray="6 5"/>
+    <path d="M320 822 H290 V368 H317"/>
+  </g>
+</svg>

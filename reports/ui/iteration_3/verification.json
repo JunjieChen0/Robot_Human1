@@ -1,0 +1,112 @@
+{
+  "verified_at": "2026-10-19T19:57:11+08:00",
+  "ui_iteration": 3,
+  "application_tests": {
+    "command": "python -m pytest -q --tb=short",
+    "passed": 55,
+    "failed": 0,
+    "elapsed_seconds": 31.64
+  },
+  "browser_checks": {
+    "record": "browser_checks.json",
+    "passed": 32,
+    "total": 32,
+    "browser": "150.0.7871.127",
+    "measurements": {
+      "primary_contrast": 7.845123434042659,
+      "caption_on_white_contrast": 7.80790272579249,
+      "primary_height_px": 44,
+      "caption_effective_opacity": 1
+    },
+    "page_errors": []
+  },
+  "source_sha256": {
+    "app.py": "daccfd611c8b35e38ebec52e2605968158996c19466405512c681a28beaa6486",
+    "requirements.txt": "aabe81f011ba8e94f56577cbe2ff0549171bd002c50aa929b37aacc0637406c5",
+    "scripts/capture_ui.py": "392b549f296131ae245ff974d6180faa1afe43a5bf2bffd140fb56f7e594fcce",
+    "src/config.py": "0d25c0018404a4151bc3c3c3b923db4df0a8525307618afe71979eff477260be",
+    "src/download_data.py": "ac8f0bd46b1ae693451499e2152e26cb528f628c618e191cd7b2dcea96000075",
+    "src/energy.py": "d13a8e541a937c84384c9e9e7354b9f59151bdba306c8ec4b9ac6955c437b697",
+    "src/error_analysis.py": "a8706642e34b5d5c0d89fb013312d2c8037a69a769b157c7724074d3a7bec500",
+    "src/evaluate.py": "cd81adaa2c1e4c30fe9fbcb7d9245cd309d3b5635ea50a656aa955e26b003e05",
+    "src/fairness.py": "1d91e5c5b4b97539285235d67bc457fc8e21f51610b62b80dfcb27488de24106",
+    "src/fairness_report.py": "2a691652bdd50ce552a4f955d5f552e76e638a2729827e3b928d96fab48db981",
+    "src/fairness_ui.py": "77e09d3d50494e5a11f03f2d4b4ad76d82002c9ba26bc6777566fe57f9ec72c1",
+    "src/preprocess.py": "4bc614607c75c78e16904e35dcbb183e2b01dda2ff465e0d84877554e382911d",
+    "src/profile_io.py": "9fd58b254ac099963f15832ee75338ce50f46a125db77a6ef3c8e9883b8d7669",
+    "src/train.py": "e076207a385c82cd71891c18b32aa7a7c92f5e82298409cc40130372b4e8235b",
+    "src/validation.py": "31a52fec8acdcbac31c3701c9c4e48123de7634212ad158c94f572017b89bc43",
+    "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tests/test_app.py": "f82d25347307ee16d415778449f2f23284c3f74bb0d1a38f8a6bfab9fdbd10f8",
+    "tests/test_energy.py": "2f54d479953c045583787599c8580a9179195999cb31a29c96c16355fb28a24d",
+    "tests/test_fairness.py": "73b7d2bec705d70a8f5c0501adc3676af0fe8e664b27e23afc2694862725be40",
+    "tests/test_fairness_app.py": "729fa55be0db928cadb333e170f988c88e08e2e170a5519656c1980a835dd2d6",
+    "tests/test_model.py": "57eb6fba070cfaaadc9481ab5a74aef3441b76e30ba6bcdbf31496de2b53a6ba",
+    "tests/test_preprocess.py": "631cdb8c60bb06b335761651b700ad08ee5a16110b212cba497702c77974f006",
+    "tests/test_profile_io.py": "b962671838150cfebf5b07ea5c66cab0c53d44d4fd121e4168cf4ea367b990f3",
+    "tests/test_validation.py": "1d8df2651340c8b54e99e5331e643ef211118b11ec1047fd4de30cdbf46d1724",
+    "tests/__init__.py": "8836a307985ef1d2d626a34e28be2cd27e0090e406cdf11a2d4d777f1ed777ae"
+  },
+  "preservation": {
+    "checked_files": 290,
+    "changed_files": 0,
+    "scope": "模型、冻结公平性结果、参与者原稿/证据/CSV及非汇总的测试材料",
+    "baseline": "preservation_baseline.json"
+  },
+  "implemented_feedback": [
+    "R01",
+    "R02",
+    "R03",
+    "R04",
+    "R05",
+    "R06",
+    "R07",
+    "R08",
+    "R09",
+    "R10"
+  ],
+  "feedback_scope": "002/003复测及004首测均对应第二轮界面；第三轮尚无新的真人评价，旧记录及评分不改写。",
+  "human_tests_after_iteration_3": false,
+  "service_url": "http://127.0.0.1:8501/",
+  "screenshots": [
+    "01_input.png",
+    "02_import_error.png",
+    "03_result.png",
+    "04_stale.png",
+    "05_feedback.png",
+    "06_fairness.png",
+    "07_mobile.png",
+    "08_trend.png",
+    "09_fairness_groups.png",
+    "10_summary_comparison.png",
+    "11_mobile_result.png",
+    "12_probability_chart.png",
+    "13_trend_chart.png",
+    "14_fairness_intervals.png",
+    "15_partial_success.png",
+    "16_csv_codes.png"
+  ],
+  "visual_review": [
+    "横向概率图与排序",
+    "趋势中文轴、记录实线与外推虚线及起点",
+    "审核区间百分比与中文说明",
+    "部分成功提示",
+    "窄屏截图"
+  ],
+  "limitations": [
+    "尚未收集第三轮新真人反馈",
+    "完整键盘遍历与屏幕阅读器体验未验证"
+  ],
+  "implementation_references": [
+    "https://docs.streamlit.io/develop/api-reference/charts/st.altair_chart",
+    "https://docs.streamlit.io/develop/concepts/architecture/widget-behavior"
+  ],
+  "independent_package_tests": {
+    "verified_at": "2026-10-19T19:59:50+08:00",
+    "command": "python -m pytest -q --tb=short",
+    "passed": 55,
+    "failed": 0,
+    "elapsed_seconds": 29.04,
+    "source_files_match": 25
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "kind": "自动化浏览器回归，非真人用户测试",
+  "browser": "150.0.7871.127",
+  "checks": {
+    "primary_contrast_at_least_4_5": true,
+    "caption_contrast_at_least_4_5": true,
+    "primary_button_at_least_44_px": true,
+    "initial_empty_state": true,
+    "invalid_csv_recovery": true,
+    "valid_csv_import": true,
+    "model_result": true,
+    "edit_and_reanalyze": true,
+    "feedback_keeps_result": true,
+    "feedback_download": true,
+    "navigation_preserves_profile": true,
+    "visible_keyboard_focus": true,
+    "keyboard_analysis": true,
+    "mobile_no_page_overflow": true,
+    "no_browser_errors": true
+  },
+  "measurements": {
+    "primary_contrast": 7.845123434042659,
+    "caption_on_white_contrast": 7.80790272579249,
+    "primary_height_px": 44
+  },
+  "page_errors": []
+}

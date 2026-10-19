@@ -1,0 +1,38 @@
+{
+  "T1_interrupted_attempt": {
+    "started_at": "2026-10-19T17:42:17.878734+08:00",
+    "finished_at": "2026-10-19T17:43:32.109614+08:00",
+    "wall_seconds": 74.23,
+    "note": "Import succeeded; evidence capture locator failed and console interrupt terminated browser driver. Restarting in a fresh context. Not an application crash."
+  },
+  "T1": {
+    "started_at": "2026-10-19T17:43:43.356601+08:00",
+    "finished_at": "2026-10-19T17:43:45.104350+08:00",
+    "wall_seconds": 1.75
+  },
+  "T2": {
+    "started_at": "2026-10-19T17:44:07.779278+08:00",
+    "finished_at": "2026-10-19T17:44:49.150934+08:00",
+    "wall_seconds": 41.37
+  },
+  "T3": {
+    "started_at": "2026-10-19T17:44:49.154131+08:00",
+    "finished_at": "2026-10-19T17:45:16.815615+08:00",
+    "wall_seconds": 27.66
+  },
+  "T4": {
+    "started_at": "2026-10-19T17:45:16.817618+08:00",
+    "finished_at": "2026-10-19T17:45:52.218092+08:00",
+    "wall_seconds": 35.4
+  },
+  "T5": {
+    "started_at": "2026-10-19T17:45:52.223114+08:00",
+    "finished_at": "2026-10-19T17:46:26.522020+08:00",
+    "wall_seconds": 34.3
+  },
+  "T6": {
+    "started_at": "2026-10-19T17:46:26.525435+08:00",
+    "finished_at": "2026-10-19T17:49:20.995000+08:00",
+    "wall_seconds": 174.47
+  }
+}

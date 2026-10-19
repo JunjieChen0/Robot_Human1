@@ -1,0 +1,36 @@
+{
+  "verified_at": "2026-10-19T13:59:07+08:00",
+  "python": "3.11.15",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "dependencies": {
+    "numpy": "2.3.5",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.9.0",
+    "scipy": "1.15.3",
+    "matplotlib": "3.11.0",
+    "streamlit": "1.65.0",
+    "joblib": "1.6.0",
+    "pytest": "8.4.2",
+    "fairlearn": "0.13.0"
+  },
+  "application_tests": {
+    "command": "python -m pytest -q --tb=short",
+    "passed": 54,
+    "failed": 0,
+    "note": "真实运行；非真人用户测试"
+  },
+  "browser_checks_passed": 15,
+  "browser_checks_total": 15,
+  "browser_measurements": {
+    "primary_contrast": 7.845123434042659,
+    "caption_on_white_contrast": 7.80790272579249,
+    "primary_height_px": 44
+  },
+  "model_sha256": {
+    "models/final_model.joblib": "f7083176c32558a3734fcd42f2073b77f6c10ebf7040b124bc7442d26b26e5e1",
+    "models/model_metadata.json": "e4c7d029d9e037d8b3bf2c3cab47ac611217c42a2a05fa223ed5979f96bae7b0",
+    "models/raw_ranges.json": "56bece667aceb7da5adcdde9667216b69b6d694c4cc43b7c9c012d6307792b98"
+  },
+  "human_retest": "用户确认尚未开展；本轮先交付界面与测试材料",
+  "review_scope": "界面、导入校验、反馈、异常恢复、文档和截图；没有改动模型训练流程及冻结审核数据"
+}

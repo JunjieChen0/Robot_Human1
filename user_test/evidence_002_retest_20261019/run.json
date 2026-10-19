@@ -1,0 +1,241 @@
+{
+  "kind": "AI browser retest; not a new human participant",
+  "participant": "002",
+  "round": "updated UI retest",
+  "started_at": "2026-10-19T16:45:04+08:00",
+  "prior_exposure": "Previously executed T1-T6 and read project guides and implementation; no blind understanding evaluation.",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "driver_python": "3.13.6",
+  "server_python": "3.11.15",
+  "server_streamlit": "1.65.0",
+  "server_sklearn": "1.9.0",
+  "viewport": {
+    "width": 1440,
+    "height": 1000
+  },
+  "url": "http://127.0.0.1:8502",
+  "timing": "perf_counter automation execution and capture only; excludes human reading/thinking/answering and is not comparable to human task times.",
+  "git_head": "0e2963bd0401fb230e84107a7166caf038bfdaa8",
+  "git_status_before": " M .gitignore\n M CHANGELOG.md\n M README.md\n M app.py\n M src/config.py\n M src/fairness_ui.py\n M src/validation.py\n M tests/test_app.py\n M tests/test_fairness_app.py\n M tests/test_validation.py\n?? data/sample/profile_template.csv\n?? reports/ui/\n?? scripts/\n?? src/profile_io.py\n?? tests/test_profile_io.py\n?? user_test/ai_walkthrough_records.csv\n?? user_test/evidence_002/\n?? user_test/evidence_003/\n?? user_test/feedback_001.md\n?? user_test/feedback_002.md\n?? user_test/feedback_002_review.md\n?? user_test/feedback_003.md\n?? user_test/feedback_003_review.md\n?? user_test/interaction_iteration.md\n?? user_test/interaction_records.csv\n?? user_test/interaction_test_guide.md\n?? \"user_test/\\347\\234\\237\\344\\272\\272\\346\\265\\213\\350\\257\\225\\345\\241\\253\\345\\206\\231\\346\\250\\241\\346\\235\\277.md\"\n?? \"user_test/\\347\\234\\237\\344\\272\\272\\346\\265\\213\\350\\257\\225\\347\\256\\200\\347\\211\\210\\350\\257\\264\\346\\230\\216.md\"\n",
+  "protected_hashes_before": {
+    "app.py": "ae34071d4e4236fe41d8bc9cffa8f921d07086776b72953c0cf35db928067b0b",
+    "src/config.py": "0d25c0018404a4151bc3c3c3b923db4df0a8525307618afe71979eff477260be",
+    "src/fairness_ui.py": "6d49ee9f0c78f0ea2f2e14be78beaa5e7dc0a82e1a5fe5df8b494a856aae81c0",
+    "src/validation.py": "31a52fec8acdcbac31c3701c9c4e48123de7634212ad158c94f572017b89bc43",
+    "src/profile_io.py": "9fd58b254ac099963f15832ee75338ce50f46a125db77a6ef3c8e9883b8d7669",
+    "models/final_model.joblib": "f7083176c32558a3734fcd42f2073b77f6c10ebf7040b124bc7442d26b26e5e1",
+    "models/model_metadata.json": "e4c7d029d9e037d8b3bf2c3cab47ac611217c42a2a05fa223ed5979f96bae7b0",
+    "data/sample/profile_template.csv": "92ad965498c172cadc484c20f5b1be51e9e7ede92ef97ce067e0eea194f81904",
+    "user_test/真人测试填写模板.md": "1bc14117064a4c9281c9cb71d70d031b6263daf5eba9c5130cdbb62bb18921a1",
+    "user_test/feedback_002.md": "08a8ac4b8429549fbca8da8133b551344682993e45daac22b85ac76d54c68ef8",
+    "user_test/feedback_002_review.md": "fc87eb440a163fa90f42cc5ca1daa903e71fecde78118989b266458a744112a1",
+    "user_test/evidence_002/run.json": "2b8041280415494c853af97f75b445d3e6ca01d8e2110e8eed9cb49d6ef2a490",
+    "user_test/evidence_002/weighttrend_feedback.json": "310287926717423f898310c1072b24b212f17e0a0076d1edf60f979fe941fcd1"
+  },
+  "tasks": {
+    "T1": {
+      "status": "completed",
+      "automation_seconds": 1.069,
+      "observable_wrong_actions": 0,
+      "help_requests_during_execution": 0,
+      "height": "1.70",
+      "weight": "70.0",
+      "source": "Repository sample CSV; not personal health data"
+    },
+    "T2": {
+      "status": "completed",
+      "automation_seconds": 2.838,
+      "observable_wrong_actions": 0,
+      "help_requests_during_execution": 0,
+      "metrics": [
+        "档案体重\n\n70.0 kg",
+        "身高\n\n1.70 m",
+        "运动频率评分\n\n1 / 3",
+        "本次分类结论\n\n正常体重",
+        "分类采用档案体重\n\n70.0 kg",
+        "趋势采用日志体重\n\n70.5 kg",
+        "估计等级\n\n正常体重",
+        "最高类别概率\n\n47.0%",
+        "最高与第二高差值\n\n12.3%",
+        "最新体重\n\n70.5 kg",
+        "活动水平\n\n轻度活动",
+        "每日消耗估算\n\n2037 kcal",
+        "每日能量差\n\n+237 kcal"
+      ],
+      "answer": "Classification estimates obesity category of current input; trend is simulated weight records plus separate energy extrapolation."
+    },
+    "T3": {
+      "status": "completed",
+      "automation_seconds": 0.439,
+      "observable_wrong_actions": 0,
+      "help_requests_during_execution": 0,
+      "answer": "80% category probability is neither illness risk nor absolute accuracy. Unvalidated populations cannot be generalized to all university students.",
+      "new_explanations_observed": [
+        "importance 0.326 example",
+        "cross-sectional survey plain-language explanation",
+        "median explanation"
+      ],
+      "prior_exposure": true
+    },
+    "T4": {
+      "status": "completed",
+      "automation_seconds": 1.518,
+      "observable_wrong_actions": 0,
+      "help_requests_during_execution": 0,
+      "before": [
+        "档案体重\n\n70.0 kg",
+        "身高\n\n1.70 m",
+        "运动频率评分\n\n1 / 3",
+        "本次分类结论\n\n正常体重",
+        "分类采用档案体重\n\n70.0 kg",
+        "趋势采用日志体重\n\n70.5 kg",
+        "估计等级\n\n正常体重",
+        "最高类别概率\n\n47.0%",
+        "最高与第二高差值\n\n12.3%",
+        "最新体重\n\n70.5 kg",
+        "活动水平\n\n轻度活动",
+        "每日消耗估算\n\n2037 kcal",
+        "每日能量差\n\n+237 kcal"
+      ],
+      "stale": [
+        "档案体重\n\n80.0 kg",
+        "身高\n\n1.70 m",
+        "运动频率评分\n\n1 / 3",
+        "本次分类结论\n\n正常体重",
+        "分类采用档案体重\n\n70.0 kg",
+        "趋势采用日志体重\n\n70.5 kg",
+        "估计等级\n\n正常体重",
+        "最高类别概率\n\n47.0%",
+        "最高与第二高差值\n\n12.3%",
+        "最新体重\n\n70.5 kg",
+        "活动水平\n\n轻度活动",
+        "每日消耗估算\n\n2037 kcal",
+        "每日能量差\n\n+237 kcal"
+      ],
+      "after": [
+        "档案体重\n\n80.0 kg",
+        "身高\n\n1.70 m",
+        "运动频率评分\n\n1 / 3",
+        "本次分类结论\n\n正常体重",
+        "分类采用档案体重\n\n80.0 kg",
+        "趋势采用日志体重\n\n70.5 kg",
+        "估计等级\n\n正常体重",
+        "最高类别概率\n\n32.7%",
+        "最高与第二高差值\n\n2.0%",
+        "最新体重\n\n70.5 kg",
+        "活动水平\n\n轻度活动",
+        "每日消耗估算\n\n2037 kcal",
+        "每日能量差\n\n+237 kcal"
+      ],
+      "comparison_before_detail": true,
+      "comparison_message": [
+        "分类未改变：正常体重；最高类别概率 47.0% → 32.7%。"
+      ]
+    },
+    "T5": {
+      "status": "completed",
+      "automation_seconds": 2.156,
+      "observable_wrong_actions": 0,
+      "help_requests_during_execution": 0,
+      "error_metrics": [
+        "档案体重\n\n80.0 kg",
+        "身高\n\n1.70 m",
+        "运动频率评分\n\n1 / 3",
+        "本次分类结论\n\n正常体重",
+        "分类采用档案体重\n\n80.0 kg",
+        "趋势采用日志体重\n\n未生成",
+        "估计等级\n\n正常体重",
+        "最高类别概率\n\n32.7%",
+        "最高与第二高差值\n\n2.0%"
+      ],
+      "recovered_metrics": [
+        "档案体重\n\n80.0 kg",
+        "身高\n\n1.70 m",
+        "运动频率评分\n\n1 / 3",
+        "本次分类结论\n\n正常体重",
+        "分类采用档案体重\n\n80.0 kg",
+        "趋势采用日志体重\n\n70.5 kg",
+        "估计等级\n\n正常体重",
+        "最高类别概率\n\n32.7%",
+        "最高与第二高差值\n\n2.0%",
+        "最新体重\n\n70.5 kg",
+        "活动水平\n\n轻度活动",
+        "每日消耗估算\n\n2037 kcal",
+        "每日能量差\n\n+237 kcal"
+      ],
+      "error_link_url": "http://127.0.0.1:8502/#daily-intake",
+      "error_link_reached_field": true,
+      "prescribed_zero_is_not_wrong_action": true
+    },
+    "T6": {
+      "status": "completed",
+      "automation_seconds": 7.216,
+      "observable_wrong_actions": 0,
+      "help_requests_during_execution": 0,
+      "downloaded_feedback": {
+        "analysis_time": "2026-10-19T16:45:31+08:00",
+        "feedback_time": "2026-10-19T16:45:32+08:00",
+        "ease_1_to_5": 4,
+        "answer": "根据当前输入估计的肥胖等级",
+        "understood_classification": true,
+        "comment": "002 更新后复测，AI 实际浏览器操作，非真人测试。结果摘要、前后对比、错误定位和反馈直达入口已试用；建议仍保留概率与外推的区别说明。"
+      },
+      "feedback_link_url": "http://127.0.0.1:8502/#user-feedback",
+      "feedback_link_reached_section": true,
+      "fairness_metrics": [
+        "基线平衡准确率\n\n99.26%",
+        "约束方案平衡准确率\n\n99.26%",
+        "错误率群体差值 EO\n\n0.0208"
+      ],
+      "groups_switched": [
+        "女性",
+        "男性",
+        "全部群体"
+      ],
+      "metrics_switched": [
+        "漏判率 FNR",
+        "误判率 FPR"
+      ],
+      "details_initially_collapsed": true,
+      "fairness_answer": "Both schemes have identical EO 0.0208 and no improvement in these results. Zero female errors does not mean perfect fairness or no future errors.",
+      "returned_metrics": [
+        "档案体重\n\n80.0 kg",
+        "身高\n\n1.70 m",
+        "运动频率评分\n\n1 / 3",
+        "本次分类结论\n\n正常体重",
+        "分类采用档案体重\n\n80.0 kg",
+        "趋势采用日志体重\n\n70.5 kg",
+        "估计等级\n\n正常体重",
+        "最高类别概率\n\n32.7%",
+        "最高与第二高差值\n\n2.0%",
+        "最新体重\n\n70.5 kg",
+        "活动水平\n\n轻度活动",
+        "每日消耗估算\n\n2037 kcal",
+        "每日能量差\n\n+237 kcal"
+      ],
+      "saved_feedback_retained": true
+    }
+  },
+  "page_errors": [],
+  "browser": "Google Chrome 150.0.7871.127",
+  "import_expander_initially_open": false,
+  "fairness_answer_before_self_test": "Both schemes have identical EO 0.0208 and no improvement in these results. Zero female errors does not mean perfect fairness or no future errors.",
+  "protected_hashes_after": {
+    "app.py": "ae34071d4e4236fe41d8bc9cffa8f921d07086776b72953c0cf35db928067b0b",
+    "src/config.py": "0d25c0018404a4151bc3c3c3b923db4df0a8525307618afe71979eff477260be",
+    "src/fairness_ui.py": "6d49ee9f0c78f0ea2f2e14be78beaa5e7dc0a82e1a5fe5df8b494a856aae81c0",
+    "src/validation.py": "31a52fec8acdcbac31c3701c9c4e48123de7634212ad158c94f572017b89bc43",
+    "src/profile_io.py": "9fd58b254ac099963f15832ee75338ce50f46a125db77a6ef3c8e9883b8d7669",
+    "models/final_model.joblib": "f7083176c32558a3734fcd42f2073b77f6c10ebf7040b124bc7442d26b26e5e1",
+    "models/model_metadata.json": "e4c7d029d9e037d8b3bf2c3cab47ac611217c42a2a05fa223ed5979f96bae7b0",
+    "data/sample/profile_template.csv": "92ad965498c172cadc484c20f5b1be51e9e7ede92ef97ce067e0eea194f81904",
+    "user_test/真人测试填写模板.md": "1bc14117064a4c9281c9cb71d70d031b6263daf5eba9c5130cdbb62bb18921a1",
+    "user_test/feedback_002.md": "08a8ac4b8429549fbca8da8133b551344682993e45daac22b85ac76d54c68ef8",
+    "user_test/feedback_002_review.md": "fc87eb440a163fa90f42cc5ca1daa903e71fecde78118989b266458a744112a1",
+    "user_test/evidence_002/run.json": "2b8041280415494c853af97f75b445d3e6ca01d8e2110e8eed9cb49d6ef2a490",
+    "user_test/evidence_002/weighttrend_feedback.json": "310287926717423f898310c1072b24b212f17e0a0076d1edf60f979fe941fcd1"
+  },
+  "protected_files_unchanged": true,
+  "completed": true,
+  "finished_at": "2026-10-19T16:45:39+08:00"
+}

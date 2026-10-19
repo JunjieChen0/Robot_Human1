@@ -1,0 +1,95 @@
+{
+  "participant": "004",
+  "operator": "Codex AI",
+  "started_at": "2026-10-19T17:41:54.407413+08:00",
+  "url": "http://127.0.0.1:8501/",
+  "os": "Windows-10-10.0.26200-SP0",
+  "browser": "Google Chrome 150.0.7871.127",
+  "headless": true,
+  "viewport": {
+    "width": 1440,
+    "height": 1000
+  },
+  "fresh_context": true,
+  "git_head": "0e2963bd0401fb230e84107a7166caf038bfdaa8",
+  "git_status_before": " M .gitignore\n M CHANGELOG.md\n M README.md\n M app.py\n M src/config.py\n M src/fairness_ui.py\n M src/validation.py\n M tests/test_app.py\n M tests/test_fairness_app.py\n M tests/test_validation.py\n?? data/sample/profile_template.csv\n?? reports/ui/\n?? scripts/\n?? src/profile_io.py\n?? tests/test_profile_io.py\n?? user_test/ai_walkthrough_records.csv\n?? user_test/evidence_002/\n?? user_test/evidence_002_retest_20261019/\n?? user_test/evidence_003/\n?? user_test/feedback_002.md\n?? user_test/feedback_002_retest_20261019.md\n?? user_test/feedback_002_retest_timing_20261019.md\n?? user_test/feedback_002_review.md\n?? user_test/feedback_003.md\n?? user_test/feedback_003_retest_20261019.md\n?? user_test/feedback_003_review.md\n?? user_test/feedback_004_template.md\n?? user_test/interaction_iteration.md\n?? user_test/interaction_records.csv\n?? user_test/interaction_test_guide.md\n?? user_test/retest_comparison_20261019.md\n?? user_test/retest_records_20261019.csv\n?? \"user_test/\\347\\234\\237\\344\\272\\272\\346\\265\\213\\350\\257\\225\\345\\241\\253\\345\\206\\231\\346\\250\\241\\346\\235\\277.md\"\n?? \"user_test/\\347\\234\\237\\344\\272\\272\\346\\265\\213\\350\\257\\225\\347\\256\\200\\347\\211\\210\\350\\257\\264\\346\\230\\216.md\"\n",
+  "source_hashes_before": {
+    "app.py": "ae34071d4e4236fe41d8bc9cffa8f921d07086776b72953c0cf35db928067b0b",
+    "src\\config.py": "0d25c0018404a4151bc3c3c3b923db4df0a8525307618afe71979eff477260be",
+    "src\\download_data.py": "ac8f0bd46b1ae693451499e2152e26cb528f628c618e191cd7b2dcea96000075",
+    "src\\energy.py": "d13a8e541a937c84384c9e9e7354b9f59151bdba306c8ec4b9ac6955c437b697",
+    "src\\error_analysis.py": "a8706642e34b5d5c0d89fb013312d2c8037a69a769b157c7724074d3a7bec500",
+    "src\\evaluate.py": "cd81adaa2c1e4c30fe9fbcb7d9245cd309d3b5635ea50a656aa955e26b003e05",
+    "src\\fairness.py": "1d91e5c5b4b97539285235d67bc457fc8e21f51610b62b80dfcb27488de24106",
+    "src\\fairness_report.py": "2a691652bdd50ce552a4f955d5f552e76e638a2729827e3b928d96fab48db981",
+    "src\\fairness_ui.py": "6d49ee9f0c78f0ea2f2e14be78beaa5e7dc0a82e1a5fe5df8b494a856aae81c0",
+    "src\\preprocess.py": "4bc614607c75c78e16904e35dcbb183e2b01dda2ff465e0d84877554e382911d",
+    "src\\profile_io.py": "9fd58b254ac099963f15832ee75338ce50f46a125db77a6ef3c8e9883b8d7669",
+    "src\\train.py": "e076207a385c82cd71891c18b32aa7a7c92f5e82298409cc40130372b4e8235b",
+    "src\\validation.py": "31a52fec8acdcbac31c3701c9c4e48123de7634212ad158c94f572017b89bc43",
+    "src\\__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "timing": "perf_counter wall time across interactive operations; includes AI reading, tool orchestration, UI waiting, screenshots and evidence IO; not human task time",
+  "finished_at": "2026-10-19T17:49:21.036289+08:00",
+  "source_hashes_after": {
+    "app.py": "ae34071d4e4236fe41d8bc9cffa8f921d07086776b72953c0cf35db928067b0b",
+    "src\\config.py": "0d25c0018404a4151bc3c3c3b923db4df0a8525307618afe71979eff477260be",
+    "src\\download_data.py": "ac8f0bd46b1ae693451499e2152e26cb528f628c618e191cd7b2dcea96000075",
+    "src\\energy.py": "d13a8e541a937c84384c9e9e7354b9f59151bdba306c8ec4b9ac6955c437b697",
+    "src\\error_analysis.py": "a8706642e34b5d5c0d89fb013312d2c8037a69a769b157c7724074d3a7bec500",
+    "src\\evaluate.py": "cd81adaa2c1e4c30fe9fbcb7d9245cd309d3b5635ea50a656aa955e26b003e05",
+    "src\\fairness.py": "1d91e5c5b4b97539285235d67bc457fc8e21f51610b62b80dfcb27488de24106",
+    "src\\fairness_report.py": "2a691652bdd50ce552a4f955d5f552e76e638a2729827e3b928d96fab48db981",
+    "src\\fairness_ui.py": "6d49ee9f0c78f0ea2f2e14be78beaa5e7dc0a82e1a5fe5df8b494a856aae81c0",
+    "src\\preprocess.py": "4bc614607c75c78e16904e35dcbb183e2b01dda2ff465e0d84877554e382911d",
+    "src\\profile_io.py": "9fd58b254ac099963f15832ee75338ce50f46a125db77a6ef3c8e9883b8d7669",
+    "src\\train.py": "e076207a385c82cd71891c18b32aa7a7c92f5e82298409cc40130372b4e8235b",
+    "src\\validation.py": "31a52fec8acdcbac31c3701c9c4e48123de7634212ad158c94f572017b89bc43",
+    "src\\__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "tasks": {
+    "T1_interrupted_attempt": {
+      "started_at": "2026-10-19T17:42:17.878734+08:00",
+      "finished_at": "2026-10-19T17:43:32.109614+08:00",
+      "wall_seconds": 74.23,
+      "note": "Import succeeded; evidence capture locator failed and console interrupt terminated browser driver. Restarting in a fresh context. Not an application crash."
+    },
+    "T1": {
+      "started_at": "2026-10-19T17:43:43.356601+08:00",
+      "finished_at": "2026-10-19T17:43:45.104350+08:00",
+      "wall_seconds": 1.75
+    },
+    "T2": {
+      "started_at": "2026-10-19T17:44:07.779278+08:00",
+      "finished_at": "2026-10-19T17:44:49.150934+08:00",
+      "wall_seconds": 41.37
+    },
+    "T3": {
+      "started_at": "2026-10-19T17:44:49.154131+08:00",
+      "finished_at": "2026-10-19T17:45:16.815615+08:00",
+      "wall_seconds": 27.66
+    },
+    "T4": {
+      "started_at": "2026-10-19T17:45:16.817618+08:00",
+      "finished_at": "2026-10-19T17:45:52.218092+08:00",
+      "wall_seconds": 35.4
+    },
+    "T5": {
+      "started_at": "2026-10-19T17:45:52.223114+08:00",
+      "finished_at": "2026-10-19T17:46:26.522020+08:00",
+      "wall_seconds": 34.3
+    },
+    "T6": {
+      "started_at": "2026-10-19T17:46:26.525435+08:00",
+      "finished_at": "2026-10-19T17:49:20.995000+08:00",
+      "wall_seconds": 174.47
+    }
+  },
+  "technical_limitations": [
+    "T1 import succeeded but a screenshot heading locator failed; console interrupt terminated Playwright driver. Evidence retained and T1 repeated in fresh context.",
+    "T1 successful replay timing covers automated actions and evidence capture only; screenshot reading occurred after stop. It is not full task duration.",
+    "T6 dropdown option locator timed out once; recovered through combobox search and ArrowDown. No wrong group was submitted.",
+    "No human participant was involved; AI had read organizer guidance and screenshot script before operating.",
+    "T2-T6 wall timings include AI reading, orchestration, screenshots, evidence IO and locator recovery; not human usability timings."
+  ]
+}

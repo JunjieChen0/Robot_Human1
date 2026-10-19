@@ -1,0 +1,24 @@
+{
+  "checks": {
+    "six_complete_tasks": true,
+    "no_interruptions": true,
+    "no_page_errors": true,
+    "document_no_references": true,
+    "identity_only_at_start": true,
+    "no_blank_cells": true,
+    "new_ratings": true,
+    "snapshot_preserved": true,
+    "download_matches_frozen_results": true,
+    "table_matches_measured_values": true,
+    "only_report_changed": true,
+    "evidence_hashes_valid": true,
+    "group_results_confirmed": true
+  },
+  "changed_existing_files": [
+    "user_test/feedback_003.md"
+  ],
+  "report_sha256": "4f0e9dca3b683cad215de192b7f5eeea9ba979506d73172bb65da7364f95b092",
+  "run_completed": true,
+  "tested_from": "2026-10-19T16:47:30+08:00",
+  "tested_until": "2026-10-19T16:48:06+08:00"
+}

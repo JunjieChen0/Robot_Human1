@@ -127,3 +127,16 @@ def test_validate_weight_log_reports_too_few_rows_when_all_blank():
     log, errors, _ = validate_weight_log(pd.DataFrame([{"date": "", "weight_kg": None}]))
     assert log.empty
     assert errors == ["至少需要 2 条体重记录才能分析趋势。"]
+
+
+def test_weight_log_missing_columns_returns_recoverable_error():
+    log, errors, _ = validate_weight_log(pd.DataFrame({"weight_kg": [70.0]}))
+    assert log.empty
+    assert "date" in errors[0]
+
+
+def test_missing_profile_value_is_named_in_error():
+    row = valid_row()
+    row["Height"] = None
+    _, errors = validate_profile(row)
+    assert any("身高" in error and "不能为空" in error for error in errors)

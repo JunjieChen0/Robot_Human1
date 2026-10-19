@@ -15,6 +15,7 @@ models/*.json
 
 # 本地作业提交材料（文档、导出文件与代码包均不入库）
 commit/
+commit2/
 
 # 临时输出
 *.log

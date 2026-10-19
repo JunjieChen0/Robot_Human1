@@ -1,0 +1,105 @@
+{
+  "kind": "003 AI 实际浏览器补测，非真人测试",
+  "started_at": "2026-10-19T16:09:15+08:00",
+  "reason": "首次 T6 选取女性选项时定位超时；反馈已下载，后续步骤未完成。",
+  "session": "新会话重建 80 kg 档案与 1800 kcal 趋势，再重新执行完整 T6。",
+  "timing": "仅记录补测 T6 自动化操作、等待与取证耗时，不含准备；不作真人用时。",
+  "events": [
+    {
+      "step": "01_feedback",
+      "at": "2026-10-19T16:09:23+08:00"
+    },
+    {
+      "step": "02_group_female",
+      "at": "2026-10-19T16:09:24+08:00"
+    },
+    {
+      "step": "02_group_male",
+      "at": "2026-10-19T16:09:25+08:00"
+    },
+    {
+      "step": "02_group_all",
+      "at": "2026-10-19T16:09:25+08:00"
+    },
+    {
+      "step": "03_metric_fnr",
+      "at": "2026-10-19T16:09:26+08:00"
+    },
+    {
+      "step": "03_metric_fpr",
+      "at": "2026-10-19T16:09:27+08:00"
+    },
+    {
+      "step": "04_uncertainty",
+      "at": "2026-10-19T16:09:28+08:00"
+    },
+    {
+      "step": "05_return",
+      "at": "2026-10-19T16:09:28+08:00"
+    }
+  ],
+  "page_errors": [],
+  "completed": true,
+  "browser": "150.0.7871.127",
+  "preparation_metrics": [
+    "档案体重\n\n80.0 kg",
+    "身高\n\n1.70 m",
+    "运动频率评分\n\n1 / 3",
+    "估计等级\n\n正常体重",
+    "最高类别概率\n\n32.7%",
+    "最高与第二高差值\n\n2.0%",
+    "最新体重\n\n70.5 kg",
+    "活动水平\n\n轻度活动",
+    "每日消耗估算\n\n2037 kcal",
+    "每日能量差\n\n+237 kcal"
+  ],
+  "feedback": {
+    "analysis_time": "2026-10-19T16:09:20+08:00",
+    "feedback_time": "2026-10-19T16:09:22+08:00",
+    "ease_1_to_5": 3,
+    "answer": "根据当前输入估计的肥胖等级",
+    "understood_classification": true,
+    "comment": "003：AI 实际浏览器补测 T6。建议集中展示两种体重来源及前后对比；评分仅为 AI 界面评估。"
+  },
+  "fairness_metrics": [
+    "基线平衡准确率\n\n99.26%",
+    "约束方案平衡准确率\n\n99.26%",
+    "错误率群体差值 EO\n\n0.0208"
+  ],
+  "fairness_answer": "本次约束前后 EO 均为 0.0208，未改善；女性本次零错误不能说明完全公平或未来不会出错。",
+  "fairness_self_test_opened": false,
+  "returned_metrics": [
+    "档案体重\n\n80.0 kg",
+    "身高\n\n1.70 m",
+    "运动频率评分\n\n1 / 3",
+    "估计等级\n\n正常体重",
+    "最高类别概率\n\n32.7%",
+    "最高与第二高差值\n\n2.0%",
+    "最新体重\n\n70.5 kg",
+    "活动水平\n\n轻度活动",
+    "每日消耗估算\n\n2037 kcal",
+    "每日能量差\n\n+237 kcal"
+  ],
+  "automation_seconds": 6.648,
+  "finished_at": "2026-10-19T16:09:28+08:00",
+  "evidence_hashes": {
+    "01_feedback.png": "a7a2c37c0a0e5a14569378437bdac573f863660a77c2bff86c7e90d48b9b6967",
+    "01_feedback.txt": "a6d1ec71da3af54a1c3ad96d60798b4da345b8e5e1446e1509044385d07205c9",
+    "02_group_all.png": "7e0f3ff527bfe493e6a5d633d7ceb835b049b0b8360837e3f641cfb1aa6a6895",
+    "02_group_all.txt": "aadef7d4248853d85c3bde921735d780abb10a918d014466ada7e73e8f83728c",
+    "02_group_female.png": "63a010fd5e8906a35efc5d1d6878b716835585d49964bf98c9f02461c283e047",
+    "02_group_female.txt": "efb85eea76977ffa7d296f782df3ec2980aae06f05e6b9e0654390ccaca49c47",
+    "02_group_male.png": "b4c4cb4a024d150873546475672097687359dd9fd6ba4032c09957a5f38d671e",
+    "02_group_male.txt": "730f2679bd6179cf0b4be66e75549eaafc5099bba4c9a43bdd63a8821188e765",
+    "03_metric_fnr.png": "c1ecc8a21396eef5f3f095c9490e5a5f6b78cc132378bd8a09dfbe2551d5b416",
+    "03_metric_fnr.txt": "f3446d242f2e25fa248eafe7786f33ea6ea096ef7db06931a42eb80b9488a105",
+    "03_metric_fpr.png": "944b88ff899e8fb592c66e01daa979792b9c73166f741315ecc8b05a7672182e",
+    "03_metric_fpr.txt": "edb28b85535f2ecefe9b71e92ec4ef778bf88da70d813e29b7d95895a4cac655",
+    "04_uncertainty.png": "0c004ec1fbcaf3047f531bd790b8a210066892eb4eb693cbb78b59a937b66548",
+    "04_uncertainty.txt": "5fdfc587972326c8cbbd3b2fdcbf847155d0c491fb1c8eb7ea35a5c09e9735d8",
+    "05_return.png": "31de1bbe158dce6db2eac747fa49e3a2f7d16ecccd864d060a53775ffec37400",
+    "05_return.txt": "6ac2e7f19a3d5c7a72088539a9133569fdfb9590bb71dfb2415c884221ba23b7",
+    "fairness_group_metrics.csv": "40bfd8dba170421dfd348bcf98a13c05a9b4463fa79de42c6fb7c5616a46b5e6",
+    "weighttrend_feedback.json": "63c7f2e4b45f59748f511094cafa1188e0fdc994d2f6a90bdb4682ec1fe5955b"
+  }
+}

@@ -1,0 +1,371 @@
+[
+  {
+    "at": "2026-10-19T17:41:54.691468+08:00",
+    "action": "capture",
+    "name": "00_initial",
+    "url": "http://127.0.0.1:8501/"
+  },
+  {
+    "at": "2026-10-19T17:42:17.878734+08:00",
+    "action": "start_task",
+    "task": "T1"
+  },
+  {
+    "at": "2026-10-19T17:42:18.491771+08:00",
+    "action": "capture",
+    "name": "T1_import",
+    "url": "http://127.0.0.1:8501/"
+  },
+  {
+    "at": "2026-10-19T17:43:12.853188+08:00",
+    "action": "automation_locator_error",
+    "task": "T1",
+    "detail": "Requested heading role for 身体基本信息; no such heading role. Read visible text instead. Not an application input error."
+  },
+  {
+    "at": "2026-10-19T17:43:32.109614+08:00",
+    "action": "automation_driver_restart",
+    "detail": "Import succeeded; evidence capture locator failed and console interrupt terminated browser driver. Restarting in a fresh context. Not an application crash."
+  },
+  {
+    "at": "2026-10-19T17:43:43.356601+08:00",
+    "action": "start_task",
+    "task": "T1"
+  },
+  {
+    "at": "2026-10-19T17:43:44.083421+08:00",
+    "action": "capture",
+    "name": "T1_import_confirmed",
+    "url": "http://127.0.0.1:8501/"
+  },
+  {
+    "at": "2026-10-19T17:43:45.013986+08:00",
+    "action": "capture",
+    "name": "T1_form",
+    "url": "http://127.0.0.1:8501/"
+  },
+  {
+    "at": "2026-10-19T17:43:45.095180+08:00",
+    "action": "capture",
+    "name": "T1_overview",
+    "url": "http://127.0.0.1:8501/"
+  },
+  {
+    "at": "2026-10-19T17:43:45.108355+08:00",
+    "action": "finish_task",
+    "task": "T1",
+    "started_at": "2026-10-19T17:43:43.356601+08:00",
+    "finished_at": "2026-10-19T17:43:45.104350+08:00",
+    "wall_seconds": 1.75
+  },
+  {
+    "at": "2026-10-19T17:44:07.779278+08:00",
+    "action": "start_task",
+    "task": "T2"
+  },
+  {
+    "at": "2026-10-19T17:44:08.713523+08:00",
+    "action": "capture",
+    "name": "T2_summary",
+    "url": "http://127.0.0.1:8501/"
+  },
+  {
+    "at": "2026-10-19T17:44:08.826959+08:00",
+    "action": "capture",
+    "name": "T2_classification",
+    "url": "http://127.0.0.1:8501/"
+  },
+  {
+    "at": "2026-10-19T17:44:09.007195+08:00",
+    "action": "capture",
+    "name": "T2_trend",
+    "url": "http://127.0.0.1:8501/"
+  },
+  {
+    "at": "2026-10-19T17:44:34.767045+08:00",
+    "action": "capture",
+    "name": "T2_probability",
+    "url": "http://127.0.0.1:8501/"
+  },
+  {
+    "at": "2026-10-19T17:44:34.866337+08:00",
+    "action": "capture",
+    "name": "T2_trend_chart",
+    "url": "http://127.0.0.1:8501/"
+  },
+  {
+    "at": "2026-10-19T17:44:49.147804+08:00",
+    "action": "task_observation",
+    "task": "T2",
+    "detail": "正常体重47.0%；档案70.0kg，日志最新70.5kg；概率表按概率排序但柱图顺序不同；趋势轴day/weight_kg、图例segment为英文。"
+  },
+  {
+    "at": "2026-10-19T17:44:49.154131+08:00",
+    "action": "finish_task",
+    "task": "T2",
+    "started_at": "2026-10-19T17:44:07.779278+08:00",
+    "finished_at": "2026-10-19T17:44:49.150934+08:00",
+    "wall_seconds": 41.37
+  },
+  {
+    "at": "2026-10-19T17:44:49.154131+08:00",
+    "action": "start_task",
+    "task": "T3"
+  },
+  {
+    "at": "2026-10-19T17:44:49.263057+08:00",
+    "action": "capture",
+    "name": "T3_explanation",
+    "url": "http://127.0.0.1:8501/"
+  },
+  {
+    "at": "2026-10-19T17:44:49.494982+08:00",
+    "action": "capture",
+    "name": "T3_scope",
+    "url": "http://127.0.0.1:8501/"
+  },
+  {
+    "at": "2026-10-19T17:45:16.810757+08:00",
+    "action": "capture",
+    "name": "T3_scope_readable",
+    "url": "http://127.0.0.1:8501/"
+  },
+  {
+    "at": "2026-10-19T17:45:16.813198+08:00",
+    "action": "first_answer",
+    "task": "T3",
+    "answer": "类别概率80%不能解读为患病风险或绝对正确率；当前输出是肥胖等级估计。训练资料来源与合成记录比例有限制，未验证新群体适用性，不能直接推广所有大学生；整体特征重要性也不是个人因果解释。"
+  },
+  {
+    "at": "2026-10-19T17:45:16.816616+08:00",
+    "action": "finish_task",
+    "task": "T3",
+    "started_at": "2026-10-19T17:44:49.154131+08:00",
+    "finished_at": "2026-10-19T17:45:16.815615+08:00",
+    "wall_seconds": 27.66
+  },
+  {
+    "at": "2026-10-19T17:45:16.817618+08:00",
+    "action": "start_task",
+    "task": "T4"
+  },
+  {
+    "at": "2026-10-19T17:45:17.790145+08:00",
+    "action": "capture",
+    "name": "T4_stale",
+    "url": "http://127.0.0.1:8501/"
+  },
+  {
+    "at": "2026-10-19T17:45:17.935629+08:00",
+    "action": "capture",
+    "name": "T4_old_result",
+    "url": "http://127.0.0.1:8501/"
+  },
+  {
+    "at": "2026-10-19T17:45:38.140919+08:00",
+    "action": "capture",
+    "name": "T4_updated",
+    "url": "http://127.0.0.1:8501/"
+  },
+  {
+    "at": "2026-10-19T17:45:38.254165+08:00",
+    "action": "capture",
+    "name": "T4_comparison",
+    "url": "http://127.0.0.1:8501/"
+  },
+  {
+    "at": "2026-10-19T17:45:52.218092+08:00",
+    "action": "task_observation",
+    "task": "T4",
+    "detail": "重算前概览80kg且旧结果70kg，有黄色待重算提示；重算后分类未改变，最高概率47.0%→32.7%，已修改体重70→80；日志70.5kg及能量消耗保持不变。"
+  },
+  {
+    "at": "2026-10-19T17:45:52.221108+08:00",
+    "action": "finish_task",
+    "task": "T4",
+    "started_at": "2026-10-19T17:45:16.817618+08:00",
+    "finished_at": "2026-10-19T17:45:52.218092+08:00",
+    "wall_seconds": 35.4
+  },
+  {
+    "at": "2026-10-19T17:45:52.223114+08:00",
+    "action": "start_task",
+    "task": "T5"
+  },
+  {
+    "at": "2026-10-19T17:45:53.123295+08:00",
+    "action": "capture",
+    "name": "T5_error",
+    "url": "http://127.0.0.1:8501/"
+  },
+  {
+    "at": "2026-10-19T17:46:03.378257+08:00",
+    "action": "capture",
+    "name": "T5_error_shortcut",
+    "url": "http://127.0.0.1:8501/#daily-intake"
+  },
+  {
+    "at": "2026-10-19T17:46:04.580536+08:00",
+    "action": "capture",
+    "name": "T5_recovered",
+    "url": "http://127.0.0.1:8501/#daily-intake"
+  },
+  {
+    "at": "2026-10-19T17:46:26.522020+08:00",
+    "action": "task_observation",
+    "task": "T5",
+    "detail": "0热量时红色错误明确指出每日摄入热量，分类保留、趋势标为未生成；返回热量链接可用；改回1800重算后趋势恢复。错误处还有绿色分类已完成提示，正的有限数值措辞偏专业。"
+  },
+  {
+    "at": "2026-10-19T17:46:26.525435+08:00",
+    "action": "finish_task",
+    "task": "T5",
+    "started_at": "2026-10-19T17:45:52.223114+08:00",
+    "finished_at": "2026-10-19T17:46:26.522020+08:00",
+    "wall_seconds": 34.3
+  },
+  {
+    "at": "2026-10-19T17:46:26.525435+08:00",
+    "action": "start_task",
+    "task": "T6"
+  },
+  {
+    "at": "2026-10-19T17:46:26.730346+08:00",
+    "action": "capture",
+    "name": "T6_feedback_entry",
+    "url": "http://127.0.0.1:8501/#user-feedback"
+  },
+  {
+    "at": "2026-10-19T17:46:45.010534+08:00",
+    "action": "capture",
+    "name": "T6_feedback_saved",
+    "url": "http://127.0.0.1:8501/#user-feedback"
+  },
+  {
+    "at": "2026-10-19T17:46:45.405757+08:00",
+    "action": "download_feedback",
+    "suggested_filename": "weighttrend_feedback.json",
+    "path": "weighttrend_feedback.json"
+  },
+  {
+    "at": "2026-10-19T17:47:03.736797+08:00",
+    "action": "capture",
+    "name": "T6_fairness_initial",
+    "url": "http://127.0.0.1:8501/#user-feedback"
+  },
+  {
+    "at": "2026-10-19T17:47:47.462727+08:00",
+    "action": "automation_locator_error",
+    "task": "T6",
+    "detail": "Dropdown clicked, but 女性 option was not exposed by exact option locator within 6s; using combobox search and ArrowDown."
+  },
+  {
+    "at": "2026-10-19T17:47:47.588154+08:00",
+    "action": "capture",
+    "name": "T6_group_search",
+    "url": "http://127.0.0.1:8501/#user-feedback"
+  },
+  {
+    "at": "2026-10-19T17:47:58.926291+08:00",
+    "action": "capture",
+    "name": "T6_group_female",
+    "url": "http://127.0.0.1:8501/#user-feedback"
+  },
+  {
+    "at": "2026-10-19T17:47:58.926291+08:00",
+    "action": "select_group",
+    "value": "女性"
+  },
+  {
+    "at": "2026-10-19T17:47:59.277695+08:00",
+    "action": "capture",
+    "name": "T6_group_male",
+    "url": "http://127.0.0.1:8501/#user-feedback"
+  },
+  {
+    "at": "2026-10-19T17:47:59.280219+08:00",
+    "action": "select_group",
+    "value": "男性"
+  },
+  {
+    "at": "2026-10-19T17:47:59.626928+08:00",
+    "action": "capture",
+    "name": "T6_group_all",
+    "url": "http://127.0.0.1:8501/#user-feedback"
+  },
+  {
+    "at": "2026-10-19T17:47:59.628813+08:00",
+    "action": "select_group",
+    "value": "全部群体"
+  },
+  {
+    "at": "2026-10-19T17:48:08.922083+08:00",
+    "action": "capture",
+    "name": "T6_metric_fnr",
+    "url": "http://127.0.0.1:8501/#user-feedback"
+  },
+  {
+    "at": "2026-10-19T17:48:08.922083+08:00",
+    "action": "select_metric",
+    "value": "漏判率 FNR"
+  },
+  {
+    "at": "2026-10-19T17:48:09.268286+08:00",
+    "action": "capture",
+    "name": "T6_metric_fpr",
+    "url": "http://127.0.0.1:8501/#user-feedback"
+  },
+  {
+    "at": "2026-10-19T17:48:09.269293+08:00",
+    "action": "select_metric",
+    "value": "误判率 FPR"
+  },
+  {
+    "at": "2026-10-19T17:48:39.619039+08:00",
+    "action": "first_answer",
+    "task": "T6",
+    "answer": "本次约束没有改善：整体平衡准确率同为99.26%，EO差值0.0208→0.0208；女性204例漏判误判均0，男性216例漏判2、误判1，两方案相同。零错误只描述本次样本，不能证明未来或全部人群完全公平。"
+  },
+  {
+    "at": "2026-10-19T17:48:39.743562+08:00",
+    "action": "capture",
+    "name": "T6_uncertainty",
+    "url": "http://127.0.0.1:8501/#user-feedback"
+  },
+  {
+    "at": "2026-10-19T17:48:40.377242+08:00",
+    "action": "capture",
+    "name": "T6_return_form",
+    "url": "http://127.0.0.1:8501/#user-feedback"
+  },
+  {
+    "at": "2026-10-19T17:48:40.480308+08:00",
+    "action": "capture",
+    "name": "T6_return",
+    "url": "http://127.0.0.1:8501/#user-feedback"
+  },
+  {
+    "at": "2026-10-19T17:49:20.995000+08:00",
+    "action": "finish_task",
+    "task": "T6",
+    "started_at": "2026-10-19T17:46:26.525435+08:00",
+    "finished_at": "2026-10-19T17:49:20.995000+08:00",
+    "wall_seconds": 174.47
+  },
+  {
+    "at": "2026-10-19T17:49:21.047014+08:00",
+    "action": "verified",
+    "feedback_download_parses": true,
+    "feedback_saved_ease": 4,
+    "female_male_all_captured": true,
+    "fnr_fpr_captured": true,
+    "returned_profile_weight": "80.0",
+    "returned_calories": "1800",
+    "returned_classification_weight": "分类采用档案体重\n\n80.0 kg",
+    "returned_trend_weight": "趋势采用日志体重\n\n70.5 kg",
+    "returned_feedback_download": true,
+    "no_unsubmitted_change_warning": true,
+    "page_errors": [],
+    "application_sources_unchanged": true
+  }
+]
