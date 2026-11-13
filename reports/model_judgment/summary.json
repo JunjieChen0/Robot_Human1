@@ -1,0 +1,35 @@
+{
+  "model": "RandomForest",
+  "trees": 300,
+  "fit_split": "train",
+  "train_samples": 1270,
+  "validation_samples": 421,
+  "test_samples_used": 0,
+  "input_policy": "prototype_median_imputation",
+  "imputed_values": {
+    "CH2O": 2.0,
+    "TUE": 0.634378
+  },
+  "metric": "balanced_accuracy",
+  "baseline_score": 0.9311718615840991,
+  "features": [
+    "Weight",
+    "Height",
+    "Age",
+    "FAF",
+    "CH2O"
+  ],
+  "repeats": 30,
+  "seed": 42,
+  "correct_count": 392,
+  "error_count": 29,
+  "std_definition": "population standard deviation across permutations (ddof=0), not a confidence interval",
+  "processed_sha256": "3f81ed49c31108173a43f3ad71d9b9199de5d3cbfbedc87cb06af615ef655cb7",
+  "script_sha256": "a79fead23babb50f786d236f36ce4787431f10ff639948b0c6d6b9a23432fed4",
+  "model_sha256": "45b0f8d9a87bbef55bbc56e7c125a528304f58e51218a6f38cc7972a31f3014d",
+  "versions": {
+    "scikit-learn": "1.9.0",
+    "pandas": "2.3.3",
+    "numpy": "2.3.5"
+  }
+}

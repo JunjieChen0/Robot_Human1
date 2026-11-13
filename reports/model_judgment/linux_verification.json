@@ -1,0 +1,62 @@
+{
+  "verified_at_utc": "2026-11-13T03:49:04.467Z",
+  "validation": "独立Debian 13容器验证，非同学机器现场复现",
+  "image": "python:3.13-slim-trixie",
+  "image_digest": "sha256:e48f59cdba69a3cbd9ed2cf0f348d90d45a8d350d98134cf1070bc106ee9ed90",
+  "environment": {
+    "python": "3.13.18 (main, Nov  5 2026, 07:59:38) [GCC 14.2.0]",
+    "os_release": "PRETTY_NAME=\"Debian GNU/Linux 13 (trixie)\"\nNAME=\"Debian GNU/Linux\"\nVERSION_ID=\"13\"\nVERSION=\"13 (trixie)\"\nVERSION_CODENAME=trixie\nDEBIAN_VERSION_FULL=13.7\nID=debian\nHOME_URL=\"https://www.debian.org/\"\nSUPPORT_URL=\"https://www.debian.org/support\"\nBUG_REPORT_URL=\"https://bugs.debian.org/\"\n",
+    "architecture": "x86_64",
+    "versions": {
+      "numpy": "2.5.4",
+      "pandas": "2.3.3",
+      "streamlit": "1.67.0",
+      "altair": "6.3.0",
+      "pyarrow": "26.0.1"
+    },
+    "training_dependencies_absent": {
+      "sklearn": true,
+      "joblib": true,
+      "fairlearn": true,
+      "matplotlib": true,
+      "torch": true
+    },
+    "virtualenv_disk_bytes": 466225078
+  },
+  "checks": {
+    "first_install_from_requirements": true,
+    "training_dependencies_absent": true,
+    "github_archive_without_models": true,
+    "github_archive_without_processed_data": true,
+    "archive_path_with_spaces": true,
+    "shell_lf_line_endings": true,
+    "archive_standalone_app_test": true,
+    "cached_boot_skips_install": true,
+    "cached_boot_health_ok": true
+  },
+  "browser": {
+    "kind": "自动化浏览器回归，非真人用户测试",
+    "page_version": "model-judgment-v1",
+    "entry": "standalone",
+    "browser": "150.0.7871.127",
+    "checks": {
+      "baseline_and_training_scope": true,
+      "click_zero_importance_row": true,
+      "switch_chart_selection_updates_feature": true,
+      "correct_and_error_cases": true,
+      "no_local_or_causal_claim": true,
+      "first_response_json_download": true,
+      "mobile_no_page_overflow": true,
+      "no_browser_errors": true
+    },
+    "page_errors": []
+  },
+  "resources": {
+    "memory_observed": "280.6 MiB（验证时包含两个页面进程）",
+    "virtualenv_bytes": 466225078
+  },
+  "user_testing": {
+    "real_participants_recorded": 0,
+    "note": "浏览器填写和下载的是标注为自动检查的临时回答，不计作真人测试，不写入记录CSV"
+  }
+}

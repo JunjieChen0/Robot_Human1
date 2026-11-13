@@ -599,7 +599,12 @@ def render_feedback(analysis: dict) -> None:
 
 def main() -> None:
     st.markdown(PAGE_STYLE, unsafe_allow_html=True)
-    page = st.sidebar.radio("页面", ["体重管理原型", "模型公平性审核"], key="main_page")
+    page = st.sidebar.radio("页面", ["体重管理原型", "模型公平性审核", "模型判断"], key="main_page")
+    if page == "模型判断":
+        from src.model_judgment_ui import render_model_judgment_page
+
+        render_model_judgment_page()
+        return
     if page == "模型公平性审核":
         from src.fairness_ui import render_fairness_page
 

@@ -1,0 +1,134 @@
+{
+  "verified_at_utc": "2026-11-13T03:49:05+00:00",
+  "source_sha256": {
+    ".gitattributes": "1b7bc133d20cc7f128d27669850cb3ab7746bdee3e892de1c67bc635b0ddecb8",
+    ".gitignore": "743d2aa2a156e2a3d4a73a1808a98cf9975fadc1381344a336f8f11bc2a021a4",
+    "app.py": "2f0eeee85b01bb460f079dfcf9050f1850b7d42cd8d753e4a45af788807ad7de",
+    "model_judgment_app.py": "a50012c014398609f2eb7d448f2cb7bc9b23dddd05f01cacac19faa4f46235a7",
+    "start_model_judgment.sh": "ee6fb4ece8e60047bd9d672aa5cab05ef75af47106ce2b00e6a838fe53673e5e",
+    "requirements-judgment.txt": "4e9101d703a9bcc7bcecf77d780032b228985bb9c5eacfc984b332971884a0bf",
+    "requirements.txt": "aabe81f011ba8e94f56577cbe2ff0549171bd002c50aa929b37aacc0637406c5",
+    "src/model_judgment.py": "a79fead23babb50f786d236f36ce4787431f10ff639948b0c6d6b9a23432fed4",
+    "src/model_judgment_ui.py": "d754408abdf2daf7c2d7d209ba49077e6566bd8da78ef2ca427118e829ced163",
+    "src/train.py": "e076207a385c82cd71891c18b32aa7a7c92f5e82298409cc40130372b4e8235b",
+    "src/config.py": "0d25c0018404a4151bc3c3c3b923db4df0a8525307618afe71979eff477260be",
+    "scripts/check_model_judgment_ui.py": "aae63e209b664befe38ef8302945022e25e028a17649c7694497b648b2e17da5",
+    "tests/test_model_judgment.py": "b2b776ad6f333bc147a5e22c68bf527de03082276fc4ad6f544f8f3970453d94",
+    "tests/test_model_judgment_app.py": "c1e423a2cdc1635af4635b39e9073bf94649e6d4a4838fd8402116ad2ef7456f",
+    "README.md": "a6b93ceb5d85373b272e9dff3faf9c7aedc3ccfed99c6a8109e4defbabfa2b17",
+    "CHANGELOG.md": "81083273bee1ce46eb37ff1d38418786da4df5a0d4b7369b8f1537b84dd8832e",
+    "user_test/model_judgment_test_guide.md": "d4382634402d0bb30647c2c4c3d4fc09e4c7587cab3a88d4ac0dcfeefa0a9b4b",
+    "user_test/model_judgment_remote_quickstart.md": "3d068bc0c6150a052b394f735613b31348958de326926909e4d54a4c66e83e21",
+    "user_test/model_judgment_before_after.md": "35ca917102e7728db477870ba3c72cd5aab965e4cbe2941254c37622b01e46d1",
+    "user_test/model_judgment_records.csv": "a342f7129380511fe3cad5c0549de394da99bbe5344e1ec5b6def910defb518e"
+  },
+  "artifact_sha256": {
+    "reports/model_judgment/feature_importance.csv": "5bcd9385fe9593f5f7ba880676a35ef88e15a4c6e183a4786c891e97e1a1df1e",
+    "reports/model_judgment/feature_importance.png": "b63855d00b9d212385be8d27a0944ddc8c1a583621e4498a230a04ae649d1727",
+    "reports/model_judgment/input_dictionary.csv": "7d3cc51975b09c1734b0e7875940c239237b0167816f4854d7bf2ef86adc20c1",
+    "reports/model_judgment/linux_verification.json": "fd60ecb537829680fd79bdee7f5618971d158ec316ad2a5c70117216787a6274",
+    "reports/model_judgment/permutation_repeats.csv": "641906e44a1b039e6c2f05a38019289dd2a99494f3cfe9f7ba0b330175f870f3",
+    "reports/model_judgment/summary.json": "0aa842948757ab2314c59ebf504aa68ae231c40a0d951f32e0f766542f09ad9b",
+    "reports/model_judgment/validation_records.csv": "2568556b767c7614c8ae804bff243ee5dac6969bc615785aed3da3cddba3e489",
+    "reports/model_judgment/ui_linux/browser_checks.json": "d447ab449ba20d2f903704d55ee87dc2e9e3777a003b7357b92cf157f58b5d99",
+    "reports/model_judgment/ui_linux/cases.png": "3215a02686258d0c61c50cad478ae3b6a0878c58cd96fc06e2bf16ffde0fb02b",
+    "reports/model_judgment/ui_linux/constant_feature.png": "568b098b99b9d0079ce3be8b56169d6276483aae579462fca72bdc4bf606c319",
+    "reports/model_judgment/ui_linux/importance_chart.png": "6fe81a4efa84f0548b7efb24c8111649bca9f7cd32ee63b81bdcb409ab085512",
+    "reports/model_judgment/ui_linux/mobile.png": "eca309cf3e334df202383c4859b3a1e6f8d4c26576d91347820fe47f276a1611",
+    "reports/model_judgment/ui_linux/page_top.png": "b3e15c3456f552ed547899c019d35a5166477e43e032469c837b171ba97b2e8c",
+    "reports/model_judgment/ui_v1/browser_checks.json": "921167717dab20f823e64492b64c7a3141546244cd9744e73c2b4c7449db8625",
+    "reports/model_judgment/ui_v1/cases.png": "71b1819d425782e3f0c5729606ef19da3e742636ed6cc0c0b6576d39cbeb1668",
+    "reports/model_judgment/ui_v1/constant_feature.png": "d93fc091b6855da013c7e9abc8af88c0fd88d60f5065be9b2ea6bc7ed3c514ce",
+    "reports/model_judgment/ui_v1/importance_chart.png": "2c01b0421f1724a651be6ac074d5e67b9f38fdba6321b1ce4ba928541bbddf24",
+    "reports/model_judgment/ui_v1/mobile.png": "7e28875ff8e9ea815b01b1523465d040f450b4bc4b2d269ff4796f9c422d2799",
+    "reports/model_judgment/ui_v1/page_top.png": "f33681250dd80a0fc199751fc10ca76ab30ace5cac6f0d42acf212649619d569"
+  },
+  "experiment": {
+    "model": "RandomForest",
+    "trees": 300,
+    "fit_split": "train",
+    "train_samples": 1270,
+    "validation_samples": 421,
+    "test_samples_used": 0,
+    "input_policy": "prototype_median_imputation",
+    "imputed_values": {
+      "CH2O": 2.0,
+      "TUE": 0.634378
+    },
+    "metric": "balanced_accuracy",
+    "baseline_score": 0.9311718615840991,
+    "features": [
+      "Weight",
+      "Height",
+      "Age",
+      "FAF",
+      "CH2O"
+    ],
+    "repeats": 30,
+    "seed": 42,
+    "correct_count": 392,
+    "error_count": 29,
+    "std_definition": "population standard deviation across permutations (ddof=0), not a confidence interval",
+    "processed_sha256": "3f81ed49c31108173a43f3ad71d9b9199de5d3cbfbedc87cb06af615ef655cb7",
+    "script_sha256": "a79fead23babb50f786d236f36ce4787431f10ff639948b0c6d6b9a23432fed4",
+    "model_sha256": "45b0f8d9a87bbef55bbc56e7c125a528304f58e51218a6f38cc7972a31f3014d",
+    "versions": {
+      "scikit-learn": "1.9.0",
+      "pandas": "2.3.3",
+      "numpy": "2.3.5"
+    }
+  },
+  "browser": {
+    "kind": "自动化浏览器回归，非真人用户测试",
+    "page_version": "model-judgment-v1",
+    "browser": "150.0.7871.127",
+    "checks": {
+      "baseline_and_training_scope": true,
+      "click_zero_importance_row": true,
+      "switch_chart_selection_updates_feature": true,
+      "correct_and_error_cases": true,
+      "no_local_or_causal_claim": true,
+      "mobile_no_page_overflow": true,
+      "no_browser_errors": true
+    },
+    "page_errors": []
+  },
+  "page_version": "model-judgment-v1",
+  "application_tests": {
+    "command": "python -B -m pytest tests -q -p no:cacheprovider --tb=short",
+    "passed": 67,
+    "failed": 0,
+    "elapsed_seconds": 28.67,
+    "new_tests": 12
+  },
+  "preservation": {
+    "checked_files": 20,
+    "changed_files": [],
+    "scope": "原最终模型、模型元数据、训练范围、处理数据与公平性冻结产物"
+  },
+  "visual_review": {
+    "reviewed": [
+      "feature_importance.png",
+      "ui_v1/page_top.png",
+      "ui_v1/importance_chart.png",
+      "ui_v1/mobile.png",
+      "ui_v1/cases.png"
+    ],
+    "notes": "中文标签、零值点、误差线与移动端布局已视觉复核"
+  },
+  "user_testing": {
+    "status": "awaiting_user_organized_tests",
+    "real_participants_recorded": 0,
+    "required_participants": 3,
+    "records_csv": "user_test/model_judgment_records.csv",
+    "before_after": "user_test/model_judgment_before_after.md",
+    "notes": "用户组织三名同学；首次回答与真实误读待补，自动测试不计作真人结果"
+  },
+  "hash_normalization": "UTF-8 text uses LF line endings for cross-platform comparison; binary files use original bytes",
+  "linux_verification": "linux_verification.json",
+  "linux_browser_checks": {
+    "passed": 8,
+    "total": 8,
+    "record": "ui_linux/browser_checks.json"
+  }
+}

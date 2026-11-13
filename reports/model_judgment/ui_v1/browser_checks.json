@@ -1,0 +1,15 @@
+{
+  "kind": "自动化浏览器回归，非真人用户测试",
+  "page_version": "model-judgment-v1",
+  "browser": "150.0.7871.127",
+  "checks": {
+    "baseline_and_training_scope": true,
+    "click_zero_importance_row": true,
+    "switch_chart_selection_updates_feature": true,
+    "correct_and_error_cases": true,
+    "no_local_or_causal_claim": true,
+    "mobile_no_page_overflow": true,
+    "no_browser_errors": true
+  },
+  "page_errors": []
+}

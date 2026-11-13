@@ -1,0 +1,2 @@
+start_model_judgment.sh text eol=lf
+requirements-judgment.txt text eol=lf
