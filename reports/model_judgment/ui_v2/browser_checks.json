@@ -1,0 +1,21 @@
+{
+  "kind": "自动化浏览器回归，非真人用户测试",
+  "page_version": "model-judgment-v2",
+  "entry": "main",
+  "browser": "150.0.7871.127",
+  "checks": {
+    "baseline_and_training_scope": true,
+    "neutral_initial_selection": true,
+    "visible_mean_labels": true,
+    "constant_explanation_before_selection": true,
+    "click_zero_importance_row": true,
+    "switch_chart_selection_updates_feature": true,
+    "correct_and_error_cases": true,
+    "no_local_or_causal_claim": true,
+    "first_response_controls_lock_immediately": true,
+    "first_response_json_download": true,
+    "mobile_no_page_overflow": true,
+    "no_browser_errors": true
+  },
+  "page_errors": []
+}

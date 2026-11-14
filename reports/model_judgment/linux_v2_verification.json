@@ -1,0 +1,30 @@
+{
+  "verified_at_utc": "2026-11-14T03:43:07+00:00",
+  "kind": "Debian应用服务+Windows Chrome自动浏览器回归，非真人复测",
+  "page_version": "model-judgment-v2",
+  "environment": {
+    "system": "Debian GNU/Linux 13 (trixie)",
+    "debian_version": "13.7",
+    "architecture": "x86_64",
+    "python": "3.13.18",
+    "packages": {
+      "streamlit": "1.67.0",
+      "pandas": "2.3.3",
+      "numpy": "2.5.4",
+      "altair": "6.3.0"
+    },
+    "training_libraries_present": {
+      "sklearn": false,
+      "joblib": false,
+      "fairlearn": false,
+      "matplotlib": false,
+      "torch": false
+    }
+  },
+  "environment_installation": "复用v1展示依赖环境；本轮没有重测首次下载",
+  "command": "bash start_model_judgment.sh --server.address 0.0.0.0",
+  "port_mapping": "容器8501仅映射宿主127.0.0.1:8519",
+  "browser_record": "ui_v2_standalone/browser_checks.json",
+  "gpu_used": false,
+  "notes": "未重训；旧v1 Debian验证记录保留。"
+}

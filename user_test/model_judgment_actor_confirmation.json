@@ -3,6 +3,13 @@
   "source": "组织者在本聊天对执行者问题的明确回复",
   "question_scope": "确认J01和002是否由同学本人操作",
   "answer_original": "J01 和 002 都由同学亲自操作",
-  "human_operator_ids": ["J01", "002"],
+  "human_operator_ids": ["J01", "002", "003"],
+  "additional_confirmation": {
+    "received_date": "2026-11-13",
+    "question_original": "这次重新提交的 003，是否由第三名同学本人操作并回答，而非 AI 代做？",
+    "answer_original": "是，第三名同学亲自完成",
+    "participant": "003",
+    "scope": "仅确认本次重新提交的新来稿，不恢复撤回资料"
+  },
   "scope": "确认执行者性质；不更改首次原话，不转作新一轮测试，也不独立核验环境、提示或完整操作过程"
 }

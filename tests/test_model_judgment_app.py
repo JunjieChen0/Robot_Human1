@@ -17,7 +17,9 @@ def test_standalone_entry_opens_judgment_without_loading_health_model():
     app = AppTest.from_file(str(APP.parent / "model_judgment_app.py"), default_timeout=60).run()
     assert not app.exception
     assert app.title[0].value == "模型判断"
-    assert app.selectbox(key="judgment_feature").value in FEATURES
+    assert app.selectbox(key="judgment_feature").value is None
+    assert not any(item.value.startswith("输入证据：") for item in app.subheader)
+    assert any("不是这421条记录的真实饮水量" in item.value for item in app.info)
 
 
 def test_judgment_feature_selection_links_distribution_and_both_cases():
@@ -44,17 +46,27 @@ def test_judgment_first_response_requires_answers_and_locks_original():
     save.click().run()
     assert any("填写匿名编号" in item.value for item in app.error)
     app.text_input(key="judgment_participant").set_value("自动测试，不是真人记录")
-    app.text_input(key="judgment_ranking").set_value("体重，平均下降最多")
+    app.text_area(key="judgment_ranking").set_value("体重，平均下降最多\n图中均值59.446个百分点")
     app.text_area(key="judgment_causality").set_value("不能；不是个人病因或局部解释")
+    app.text_input(key="judgment_system_browser").set_value("自动测试环境")
+    app.text_area(key="judgment_exposure").set_value("测试脚本，非参与者")
+    app.number_input(key="judgment_hints").set_value(0)
     next(button for button in app.button if button.label == "保存首次回答").click().run()
     assert not app.exception
     original = dict(app.session_state["judgment_response"])
-    assert original["task_1"] == "体重，平均下降最多"
+    assert original["task_1"] == "体重，平均下降最多\n图中均值59.446个百分点"
+    assert original["page_version"] == "model-judgment-v2"
+    assert original["system_browser_self_report"] == "自动测试环境"
+    assert original["hint_count_self_report"] == 0
     assert original["experiment_model_sha256"]
-    app.text_input(key="judgment_ranking").set_value("后续改写")
-    next(button for button in app.button if button.label == "保存首次回答").click().run()
+    assert all(widget.disabled for widget in [*app.text_input, *app.text_area, *app.number_input])
+    app.selectbox(key="judgment_feature").set_value("Age").run()
     assert dict(app.session_state["judgment_response"]) == original
     assert next(button for button in app.button if button.label == "保存首次回答").disabled
+    app.radio(key="main_page").set_value("体重管理原型").run()
+    app.radio(key="main_page").set_value("模型判断").run()
+    assert app.text_area(key="judgment_ranking").value == original["task_1"]
+    assert app.text_area(key="judgment_ranking").disabled
 
 
 def test_health_snapshot_and_draft_survive_judgment_navigation():

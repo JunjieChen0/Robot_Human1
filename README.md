@@ -235,8 +235,8 @@ python -m streamlit run app.py
 
 浏览器回归脚本为 `scripts/check_model_judgment_ui.py`，使用另装Playwright且已可启动Chrome的Python环境运行，服务默认端口8517，可用`--url`指定。它只做自动检查，不提交真人回答。
 
-**真人测试进行中（2/3份）**：已收到[J01](user_test/model_judgment_J01_review.md)与[002](user_test/model_judgment_002_review.md)来稿，各自两项核心理解符合要点，模型哈希、分数和默认案例与冻结结果一致。[J01字段及补充](user_test/model_judgment_J01_record.json)和[002字段及摘要](user_test/model_judgment_002_record.json)分别保留。操作、资料接触和0次提示按参与者自报；002未展开精确分数表、从图表提示读数的声明不改写为查表。两人的测试日期和用时未提供，002的系统/浏览器也未提供，不套用J01信息或以接收日期代填。[记录CSV](user_test/model_judgment_records.csv)已有2行，[修改前后对照](user_test/model_judgment_before_after.md)合并登记9类建议，尚未实施。还需至少1份同版首测，详见[任务与逐人记录模板](user_test/model_judgment_test_guide.md)。002不与旧页面同名编号合并；收齐前保持v1，不宣称三人结果或改进效果。
+**三人v1首测已收齐，页面已更新为v2**：[J01](user_test/model_judgment_J01_review.md)、[002](user_test/model_judgment_002_review.md)、[本次重新提交的003](user_test/model_judgment_003_review.md)两项核心回答均符合要点，模型哈希、分数和案例与冻结结果一致。[J01原话](user_test/model_judgment_J01_record.json)、[002原话](user_test/model_judgment_002_record.json)、[本次003原话](user_test/model_judgment_003_record.json)与[三行CSV](user_test/model_judgment_records.csv)保留。行为、资料接触和0次提示按自报；002从图表提示读数的声明不改写为查表。缺失日期、用时和002环境留空；003“训练里约77%”按来源数据集比例澄清，不改原话。
 
-组织者已明确确认[J01、002均由同学亲自操作](user_test/model_judgment_actor_confirmation.json)。当前只纳入这两份记录，进度2/3；原话与记录表保持不变，待第三位同学完成同版首测后统一处理改进。
+组织者分别[确认三位同学亲自操作](user_test/model_judgment_actor_confirmation.json)。本次003仅纳入新来稿，撤回资料不恢复，旧页面同名编号不合并。v2在图上直接标均值、减少刻度，提前说明饮水常量及整批/个人边界，澄清行号和五项范围，增高输入表，取消默认选中特征，支持多行回答、即时锁定和背景自报字段。模型及实验数值未变。[修改前后对照](user_test/model_judgment_before_after.md)包含逐项依据、v1/v2截图及验证记录。**尚无v2真人复测**，不宣称误读消除或理解率提升；复测原话另存，详见[测试指南](user_test/model_judgment_test_guide.md)。
 
 方法参考：[scikit-learn置换重要性](https://scikit-learn.org/stable/modules/permutation_importance.html)；图表选取接口参考[Streamlit Altair图表](https://docs.streamlit.io/develop/api-reference/charts/st.altair_chart)。

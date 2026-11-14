@@ -1,5 +1,5 @@
 {
-  "verified_at_utc": "2026-11-14T03:16:18+00:00",
+  "verified_at_utc": "2026-11-14T03:43:07+00:00",
   "source_sha256": {
     ".gitattributes": "1b7bc133d20cc7f128d27669850cb3ab7746bdee3e892de1c67bc635b0ddecb8",
     ".gitignore": "743d2aa2a156e2a3d4a73a1808a98cf9975fadc1381344a336f8f11bc2a021a4",
@@ -9,23 +9,25 @@
     "requirements-judgment.txt": "4e9101d703a9bcc7bcecf77d780032b228985bb9c5eacfc984b332971884a0bf",
     "requirements.txt": "aabe81f011ba8e94f56577cbe2ff0549171bd002c50aa929b37aacc0637406c5",
     "src/model_judgment.py": "a79fead23babb50f786d236f36ce4787431f10ff639948b0c6d6b9a23432fed4",
-    "src/model_judgment_ui.py": "d754408abdf2daf7c2d7d209ba49077e6566bd8da78ef2ca427118e829ced163",
+    "src/model_judgment_ui.py": "3d4e698d9256d6874423bf3d680d1908ef21ac810c0f32305c94f3d0645e9ed8",
     "src/train.py": "e076207a385c82cd71891c18b32aa7a7c92f5e82298409cc40130372b4e8235b",
     "src/config.py": "0d25c0018404a4151bc3c3c3b923db4df0a8525307618afe71979eff477260be",
-    "scripts/check_model_judgment_ui.py": "aae63e209b664befe38ef8302945022e25e028a17649c7694497b648b2e17da5",
+    "scripts/check_model_judgment_ui.py": "c7a660df535523978850e77f6407c0d4b508869d7c5e17119d4c754559d538d4",
     "tests/test_model_judgment.py": "b2b776ad6f333bc147a5e22c68bf527de03082276fc4ad6f544f8f3970453d94",
-    "tests/test_model_judgment_app.py": "c1e423a2cdc1635af4635b39e9073bf94649e6d4a4838fd8402116ad2ef7456f",
-    "README.md": "9065d48d579e024997ee77b825a70a827a8703555b5e11f4834bb82b9ffc7385",
-    "CHANGELOG.md": "ceae6ef09f566705499b2e818787df7dd271631a8fca3188345141a94a94f4b3",
-    "user_test/model_judgment_test_guide.md": "08096367681db819fa9967cbeb329cf67b3c2417523e41054f13a15aee4076cf",
-    "user_test/model_judgment_remote_quickstart.md": "3d068bc0c6150a052b394f735613b31348958de326926909e4d54a4c66e83e21",
-    "user_test/model_judgment_before_after.md": "79e00a533bdf57ffaf09d697fe4bf530f275a9190962248828b73e249e43654f",
-    "user_test/model_judgment_records.csv": "82185130459c502328a49e84ab44653e4a8ae80ff7ab254f2cb77d8f9d54a1d1",
+    "tests/test_model_judgment_app.py": "2dd76712fb49f8363d79692165005daf69fb0b73ff760424b99de7111fd1fe83",
+    "README.md": "dbbae011a44990682549397698ef635c47a8dd1c2e7f7fb7a0b4a48957eb7f11",
+    "CHANGELOG.md": "0af0eb7080c677e002c46d51de4c779b5552374b135ce9f5cd1494cda63417e6",
+    "user_test/model_judgment_test_guide.md": "bfa98a91aa29ed217644c0f0dd5c5ea093b0042c70649142cb53b6575aa1e4a6",
+    "user_test/model_judgment_remote_quickstart.md": "97dfc9838808129b7af8b97f8a747601848d3209cfb0403bf72b6a5f3a0d9a18",
+    "user_test/model_judgment_before_after.md": "0e41bcd455a940cfc6e474f39e36f3ce6ba03c9b785319951e1bd9f469bc6e78",
+    "user_test/model_judgment_records.csv": "5d56c3aa8681ab3a9e9e1caad7dbd40e402412486f0bd914deb510688d3cc04a",
     "user_test/model_judgment_J01_record.json": "1a77b6b9cfcde02e305112b9be8f9ed8df72e52ad834fb5ae91abd77d316d35a",
     "user_test/model_judgment_J01_review.md": "ea175c7c71f8f18c7ba0b8b0362df468a021fa052e706eb0d4b1418399c25e1e",
     "user_test/model_judgment_002_record.json": "d553ed6d92112e6fb27b7f2883745405df529688042496d6cc4337d2e0699269",
     "user_test/model_judgment_002_review.md": "93fa2a59ee7f57ec9975a9981ae7e6dbca467a4e31ec1f9fd1d3c8ee31afd7bd",
-    "user_test/model_judgment_actor_confirmation.json": "e59b6cf1c6609fa0d25b58250f4d1467c83b9d5571a511f3f7627474b2504a8f"
+    "user_test/model_judgment_actor_confirmation.json": "58085fa187d5935fe406c2142213b44fa3971a8a42d7b3e6e1b9d3b65439ce69",
+    "user_test/model_judgment_003_record.json": "eba3349b80221989fd1d1a255024fafaf60225f4abdcde44f7c09cd02bc6a56a",
+    "user_test/model_judgment_003_review.md": "15ec7fadf6803299d1fe3a61cf0cc55afc04129b8ba7f3185cbaa92e6252e974"
   },
   "artifact_sha256": {
     "reports/model_judgment/feature_importance.csv": "5bcd9385fe9593f5f7ba880676a35ef88e15a4c6e183a4786c891e97e1a1df1e",
@@ -46,7 +48,26 @@
     "reports/model_judgment/ui_v1/constant_feature.png": "d93fc091b6855da013c7e9abc8af88c0fd88d60f5065be9b2ea6bc7ed3c514ce",
     "reports/model_judgment/ui_v1/importance_chart.png": "2c01b0421f1724a651be6ac074d5e67b9f38fdba6321b1ce4ba928541bbddf24",
     "reports/model_judgment/ui_v1/mobile.png": "7e28875ff8e9ea815b01b1523465d040f450b4bc4b2d269ff4796f9c422d2799",
-    "reports/model_judgment/ui_v1/page_top.png": "f33681250dd80a0fc199751fc10ca76ab30ace5cac6f0d42acf212649619d569"
+    "reports/model_judgment/ui_v1/page_top.png": "f33681250dd80a0fc199751fc10ca76ab30ace5cac6f0d42acf212649619d569",
+    "reports/model_judgment/linux_v2_verification.json": "e88cecd46358acca93fb98b9b9391072f9558ba65ed4c97fd0889dd29ac4f296",
+    "reports/model_judgment/ui_v2/answer_form.png": "acdcd2382385340c0355d1b948dc281d0ff9a00c27b82cdb1e8723ed9793e65e",
+    "reports/model_judgment/ui_v2/answer_locked.png": "9e618322a49e0172223ad611d51750fe21b21c0020c0019ac0e1b3b803d55f35",
+    "reports/model_judgment/ui_v2/browser_checks.json": "8bf92de452ba814997b1c3baf2c7a9410e9b03a8741dcbd84a83c1231cb8606f",
+    "reports/model_judgment/ui_v2/cases.png": "fe3a6a58005e35e76dc157d1832a0e29bbd73c092f5542d234a6bbb4ff506bcd",
+    "reports/model_judgment/ui_v2/complete_inputs.png": "37e478947a7634187a54976bcaca0024fdb3dd01329848848276889aaffd78bb",
+    "reports/model_judgment/ui_v2/constant_feature.png": "c4fd1ac8098aeb2272a544b493cad020b6c23bd4102000a7d7ed9c58ee563ba1",
+    "reports/model_judgment/ui_v2/importance_chart.png": "a7df4bf72ea22227bd8726fbf0c481c3b861e61960f4cf38dff63f0ef2cc1e36",
+    "reports/model_judgment/ui_v2/mobile.png": "eea24d5308032cc9b75f665b763c12f8b34b30707edd1c6a9fbb073d5a31c4ec",
+    "reports/model_judgment/ui_v2/page_top.png": "c97b76d657bb6928bda00be2fd8214ceb473fbd347d1dbc8e9937caa8bc2b009",
+    "reports/model_judgment/ui_v2_standalone/answer_form.png": "29b0e6904fd8e7ab597c22caaadb1ca05bc4a0cfad772d6b4544199538657d73",
+    "reports/model_judgment/ui_v2_standalone/answer_locked.png": "36c4a936e45d441b2306654434083fd1c46e59c404c86230ac5490e0e0112af5",
+    "reports/model_judgment/ui_v2_standalone/browser_checks.json": "7ceda249e1160db2becd713e7a580658abb5053cf48a1337657dc40c4a2f2a7f",
+    "reports/model_judgment/ui_v2_standalone/cases.png": "3ffea295ac27936eb45f7c3b9b627360d30f7e9289683fe8e16ce788a0963d6e",
+    "reports/model_judgment/ui_v2_standalone/complete_inputs.png": "b0fdb415baa72964e074e8df67043ef559e96a69e9844fa284c6f831412412ae",
+    "reports/model_judgment/ui_v2_standalone/constant_feature.png": "4c88de2763614137c1dc3a89eb6cb78f01e019c128b6d8cfa4aec88d144c7775",
+    "reports/model_judgment/ui_v2_standalone/importance_chart.png": "14993c5c3d885d35a3eb78ae5a835ae58944dccd27487f5d02433607b5d129e2",
+    "reports/model_judgment/ui_v2_standalone/mobile.png": "57a14e6d291107fa9b369e6935bc50aa4490a3cf3930338682533cc03e7741bf",
+    "reports/model_judgment/ui_v2_standalone/page_top.png": "1ec123589b126fe7ceff96de413d2993cc755e0dd3e1050a8e9a65c1b1eba7ac"
   },
   "experiment": {
     "model": "RandomForest",
@@ -85,26 +106,32 @@
   },
   "browser": {
     "kind": "自动化浏览器回归，非真人用户测试",
-    "page_version": "model-judgment-v1",
+    "page_version": "model-judgment-v2",
+    "entry": "main",
     "browser": "150.0.7871.127",
     "checks": {
       "baseline_and_training_scope": true,
+      "neutral_initial_selection": true,
+      "visible_mean_labels": true,
+      "constant_explanation_before_selection": true,
       "click_zero_importance_row": true,
       "switch_chart_selection_updates_feature": true,
       "correct_and_error_cases": true,
       "no_local_or_causal_claim": true,
+      "first_response_controls_lock_immediately": true,
+      "first_response_json_download": true,
       "mobile_no_page_overflow": true,
       "no_browser_errors": true
     },
     "page_errors": []
   },
-  "page_version": "model-judgment-v1",
+  "page_version": "model-judgment-v2",
   "application_tests": {
     "command": "python -B -m pytest tests -q -p no:cacheprovider --tb=short",
     "passed": 67,
     "failed": 0,
-    "elapsed_seconds": 28.67,
-    "new_tests": 12
+    "elapsed_seconds": 30.83,
+    "notes": "更新原有应用测试，验证中性默认、分段、背景字段与锁定跨页保留；总测试数仍为67"
   },
   "preservation": {
     "checked_files": 20,
@@ -113,21 +140,24 @@
   },
   "visual_review": {
     "reviewed": [
-      "feature_importance.png",
-      "ui_v1/page_top.png",
-      "ui_v1/importance_chart.png",
-      "ui_v1/mobile.png",
-      "ui_v1/cases.png"
+      "ui_v2/importance_chart.png",
+      "ui_v2/page_top.png",
+      "ui_v2/mobile.png",
+      "ui_v2/cases.png",
+      "ui_v2/complete_inputs.png",
+      "ui_v2/answer_locked.png",
+      "ui_v2_standalone/page_top.png"
     ],
-    "notes": "中文标签、零值点、误差线与移动端布局已视觉复核"
+    "notes": "均值标注、较疏刻度、零值点、19行高度及移动端布局已视觉复核；窄表列宽仍需表内横向滚动。未作真人效果判断。"
   },
   "user_testing": {
-    "status": "2_of_3_human_reports_confirmed_v1_retained",
-    "real_participants_recorded": 2,
-    "participant_reports_received": 2,
+    "status": "3_human_v1_reports_confirmed_v2_implemented_no_human_retest",
+    "real_participants_recorded": 3,
+    "participant_reports_received": 3,
     "participants": [
       "J01",
-      "002"
+      "002",
+      "003"
     ],
     "required_participants": 3,
     "received_date": "2026-11-13",
@@ -135,34 +165,45 @@
     "before_after": "user_test/model_judgment_before_after.md",
     "review_files": [
       "user_test/model_judgment_J01_review.md",
-      "user_test/model_judgment_002_review.md"
+      "user_test/model_judgment_002_review.md",
+      "user_test/model_judgment_003_review.md"
     ],
     "candidate_improvements": 9,
-    "notes": "组织者确认J01和002均由同学亲自操作，仅纳入两份真人记录；原话、提示和环境自报保持。9类建议未实施，仍需至少1份同版真人首测。未纳入的新增材料已按用户要求删除，不保留为辅助走查。",
+    "notes": "组织者确认三位同学亲自完成v1；本次003只用重新提交的新来稿，不恢复撤回资料。首次原话与缺失值保留；风险建议不转写为实际误读；v2已修改，未做真人复测，不声称提升。",
     "human_operator_confirmation_file": "user_test/model_judgment_actor_confirmation.json",
-    "human_execution_confirmed_by_organizer": true
+    "human_execution_confirmed_by_organizer": true,
+    "implemented_candidate_improvements": 9,
+    "additional_clarifications": [
+      "整批/单条/因果边界前置及图题图例澄清",
+      "SMOTE来源数据集比例与训练子集比例区分"
+    ],
+    "human_retests": 0
   },
   "hash_normalization": "UTF-8 text uses LF line endings for cross-platform comparison; binary files use original bytes",
   "linux_verification": "linux_verification.json",
   "linux_browser_checks": {
-    "passed": 8,
-    "total": 8,
-    "record": "ui_linux/browser_checks.json"
+    "passed": 12,
+    "total": 12,
+    "record": "ui_v2_standalone/browser_checks.json",
+    "runtime": "linux_v2_verification.json"
   },
-  "application_verified_at_utc": "2026-11-13T03:49:05+00:00",
-  "verification_scope": "Organizer confirmation and withdrawal of unsubmitted extra test materials; prior application and browser checks reused, not rerun",
+  "application_verified_at_utc": "2026-11-14T03:43:07+00:00",
+  "verification_scope": "三份v1真人首测归档、v2反馈修改；本轮重新执行完整测试和两入口浏览器检查。旧Linux首次安装记录保留，未重测依赖下载。",
   "documentation_checks": {
     "csv_original_answers_match_transcript": true,
     "test_date_left_blank": true,
-    "experiment_artifacts_changed": 0,
-    "application_code_changed": 0,
-    "j01_model_hash_matches": true,
-    "existing_j01_csv_row_preserved": true,
+    "existing_j01_and_002_csv_rows_preserved": true,
     "002_environment_left_unknown": true,
-    "002_model_hash_matches": true,
-    "002_numbers_and_cases_match": true,
-    "human_csv_unchanged": true,
-    "human_operator_confirmation_preserved": true,
-    "withdrawn_unsubmitted_files_removed": 4
+    "003_model_hash_numbers_distribution_cases_match": true,
+    "human_operator_confirmation_preserved_and_extended": true,
+    "previously_withdrawn_files_still_absent": true,
+    "experiment_artifacts_changed": 0,
+    "application_ui_changed": true,
+    "human_rows": 3
+  },
+  "iteration_preservation": {
+    "checked_files": 42,
+    "changed_files": [],
+    "scope": "本轮前已有模型、处理数据、公平性产物、模型判断冻结实验与v1证据；排除本轮更新的verification.json"
   }
 }
