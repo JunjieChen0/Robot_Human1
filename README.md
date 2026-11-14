@@ -235,6 +235,6 @@ python -m streamlit run app.py
 
 浏览器回归脚本为 `scripts/check_model_judgment_ui.py`，使用另装Playwright且已可启动Chrome的Python环境运行，服务默认端口8517，可用`--url`指定。它只做自动检查，不提交真人回答。
 
-**真人测试进行中（1/3份）**：已收到[J01来稿与核对](user_test/model_judgment_J01_review.md)，[字段和补充原话](user_test/model_judgment_J01_record.json)分别保留；两项核心理解符合判定要点，模型哈希、分数和默认案例与冻结结果一致。环境、操作和0次提示按参与者自报登记，测试日期与用时未提供，不以接收日期代填。[记录CSV](user_test/model_judgment_records.csv)已有1行，[修改前后对照](user_test/model_judgment_before_after.md)登记7类建议，尚未实施。用户继续组织至少2份同版首测，详见[任务与逐人记录模板](user_test/model_judgment_test_guide.md)。页面可下载首次回答，后续解释、修改和复测另存，不覆盖原话。收齐前保持v1，不宣称已有三人结果或改进效果；旧页面成绩不转填到新页面。
+**真人测试进行中（2/3份）**：已收到[J01](user_test/model_judgment_J01_review.md)与[002](user_test/model_judgment_002_review.md)来稿，各自两项核心理解符合要点，模型哈希、分数和默认案例与冻结结果一致。[J01字段及补充](user_test/model_judgment_J01_record.json)和[002字段及摘要](user_test/model_judgment_002_record.json)分别保留。操作、资料接触和0次提示按参与者自报；002未展开精确分数表、从图表提示读数的声明不改写为查表。两人的测试日期和用时未提供，002的系统/浏览器也未提供，不套用J01信息或以接收日期代填。[记录CSV](user_test/model_judgment_records.csv)已有2行，[修改前后对照](user_test/model_judgment_before_after.md)合并登记9类建议，尚未实施。还需至少1份同版首测，详见[任务与逐人记录模板](user_test/model_judgment_test_guide.md)。002不与旧页面同名编号合并；收齐前保持v1，不宣称三人结果或改进效果。
 
 方法参考：[scikit-learn置换重要性](https://scikit-learn.org/stable/modules/permutation_importance.html)；图表选取接口参考[Streamlit Altair图表](https://docs.streamlit.io/develop/api-reference/charts/st.altair_chart)。
