@@ -1,5 +1,5 @@
 {
-  "verified_at_utc": "2026-11-14T03:06:04+00:00",
+  "verified_at_utc": "2026-11-14T03:16:18+00:00",
   "source_sha256": {
     ".gitattributes": "1b7bc133d20cc7f128d27669850cb3ab7746bdee3e892de1c67bc635b0ddecb8",
     ".gitignore": "743d2aa2a156e2a3d4a73a1808a98cf9975fadc1381344a336f8f11bc2a021a4",
@@ -15,16 +15,17 @@
     "scripts/check_model_judgment_ui.py": "aae63e209b664befe38ef8302945022e25e028a17649c7694497b648b2e17da5",
     "tests/test_model_judgment.py": "b2b776ad6f333bc147a5e22c68bf527de03082276fc4ad6f544f8f3970453d94",
     "tests/test_model_judgment_app.py": "c1e423a2cdc1635af4635b39e9073bf94649e6d4a4838fd8402116ad2ef7456f",
-    "README.md": "172d81a54e913cb55c9c88c1e013bc45160d8dc1dfc9b2a076cd261207e576ca",
-    "CHANGELOG.md": "a2183b874bb35049ceaa0cbe88f93f183acdbd2acf55b98298040fce6152fdcf",
-    "user_test/model_judgment_test_guide.md": "01a74893f7cee0ecbd49ffac93346c8aed9af7aab3ca35e41d49e79abac2f969",
+    "README.md": "9065d48d579e024997ee77b825a70a827a8703555b5e11f4834bb82b9ffc7385",
+    "CHANGELOG.md": "ceae6ef09f566705499b2e818787df7dd271631a8fca3188345141a94a94f4b3",
+    "user_test/model_judgment_test_guide.md": "08096367681db819fa9967cbeb329cf67b3c2417523e41054f13a15aee4076cf",
     "user_test/model_judgment_remote_quickstart.md": "3d068bc0c6150a052b394f735613b31348958de326926909e4d54a4c66e83e21",
-    "user_test/model_judgment_before_after.md": "76680a28041cc1b42ad339b0610b8d7516d52bf6440f2f0f2524f9d3103ebc72",
+    "user_test/model_judgment_before_after.md": "79e00a533bdf57ffaf09d697fe4bf530f275a9190962248828b73e249e43654f",
     "user_test/model_judgment_records.csv": "82185130459c502328a49e84ab44653e4a8ae80ff7ab254f2cb77d8f9d54a1d1",
     "user_test/model_judgment_J01_record.json": "1a77b6b9cfcde02e305112b9be8f9ed8df72e52ad834fb5ae91abd77d316d35a",
     "user_test/model_judgment_J01_review.md": "ea175c7c71f8f18c7ba0b8b0362df468a021fa052e706eb0d4b1418399c25e1e",
     "user_test/model_judgment_002_record.json": "d553ed6d92112e6fb27b7f2883745405df529688042496d6cc4337d2e0699269",
-    "user_test/model_judgment_002_review.md": "93fa2a59ee7f57ec9975a9981ae7e6dbca467a4e31ec1f9fd1d3c8ee31afd7bd"
+    "user_test/model_judgment_002_review.md": "93fa2a59ee7f57ec9975a9981ae7e6dbca467a4e31ec1f9fd1d3c8ee31afd7bd",
+    "user_test/model_judgment_actor_confirmation.json": "e59b6cf1c6609fa0d25b58250f4d1467c83b9d5571a511f3f7627474b2504a8f"
   },
   "artifact_sha256": {
     "reports/model_judgment/feature_importance.csv": "5bcd9385fe9593f5f7ba880676a35ef88e15a4c6e183a4786c891e97e1a1df1e",
@@ -121,7 +122,7 @@
     "notes": "中文标签、零值点、误差线与移动端布局已视觉复核"
   },
   "user_testing": {
-    "status": "2_of_3_reports_received_v1_retained",
+    "status": "2_of_3_human_reports_confirmed_v1_retained",
     "real_participants_recorded": 2,
     "participant_reports_received": 2,
     "participants": [
@@ -137,7 +138,9 @@
       "user_test/model_judgment_002_review.md"
     ],
     "candidate_improvements": 9,
-    "notes": "两份各两项核心理解符合要点，行为、资料接触和提示0次按自报。002提示读数路径保留，实际日期、系统/浏览器和用时缺失。尚需至少1份同版首测，9类建议未实施，无复测效果结论。"
+    "notes": "组织者确认J01和002均由同学亲自操作，仅纳入两份真人记录；原话、提示和环境自报保持。9类建议未实施，仍需至少1份同版真人首测。未纳入的新增材料已按用户要求删除，不保留为辅助走查。",
+    "human_operator_confirmation_file": "user_test/model_judgment_actor_confirmation.json",
+    "human_execution_confirmed_by_organizer": true
   },
   "hash_normalization": "UTF-8 text uses LF line endings for cross-platform comparison; binary files use original bytes",
   "linux_verification": "linux_verification.json",
@@ -147,7 +150,7 @@
     "record": "ui_linux/browser_checks.json"
   },
   "application_verified_at_utc": "2026-11-13T03:49:05+00:00",
-  "verification_scope": "J01 and 002 documentation and evidence review only; prior application and browser checks reused, not rerun",
+  "verification_scope": "Organizer confirmation and withdrawal of unsubmitted extra test materials; prior application and browser checks reused, not rerun",
   "documentation_checks": {
     "csv_original_answers_match_transcript": true,
     "test_date_left_blank": true,
@@ -157,6 +160,9 @@
     "existing_j01_csv_row_preserved": true,
     "002_environment_left_unknown": true,
     "002_model_hash_matches": true,
-    "002_numbers_and_cases_match": true
+    "002_numbers_and_cases_match": true,
+    "human_csv_unchanged": true,
+    "human_operator_confirmation_preserved": true,
+    "withdrawn_unsubmitted_files_removed": 4
   }
 }
