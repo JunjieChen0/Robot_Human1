@@ -1,5 +1,5 @@
 {
-  "verified_at_utc": "2026-11-13T03:49:05+00:00",
+  "verified_at_utc": "2026-11-14T02:14:51+00:00",
   "source_sha256": {
     ".gitattributes": "1b7bc133d20cc7f128d27669850cb3ab7746bdee3e892de1c67bc635b0ddecb8",
     ".gitignore": "743d2aa2a156e2a3d4a73a1808a98cf9975fadc1381344a336f8f11bc2a021a4",
@@ -15,12 +15,14 @@
     "scripts/check_model_judgment_ui.py": "aae63e209b664befe38ef8302945022e25e028a17649c7694497b648b2e17da5",
     "tests/test_model_judgment.py": "b2b776ad6f333bc147a5e22c68bf527de03082276fc4ad6f544f8f3970453d94",
     "tests/test_model_judgment_app.py": "c1e423a2cdc1635af4635b39e9073bf94649e6d4a4838fd8402116ad2ef7456f",
-    "README.md": "a6b93ceb5d85373b272e9dff3faf9c7aedc3ccfed99c6a8109e4defbabfa2b17",
-    "CHANGELOG.md": "81083273bee1ce46eb37ff1d38418786da4df5a0d4b7369b8f1537b84dd8832e",
-    "user_test/model_judgment_test_guide.md": "d4382634402d0bb30647c2c4c3d4fc09e4c7587cab3a88d4ac0dcfeefa0a9b4b",
+    "README.md": "0b81aa1b8dc7de9659b5bf0a29ade1f5bc1f065dca67b95046f7eef1474fd884",
+    "CHANGELOG.md": "a0a68f8c051f2bb6676389d3f2f03ed22237ab88857cab0c6bbff82998fd4f0d",
+    "user_test/model_judgment_test_guide.md": "6865913eb771f55ab65fe7fbe5443ca40e0b2fec4aac7d34044c1032abc9f9ac",
     "user_test/model_judgment_remote_quickstart.md": "3d068bc0c6150a052b394f735613b31348958de326926909e4d54a4c66e83e21",
-    "user_test/model_judgment_before_after.md": "35ca917102e7728db477870ba3c72cd5aab965e4cbe2941254c37622b01e46d1",
-    "user_test/model_judgment_records.csv": "a342f7129380511fe3cad5c0549de394da99bbe5344e1ec5b6def910defb518e"
+    "user_test/model_judgment_before_after.md": "794e4bd177d59d55255deea7a7a97f63876fbf1e6bc0af1d6e125887e4d902e7",
+    "user_test/model_judgment_records.csv": "d3cbb1edef2b6c8b730d541cbbe4fa17a63c75fae379e3624b258ece41fcfe72",
+    "user_test/model_judgment_J01_record.json": "1a77b6b9cfcde02e305112b9be8f9ed8df72e52ad834fb5ae91abd77d316d35a",
+    "user_test/model_judgment_J01_review.md": "ea175c7c71f8f18c7ba0b8b0362df468a021fa052e706eb0d4b1418399c25e1e"
   },
   "artifact_sha256": {
     "reports/model_judgment/feature_importance.csv": "5bcd9385fe9593f5f7ba880676a35ef88e15a4c6e183a4786c891e97e1a1df1e",
@@ -117,12 +119,15 @@
     "notes": "中文标签、零值点、误差线与移动端布局已视觉复核"
   },
   "user_testing": {
-    "status": "awaiting_user_organized_tests",
-    "real_participants_recorded": 0,
+    "status": "1_of_3_reports_received_v1_retained",
+    "real_participants_recorded": 1,
+    "participant_reports_received": 1,
     "required_participants": 3,
+    "received_date": "2026-11-13",
     "records_csv": "user_test/model_judgment_records.csv",
     "before_after": "user_test/model_judgment_before_after.md",
-    "notes": "用户组织三名同学；首次回答与真实误读待补，自动测试不计作真人结果"
+    "review_file": "user_test/model_judgment_J01_review.md",
+    "notes": "J01两项核心理解符合要点；环境、操作、提示0次按自报，实际测试日期和用时缺失。另需至少2份同版首测；7类建议未实施，无复测效果结论。"
   },
   "hash_normalization": "UTF-8 text uses LF line endings for cross-platform comparison; binary files use original bytes",
   "linux_verification": "linux_verification.json",
@@ -130,5 +135,14 @@
     "passed": 8,
     "total": 8,
     "record": "ui_linux/browser_checks.json"
+  },
+  "application_verified_at_utc": "2026-11-13T03:49:05+00:00",
+  "verification_scope": "J01 documentation and evidence update only; prior application tests and browser checks reused, not rerun",
+  "documentation_checks": {
+    "csv_original_answers_match_transcript": true,
+    "test_date_left_blank": true,
+    "experiment_artifacts_changed": 0,
+    "application_code_changed": 0,
+    "j01_model_hash_matches": true
   }
 }

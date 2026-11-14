@@ -235,6 +235,6 @@ python -m streamlit run app.py
 
 浏览器回归脚本为 `scripts/check_model_judgment_ui.py`，使用另装Playwright且已可启动Chrome的Python环境运行，服务默认端口8517，可用`--url`指定。它只做自动检查，不提交真人回答。
 
-**真人测试待完成**：用户组织至少3位同学完成两项新任务，详见[任务与逐人记录模板](user_test/model_judgment_test_guide.md)。[记录CSV](user_test/model_judgment_records.csv)目前仅有表头，[修改前后对照](user_test/model_judgment_before_after.md)保存v1基线和待填写结构。页面可下载首次回答，保存后锁定并绑定实验模型哈希；后续解释、修改和复测另存，不覆盖原话。尚未收到这三份记录，不宣称已完成真人测试或依据反馈改进。旧页面的真人成绩不转填到新页面。
+**真人测试进行中（1/3份）**：已收到[J01来稿与核对](user_test/model_judgment_J01_review.md)，[字段和补充原话](user_test/model_judgment_J01_record.json)分别保留；两项核心理解符合判定要点，模型哈希、分数和默认案例与冻结结果一致。环境、操作和0次提示按参与者自报登记，测试日期与用时未提供，不以接收日期代填。[记录CSV](user_test/model_judgment_records.csv)已有1行，[修改前后对照](user_test/model_judgment_before_after.md)登记7类建议，尚未实施。用户继续组织至少2份同版首测，详见[任务与逐人记录模板](user_test/model_judgment_test_guide.md)。页面可下载首次回答，后续解释、修改和复测另存，不覆盖原话。收齐前保持v1，不宣称已有三人结果或改进效果；旧页面成绩不转填到新页面。
 
 方法参考：[scikit-learn置换重要性](https://scikit-learn.org/stable/modules/permutation_importance.html)；图表选取接口参考[Streamlit Altair图表](https://docs.streamlit.io/develop/api-reference/charts/st.altair_chart)。
