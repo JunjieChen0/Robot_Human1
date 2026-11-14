@@ -11,5 +11,15 @@
     "participant": "003",
     "scope": "仅确认本次重新提交的新来稿，不恢复撤回资料"
   },
-  "scope": "确认执行者性质；不更改首次原话，不转作新一轮测试，也不独立核验环境、提示或完整操作过程"
+  "scope": "确认执行者性质；不更改首次原话，不转作新一轮测试，也不独立核验环境、提示或完整操作过程",
+  "v2_confirmations": [
+    {
+      "received_date": "2026-11-14",
+      "question_original": "这份 v2 的 J02 是否由同学本人操作并回答，而非 AI 代做？",
+      "answer_original": "是，同学本人完成",
+      "participant": "J02",
+      "page_version": "model-judgment-v2",
+      "scope": "确认本次v2来稿本人操作；是否参加v1及资料接触、环境、提示仍按参与者自报，不与002合并"
+    }
+  ]
 }

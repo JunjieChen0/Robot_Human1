@@ -1,5 +1,5 @@
 {
-  "verified_at_utc": "2026-11-14T03:43:07+00:00",
+  "verified_at_utc": "2026-11-14T04:38:55+00:00",
   "source_sha256": {
     ".gitattributes": "1b7bc133d20cc7f128d27669850cb3ab7746bdee3e892de1c67bc635b0ddecb8",
     ".gitignore": "743d2aa2a156e2a3d4a73a1808a98cf9975fadc1381344a336f8f11bc2a021a4",
@@ -15,19 +15,22 @@
     "scripts/check_model_judgment_ui.py": "c7a660df535523978850e77f6407c0d4b508869d7c5e17119d4c754559d538d4",
     "tests/test_model_judgment.py": "b2b776ad6f333bc147a5e22c68bf527de03082276fc4ad6f544f8f3970453d94",
     "tests/test_model_judgment_app.py": "2dd76712fb49f8363d79692165005daf69fb0b73ff760424b99de7111fd1fe83",
-    "README.md": "dbbae011a44990682549397698ef635c47a8dd1c2e7f7fb7a0b4a48957eb7f11",
-    "CHANGELOG.md": "0af0eb7080c677e002c46d51de4c779b5552374b135ce9f5cd1494cda63417e6",
-    "user_test/model_judgment_test_guide.md": "bfa98a91aa29ed217644c0f0dd5c5ea093b0042c70649142cb53b6575aa1e4a6",
+    "README.md": "6ca9f70a04512bc6e0c8f531db49e53a0b5de0f9d8d6a62e5ba00d5397a3b6e9",
+    "CHANGELOG.md": "f4cae53263ec779f22d4f9f61a4d77bf9d4fe90fa13db89e3da0489b627176c8",
+    "user_test/model_judgment_test_guide.md": "4a8852b8ba05d2824d9fb9fc1632a480e09edcba25e9b529ab49f42650ca228b",
     "user_test/model_judgment_remote_quickstart.md": "97dfc9838808129b7af8b97f8a747601848d3209cfb0403bf72b6a5f3a0d9a18",
-    "user_test/model_judgment_before_after.md": "0e41bcd455a940cfc6e474f39e36f3ce6ba03c9b785319951e1bd9f469bc6e78",
+    "user_test/model_judgment_before_after.md": "5e348214086b26aecd8e4ac585f5dff1ec20af6dc39ee5588a73e151c3edc300",
     "user_test/model_judgment_records.csv": "5d56c3aa8681ab3a9e9e1caad7dbd40e402412486f0bd914deb510688d3cc04a",
     "user_test/model_judgment_J01_record.json": "1a77b6b9cfcde02e305112b9be8f9ed8df72e52ad834fb5ae91abd77d316d35a",
     "user_test/model_judgment_J01_review.md": "ea175c7c71f8f18c7ba0b8b0362df468a021fa052e706eb0d4b1418399c25e1e",
     "user_test/model_judgment_002_record.json": "d553ed6d92112e6fb27b7f2883745405df529688042496d6cc4337d2e0699269",
     "user_test/model_judgment_002_review.md": "93fa2a59ee7f57ec9975a9981ae7e6dbca467a4e31ec1f9fd1d3c8ee31afd7bd",
-    "user_test/model_judgment_actor_confirmation.json": "58085fa187d5935fe406c2142213b44fa3971a8a42d7b3e6e1b9d3b65439ce69",
+    "user_test/model_judgment_actor_confirmation.json": "2d2f23d8e54cbf8a7176eb7ac15504a847f76b3da17a1ea38866bc2157a1d2aa",
     "user_test/model_judgment_003_record.json": "eba3349b80221989fd1d1a255024fafaf60225f4abdcde44f7c09cd02bc6a56a",
-    "user_test/model_judgment_003_review.md": "15ec7fadf6803299d1fe3a61cf0cc55afc04129b8ba7f3185cbaa92e6252e974"
+    "user_test/model_judgment_003_review.md": "15ec7fadf6803299d1fe3a61cf0cc55afc04129b8ba7f3185cbaa92e6252e974",
+    "user_test/model_judgment_v2_J02_record.json": "ef8d643e5034eccc890871825e35ed489d2ca5b51bb638995886a099b67ba61c",
+    "user_test/model_judgment_v2_J02_review.md": "28d17afd00792975a0d061011ca2fbd68efbb54e1448dfc1061c2eccca5ed173",
+    "user_test/model_judgment_v2_records.csv": "356f2cf35d74b401b74b7a95c698b75c4b37bac2014cbf02314ac6b03371a310"
   },
   "artifact_sha256": {
     "reports/model_judgment/feature_importance.csv": "5bcd9385fe9593f5f7ba880676a35ef88e15a4c6e183a4786c891e97e1a1df1e",
@@ -151,13 +154,14 @@
     "notes": "均值标注、较疏刻度、零值点、19行高度及移动端布局已视觉复核；窄表列宽仍需表内横向滚动。未作真人效果判断。"
   },
   "user_testing": {
-    "status": "3_human_v1_reports_confirmed_v2_implemented_no_human_retest",
-    "real_participants_recorded": 3,
-    "participant_reports_received": 3,
+    "status": "3_human_v1_reports_and_1_v2_first_time_report_confirmed",
+    "real_participants_recorded": 4,
+    "participant_reports_received": 4,
     "participants": [
       "J01",
       "002",
-      "003"
+      "003",
+      "J02"
     ],
     "required_participants": 3,
     "received_date": "2026-11-13",
@@ -166,10 +170,11 @@
     "review_files": [
       "user_test/model_judgment_J01_review.md",
       "user_test/model_judgment_002_review.md",
-      "user_test/model_judgment_003_review.md"
+      "user_test/model_judgment_003_review.md",
+      "user_test/model_judgment_v2_J02_review.md"
     ],
     "candidate_improvements": 9,
-    "notes": "组织者确认三位同学亲自完成v1；本次003只用重新提交的新来稿，不恢复撤回资料。首次原话与缺失值保留；风险建议不转写为实际误读；v2已修改，未做真人复测，不声称提升。",
+    "notes": "v1三份与v2一份分开存表。J02组织者确认本人操作，自报未参加v1、仅看启动指南、0次提示；两项核心理解符合，仍报告饮水零值/文件行号易混。缺失日期、用时和分布分箱不补造，不与002合并。没有同人前后测或对照，不宣称提升或困惑消除。",
     "human_operator_confirmation_file": "user_test/model_judgment_actor_confirmation.json",
     "human_execution_confirmed_by_organizer": true,
     "implemented_candidate_improvements": 9,
@@ -177,7 +182,14 @@
       "整批/单条/因果边界前置及图题图例澄清",
       "SMOTE来源数据集比例与训练子集比例区分"
     ],
-    "human_retests": 0
+    "v1_participants_recorded": 3,
+    "v2_first_time_participants_recorded": 1,
+    "v2_records_csv": "user_test/model_judgment_v2_records.csv",
+    "v2_participants": [
+      "J02"
+    ],
+    "latest_received_date": "2026-11-14",
+    "returning_v1_participant_retests": 0
   },
   "hash_normalization": "UTF-8 text uses LF line endings for cross-platform comparison; binary files use original bytes",
   "linux_verification": "linux_verification.json",
@@ -188,22 +200,30 @@
     "runtime": "linux_v2_verification.json"
   },
   "application_verified_at_utc": "2026-11-14T03:43:07+00:00",
-  "verification_scope": "三份v1真人首测归档、v2反馈修改；本轮重新执行完整测试和两入口浏览器检查。旧Linux首次安装记录保留，未重测依赖下载。",
+  "verification_scope": "J02的v2新用户首测归档与文档核对；本轮未改应用，沿用此前67项应用测试及两入口各12项浏览器检查，未重新执行。",
   "documentation_checks": {
-    "csv_original_answers_match_transcript": true,
-    "test_date_left_blank": true,
-    "existing_j01_and_002_csv_rows_preserved": true,
-    "002_environment_left_unknown": true,
-    "003_model_hash_numbers_distribution_cases_match": true,
-    "human_operator_confirmation_preserved_and_extended": true,
-    "previously_withdrawn_files_still_absent": true,
-    "experiment_artifacts_changed": 0,
-    "application_ui_changed": true,
-    "human_rows": 3
+    "source_response_and_v2_csv_match": true,
+    "v1_csv_unchanged": true,
+    "v1_records_unchanged": true,
+    "v1_rows": 3,
+    "v2_rows": 1,
+    "j02_model_hash_numbers_cases_match": true,
+    "j02_human_operator_confirmed_by_organizer": true,
+    "actual_test_date_left_unknown": true,
+    "linux_distribution_not_inferred": true,
+    "application_code_changed": 0,
+    "existing_artifacts_changed": 0,
+    "checks_reused_not_rerun": true
   },
   "iteration_preservation": {
     "checked_files": 42,
     "changed_files": [],
     "scope": "本轮前已有模型、处理数据、公平性产物、模型判断冻结实验与v1证据；排除本轮更新的verification.json"
+  },
+  "documentation_preservation": {
+    "existing_artifacts_checked": 38,
+    "application_and_config_files_checked": 14,
+    "changed_files": [],
+    "scope": "按上轮验证清单复核代码、启动依赖和38项冻结实验/图表证据；本轮仅新增来稿及修改文档。"
   }
 }
