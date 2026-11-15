@@ -1,5 +1,7 @@
 .venv/
 .venv-judgment/
+.venv-squat/
+src/squat_frontend/vendor/
 __pycache__/
 *.py[cod]
 .pytest_cache/

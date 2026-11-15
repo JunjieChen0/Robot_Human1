@@ -1,0 +1,2 @@
+# Inference runs in the browser; no Python MediaPipe, OpenCV, or GPU runtime.
+streamlit>=1.49,<2

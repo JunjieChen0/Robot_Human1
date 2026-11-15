@@ -1,5 +1,7 @@
 # WeightTrend（暂定名）
 
+> **视觉交互新作业：深蹲计数与纠错助手。** 同学可按[启动说明](user_test/squat_counter_quickstart.md)运行 `bash start_squat_counter.sh`，独立入口只需页面依赖与官方姿态资源，浏览器CPU推理。应用与[测试说明](user_test/squat_counter_test_guide.md)已准备；真实视频评价、3名同学的新流程测试及真实失败复测待组织，不能复用下面旧作业的测试记录。
+
 > **参加“模型判断”测试的同学：** 请先阅读[Linux下载与启动说明](user_test/model_judgment_remote_quickstart.md)，下载源码后运行 `bash start_model_judgment.sh`。首次自动安装页面依赖，无需训练模型；请先完成任务，再阅读下方实验结论。
 
 **人机交互课程作业选题 2：减重趋势分析原型**
@@ -242,3 +244,29 @@ python -m streamlit run app.py
 2026-11-14新增[J02的v2新用户首测](user_test/model_judgment_v2_J02_review.md)，[原话转录](user_test/model_judgment_v2_J02_record.json)及[v2 CSV](user_test/model_judgment_v2_records.csv)单独保存；组织者确认本人操作，J02自报未参加v1、仅看启动指南、0次提示。两项核心回答符合要点，仍自报饮水零值和features.csv文件行号易混；未提供的日期、用时、分布具体分箱不补造。v1三行不变，J02不与002合并。**这是v2新用户首测，尚无原参与者同人前后测**；不计算提升幅度，也不宣称误读已消除。详见[测试指南](user_test/model_judgment_test_guide.md)。
 
 方法参考：[scikit-learn置换重要性](https://scikit-learn.org/stable/modules/permutation_importance.html)；图表选取接口参考[Streamlit Altair图表](https://docs.streamlit.io/develop/api-reference/charts/st.altair_chart)。
+
+## 视觉交互扩展：深蹲计数与纠错
+
+面向大学生宿舍/课间单人锻炼，用户从固定侧面完成10次约定深蹲，核对自动反馈，修正误计/漏计并结束。开始时先站立，确认下蹲后恢复站立计1次；保持3秒不重复，半蹲不计。膝角≥160°为站立、≤100°为下蹲，各确认300毫秒；这些是尚待真实片段验证的初始课堂规则，详见[场景与验收条件](docs/squat_counter_spec.md)。
+
+Linux下载完整源码并解压后运行：
+
+```bash
+bash start_squat_counter.sh
+```
+
+需要Python 3.11+。脚本新建独立虚拟环境、安装`requirements-squat.txt`，从官方源下载并校验固定版本的MediaPipe浏览器资源。后续复用缓存；无需下载原健康模型、训练数据、Python视觉库或显卡运行库。默认仅监听`127.0.0.1:8501`；端口占用可加`--server.port 8521`，远程服务器的SSH转发方式见[同学说明](user_test/squat_counter_quickstart.md)。主项目已有依赖时，也可准备资源后运行`python -m streamlit run app.py`，侧栏选择“深蹲计数”。
+
+其他系统或已有Python环境可分别执行：
+
+```text
+python -m pip install -r requirements-squat.txt
+python scripts/download_squat_assets.py
+python -m streamlit run squat_counter_app.py
+```
+
+页面支持浏览器摄像头与本地视频、开始/暂停/继续/结束、关键点不清提示及停止计数、暂停后回看、撤销选中误计、补记漏计、撤销修正。自动数与修正数分开显示，原始事件不被覆盖。摄像头暂停时仍显示开启状态；结束、关闭或切页释放轨道。原画面默认不上传或录制，导出JSON保留模型/素材身份、角度与所选关键点轨迹、原始事件、修正、操作及锁定的首次自报反馈。[模型与影像来源](docs/squat_model_sources.md)列出官方链接、固定版本和校验值。
+
+实现入口为`src/squat_ui.py`与`src/squat_frontend/`；相同的`counter.mjs`供浏览器和Node规则测试使用。`src/squat_evaluation.py`以人工事件标注逐次匹配原始自动事件，分别输出误计、漏计和软件估计反馈延迟；不以修正后的总数评价识别效果，也不让误计漏计相互抵消。
+
+验证证据及复现命令见[技术检查报告](reports/squat_counter/README.md)。真实正常光照/光线变化/遮挡片段尚未纳入，真人参与者为0/3；[组织指南](user_test/squat_counter_test_guide.md)、[素材登记](user_test/squat_media_register.csv)、[人工标注模板](user_test/squat_annotations_template.csv)、[操作记录表](user_test/squat_counter_records.csv)和[失败改进对照模板](user_test/squat_counter_before_after.md)均已准备。真实演示视频和失败前后复测仍待完成；自动空画面、合成摄像头和模拟关键点检查不能代替这些材料。

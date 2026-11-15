@@ -1,0 +1,167 @@
+{
+  "page_version": "squat-counter-v1",
+  "kind": "应用与技术检查阶段；非真人识别或使用测试结论",
+  "organized_local_date": "2026-11-14",
+  "generated_at_utc": "2026-11-15T03:20:21.801842+00:00",
+  "base_commit": "a85e90a5145bdd0786a5173c0afd3715a6fd6d23",
+  "scope": "先完成应用与测试说明；不改旧作业模型、数据、分数、真人记录及本地提交包",
+  "checks": {
+    "python": {
+      "command": "python -B -m pytest tests -q -p no:cacheprovider --tb=short",
+      "passed": 81,
+      "seconds": 33.16,
+      "runtime": "3.11.15",
+      "includes_existing_tests": 67,
+      "new_app_and_evaluation_tests": 14
+    },
+    "node": {
+      "command": "node --test tests/test_squat_counter.mjs",
+      "passed": 8,
+      "runtime": "v24.4.1"
+    },
+    "browser": {
+      "ui_v1": {
+        "passed": 10,
+        "browser": "150.0.7871.127",
+        "record": "ui_v1/browser_checks.json"
+      },
+      "ui_integrated": {
+        "passed": 11,
+        "browser": "150.0.7871.127",
+        "record": "ui_integrated/browser_checks.json"
+      }
+    },
+    "debian": {
+      "passed": 9,
+      "python": "3.13.18",
+      "streamlit": "1.67.0",
+      "record": "linux_startup.json"
+    },
+    "syntax": {
+      "python_ast_files": 7,
+      "javascript_files": 4,
+      "passed": true
+    },
+    "local_markdown_links": {
+      "checked_documents": 7,
+      "passed": true
+    },
+    "empty_real_evidence_templates": {
+      "files": [
+        "user_test/squat_annotations_template.csv",
+        "user_test/squat_media_register.csv",
+        "user_test/squat_counter_records.csv"
+      ],
+      "data_rows": 0
+    },
+    "existing_artifact_preservation": {
+      "checked_files": 42,
+      "unchanged": true,
+      "sha256": {
+        "models/fairness_bundle.joblib": "7c527f86246659fc01225d7745b2be22a8abf0ee45b21695ef0e3853bb59cd09",
+        "models/final_model.joblib": "f7083176c32558a3734fcd42f2073b77f6c10ebf7040b124bc7442d26b26e5e1",
+        "models/judgment_model.joblib": "45b0f8d9a87bbef55bbc56e7c125a528304f58e51218a6f38cc7972a31f3014d",
+        "models/model_metadata.json": "e4c7d029d9e037d8b3bf2c3cab47ac611217c42a2a05fa223ed5979f96bae7b0",
+        "models/raw_ranges.json": "56bece667aceb7da5adcdde9667216b69b6d694c4cc43b7c9c012d6307792b98",
+        "data/processed/data_quality.json": "373f68792dfb00f089868be87dbff18ec9e8acf4b2aa5de087e7fd48cc81a678",
+        "data/processed/features.csv": "3f81ed49c31108173a43f3ad71d9b9199de5d3cbfbedc87cb06af615ef655cb7",
+        "reports/fairness/audit_page.png": "5bf38cd2887e8916b20d287d9846dd1469730a143d9f469f669aaa21e7130caa",
+        "reports/fairness/constraint_diagnostics.json": "90f5ea10e2bf873b43f7b2465150807ede9acaf1253eb91be224224df0fa43c4",
+        "reports/fairness/group_counts.csv": "5b32aa0efe917523784a9c7a228d609319c91ea7b14ecf65bde85be5d9705bee",
+        "reports/fairness/group_counts.png": "fe63bcdd72c9a11597e498ab505157a834b5e877cd9902ad25963edc0e9b0512",
+        "reports/fairness/group_rates.png": "b2d794c6183d72a9a353235f6e8e82e77c6fac06c3688af45fc83455607f59ce",
+        "reports/fairness/randomization_sensitivity.csv": "36845f49557630c19a082798d0fc7f9c42cfcf5f6eb14a289fd5682a817c81fd",
+        "reports/fairness/selection.json": "09e4411b7508335441df6c1da250c477b19205f165ec7124221e947aa2b34dc6",
+        "reports/fairness/test_comparison.csv": "ce471ba9a134c31b333bff97cf38653f079571729d3bd5764bcadf70a41c2740",
+        "reports/fairness/test_comparison.png": "15263a2971b2d4ba2322bd2109feaa0e036cd18094dd085b3a52040abe8659d7",
+        "reports/fairness/test_group_metrics.csv": "40bfd8dba170421dfd348bcf98a13c05a9b4463fa79de42c6fb7c5616a46b5e6",
+        "reports/fairness/test_predictions.csv": "a00cc905a04453cde1e7e283b939c99df04a0b5a57f8574e6b422d75f1cbbf33",
+        "reports/fairness/test_summary.json": "a3186d99b8a06e86f8313c3abf5acf1b75996988a01a74eb512f23e87c066fd7",
+        "reports/fairness/training_diagnostics.csv": "40001d0f9e7edff5edda7834f5d05625c4c444cc39a8fa8293049e8a0109b532",
+        "reports/fairness/validation_comparison.csv": "c977bb87af921dadaa6789ab3293eaf24cae78df4393e60f1b77200366c790aa",
+        "reports/fairness/validation_tradeoff.png": "6cad9a9c6f7c502954cf0b3d1b63a02fbfcf18069d041f1eb929894b10e5a46c",
+        "reports/fairness/公平性分析报告.md": "6156447f419c4c736e0a993192cf07a4ff3e14dc5a9d1f7a8e02317536e19a6b",
+        "reports/model_judgment/feature_importance.csv": "0cf306a2c715ab436f909606f29d3f3c00a83234b6abeb9183c4eafb466d014a",
+        "reports/model_judgment/feature_importance.png": "b63855d00b9d212385be8d27a0944ddc8c1a583621e4498a230a04ae649d1727",
+        "reports/model_judgment/input_dictionary.csv": "c5f1a3fb5cbdc3cc43fea75a5fa9cad7e0be8f1121fdf1aa52724baa58ed5858",
+        "reports/model_judgment/linux_verification.json": "fd60ecb537829680fd79bdee7f5618971d158ec316ad2a5c70117216787a6274",
+        "reports/model_judgment/permutation_repeats.csv": "dfacecbfb1b67372bf58e38f978cc9b01d71b0c1f796d45fb8433b526915b730",
+        "reports/model_judgment/summary.json": "c3fc374cae911cf6d3957b929d358d689abbb41b0c6ca5abc2a7bfd9663fa1e4",
+        "reports/model_judgment/validation_records.csv": "6069af26475fc5db76d08980f818f7641dcab866e2ff47943b5b50272bf502c1",
+        "reports/model_judgment/ui_linux/browser_checks.json": "dd2e6697e732bf5b90b5fa8438dff87bf7ba06edc3b4cb0319b1d32106d726ef",
+        "reports/model_judgment/ui_linux/cases.png": "3215a02686258d0c61c50cad478ae3b6a0878c58cd96fc06e2bf16ffde0fb02b",
+        "reports/model_judgment/ui_linux/constant_feature.png": "568b098b99b9d0079ce3be8b56169d6276483aae579462fca72bdc4bf606c319",
+        "reports/model_judgment/ui_linux/importance_chart.png": "6fe81a4efa84f0548b7efb24c8111649bca9f7cd32ee63b81bdcb409ab085512",
+        "reports/model_judgment/ui_linux/mobile.png": "eca309cf3e334df202383c4859b3a1e6f8d4c26576d91347820fe47f276a1611",
+        "reports/model_judgment/ui_linux/page_top.png": "b3e15c3456f552ed547899c019d35a5166477e43e032469c837b171ba97b2e8c",
+        "reports/model_judgment/ui_v1/browser_checks.json": "caa52270fba020ca7436713d5bd6a9fea30bb0feaed338fe612b2b5e8cd52599",
+        "reports/model_judgment/ui_v1/cases.png": "71b1819d425782e3f0c5729606ef19da3e742636ed6cc0c0b6576d39cbeb1668",
+        "reports/model_judgment/ui_v1/constant_feature.png": "d93fc091b6855da013c7e9abc8af88c0fd88d60f5065be9b2ea6bc7ed3c514ce",
+        "reports/model_judgment/ui_v1/importance_chart.png": "2c01b0421f1724a651be6ac074d5e67b9f38fdba6321b1ce4ba928541bbddf24",
+        "reports/model_judgment/ui_v1/mobile.png": "7e28875ff8e9ea815b01b1523465d040f450b4bc4b2d269ff4796f9c422d2799",
+        "reports/model_judgment/ui_v1/page_top.png": "f33681250dd80a0fc199751fc10ca76ab30ace5cac6f0d42acf212649619d569"
+      }
+    }
+  },
+  "real_evidence": {
+    "consented_human_clips": 0,
+    "human_participants": 0,
+    "required_human_participants": 3,
+    "normal_light_change_occlusion_metrics": null,
+    "real_failure_before_after": null,
+    "real_demo_video": null
+  },
+  "limitations": [
+    "真实CPU模型只检查了程序生成的空画面；摄像头为Chromium合成设备。",
+    "动作与纠错检查使用明确标记的模拟关键点，评价工具拒绝将其作为真实识别样本。",
+    "160/100度、300毫秒稳定及500毫秒断帧为初始课堂规则，真实片段试录后应固定正式版本。",
+    "反馈延迟是软件渲染回调估计，包含稳定确认偏移，不是光电屏幕实测。",
+    "识别性能测试连续运行；三人操作测试的手动暂停/纠错会话单独评价。"
+  ],
+  "source_sha256": {
+    ".gitattributes": "257779c348cb3cc6e7292406333ece722dbf8c0082e0b4056a89cff5d4bf83c3",
+    ".gitignore": "cbfcc208bb1d1f48f02134c84b745556e845bd610bad0397a996d3dfb8ba1813",
+    "CHANGELOG.md": "4e297ac6476d7e972e9f872a1ac89ca49bab73e0d8ea40b8ee7b59208fb58be6",
+    "README.md": "095662f49cd68149d662767b34f59aec7e2dc29a840b21a9b5b6ddf698ad9c7a",
+    "app.py": "bea8203a1d2f20e613d71a480f09e583f557c152449b26fcc88131a06b5651ef",
+    "docs/squat_counter_spec.md": "0956862d3b19475ba94da071ccb9c25b8db91c97aa60dbf3b52205499c120438",
+    "docs/squat_model_sources.md": "07a3667b976b1e380eb3b7d4ba17e90ecae59190157c66ea8384f8d530f0d18a",
+    "requirements-squat.txt": "a0ad3b13730459a029071f7a30bf9d9a578161ab3a4c0c335639c31174cfe864",
+    "scripts/check_squat_ui.py": "f336c4181dca6fec871b85693722ac473fcd2ea6d4242b3db2f37ef9cbbc29de",
+    "scripts/download_squat_assets.py": "549657e075dba51d7b7443b242affe89ada3b1d8675b1e8848a6569c07f0d9f5",
+    "squat_counter_app.py": "52c869ead36ec699e2d196f741e1aa7721a3125316a530b5ffdb157a742feb8e",
+    "src/squat_evaluation.py": "ad1b5e39ae6023db9e4c3abaa62fcdff7546a31a782dd20f6711b5ff4b52e0c7",
+    "src/squat_frontend/app.mjs": "0e0f8be51d9ed41b1594e4bd795f351ee670df9f1681332a8939f06d8af7c291",
+    "src/squat_frontend/asset_manifest.json": "fd5f25cedba21e74e9c3ae299ff73fa214b6b64b286583b9de2524a22220a000",
+    "src/squat_frontend/counter.mjs": "8ca4a2b83bf4ecbbc3e802691f32df4bfa087e2efb4373d7d8539edd0f42257c",
+    "src/squat_frontend/index.html": "f29600a4f13dcd70558a20ba5003aec71881339f99c7105d643c1ff93153e3f1",
+    "src/squat_frontend/pose_worker.mjs": "d8df9338ba0478e17839ead86d37b457eb3961a2325fcd2f8954949a1fb6dfd4",
+    "src/squat_frontend/style.css": "2c79f95d301e2924bbe405e201d9f6804aa2e96c70a6f30b6c57668a3f46b389",
+    "src/squat_ui.py": "3865fe8775025e312eff0fa5b25db5a95bcb12e13d861986200624a2dc2f1e19",
+    "start_squat_counter.sh": "ff8c8dbe947ff95271c4dc981f5aafff97c57aa352805e6b70be1aa969a9c8d1",
+    "tests/test_squat_app.py": "0940c824a7ec7115d894c5adb64d12f45280a394f2be3b820ec74c29538867a0",
+    "tests/test_squat_counter.mjs": "3a2c1c15d9a3d5e348b033a923f5d1d0f5180509f500b9ed4111ba83eae7dc5f",
+    "tests/test_squat_evaluation.py": "0ca8c7ee9e19bbdf6fa2fa7dee4666b4856fd19ecb914c7e544ce38ccccb3c31",
+    "user_test/squat_annotations_template.csv": "12a4bcfa81ad89c0112097ddb7b2052e6d2b09ce265779179d2145def4ace7a1",
+    "user_test/squat_counter_before_after.md": "aebf4f60ef795837259e1d4d5383bb2183d247b55dccb8626e5dce73392baf84",
+    "user_test/squat_counter_quickstart.md": "43ca2ddf57ba0d67198571fccd6e76fd6e836694ddec6c6a79b2aab5af489440",
+    "user_test/squat_counter_records.csv": "0e9a0262c03fcbf858bfac5364e767fa78010ae8972facf30892f3ebbd6b2e00",
+    "user_test/squat_counter_test_guide.md": "543c97034103b3765f31ffe5b28af4a164166462251500e336e3f04dcfbe5151",
+    "user_test/squat_media_register.csv": "adfe46cfc9249854330507e70aa4023a9efff04d83c6ce367c0d60569ea60f82"
+  },
+  "technical_artifact_sha256": {
+    "reports/squat_counter/linux_startup.json": "1b36e33e21f1f4bb7f8364583a28761e06c0f82dbc57d8329dc42d6817291a5d",
+    "reports/squat_counter/ui_integrated/browser_checks.json": "31511da708f2c74ca12c6151c9314dbfb83de82480cb81ce9c8158979d4e90f3",
+    "reports/squat_counter/ui_integrated/initial.png": "133b5367891aa1acb0c65419fd9c1594ab8f99a9c6c587b1fad86662e682b579",
+    "reports/squat_counter/ui_integrated/mobile.png": "5655eb8b9123ff65e8bf9b3a8ef9328e27a5ac9fa4f35a8cfd5d34199ae7cd3f",
+    "reports/squat_counter/ui_integrated/mock_controls.png": "664439cc463661bfeb89bd23eaa7004c19cabdf438f16c0ff155cc5663e8a2b8",
+    "reports/squat_counter/ui_integrated/unclear_real_model.png": "72e743c9cd87b2c8b14b27bab708a9823835b33bbc4729e7412769cdae340694",
+    "reports/squat_counter/ui_v1/browser_checks.json": "82a05e87f9c144182e71b85c567a71bf57691c4a4f35de43a474fc3d11a7797e",
+    "reports/squat_counter/ui_v1/initial.png": "d77bac2cd95e5535042693f43fd9499c70c6c8103aa8849f02a02ac69480e5d9",
+    "reports/squat_counter/ui_v1/mobile.png": "999e962292cc981b2062874a5984f2d2e5e0bff1b12c76d20b972bf6a5cfa853",
+    "reports/squat_counter/ui_v1/mock_controls.png": "c6ccd92cd3d31d37fca930a5e334434b1f763516ac2db1780b3583510dd8a5e7",
+    "reports/squat_counter/ui_v1/unclear_real_model.png": "012e5d12642cd92950f0fcc826629f937969d031a092639bb749e568e884f742"
+  },
+  "source_hash_basis": "源码和文档按LF归一化后SHA256，对应Git文本内容；不包括本摘要自身",
+  "artifact_hash_basis": "PNG按原始字节；JSON按LF归一化"
+}

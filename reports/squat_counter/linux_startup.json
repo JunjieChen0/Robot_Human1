@@ -1,0 +1,37 @@
+{
+  "kind": "Debian 13容器内独立入口启动检查，非真人识别测试",
+  "python": "3.13.18",
+  "os_release": "PRETTY_NAME=\"Debian GNU/Linux 13 (trixie)\"\nNAME=\"Debian GNU/Linux\"\nVERSION_ID=\"13\"\nVERSION=\"13 (trixie)\"\nVERSION_CODENAME=trixie\nDEBIAN_VERSION_FULL=13.7\nID=debian\nHOME_URL=\"https://www.debian.org/\"\nSUPPORT_URL=\"https://www.debian.org/support\"\nBUG_REPORT_URL=\"https://bugs.debian.org/\"\n",
+  "streamlit": "1.67.0",
+  "checks": {
+    "fresh_venv_created_by_launcher": true,
+    "standalone_without_health_models": true,
+    "health_ok": true,
+    "path_with_spaces": true,
+    "asset_hashes_verified": true,
+    "resources_reused": true,
+    "requirements_marker_matches": true,
+    "no_python_vision_or_health_dependencies": true,
+    "bash_syntax": true
+  },
+  "absent_python_packages": {
+    "sklearn": true,
+    "joblib": true,
+    "fairlearn": true,
+    "cv2": true,
+    "mediapipe": true,
+    "torch": true
+  },
+  "asset_hash_checks": {
+    "vision_bundle.mjs": true,
+    "wasm/vision_wasm_internal.js": true,
+    "wasm/vision_wasm_internal.wasm": true,
+    "wasm/vision_wasm_nosimd_internal.js": true,
+    "wasm/vision_wasm_nosimd_internal.wasm": true,
+    "package.json": true,
+    "README.md": true,
+    "pose_landmarker_lite.task": true
+  },
+  "first_launch": "新建虚拟环境；pip复用了部分系统下载缓存并联网下载其余依赖；模型缓存初始为空，已从官方源下载并校验",
+  "browser_cpu_checks": "另见ui_v1和ui_integrated；本报告不包含真人识别效果"
+}

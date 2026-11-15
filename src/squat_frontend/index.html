@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>深蹲计数</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main id="app">
+  <section class="input-panel" aria-label="影像来源">
+    <label class="consent"><input id="consent" type="checkbox">我使用本人影像，或已获得被拍摄者用于本次课程测试的同意</label>
+    <div class="source-row">
+      <label>影像来源<select id="sourceMode"><option value="video">导入测试视频</option><option value="camera">浏览器摄像头</option></select></label>
+      <label>靠近镜头的一侧<select id="side"><option value="left">身体左侧</option><option value="right">身体右侧</option></select></label>
+      <label id="fileLabel">选择视频<input id="file" type="file" accept="video/mp4,video/webm,video/quicktime" disabled></label>
+      <button id="openCamera" hidden disabled>打开摄像头</button>
+    </div>
+    <p id="sourceInfo" class="muted">选择视频后点击开始。换新输入会新建记录，请先导出需要保留的结果。</p>
+  </section>
+  <div class="status-row"><span id="cameraStatus">摄像头：关闭</span><span id="modelStatus">模型：尚未加载</span></div>
+  <section class="workspace">
+    <div class="preview">
+      <video id="video" playsinline muted preload="metadata" hidden></video>
+      <canvas id="canvas" width="640" height="480" role="img" aria-label="视频画面和肩髋膝踝关键点"></canvas>
+      <p class="preview-note">单人侧身，肩、髋、膝、踝完整入镜。预览不镜像，左/右按本人身体区分。</p>
+      <label id="reviewLabel" hidden>暂停或结束后回看（只回放，不计数）<input id="review" type="range" min="0" max="1" step="0.05" value="0"></label>
+      <div class="clock-row"><span id="clock">片段时间 00:00.0</span><span id="angle">膝角 —</span></div>
+    </div>
+    <aside class="count-panel">
+      <div id="feedback" role="status" aria-live="polite">等待输入，请先确认影像使用同意。</div>
+      <div class="totals"><div><span>自动计数</span><output id="autoCount">0</output></div><div><span>修正后计数</span><output id="correctedCount">0</output></div></div>
+      <p id="adjustment" class="muted">手工调整 0 次；自动记录始终保留。</p>
+      <div class="controls">
+        <button id="start" class="primary" disabled>开始计数</button><button id="pause" disabled>暂停识别</button>
+        <button id="resume" disabled>继续识别</button><button id="end" disabled>结束</button>
+        <button id="closeCamera" disabled>关闭摄像头并结束</button>
+      </div>
+      <section class="correction" aria-label="计数纠错">
+        <h2>核对与修正</h2><p class="muted">暂停或结束后，按画面时间核对；原始计数不被覆盖。</p>
+        <label>需撤销的自动记录<select id="eventChoice" disabled><option value="">暂无自动记录</option></select></label>
+        <div class="controls"><button id="retract" disabled>撤销选中误计</button><button id="add" disabled>补记漏计 1 次</button><button id="undoCorrection" disabled>撤销上次修正</button></div>
+      </section>
+    </aside>
+  </section>
+  <details class="rules"><summary>如何计1次</summary><p>先站立准备，确认下蹲后恢复站立计1次；保持3秒不重复。站立膝角≥160°、下蹲≤100°，各确认300毫秒；中间区间不触发。关键点不清、暂停或帧间隔超过500毫秒后，需要重新站立准备。</p><p>这是课堂计数条件，不是动作标准或健康评价。阈值尚待真实视频验证。</p></details>
+  <section class="record-panel">
+    <h2>本次记录</h2><p id="sessionState" class="muted">还没有开始计数。</p>
+    <ol id="eventLog" aria-label="自动计数与修正时间记录"></ol>
+    <details><summary>填写操作反馈（同学测试时填写，保留首次原话）</summary>
+      <div class="form-grid"><label>匿名编号<input id="participant" maxlength="20" placeholder="如 S01"></label><label>提示次数（未知留空）<input id="hints" type="number" min="0" step="1"></label></div>
+      <label>是否完成开始、暂停、继续、结束和关闭输入<select id="taskCompleted"><option value="">未填写</option><option>已完成</option><option>部分完成</option><option>未完成</option></select></label>
+      <label>发现了哪些计数错误，发生在什么时间<textarea id="noticedError" rows="3"></textarea></label>
+      <label>如何修正，是否需要帮助<textarea id="correctionAnswer" rows="3"></textarea></label>
+      <label>既往接触、提示内容及其他困惑<textarea id="issues" rows="3"></textarea></label>
+      <button id="saveAnswers" disabled>保存首次反馈</button><span id="answerState" class="muted"></span>
+    </details>
+    <button id="download" class="primary" disabled>导出本次记录 JSON</button>
+    <p class="muted">视频与摄像头画面留在本机浏览器，默认不录制、不上传。会话只在当前页面暂存，请导出后交给组织者。结束或切换页面会关闭本组件的摄像头。</p>
+  </section>
+  <p class="version">squat-counter-v1 · 单人侧面计数 · 浏览器CPU推理</p>
+</main>
+<script type="module" src="app.mjs"></script>
+</body></html>
