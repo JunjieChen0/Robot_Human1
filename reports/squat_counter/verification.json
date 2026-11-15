@@ -2,7 +2,7 @@
   "page_version": "squat-counter-v1",
   "kind": "应用与技术检查阶段；非真人识别或使用测试结论",
   "organized_local_date": "2026-11-14",
-  "generated_at_utc": "2026-11-15T03:20:21.801842+00:00",
+  "generated_at_utc": "2026-11-15T03:22:46.626303+00:00",
   "base_commit": "a85e90a5145bdd0786a5173c0afd3715a6fd6d23",
   "scope": "先完成应用与测试说明；不改旧作业模型、数据、分数、真人记录及本地提交包",
   "checks": {
@@ -121,13 +121,13 @@
   "source_sha256": {
     ".gitattributes": "257779c348cb3cc6e7292406333ece722dbf8c0082e0b4056a89cff5d4bf83c3",
     ".gitignore": "cbfcc208bb1d1f48f02134c84b745556e845bd610bad0397a996d3dfb8ba1813",
-    "CHANGELOG.md": "4e297ac6476d7e972e9f872a1ac89ca49bab73e0d8ea40b8ee7b59208fb58be6",
+    "CHANGELOG.md": "c8a509148cc92d45cf2fe84e4bba17995be6a42e8c04564593f6102401fcb69b",
     "README.md": "095662f49cd68149d662767b34f59aec7e2dc29a840b21a9b5b6ddf698ad9c7a",
     "app.py": "bea8203a1d2f20e613d71a480f09e583f557c152449b26fcc88131a06b5651ef",
     "docs/squat_counter_spec.md": "0956862d3b19475ba94da071ccb9c25b8db91c97aa60dbf3b52205499c120438",
     "docs/squat_model_sources.md": "07a3667b976b1e380eb3b7d4ba17e90ecae59190157c66ea8384f8d530f0d18a",
     "requirements-squat.txt": "a0ad3b13730459a029071f7a30bf9d9a578161ab3a4c0c335639c31174cfe864",
-    "scripts/check_squat_ui.py": "f336c4181dca6fec871b85693722ac473fcd2ea6d4242b3db2f37ef9cbbc29de",
+    "scripts/check_squat_ui.py": "41b6a60c950a307ff71cf4b4f112f72d9fd4141875f90553e44dc04cb61ed3fa",
     "scripts/download_squat_assets.py": "549657e075dba51d7b7443b242affe89ada3b1d8675b1e8848a6569c07f0d9f5",
     "squat_counter_app.py": "52c869ead36ec699e2d196f741e1aa7721a3125316a530b5ffdb157a742feb8e",
     "src/squat_evaluation.py": "ad1b5e39ae6023db9e4c3abaa62fcdff7546a31a782dd20f6711b5ff4b52e0c7",
@@ -153,7 +153,7 @@
     "reports/squat_counter/linux_startup.json": "1b36e33e21f1f4bb7f8364583a28761e06c0f82dbc57d8329dc42d6817291a5d",
     "reports/squat_counter/ui_integrated/browser_checks.json": "31511da708f2c74ca12c6151c9314dbfb83de82480cb81ce9c8158979d4e90f3",
     "reports/squat_counter/ui_integrated/initial.png": "133b5367891aa1acb0c65419fd9c1594ab8f99a9c6c587b1fad86662e682b579",
-    "reports/squat_counter/ui_integrated/mobile.png": "5655eb8b9123ff65e8bf9b3a8ef9328e27a5ac9fa4f35a8cfd5d34199ae7cd3f",
+    "reports/squat_counter/ui_integrated/mobile.png": "f181dc8f222c3434278849be8a655555614a0d2644d21a5937a68d5ab8ecec93",
     "reports/squat_counter/ui_integrated/mock_controls.png": "664439cc463661bfeb89bd23eaa7004c19cabdf438f16c0ff155cc5663e8a2b8",
     "reports/squat_counter/ui_integrated/unclear_real_model.png": "72e743c9cd87b2c8b14b27bab708a9823835b33bbc4729e7412769cdae340694",
     "reports/squat_counter/ui_v1/browser_checks.json": "82a05e87f9c144182e71b85c567a71bf57691c4a4f35de43a474fc3d11a7797e",
@@ -163,5 +163,11 @@
     "reports/squat_counter/ui_v1/unclear_real_model.png": "012e5d12642cd92950f0fcc826629f937969d031a092639bb749e568e884f742"
   },
   "source_hash_basis": "源码和文档按LF归一化后SHA256，对应Git文本内容；不包括本摘要自身",
-  "artifact_hash_basis": "PNG按原始字节；JSON按LF归一化"
+  "artifact_hash_basis": "PNG按原始字节；JSON按LF归一化",
+  "additional_visual_check": {
+    "main_entry_width_px": 390,
+    "sidebar_fully_closed": true,
+    "component_and_page_no_horizontal_overflow": true,
+    "scope": "只重拍主入口窄屏图，不修改应用或重新宣称全套功能回归"
+  }
 }

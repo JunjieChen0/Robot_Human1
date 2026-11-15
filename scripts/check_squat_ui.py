@@ -175,6 +175,7 @@ def main():
         frame=open_component(mobile,args.url)
         if mobile.get_by_test_id("stSidebarCollapseButton").count():
             mobile.get_by_test_id("stSidebarCollapseButton").get_by_role("button").click()
+            mobile.wait_for_function("document.querySelector('[data-testid=stSidebar]').getBoundingClientRect().right <= 1")
         iframe=next(f for f in mobile.frames if "squat_counter" in f.url)
         checks["mobile_no_component_overflow"]=iframe.evaluate("document.documentElement.scrollWidth<=innerWidth")
         mobile.screenshot(path=str(args.output/"mobile.png"),full_page=True)
