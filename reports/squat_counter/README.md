@@ -2,7 +2,9 @@
 
 页面版本`squat-counter-v1`。初始技术检查整理于2026-11-14；当时按“先完成应用与测试说明”执行，没有真人记录。[初始验证摘要](verification.json)保留该时点状态和测试结果，不随后来来稿改写。
 
-2026-11-18新增[S01同学操作核对](../../user_test/squat_counter_S01_review.md)及[机器摘要](S01_intake.json)，组织者确认本人独立完成，当前记录1/3，原答复“部分完成”。视频哈希一致，自动6次、4次补记后10次；原始事件保留。输入经过剪辑，原出处/剪辑明细待补，影像及含人物截图本地保存。会话含手动暂停，尚无连续识别性能指标；已定位候选规则/界面问题，应用尚未修改或改后复测。
+2026-11-18新增[S01同学操作核对](../../user_test/squat_counter_S01_review.md)及[机器摘要](S01_intake.json)，组织者确认本人独立完成，原答复“部分完成”。视频哈希一致，自动6次、4次补记后10次；原始事件保留。输入经过剪辑，原出处/剪辑明细待补，影像及含人物截图本地保存。
+
+同日新增[S02核对](../../user_test/squat_counter_S02_review.md)及[机器摘要](S02_intake.json)，组织者确认另一名同学独立操作与课程影像同意，当前记录2/3。S02自报“已完成”，保留正式前清空重试与当前仅自动结束的边界；视频哈希一致，自动8次、补记2次后10次。素材说明为截取片段拼接两次，最低点与稀疏取样说明尚非完成事件真值。两份都含手动暂停，尚无连续识别性能指标；补记归零及规则提示问题待统一改进，应用仍v1，尚无改后复测。
 
 ## 任务对应材料
 
@@ -10,7 +12,7 @@
 | --- | --- | --- |
 | 用户场景与成功条件 | [规则与验收条件](../../docs/squat_counter_spec.md)，大学生单人侧面深蹲 | 真实片段试录，固定正式测试版本 |
 | 完整视觉交互 | [独立入口](../../squat_counter_app.py)、[主界面入口](../../app.py)、[浏览器实现](../../src/squat_frontend/app.mjs)，摄像头/视频、开始至结束、遮挡提示、纠错和原始记录 | 用真实动作验证可靠性 |
-| 识别效果与使用效果分别评价 | [逐次匹配工具](../../src/squat_evaluation.py)、[标注空表](../../user_test/squat_annotations_template.csv)、[S01操作记录](../../user_test/squat_counter_records.csv)、[组织说明](../../user_test/squat_counter_test_guide.md) | 三种光照/遮挡条件下的连续误计、漏计、延迟；另2位同学操作 |
+| 识别效果与使用效果分别评价 | [逐次匹配工具](../../src/squat_evaluation.py)、[标注空表](../../user_test/squat_annotations_template.csv)、[两份操作记录](../../user_test/squat_counter_records.csv)、[组织说明](../../user_test/squat_counter_test_guide.md) | 三种光照/遮挡条件下的连续误计、漏计、延迟；S03操作 |
 | 一次失败改进与同条件复测 | [前后对照模板及S01候选](../../user_test/squat_counter_before_after.md)，区分模型、规则、提示原因 | 修改应用并用同片段/条件复测，尚无改后结果 |
 | 模型、影像来源与演示 | [来源及权限说明](../../docs/squat_model_sources.md)、[素材登记空表](../../user_test/squat_media_register.csv)、[运行说明](../../user_test/squat_counter_quickstart.md) | 获同意的实际影像与最终演示视频 |
 

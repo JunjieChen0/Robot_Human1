@@ -12,6 +12,19 @@
       "recorded_date": null,
       "public_media_permission_explicit": false,
       "record": "squat_counter_S01_record.json"
+    },
+    "S02": {
+      "received_local_date": "2026-11-18",
+      "question_original": "请确认：S02由另一名同学本人独立操作并填写，且这份视频已获用于课程测试和报告的同意。影像仍仅本地保存。",
+      "answer_original": "两项均确认",
+      "interpretation": "组织者确认S02为另一名同学、本人独立操作并填写，确认视频课程测试和报告使用同意；影像仅本地保存。正式导出前的清空重试按参与者原话记录，不推断为完全首次尝试。",
+      "media_source_self_report": "来稿说明称实体拍摄；原15秒片段截取前约12.3秒并首尾拼接两次。未提供原片出处或拍摄日期。",
+      "original_media_source": null,
+      "recorded_date": null,
+      "media_storage_scope": "local_only",
+      "public_media_permission_explicit": false,
+      "record": "squat_counter_S02_record.json",
+      "ground_truth_note": "squat_counter_S02_ground_truth_note.txt"
     }
   }
 }

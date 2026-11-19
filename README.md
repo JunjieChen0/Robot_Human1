@@ -1,6 +1,6 @@
 # WeightTrend（暂定名）
 
-> **视觉交互新作业：深蹲计数与纠错助手。** 同学可按[启动说明](user_test/squat_counter_quickstart.md)运行 `bash start_squat_counter.sh`，独立入口只需页面依赖与官方姿态资源，浏览器CPU推理。应用与[测试说明](user_test/squat_counter_test_guide.md)已准备；真实视频评价、3名同学的新流程测试及真实失败复测待组织，不能复用下面旧作业的测试记录。
+> **视觉交互新作业：深蹲计数与纠错助手。** 同学可按[启动说明](user_test/squat_counter_quickstart.md)运行 `bash start_squat_counter.sh`，独立入口只需页面依赖与官方姿态资源，浏览器CPU推理。应用与[测试说明](user_test/squat_counter_test_guide.md)已准备，已收2份同学操作记录；连续识别评价、S03及实际改后复测待组织，不能复用下面旧作业的测试记录。未测试同学先只阅读启动说明。
 
 > **参加“模型判断”测试的同学：** 请先阅读[Linux下载与启动说明](user_test/model_judgment_remote_quickstart.md)，下载源码后运行 `bash start_model_judgment.sh`。首次自动安装页面依赖，无需训练模型；请先完成任务，再阅读下方实验结论。
 
@@ -269,6 +269,6 @@ python -m streamlit run squat_counter_app.py
 
 实现入口为`src/squat_ui.py`与`src/squat_frontend/`；相同的`counter.mjs`供浏览器和Node规则测试使用。`src/squat_evaluation.py`以人工事件标注逐次匹配原始自动事件，分别输出误计、漏计和软件估计反馈延迟；不以修正后的总数评价识别效果，也不让误计漏计相互抵消。
 
-验证证据及复现命令见[技术检查报告](reports/squat_counter/README.md)。2026-11-18收到[S01的v1独立操作记录](user_test/squat_counter_S01_review.md)，组织者确认本人完成及剪辑素材符合课程要求，当前同学记录1/3，原答复“部分完成”；[原始JSON](user_test/squat_counter_S01_record.json)保留自动6次、4次补记及修正后10次。原视频出处与剪辑明细待补，未明确公开影像许可，视频及含人物截图仅本地留存。会话含手动暂停，不作连续识别性能评分；规则确认时长与补记归零问题已有诊断，应用尚未修改或改后复测。
+验证证据及复现命令见[技术检查报告](reports/squat_counter/README.md)。2026-11-18收到[S01](user_test/squat_counter_S01_review.md)和[S02](user_test/squat_counter_S02_review.md)两份v1操作记录，组织者确认两位同学分别独立完成及课程影像使用要求，当前记录2/3；完成情况“部分完成”“已完成”按各自原话保留，不作统一通过率。S01[原始JSON](user_test/squat_counter_S01_record.json)为自动6、补记4、修正10；S02[原始JSON](user_test/squat_counter_S02_record.json)为自动8、补记2、修正10，另保留正式前清空重试和当前仅自动结束的边界。[S02原标注说明](user_test/squat_counter_S02_ground_truth_note.txt)称原片截取后重复拼接，给出最低点及稀疏取样，不等于恢复站立事件标注。原素材出处待补，视频及含人物截图仅本地保存。
 
-三种条件的连续评价、另两位同学、最终演示及失败改进复测仍待完成。[组织指南](user_test/squat_counter_test_guide.md)、[素材登记](user_test/squat_media_register.csv)、[人工标注模板](user_test/squat_annotations_template.csv)、[操作记录表](user_test/squat_counter_records.csv)和[失败改进对照模板](user_test/squat_counter_before_after.md)均已准备；自动空画面、合成摄像头和模拟关键点检查与同学操作记录分开，不代替真实识别效果。
+两份会话均含手动暂停，不作连续识别性能评分；输入不同，不用6与8比较版本提升，也不宣称60%或80%准确率。规则确认时长、暂停提示及补记归零已有诊断，应用保持v1，尚无修复或改后复测。三种条件的连续评价、S03、最终演示及失败改进复测仍待完成。[组织指南](user_test/squat_counter_test_guide.md)、[素材登记](user_test/squat_media_register.csv)、[人工标注模板](user_test/squat_annotations_template.csv)、[操作记录表](user_test/squat_counter_records.csv)和[失败改进对照模板](user_test/squat_counter_before_after.md)均已准备；自动技术检查与同学操作记录分开，不代替真实识别效果。
