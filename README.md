@@ -269,4 +269,6 @@ python -m streamlit run squat_counter_app.py
 
 实现入口为`src/squat_ui.py`与`src/squat_frontend/`；相同的`counter.mjs`供浏览器和Node规则测试使用。`src/squat_evaluation.py`以人工事件标注逐次匹配原始自动事件，分别输出误计、漏计和软件估计反馈延迟；不以修正后的总数评价识别效果，也不让误计漏计相互抵消。
 
-验证证据及复现命令见[技术检查报告](reports/squat_counter/README.md)。真实正常光照/光线变化/遮挡片段尚未纳入，真人参与者为0/3；[组织指南](user_test/squat_counter_test_guide.md)、[素材登记](user_test/squat_media_register.csv)、[人工标注模板](user_test/squat_annotations_template.csv)、[操作记录表](user_test/squat_counter_records.csv)和[失败改进对照模板](user_test/squat_counter_before_after.md)均已准备。真实演示视频和失败前后复测仍待完成；自动空画面、合成摄像头和模拟关键点检查不能代替这些材料。
+验证证据及复现命令见[技术检查报告](reports/squat_counter/README.md)。2026-11-18收到[S01的v1独立操作记录](user_test/squat_counter_S01_review.md)，组织者确认本人完成及剪辑素材符合课程要求，当前同学记录1/3，原答复“部分完成”；[原始JSON](user_test/squat_counter_S01_record.json)保留自动6次、4次补记及修正后10次。原视频出处与剪辑明细待补，未明确公开影像许可，视频及含人物截图仅本地留存。会话含手动暂停，不作连续识别性能评分；规则确认时长与补记归零问题已有诊断，应用尚未修改或改后复测。
+
+三种条件的连续评价、另两位同学、最终演示及失败改进复测仍待完成。[组织指南](user_test/squat_counter_test_guide.md)、[素材登记](user_test/squat_media_register.csv)、[人工标注模板](user_test/squat_annotations_template.csv)、[操作记录表](user_test/squat_counter_records.csv)和[失败改进对照模板](user_test/squat_counter_before_after.md)均已准备；自动空画面、合成摄像头和模拟关键点检查与同学操作记录分开，不代替真实识别效果。

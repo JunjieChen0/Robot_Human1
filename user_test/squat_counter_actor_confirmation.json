@@ -1,0 +1,17 @@
+{
+  "kind": "组织者在聊天中确认；不替代原始素材来源和公开影像授权",
+  "received_local_date": "2026-11-18",
+  "participants": {
+    "S01": {
+      "actor_confirmation_original": "同学本人独立完成",
+      "editing_confirmation_original": "视频经过剪辑",
+      "course_requirements_confirmation_original": "确认符合要求",
+      "interpretation": "纳入1名同学的独立操作记录；课程使用要求由组织者确认。原素材来源、剪辑明细和拍摄日期未提供，公开GitHub影像许可未明确；视频及含人物截图仅本地保留。",
+      "original_media_source": null,
+      "editing_details": null,
+      "recorded_date": null,
+      "public_media_permission_explicit": false,
+      "record": "squat_counter_S01_record.json"
+    }
+  }
+}

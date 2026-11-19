@@ -1,0 +1,154 @@
+{
+  "kind": "S01首份同学操作来稿核对；非连续识别性能评价或修改后复测",
+  "received_local_date": "2026-11-18",
+  "generated_at_utc": "2026-11-19T03:10:04.858993+00:00",
+  "page_version": "squat-counter-v1",
+  "base_commit": "cf0f22a782519879fcdcfa938ef3fd30e2ac4c96",
+  "participant": "S01",
+  "actor_confirmation": "组织者确认同学本人独立完成",
+  "participants_after_intake": 1,
+  "required_participants": 3,
+  "source": {
+    "name": "squat_S01_side_10reps.mp4",
+    "sha256": "a3ad11b804d0905d2bd1d00791f159725fd75b1b04e547589f2bf55661bc724f",
+    "bytes": 5246394,
+    "duration_ms": 30083.333,
+    "edited": true,
+    "original_source": null,
+    "editing_details": null,
+    "condition_design_provided": false,
+    "media_public_permission_explicit": false
+  },
+  "source_json_sha256": "9c42cc28e4ba8f3d3f2b35c8c2295bdeabc0fe6863b80c901941b50c8bb15422",
+  "local_media_evidence_sha256": {
+    "squat_S01_side_10reps.mp4": "a3ad11b804d0905d2bd1d00791f159725fd75b1b04e547589f2bf55661bc724f",
+    "01_auto6.png": "6ddb6d5ff74bca63fa780967c78d678bb279f5aeab7913ee250a4f61d5706f30",
+    "02_corrected10.png": "96aa4e87e60e30251e9284cb3fd4f081198615284d4fb3021541db39a4957576",
+    "03_paused3.png": "3945c9c2dacf679d876b915aad51ab7819749754d2951cbbc66b33370b127e31"
+  },
+  "checks": {
+    "video_sha256_matches_export": true,
+    "raw_record_preserved_exactly": true,
+    "raw_auto_event_count": true,
+    "four_add_manual_actions": true,
+    "corrected_total": true,
+    "fixed_model_hash_matches": true,
+    "rule_replay_matches_all_event_times": true,
+    "rule_replay_matches_all_frame_phases": true,
+    "paused_performance_session_rejected": true,
+    "application_code_unchanged": true
+  },
+  "counts": {
+    "raw_automatic": 6,
+    "manual_additions": 4,
+    "corrected": 10,
+    "participant_reported_motion_total": 10,
+    "participant_reported_false_count": 0,
+    "participant_reported_missed_count": 4,
+    "independent_event_annotations": null,
+    "recognition_accuracy": null
+  },
+  "operations": {
+    "participant_completion_original": "部分完成",
+    "manual_pause_source_ms": 14106.9,
+    "resume_source_ms": 14127.4,
+    "pause_wall_seconds": 14.361,
+    "pause_duration_original": "等待约4秒",
+    "ended_automatically": true,
+    "manual_end_exercised": false,
+    "camera_exercised": false,
+    "hint_count_self_report": 0,
+    "all_correction_times_ms": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "trace": {
+    "frames": 449,
+    "invalid_frames": 0,
+    "median_gap_ms": 66.69999999999936,
+    "maximum_gap_ms": 198.2,
+    "gaps_over_500ms": 0,
+    "short_stand_runs": [
+      {
+        "zone": "stand",
+        "start_ms": 9879.5,
+        "end_ms": 10079.599999999999,
+        "n": 4,
+        "min_angle": 160.89003480268414,
+        "max_angle": 169.87991111473147,
+        "observed_duration_ms": 200.09999999999854
+      },
+      {
+        "zone": "stand",
+        "start_ms": 24938.300000000003,
+        "end_ms": 25071.5,
+        "n": 3,
+        "min_angle": 160.94118275967418,
+        "max_angle": 170.95637710129034,
+        "observed_duration_ms": 133.1999999999971
+      },
+      {
+        "zone": "stand",
+        "start_ms": 29804.8,
+        "end_ms": 30071.100000000002,
+        "n": 5,
+        "min_angle": 165.35696759732224,
+        "max_angle": 174.33447311483587,
+        "observed_duration_ms": 266.3000000000029
+      }
+    ],
+    "explanation": "轨迹有效标志不证明视觉定位完全正确；短站立区间未达到300毫秒确认，中途暂停会清除未完成动作。以上使用模型轨迹，仅供诊断，不作独立人工真值。"
+  },
+  "rule_replay": {
+    "recorded_count": 6,
+    "replayed_count": 6,
+    "frame_phase_mismatches": 0,
+    "same_trace_without_manual_reset_count": 7,
+    "counterfactual_limitation": "移除暂停重置只用于解释规则；未重新跑视觉模型，不作为连续运行性能或真值。"
+  },
+  "cleanup_time_probe": {
+    "kind": "本地浏览器API隔离复现；非真人复测或应用新版本",
+    "browser": "150.0.7871.127",
+    "before_cleanup_seconds": 12.34,
+    "immediately_after_srcObject_null_seconds": 0,
+    "input": "S01提供的本地视频；无网络上传",
+    "application_path": "end() -> stopTracks() -> video.srcObject=null; correction time reads video.currentTime"
+  },
+  "performance_evaluation": {
+    "accepted": false,
+    "reason": "性能测试需连续处理，不能包含手动暂停/继续；用户操作测试请单独记录",
+    "full_feedback_delay_ms": null,
+    "pipeline_values_ms": [
+      71.10000000149012,
+      73.29999999701977,
+      71.60000000149012,
+      76.39999999850988,
+      71.39999999850988,
+      72.10000000149012
+    ],
+    "pipeline_note": "这些仅是帧处理到后续渲染回调耗时；不等于动作完成到反馈的完整延迟。"
+  },
+  "pending": [
+    "S02和S03独立操作记录",
+    "原始视频来源与剪辑明细",
+    "三种条件的连续运行、独立逐次人工标注及误计/漏计/反馈延迟",
+    "应用改动及同片段/同条件复测",
+    "最终演示视频"
+  ],
+  "validation_scope": "本轮核验原件、哈希、字段、规则回放、暂停评价拒绝和浏览器API隔离复现；未重跑原81项Python/8项Node/10与11项浏览器/9项Debian全套回归。",
+  "application_source_sha256_lf": {
+    "app.py": "bea8203a1d2f20e613d71a480f09e583f557c152449b26fcc88131a06b5651ef",
+    "squat_counter_app.py": "52c869ead36ec699e2d196f741e1aa7721a3125316a530b5ffdb157a742feb8e",
+    "src/squat_ui.py": "3865fe8775025e312eff0fa5b25db5a95bcb12e13d861986200624a2dc2f1e19",
+    "src/squat_evaluation.py": "ad1b5e39ae6023db9e4c3abaa62fcdff7546a31a782dd20f6711b5ff4b52e0c7",
+    "src/squat_frontend/app.mjs": "0e0f8be51d9ed41b1594e4bd795f351ee670df9f1681332a8939f06d8af7c291",
+    "src/squat_frontend/counter.mjs": "8ca4a2b83bf4ecbbc3e802691f32df4bfa087e2efb4373d7d8539edd0f42257c",
+    "src/squat_frontend/pose_worker.mjs": "d8df9338ba0478e17839ead86d37b457eb3961a2325fcd2f8954949a1fb6dfd4",
+    "src/squat_frontend/index.html": "f29600a4f13dcd70558a20ba5003aec71881339f99c7105d643c1ff93153e3f1",
+    "src/squat_frontend/style.css": "2c79f95d301e2924bbe405e201d9f6804aa2e96c70a6f30b6c57668a3f46b389",
+    "src/squat_frontend/asset_manifest.json": "fd5f25cedba21e74e9c3ae299ff73fa214b6b64b286583b9de2524a22220a000"
+  }
+}
