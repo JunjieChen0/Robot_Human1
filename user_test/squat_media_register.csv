@@ -1,3 +1,4 @@
 source_id,anonymous_filename,condition,owner_or_consent_reference,permitted_use,recorded_date,notes
 a3ad11b804d0905d2bd1d00791f159725fd75b1b04e547589f2bf55661bc724f,squat_S01_side_10reps.mp4,,user_test/squat_counter_actor_confirmation.json；组织者确认符合课程要求，原素材来源未提供。,课程测试与报告按组织者确认；未明确公开影像许可，视频和含人物截图仅本地保存。,,已核对30.083333秒侧面剪辑片段及哈希；单一光照外观，未提供正式条件设计、原始来源和剪辑明细，不计作三种条件测试完成。
 eed97cdfcaf433f5c6feaf1c9df335412e690d3dd59576baca3e8e66acf0bc03,squat_S02_side_10reps.mp4,,user_test/squat_counter_actor_confirmation.json；组织者确认课程使用同意，原15秒视频出处未提供。,课程测试和报告已确认；影像仅本地保存，不公开GitHub。,,24.666667秒、592帧；说明称实体拍摄15秒原片截取前约12.3秒后拼接两次。标注仅给0.5秒取样计数和最低点近似时间，缺少恢复站立事件及确认时长标注；非三种条件评价。
+194e7368fbea5877a097d0ebece81878a9505f5a35bf256414a0894f903ee048,S03_test_squat.mp4,,user_test/squat_counter_actor_confirmation.json；组织者确认课程测试/报告同意，原始出处未提供。,课程测试与报告；影像仅本地保存。,,1920×1088、24fps、564帧，实际约23.458333秒；自报14.2秒拼接。自报末次恢复23.7秒超出片段，不作已完成事件真值。

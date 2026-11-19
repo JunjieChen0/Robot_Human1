@@ -1,0 +1,123 @@
+{
+  "kind": "S03 v1首次保存反馈核对；非连续性能或同学复测",
+  "received_local_date": "2026-11-18",
+  "generated_at_utc": "2026-11-19T03:36:41.440232+00:00",
+  "base_commit": "552d90443f0f821d07ecbf934ec760a629620b97",
+  "page_version": "squat-counter-v1",
+  "participant": "S03",
+  "participant_records_after_intake": 3,
+  "required_participants": 3,
+  "actor_confirmation": "第三名同学本人独立完成与课程使用同意由组织者确认；自动化会话原文保留为环境自述",
+  "checks": {
+    "raw_json_exact": true,
+    "source_hash_matches": true,
+    "counts_match": true,
+    "two_add_manual": true,
+    "hint_remains_unknown": true,
+    "model_hash_matches": true,
+    "rule_event_times_match": true,
+    "rule_all_frame_phases_match": true,
+    "paused_performance_rejected": true,
+    "application_v1_unchanged_at_intake": true
+  },
+  "original_json_sha256": "007e59a9a5fb1866845a7c666720bf1b0d64ee0bcdebdf3a12d4185810df5ac7",
+  "source": {
+    "name": "S03_test_squat.mp4",
+    "sha256": "194e7368fbea5877a097d0ebece81878a9505f5a35bf256414a0894f903ee048",
+    "bytes": 10769578,
+    "duration_ms": 23458.333,
+    "frame_count": 564,
+    "original_source": null,
+    "editing_self_report": "约14.2秒拼接点，详细制作说明未提供",
+    "media_storage_scope": "local_only"
+  },
+  "local_media_evidence_sha256": {
+    "S03_test_squat.mp4": "194e7368fbea5877a097d0ebece81878a9505f5a35bf256414a0894f903ee048",
+    "01_ready.png": "04760ef8d242e32fe8a4f3ecec6901642d096d5062ef59f70a147efe56928fcc",
+    "02_paused4.png": "905c23f2da463b3e905c56142ffd61cdadbcc5273e049849471a25be75676449",
+    "03_paused4.png": "ca7cfefa0ac810aae8937b9b5968e64f1faaeda15dbf660bc4dcabe142b42685",
+    "04_ended8.png": "890b622f04e61b8a25566e1720214cf2ad594186a679fbc9b65c19b99e7038ec"
+  },
+  "counts": {
+    "raw_automatic": 8,
+    "manual_additions": 2,
+    "corrected": 10,
+    "participant_reported_total": 10,
+    "participant_reported_false_count": 0,
+    "participant_reported_missed_count": 2,
+    "recognition_accuracy": null
+  },
+  "operations": {
+    "completion_original": "部分完成",
+    "hint_count_self_report": null,
+    "browser_automation_original": "自动化会话，非无痕窗口",
+    "pause_ms": 9754,
+    "resume_ms": 9765.599999999999,
+    "pause_wall_seconds": 8.694,
+    "automatic_end": true,
+    "manual_end_recorded": false,
+    "camera_exercised": false,
+    "correction_times_ms": [
+      0,
+      0
+    ]
+  },
+  "trace": {
+    "frames": 340,
+    "invalid_frames": 0,
+    "median_gap_ms": 66.70000000000073,
+    "maximum_gap_ms": 249.0,
+    "resumed_stand_first_ms": 9770.300000000001,
+    "resumed_stand_last_ms": 10070.3,
+    "resumed_stand_observed_ms": 299.9999999999982,
+    "final_stand_run": {
+      "zone": "stand",
+      "start_ms": 23403.300000000003,
+      "end_ms": 23458.334,
+      "n": 2,
+      "observed_duration_ms": 55.03399999999601
+    }
+  },
+  "rule_replay": {
+    "replayed_count": 8,
+    "phase_mismatches": 0,
+    "same_trace_without_pause_reset_count": 9,
+    "limitation": "移除暂停重置只用于解释规则；未重新跑视觉模型，不作为连续运行性能或真值。"
+  },
+  "label_limits": {
+    "independent_completion_annotations": null,
+    "claimed_last_completion_ms": 23700,
+    "video_ends_ms": 23458.333,
+    "claimed_last_completion_is_outside_clip": true,
+    "note": "自报10次和漏计2不作正式真值；末次23.7秒超出片段，且片尾站立观测约55毫秒不足300毫秒。"
+  },
+  "performance_evaluation": {
+    "accepted": false,
+    "reason": "性能测试需连续处理，不能包含手动暂停/继续；用户操作测试请单独记录",
+    "full_feedback_delay_ms": null,
+    "pipeline_values_ms": [
+      146.80000000447035,
+      110.39999999850988,
+      87.60000000149012,
+      86.80000000447035,
+      78.29999999701977,
+      82.40000000596046,
+      75.5,
+      74.5
+    ],
+    "pipeline_note": "约74.5至146.8毫秒仅处理到回调耗时，不是完整动作反馈延迟。"
+  },
+  "application_source_sha256_lf": {
+    "app.py": "bea8203a1d2f20e613d71a480f09e583f557c152449b26fcc88131a06b5651ef",
+    "squat_counter_app.py": "52c869ead36ec699e2d196f741e1aa7721a3125316a530b5ffdb157a742feb8e",
+    "src/squat_ui.py": "3865fe8775025e312eff0fa5b25db5a95bcb12e13d861986200624a2dc2f1e19",
+    "src/squat_evaluation.py": "ad1b5e39ae6023db9e4c3abaa62fcdff7546a31a782dd20f6711b5ff4b52e0c7",
+    "src/squat_frontend/app.mjs": "0e0f8be51d9ed41b1594e4bd795f351ee670df9f1681332a8939f06d8af7c291",
+    "src/squat_frontend/counter.mjs": "8ca4a2b83bf4ecbbc3e802691f32df4bfa087e2efb4373d7d8539edd0f42257c",
+    "src/squat_frontend/pose_worker.mjs": "d8df9338ba0478e17839ead86d37b457eb3961a2325fcd2f8954949a1fb6dfd4",
+    "src/squat_frontend/index.html": "f29600a4f13dcd70558a20ba5003aec71881339f99c7105d643c1ff93153e3f1",
+    "src/squat_frontend/style.css": "2c79f95d301e2924bbe405e201d9f6804aa2e96c70a6f30b6c57668a3f46b389",
+    "src/squat_frontend/asset_manifest.json": "fd5f25cedba21e74e9c3ae299ff73fa214b6b64b286583b9de2524a22220a000"
+  },
+  "validation_scope": "原件/哈希/规则回放/暂停评分拒绝；v1原件冻结，此后界面修复及技术复测另外记录。"
+}

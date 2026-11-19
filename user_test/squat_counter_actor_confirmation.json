@@ -25,6 +25,18 @@
       "public_media_permission_explicit": false,
       "record": "squat_counter_S02_record.json",
       "ground_truth_note": "squat_counter_S02_ground_truth_note.txt"
+    },
+    "S03": {
+      "received_local_date": "2026-11-18",
+      "question_original": "请确认：S03由第三名同学本人独立操作并填写，且这份视频已获用于课程测试和报告的同意。影像仍仅本地保存。",
+      "answer_original": "两项均确认",
+      "interpretation": "组织者确认第三名同学本人独立操作及课程使用同意。原话自动化会话作为浏览器环境自述保留，不由该词推断AI代做；提示次数仍未知。",
+      "original_media_source": null,
+      "editing_self_report": "约14.2秒有拼接点，未提供详细来源或制作说明。",
+      "recorded_date": null,
+      "public_media_permission_explicit": false,
+      "media_storage_scope": "local_only",
+      "record": "squat_counter_S03_record.json"
     }
   }
 }
