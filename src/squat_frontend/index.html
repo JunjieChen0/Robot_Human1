@@ -7,7 +7,7 @@
 <body>
 <main id="app">
   <section class="input-panel" aria-label="影像来源">
-    <label class="consent"><input id="consent" type="checkbox">我使用本人影像，或已获得被拍摄者用于本次课程测试的同意</label>
+    <label class="consent"><input id="consent" type="checkbox">我使用本人影像，或已获被拍摄者同意及本课程测试所需的影像使用授权（含剪辑视频）</label>
     <div class="source-row">
       <label>影像来源<select id="sourceMode"><option value="video">导入测试视频</option><option value="camera">浏览器摄像头</option></select></label>
       <label>靠近镜头的一侧<select id="side"><option value="left">身体左侧</option><option value="right">身体右侧</option></select></label>
@@ -15,6 +15,7 @@
       <button id="openCamera" hidden disabled>打开摄像头</button>
     </div>
     <p id="sourceInfo" class="muted">选择视频后点击开始。换新输入会新建记录，请先导出需要保留的结果。</p>
+    <p class="muted">站位会在开始后自动检查，无需另找按钮。先侧身站直保持0.3秒；导入的视频会自动播放。</p>
   </section>
   <div class="status-row"><span id="cameraStatus">摄像头：关闭</span><span id="modelStatus">模型：尚未加载</span></div>
   <section class="workspace">
@@ -26,6 +27,7 @@
       <div class="clock-row"><span id="clock">片段时间 00:00.0</span><span id="angle">膝角 —</span></div>
     </div>
     <aside class="count-panel">
+      <h2>站位与计数反馈</h2>
       <div id="feedback" role="status" aria-live="polite">等待输入，请先确认影像使用同意。</div>
       <div class="totals"><div><span>自动计数</span><output id="autoCount">0</output></div><div><span>修正后计数</span><output id="correctedCount">0</output></div></div>
       <p id="adjustment" class="muted">手工调整 0 次；自动记录始终保留。</p>
@@ -36,8 +38,11 @@
       </div>
       <section class="correction" aria-label="计数纠错">
         <h2>核对与修正</h2><p class="muted">暂停或结束后，按画面时间核对；原始计数不被覆盖。</p>
+        <label>漏计动作完成时刻（片段秒）<input id="correctionTime" type="number" min="0" max="0" step="0.001" value="0.000" required disabled></label>
+        <p class="muted">回看视频或输入完成时刻后补记；默认是当前位置。摄像头画面默认不保存，时间需自行核对。</p>
         <label>需撤销的自动记录<select id="eventChoice" disabled><option value="">暂无自动记录</option></select></label>
         <div class="controls"><button id="retract" disabled>撤销选中误计</button><button id="add" disabled>补记漏计 1 次</button><button id="undoCorrection" disabled>撤销上次修正</button></div>
+        <p id="correctionState" class="muted" role="status" aria-live="polite"></p>
       </section>
     </aside>
   </section>
@@ -56,7 +61,7 @@
     <button id="download" class="primary" disabled>导出本次记录 JSON</button>
     <p class="muted">视频与摄像头画面留在本机浏览器，默认不录制、不上传。会话只在当前页面暂存，请导出后交给组织者。结束或切换页面会关闭本组件的摄像头。</p>
   </section>
-  <p class="version">squat-counter-v1 · 单人侧面计数 · 浏览器CPU推理</p>
+  <p class="version"><span id="pageVersion">squat-counter-v2</span> · 单人侧面计数 · 浏览器CPU推理</p>
 </main>
 <script type="module" src="app.mjs"></script>
 </body></html>

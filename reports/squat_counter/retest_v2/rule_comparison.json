@@ -1,0 +1,278 @@
+{
+  "boundary_probe": {
+    "before": {
+      "at_299_9_ms": "need_stand",
+      "at_decimal_300_ms": "need_stand"
+    },
+    "after": {
+      "at_299_9_ms": "need_stand",
+      "at_decimal_300_ms": "ready"
+    },
+    "elapsed_ms": 299.9999999999982
+  },
+  "kind": "同一保存轨迹的规则回放；非新的视觉推理或真人复测",
+  "rules_changed": false,
+  "numerical_comparison": "300ms comparison tolerates 1e-6ms conversion error; 299.9ms still rejected",
+  "results": [
+    {
+      "participant": "S01",
+      "original_count": 6,
+      "before_count": 6,
+      "after_count": 6,
+      "before_event_times_match": true,
+      "before_events": [
+        {
+          "id": "auto-1",
+          "time_ms": 3879.7000000000003,
+          "angle": 176.77357676684056
+        },
+        {
+          "id": "auto-2",
+          "time_ms": 7013.5,
+          "angle": 176.75444425323693
+        },
+        {
+          "id": "auto-3",
+          "time_ms": 12146.5,
+          "angle": 176.94075665282088
+        },
+        {
+          "id": "auto-4",
+          "time_ms": 18938.5,
+          "angle": 176.47762717551882
+        },
+        {
+          "id": "auto-5",
+          "time_ms": 22005,
+          "angle": 175.86692301504755
+        },
+        {
+          "id": "auto-6",
+          "time_ms": 27137.8,
+          "angle": 175.00997446328876
+        }
+      ],
+      "after_events": [
+        {
+          "id": "auto-1",
+          "time_ms": 3879.7000000000003,
+          "angle": 176.77357676684056
+        },
+        {
+          "id": "auto-2",
+          "time_ms": 7013.5,
+          "angle": 176.75444425323693
+        },
+        {
+          "id": "auto-3",
+          "time_ms": 12146.5,
+          "angle": 176.94075665282088
+        },
+        {
+          "id": "auto-4",
+          "time_ms": 18938.5,
+          "angle": 176.47762717551882
+        },
+        {
+          "id": "auto-5",
+          "time_ms": 22005,
+          "angle": 175.86692301504755
+        },
+        {
+          "id": "auto-6",
+          "time_ms": 27137.8,
+          "angle": 175.00997446328876
+        }
+      ]
+    },
+    {
+      "participant": "S02",
+      "original_count": 8,
+      "before_count": 8,
+      "after_count": 8,
+      "before_event_times_match": true,
+      "before_events": [
+        {
+          "id": "auto-1",
+          "time_ms": 2441.8,
+          "angle": 179.2680266125206
+        },
+        {
+          "id": "auto-2",
+          "time_ms": 4841.9,
+          "angle": 179.65787724178182
+        },
+        {
+          "id": "auto-3",
+          "time_ms": 7441.8,
+          "angle": 177.63566306554517
+        },
+        {
+          "id": "auto-4",
+          "time_ms": 12498,
+          "angle": 176.99247707491156
+        },
+        {
+          "id": "auto-5",
+          "time_ms": 14782.1,
+          "angle": 179.2680266125206
+        },
+        {
+          "id": "auto-6",
+          "time_ms": 17181.5,
+          "angle": 179.65787724178182
+        },
+        {
+          "id": "auto-7",
+          "time_ms": 19714.7,
+          "angle": 178.13877234420804
+        },
+        {
+          "id": "auto-8",
+          "time_ms": 22381,
+          "angle": 177.01641161687778
+        }
+      ],
+      "after_events": [
+        {
+          "id": "auto-1",
+          "time_ms": 2441.8,
+          "angle": 179.2680266125206
+        },
+        {
+          "id": "auto-2",
+          "time_ms": 4841.9,
+          "angle": 179.65787724178182
+        },
+        {
+          "id": "auto-3",
+          "time_ms": 7441.8,
+          "angle": 177.63566306554517
+        },
+        {
+          "id": "auto-4",
+          "time_ms": 12498,
+          "angle": 176.99247707491156
+        },
+        {
+          "id": "auto-5",
+          "time_ms": 14782.1,
+          "angle": 179.2680266125206
+        },
+        {
+          "id": "auto-6",
+          "time_ms": 17181.5,
+          "angle": 179.65787724178182
+        },
+        {
+          "id": "auto-7",
+          "time_ms": 19714.7,
+          "angle": 178.13877234420804
+        },
+        {
+          "id": "auto-8",
+          "time_ms": 22381,
+          "angle": 177.01641161687778
+        }
+      ]
+    },
+    {
+      "participant": "S03",
+      "original_count": 8,
+      "before_count": 8,
+      "after_count": 9,
+      "before_event_times_match": true,
+      "before_events": [
+        {
+          "id": "auto-1",
+          "time_ms": 2536.5,
+          "angle": 178.18046609256837
+        },
+        {
+          "id": "auto-2",
+          "time_ms": 4919.7,
+          "angle": 179.4066353022497
+        },
+        {
+          "id": "auto-3",
+          "time_ms": 7302.6,
+          "angle": 177.9604941596333
+        },
+        {
+          "id": "auto-4",
+          "time_ms": 9569.2,
+          "angle": 178.9043127670272
+        },
+        {
+          "id": "auto-5",
+          "time_ms": 14086.6,
+          "angle": 177.48413848496597
+        },
+        {
+          "id": "auto-6",
+          "time_ms": 16720.4,
+          "angle": 178.10971054879073
+        },
+        {
+          "id": "auto-7",
+          "time_ms": 19086.300000000003,
+          "angle": 179.7440032553537
+        },
+        {
+          "id": "auto-8",
+          "time_ms": 21470.300000000003,
+          "angle": 177.9604941596333
+        }
+      ],
+      "after_events": [
+        {
+          "id": "auto-1",
+          "time_ms": 2536.5,
+          "angle": 178.18046609256837
+        },
+        {
+          "id": "auto-2",
+          "time_ms": 4919.7,
+          "angle": 179.4066353022497
+        },
+        {
+          "id": "auto-3",
+          "time_ms": 7302.6,
+          "angle": 177.9604941596333
+        },
+        {
+          "id": "auto-4",
+          "time_ms": 9569.2,
+          "angle": 178.9043127670272
+        },
+        {
+          "id": "auto-5",
+          "time_ms": 11803.1,
+          "angle": 177.3651616745952
+        },
+        {
+          "id": "auto-6",
+          "time_ms": 14086.6,
+          "angle": 177.48413848496597
+        },
+        {
+          "id": "auto-7",
+          "time_ms": 16720.4,
+          "angle": 178.10971054879073
+        },
+        {
+          "id": "auto-8",
+          "time_ms": 19086.300000000003,
+          "angle": 179.7440032553537
+        },
+        {
+          "id": "auto-9",
+          "time_ms": 21470.300000000003,
+          "angle": 177.9604941596333
+        }
+      ]
+    }
+  ],
+  "recognition_accuracy": null,
+  "human_retest_participants": 0
+}

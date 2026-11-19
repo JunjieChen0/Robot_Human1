@@ -24,4 +24,4 @@ def render_squat_page():
     with st.expander("计数规则与适用范围"):
         st.write("先确认站立，再下蹲并恢复站立计1次；下蹲保持3秒仍只计1次。膝角≥160°为站立，≤100°为下蹲，各持续300毫秒；中间区间不触发。相邻有效帧间隔超过500毫秒、关键点不清或手动暂停后，须重新确认站立。")
         st.write("这是课堂计数条件，不评价动作是否标准。单人、固定侧面、肩髋膝踝完整入镜；不从深蹲次数推算热量、肥胖等级或健康结论。首次规则尚需真实视频验证。")
-        st.caption("squat-counter-v1 · MediaPipe Pose Landmarker Lite · 浏览器CPU推理；模型资源由本地服务提供，原视频和摄像头画面不上传到Python服务。")
+        st.caption("squat-counter-v2 · MediaPipe Pose Landmarker Lite · 浏览器CPU推理；模型资源由本地服务提供，原视频和摄像头画面不上传到Python服务。")

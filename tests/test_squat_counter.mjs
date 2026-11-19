@@ -2,6 +2,18 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import {SquatCounter, kneeObservation} from "../src/squat_frontend/counter.mjs";
 
+test("decimal source times include the 300ms boundary without accepting 299.9ms", () => {
+  const c = new SquatCounter();
+  c.observe({angle:170,timeMs:9770.300000000001});
+  c.observe({angle:170,timeMs:10070.2});
+  assert.equal(c.phase,"need_stand");
+  c.observe({angle:170,timeMs:10070.3});
+  assert.equal(c.phase,"ready");
+  for (const t of [10170.3,10270.3,10370.3,10470.3]) c.observe({angle:80,timeMs:t});
+  for (const t of [10570.300000000001,10670.3,10770.3,10870.3]) c.observe({angle:170,timeMs:t});
+  assert.equal(c.events.length,1);
+});
+
 function sequence(counter) {
   let time = counter.lastMs === null ? 0 : counter.lastMs + 100;
   return (angle, duration = 400, valid = true) => {

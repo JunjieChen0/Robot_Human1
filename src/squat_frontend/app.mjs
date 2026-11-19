@@ -8,6 +8,7 @@ let mediaStream = null, objectUrl = null, source = null, session = null;
 let counter = new SquatCounter(), trace = [], actions = [], savedAnswers = null;
 let state = "idle", epoch = 0, busy = false, lastSourceMs = null, lastCaptureWall = 0, lastModelMs = 0;
 let pausedAt = 0, lastHeight = 0;
+let correctionLimitMs = 0;
 let countNotice = "", countNoticeUntil = 0;
 
 function bridge(type, rest = {}) {
@@ -34,8 +35,25 @@ function feedback(text, warning = false) {
   if ($("feedback").textContent !== text) $("feedback").textContent = text;
   $("feedback").classList.toggle("warning", warning);
 }
+function sourceTimeMs() {
+  return source?.kind === "camera" && !mediaStream ? correctionLimitMs : video.currentTime*1000;
+}
+function syncReviewTime() {
+  const seconds = Math.max(0, sourceTimeMs())/1000;
+  $("review").value = seconds;
+  $("correctionTime").value = seconds.toFixed(3);
+  $("clock").textContent = `片段时间 ${timeLabel(seconds*1000)}`;
+}
+function selectedCorrectionMs() {
+  const input = $("correctionTime");
+  if (!input.validity.valid) {
+    $("correctionState").textContent = `请输入0至${input.max}秒之间的片段时刻。`;
+    return null;
+  }
+  return Math.round(Number(input.value)*1000);
+}
 function logAction(kind, extra = {}) {
-  if (session) actions.push({kind, time_ms: video.currentTime*1000, wall_time_iso: new Date().toISOString(), ...extra});
+  if (session) actions.push({kind, time_ms: sourceTimeMs(), wall_time_iso: new Date().toISOString(), ...extra});
 }
 function controls() {
   const running = state === "running", paused = state === "paused", ended = state === "ended";
@@ -51,6 +69,8 @@ function controls() {
   $("file").disabled = !$("consent").checked || running || paused || state === "loading";
   $("openCamera").disabled = !$("consent").checked || running || paused || state === "loading";
   $("add").disabled = !editable;
+  $("correctionTime").disabled = !editable;
+  $("correctionTime").max = (Math.max(0, source?.kind === "video" ? source.duration_ms : correctionLimitMs)/1000).toFixed(3);
   $("retract").disabled = !editable || !$("eventChoice").value;
   $("eventChoice").disabled = !editable;
   $("undoCorrection").disabled = !editable || counter.activeCorrections.length === 0;
@@ -80,25 +100,33 @@ function renderCounts() {
   controls();
 }
 function stopTracks() {
-  if (mediaStream) mediaStream.getTracks().forEach(track => track.stop());
-  mediaStream = null;
-  video.srcObject = null;
+  if (mediaStream) {
+    mediaStream.getTracks().forEach(track => track.stop());
+    mediaStream = null;
+    video.srcObject = null;
+  }
 }
 function end(reason = "user_end") {
+  correctionLimitMs = sourceTimeMs();
   epoch++;
   video.pause();
   dropWorker();
   counter.invalidate("ended");
   logAction(reason);
   state = session ? "ended" : "idle";
-  if (session) session.ended_at = new Date().toISOString();
+  if (session) { session.ended_at = new Date().toISOString(); session.end_reason = reason; }
   stopTracks();
-  feedback(session ? "本次计数已结束。可回看视频、修正并导出；摄像头已关闭。" : "输入已关闭，摄像头未工作。");
+  syncReviewTime();
+  if (session) $("modelStatus").textContent = "模型：本次识别已结束，资源已释放";
+  const ending = reason === "video_finished" ? "视频播放完毕，计数已结束（自动），无需再点结束。" : "本次计数已结束。";
+  feedback(session ? `${ending}未确认动作不补算。可回看或输入片段时刻后修正并导出；摄像头已关闭。` : "输入已关闭，摄像头未工作。");
   renderCounts();
 }
 function clearSession() {
   counter = new SquatCounter(); trace = []; actions = []; session = null; savedAnswers = null;
   countNoticeUntil=0;
+  correctionLimitMs=0;$("correctionTime").value="0.000";$("correctionState").textContent="";
+  if (!workerReady) $("modelStatus").textContent="模型：尚未加载";
   answerIds.forEach(id => { $(id).disabled = false; $(id).value = ""; });
   $("answerState").textContent = "";
   lastSourceMs = null;
@@ -115,6 +143,7 @@ function drawFrame() {
   if (canvas.width !== width || canvas.height !== height) {canvas.width = width; canvas.height = height;}
   ctx.drawImage(video, 0, 0, width, height);
   $("clock").textContent = `片段时间 ${timeLabel(video.currentTime*1000)}`;
+  if (state !== "running") syncReviewTime();
 }
 function drawPoints(points) {
   if (!points) return;
@@ -129,12 +158,13 @@ function showObservation(observation, result) {
     const messages = {no_pose:"未可靠识别人形。请侧身、后退，让肩髋膝踝完整入镜。", multiple_people:"画面有多人，请只保留一位使用者。",
       low_visibility:"肩髋膝踝不够清楚，请移开遮挡、调整光照或转为侧身。", out_of_frame:"关键点接近画面边缘，请后退或调整摄像头。", degenerate:"关键点位置异常，请重新调整位置。"};
     feedback(`看不清，已暂停计数。${messages[observation.reason] || "请调整位置。"}恢复后先站立准备。`,true);
-  } else if (result.phase === "need_stand") feedback("先站立并保持片刻，准备下一次。暂停、遮挡或画面跳变后都需要重新准备。");
+  } else if (result.phase === "need_stand") feedback(result.zone === "stand" ? "站位自动检查中：请站直保持0.3秒，确认后显示已准备。" : "站位未就绪：请站直保持0.3秒。暂停、遮挡或画面跳变后都需重新准备。");
   else if (result.event) {
     countNotice=`已完成1次，自动计数 ${counter.events.length}。请站稳后开始下一次。`;
     countNoticeUntil=performance.now()+1000;feedback(countNotice);
   }
-  else if (result.phase === "down") feedback("已确认下蹲，恢复站立后计1次。保持不重复计数。");
+  else if (result.phase === "down") feedback(result.zone === "stand" ? "恢复站立确认中（需连续0.3秒），尚未计入；此时暂停会清除未确认动作。" : "已确认下蹲，恢复站立并保持0.3秒后计1次。保持不重复计数。");
+  else if (result.zone === "down") feedback("下蹲确认中，请保持片刻（需连续0.3秒）。");
   else if (performance.now()<countNoticeUntil) feedback(countNotice);
   else feedback("已准备。下蹲后恢复站立，完成一次完整动作。");
 }
@@ -205,7 +235,7 @@ async function start(resume = false) {
     counter.invalidate(resume ? "resume" : "start");lastSourceMs=null;
     video.playbackRate=1;await video.play();
     if (activeEpoch !== epoch) { video.pause();return; }
-    state="running";logAction(resume?"resume":"start");feedback("请先站立准备，再完成下蹲并恢复站立。");renderCounts();
+    state="running";logAction(resume?"resume":"start");feedback(resume ? "继续识别：先重新站直0.3秒；暂停前未确认的动作不补发。" : "已开始自动检查站位，请先站直0.3秒，再下蹲并恢复站立。");renderCounts();
   } catch(error) {
     if(activeEpoch!==epoch)return;
     state=session?"paused":"idle";feedback(`无法开始：${error.message}。请使用localhost或HTTPS，确认资源已下载。`,true);controls();
@@ -214,7 +244,8 @@ async function start(resume = false) {
 function pause() {
   if (state !== "running") return;
   pausedAt=video.currentTime;video.pause();epoch++;state="paused";counter.invalidate("pause");logAction("pause");
-  feedback("识别已暂停，可回看并修正。继续时回到暂停位置，并先站立准备。");renderCounts();
+  correctionLimitMs=sourceTimeMs();syncReviewTime();
+  feedback("识别已暂停，未确认动作已清除。可回看或输入漏计完成时刻后补记；继续时回到暂停位置，先重新站直0.3秒。");renderCounts();
 }
 async function loadFile() {
   const file=$("file").files[0];if(!file || !$("consent").checked)return;
@@ -231,7 +262,7 @@ async function loadFile() {
     if(activeEpoch!==epoch)return;
     source={kind:"video",name:file.name,sha256:sha,size_bytes:file.size,duration_ms:video.duration*1000,consent_confirmed:true};
     state="idle";
-    $("review").max=video.duration;$("sourceInfo").textContent=`已载入 ${file.name} · ${timeLabel(source.duration_ms)}。点击开始，视频以1倍速识别。`;
+    $("review").max=video.duration;$("sourceInfo").textContent=`已载入 ${file.name} · ${timeLabel(source.duration_ms)}。点击开始后，视频以1倍速自动播放并检查站位。`;
     drawFrame();feedback("视频已就绪，开始后先确认站立。",false);controls();
   } catch(error) {
     if(activeEpoch!==epoch)return;
@@ -288,12 +319,26 @@ $("file").onchange=loadFile;$("openCamera").onclick=openCamera;
 $("start").onclick=()=>start();$("pause").onclick=pause;$("resume").onclick=()=>start(true);
 $("end").onclick=()=>end();$("closeCamera").onclick=()=>end("close_camera");
 video.onended=()=>{if(state==="running" && !busy)end("video_finished");};
-$("review").oninput=()=>{if(["paused","ended"].includes(state))video.currentTime=Number($("review").value);};
-video.onseeked=()=>{if(state!=="running")drawFrame();};
+$("review").oninput=()=>{if(["paused","ended"].includes(state)){video.currentTime=Number($("review").value);syncReviewTime();}};
+$("correctionTime").onchange=()=>{
+  const ms=selectedCorrectionMs();if(ms===null)return;
+  $("correctionState").textContent=`已选片段时刻 ${timeLabel(ms)}；点击补记后写入手工记录。`;
+  if(source?.kind==="video" && ["paused","ended"].includes(state))video.currentTime=ms/1000;
+};
+video.onseeked=()=>{
+  if(["paused","ended"].includes(state)) {
+    drawFrame();$("angle").textContent="膝角 —（回看不识别）";
+    logAction("review_seek",{selected_time_ms:Math.round(video.currentTime*1000)});
+  }
+};
 $("eventChoice").onchange=controls;
-$("retract").onclick=()=>{const item=counter.correct("retract_auto",video.currentTime*1000,$("eventChoice").value);logAction("retract_auto",{correction_id:item.id,target_id:item.target_id});renderCounts();};
-$("add").onclick=()=>{const item=counter.correct("add_manual",video.currentTime*1000);logAction("add_manual",{correction_id:item.id});renderCounts();};
-$("undoCorrection").onclick=()=>{const item=counter.undoCorrection(video.currentTime*1000);logAction("undo_correction",{correction_id:item?.id,target_id:item?.target_id});renderCounts();};
+$("retract").onclick=()=>{const item=counter.correct("retract_auto",sourceTimeMs(),$("eventChoice").value);logAction("retract_auto",{correction_id:item.id,target_id:item.target_id});renderCounts();};
+$("add").onclick=()=>{
+  const ms=selectedCorrectionMs();if(ms===null)return;
+  const item=counter.correct("add_manual",ms);logAction("add_manual",{correction_id:item.id,selected_time_ms:ms});
+  $("correctionState").textContent=`已在 ${timeLabel(ms)} 补记1次（手工记录）。`;renderCounts();
+};
+$("undoCorrection").onclick=()=>{const item=counter.undoCorrection(sourceTimeMs());logAction("undo_correction",{correction_id:item?.id,target_id:item?.target_id});renderCounts();};
 $("saveAnswers").onclick=()=>{
   if(!$("participant").value.trim() || !$("taskCompleted").value || !$("noticedError").value.trim() || !$("correctionAnswer").value.trim()) {
     $("answerState").textContent="请填写匿名编号、完成情况、错误核对和修正说明；没有错误可明确写无。";return;

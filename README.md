@@ -1,6 +1,6 @@
 # WeightTrend（暂定名）
 
-> **视觉交互新作业：深蹲计数与纠错助手。** 同学可按[启动说明](user_test/squat_counter_quickstart.md)运行 `bash start_squat_counter.sh`，独立入口只需页面依赖与官方姿态资源，浏览器CPU推理。应用与[测试说明](user_test/squat_counter_test_guide.md)已准备，已收2份同学操作记录；连续识别评价、S03及实际改后复测待组织，不能复用下面旧作业的测试记录。未测试同学先只阅读启动说明。
+> **视觉交互新作业：深蹲计数与纠错助手v2。** 同学按[启动说明](user_test/squat_counter_quickstart.md)运行 `bash start_squat_counter.sh`，独立入口无需健康模型，浏览器CPU推理。三名同学的v1原记录已收齐，已依据反馈修复并完成[同片段技术前后检查](user_test/squat_counter_before_after.md)。三种条件的连续识别指标及最终演示仍待补；没有声称真人改后理解率提升。未测试同学先只阅读启动说明。
 
 > **参加“模型判断”测试的同学：** 请先阅读[Linux下载与启动说明](user_test/model_judgment_remote_quickstart.md)，下载源码后运行 `bash start_model_judgment.sh`。首次自动安装页面依赖，无需训练模型；请先完成任务，再阅读下方实验结论。
 
@@ -269,6 +269,8 @@ python -m streamlit run squat_counter_app.py
 
 实现入口为`src/squat_ui.py`与`src/squat_frontend/`；相同的`counter.mjs`供浏览器和Node规则测试使用。`src/squat_evaluation.py`以人工事件标注逐次匹配原始自动事件，分别输出误计、漏计和软件估计反馈延迟；不以修正后的总数评价识别效果，也不让误计漏计相互抵消。
 
-验证证据及复现命令见[技术检查报告](reports/squat_counter/README.md)。2026-11-18收到[S01](user_test/squat_counter_S01_review.md)和[S02](user_test/squat_counter_S02_review.md)两份v1操作记录，组织者确认两位同学分别独立完成及课程影像使用要求，当前记录2/3；完成情况“部分完成”“已完成”按各自原话保留，不作统一通过率。S01[原始JSON](user_test/squat_counter_S01_record.json)为自动6、补记4、修正10；S02[原始JSON](user_test/squat_counter_S02_record.json)为自动8、补记2、修正10，另保留正式前清空重试和当前仅自动结束的边界。[S02原标注说明](user_test/squat_counter_S02_ground_truth_note.txt)称原片截取后重复拼接，给出最低点及稀疏取样，不等于恢复站立事件标注。原素材出处待补，视频及含人物截图仅本地保存。
+验证证据见[技术报告](reports/squat_counter/README.md)。2026-11-18已收齐[S01](user_test/squat_counter_S01_review.md)、[S02](user_test/squat_counter_S02_review.md)、[S03](user_test/squat_counter_S03_review.md)三名同学的v1记录，组织者确认分别本人操作及课程素材使用同意；自评为部分完成/已完成/部分完成，提示0/0/未知，不当作统一通过率。[三人汇总](user_test/squat_counter_v1_summary.md)保留自动6/8/8、补记4/2/2及各自修正数10，原件不改。S02正式前重试、S03“自动化会话”环境自述及自报末次恢复超出片段的限制均保留。原素材出处待补，影像及人物截图本地保存。
 
-两份会话均含手动暂停，不作连续识别性能评分；输入不同，不用6与8比较版本提升，也不宣称60%或80%准确率。规则确认时长、暂停提示及补记归零已有诊断，应用保持v1，尚无修复或改后复测。三种条件的连续评价、S03、最终演示及失败改进复测仍待完成。[组织指南](user_test/squat_counter_test_guide.md)、[素材登记](user_test/squat_media_register.csv)、[人工标注模板](user_test/squat_annotations_template.csv)、[操作记录表](user_test/squat_counter_records.csv)和[失败改进对照模板](user_test/squat_counter_before_after.md)均已准备；自动技术检查与同学操作记录分开，不代替真实识别效果。
+v2保留视频结束位置，补记支持精确选时并与回看同步，说明自动站位、暂停后准备和自动结束；修复300毫秒浮点边界，模型及阈值未变。[前后对照](user_test/squat_counter_before_after.md)以同一S03视频、同一Chrome/CPU模型验证默认补记由0毫秒变为保留位置23458毫秒，指定5秒/15秒正确导出，原自动事件不覆盖。另在同保存轨迹上重放，S03因数值边界从8变9，仅为规则诊断；同片段连续实际推理的两次自动数都是9，不称准确率改善。完整Python81项、Node9项及两入口15/16项浏览器检查通过，详见[本轮验证](reports/squat_counter/verification_v2.json)。
+
+三份原操作会话均含手动暂停；S02最低点/稀疏取样不等于独立完成事件真值，不宣称60%或80%准确率。三种条件的连续误计、漏计与完整反馈延迟、最终演示仍待补；同学在v2的使用效果尚无复测，不能声称误读消除。[组织指南](user_test/squat_counter_test_guide.md)、[素材登记](user_test/squat_media_register.csv)、[人工标注模板](user_test/squat_annotations_template.csv)和[操作记录](user_test/squat_counter_records.csv)保留下一步所需材料。

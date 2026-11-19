@@ -1,0 +1,31 @@
+{
+  "kind": "自动技术复测，非同学复测；5秒/15秒仅测试输入控件，不是漏计真值",
+  "phase": "before",
+  "page_version": "squat-counter-v1",
+  "browser": "150.0.7871.127",
+  "source_sha256": "194e7368fbea5877a097d0ebece81878a9505f5a35bf256414a0894f903ee048",
+  "duration_seconds": 23.458333,
+  "end_position_seconds": 0,
+  "default_correction_ms": 0,
+  "raw_automatic_count": 9,
+  "checks": {
+    "real_cpu_model": true,
+    "same_source_hash": true,
+    "raw_events_preserved": true,
+    "existing_review_selects_5_seconds": true,
+    "v1_position_reset_reproduced": true
+  },
+  "page_errors": [],
+  "recognition_metrics": null,
+  "human_retest_participants": 0,
+  "model": {
+    "package": "@mediapipe/tasks-vision",
+    "version": "0.10.32",
+    "variant": "pose_landmarker_lite/float16/1",
+    "sha256": "59929e1d1ee95287735ddd833b19cf4ac46d29bc7afddbbf6753c459690d574a",
+    "delegate": "CPU",
+    "inference_mode": "mediapipe"
+  },
+  "continuous_run": true,
+  "manual_truth_available": false
+}

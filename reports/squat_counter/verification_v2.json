@@ -1,0 +1,184 @@
+{
+  "page_version": "squat-counter-v2",
+  "organized_local_date": "2026-11-18",
+  "generated_at_utc": "2026-11-19T06:42:38.205959+00:00",
+  "v1_cohort_commit": "d3e882c76aec86dfaca411cf8f04ef4e9cd8377e",
+  "scope": "三人v1记录冻结；v2修复媒体位置/补记选时、状态提示和浮点边界，同片段技术复测；未补造真人复测或正式识别指标",
+  "checks": {
+    "python": {
+      "passed": 81,
+      "seconds": 38.06,
+      "runtime": "3.11.15",
+      "command": "python -B -m pytest tests -q -p no:cacheprovider --tb=short"
+    },
+    "node": {
+      "passed": 9,
+      "command": "node --test tests/test_squat_counter.mjs",
+      "regression_before": "新增十进制边界用例在原v1为need_stand，预期ready，实际先失败",
+      "regression_after": "9项通过，299.9毫秒仍不确认"
+    },
+    "browser": {
+      "ui_v2": {
+        "passed": 15,
+        "browser": "150.0.7871.127",
+        "record": "ui_v2/browser_checks.json"
+      },
+      "ui_v2_integrated": {
+        "passed": 16,
+        "browser": "150.0.7871.127",
+        "record": "ui_v2_integrated/browser_checks.json"
+      }
+    },
+    "same_clip_real_cpu_retest": {
+      "before": "retest_v2/before.json",
+      "after": "retest_v2/after.json",
+      "source_sha256": "194e7368fbea5877a097d0ebece81878a9505f5a35bf256414a0894f903ee048",
+      "browser": "150.0.7871.127",
+      "model_sha256": "59929e1d1ee95287735ddd833b19cf4ac46d29bc7afddbbf6753c459690d574a",
+      "end_positions_seconds": [
+        0,
+        23.458334
+      ],
+      "default_corrections_ms": [
+        0,
+        23458
+      ],
+      "raw_counts": [
+        9,
+        9
+      ],
+      "precise_5_and_15_seconds_verified": true,
+      "out_of_range_rejected": true,
+      "human_retest_participants": 0
+    },
+    "same_saved_trace_rule_replay": {
+      "record": "retest_v2/rule_comparison.json",
+      "before_after_counts": {
+        "S01": [
+          6,
+          6
+        ],
+        "S02": [
+          8,
+          8
+        ],
+        "S03": [
+          8,
+          9
+        ]
+      },
+      "recognition_accuracy": null
+    },
+    "syntax": {
+      "python_ast_files": 8,
+      "javascript_files": 4,
+      "passed": true
+    },
+    "local_markdown_links": {
+      "checked": 105,
+      "passed": true
+    },
+    "assets": {
+      "files": 8,
+      "hashes_match": true,
+      "model_unchanged": true
+    },
+    "preservation": {
+      "frozen_cohort_files": 14,
+      "frozen_sha256_lf": {
+        "user_test/squat_counter_S01_record.json": "9c42cc28e4ba8f3d3f2b35c8c2295bdeabc0fe6863b80c901941b50c8bb15422",
+        "user_test/squat_counter_S01_review.md": "e05c99d5b4092dfe4bffaf6fcd790cdd8d7306b8441b47a884a8802954a03f75",
+        "reports/squat_counter/S01_intake.json": "3badc53bc869cacbc8e3a0ae13fe83a6fef7a114a65018352d86e7e7750f17f0",
+        "user_test/squat_counter_S02_record.json": "e4fcb44cc01066bdb9a431fa9bdeb33b0589bf0b0c7a72bfb79c653a970648b4",
+        "user_test/squat_counter_S02_review.md": "64effc7a5a49456fbc6a6696d88053a076e335106de5eac14f3f95e9d912c398",
+        "reports/squat_counter/S02_intake.json": "c94f21f0a33dad70e6adc4a33b33fa596eb9fd8d29caf80fabd75158e3524f59",
+        "user_test/squat_counter_S03_record.json": "007e59a9a5fb1866845a7c666720bf1b0d64ee0bcdebdf3a12d4185810df5ac7",
+        "user_test/squat_counter_S03_review.md": "8e71a5a6dc8664ca712fc53f14e9599bfc12531ec08abf497d87e18a8d7b5b84",
+        "reports/squat_counter/S03_intake.json": "4cfbd97789baa6798a49d99f1f3a9cb1beaaf43415d6da0cd692a6f1fd3db7da",
+        "user_test/squat_counter_actor_confirmation.json": "f65d506f6da93f64a8cc1876f7b60c5f6268eafd7166418c08c9a8f646a61608",
+        "user_test/squat_counter_records.csv": "7e103b04fcf187af171dd305d5fa80fe7f6865553c23c25a5d5c835cfb65516c",
+        "user_test/squat_media_register.csv": "43db09a09f952b166d712129fef72542e127d2c04eb64689963d01517fc813d7",
+        "user_test/squat_counter_v1_summary.md": "a319d51d538dd5f7fbb5b8ee497c528ada12edb3601c2e3ba4634ac5b20f1078",
+        "user_test/squat_counter_S02_ground_truth_note.txt": "7e7205b65cc4081c4e4958f13bde8f7e7b47a4a403e3cd65aac4f2cb02edd625"
+      },
+      "old_artifacts": 42,
+      "old_artifacts_unchanged": true,
+      "v1_technical_artifacts": 11,
+      "v1_technical_artifacts_unchanged": true,
+      "bootstrap_requirements_worker_evaluator_and_health_app_unchanged": true
+    },
+    "debian_this_round": {
+      "executed": false,
+      "reason": "Docker服务未运行；启动脚本和依赖未改，初始9项为历史记录，不作为本轮重跑。",
+      "historical_record": "linux_startup.json"
+    }
+  },
+  "human_evidence": {
+    "v1_records": 3,
+    "v1_completion_self_reports": [
+      "部分完成",
+      "已完成",
+      "部分完成"
+    ],
+    "hint_counts_self_report": [
+      0,
+      0,
+      null
+    ],
+    "human_v2_retests": 0,
+    "formal_three_condition_metrics": null,
+    "final_demo_video": null
+  },
+  "limitations": [
+    "三人原操作都含手动暂停，不能直接作连续性能评分。",
+    "S02最低点和稀疏取样不代替恢复站立事件；S03自报末次完成超出片段。",
+    "保存轨迹S03的8→9是规则数值修复，不是新视觉推理准确率。",
+    "同片段真实CPU连续实跑9→9，控制补记5/15秒是控件试值，不是真值。",
+    "原视频和人物截图仅本地；公开前后图只含控件。",
+    "原素材出处、三种条件连续误计/漏计/完整延迟及最终演示仍待补；无真人改后使用效果结论。"
+  ],
+  "source_hash_basis": "文本源码/文档按LF归一化的SHA256，与Git文本内容对应；不含本摘要自身",
+  "source_sha256": {
+    "CHANGELOG.md": "9e50b81d5345f53ea8004ad3ec91560f304bae81164be71745573063f739106c",
+    "README.md": "3bbd53c5d5ec5ccb29d735ef126d2c5c1403fa15c5a6a8ee864c3b138d91c069",
+    "app.py": "bea8203a1d2f20e613d71a480f09e583f557c152449b26fcc88131a06b5651ef",
+    "docs/squat_counter_spec.md": "af41ba18dcf4b754c4c727612aa1c185665f6c9e048de179e2507b86b67ba206",
+    "docs/squat_model_sources.md": "e970721bf5887920686ce49a17cde04faf1349197eda60ac4c601ecbcd23a5c7",
+    "reports/squat_counter/README.md": "e03aabc024ece91652a0c2491fe6ca28e2fa7132269f4f1d2443dd0904765738",
+    "scripts/check_squat_correction_retest.py": "b67f09f5937456af16c77cd73b83c8d60b29a9ca807c81e3b42e5f2209fc08d1",
+    "scripts/check_squat_ui.py": "8c2bfcfc25014e6b3c26d633934d2df9886eb601be1bf0195f84a5e7b54aa1e4",
+    "squat_counter_app.py": "52c869ead36ec699e2d196f741e1aa7721a3125316a530b5ffdb157a742feb8e",
+    "src/squat_evaluation.py": "ad1b5e39ae6023db9e4c3abaa62fcdff7546a31a782dd20f6711b5ff4b52e0c7",
+    "src/squat_frontend/app.mjs": "60d75312d9c997297c08f23d0f615644579be00447bae863d681f04e5f587366",
+    "src/squat_frontend/asset_manifest.json": "fd5f25cedba21e74e9c3ae299ff73fa214b6b64b286583b9de2524a22220a000",
+    "src/squat_frontend/counter.mjs": "572ccb1161a60ef5b0bd219519e63fc222ce5f1ad0ccc8271db1de3e60c6d587",
+    "src/squat_frontend/index.html": "1f42a42db83a1bbbc8a774d4544560eece5bc5c46f2785b9a9d4cb761c403cee",
+    "src/squat_frontend/pose_worker.mjs": "d8df9338ba0478e17839ead86d37b457eb3961a2325fcd2f8954949a1fb6dfd4",
+    "src/squat_frontend/style.css": "2c79f95d301e2924bbe405e201d9f6804aa2e96c70a6f30b6c57668a3f46b389",
+    "src/squat_ui.py": "603f907358dd03f5558d7ae7bc1c2c0fc04f611be750c05aa3545c8c3933c8b5",
+    "tests/test_squat_counter.mjs": "072ae2b5b064b22a2da5c814ed3b3b2c427288cee8f9cb7ded4d3c577a3ded33",
+    "user_test/squat_counter_before_after.md": "eda84d0f34cf97025e5c0875f0e0efb308e99bd2fab653c0ac12e8833894c0f0",
+    "user_test/squat_counter_quickstart.md": "d0da5fb55bd9f44fb91fef778ba87edd4e7933def0c0df90c1bcad87bf0a3cb4",
+    "user_test/squat_counter_test_guide.md": "8144fb7c053faca63f510d5bf55a4065ed375a0a3c48595ac494e065072ca43f"
+  },
+  "technical_artifact_hash_basis": "PNG原始字节，JSON按LF归一化",
+  "technical_artifact_sha256": {
+    "reports/squat_counter/retest_v2/after.json": "d38ade4a0321adf04028af9f865f7aa321c46e5f476aa6a02f7a116940d10d17",
+    "reports/squat_counter/retest_v2/after_controls.png": "3ea2bb13ade919da3c92b2edf230a3305961898ba4a8460e7891e14a34283b4c",
+    "reports/squat_counter/retest_v2/before.json": "dae85a76069483fd75f7fb98de977d05cbb8d2526790e6f140ac5b5f64226ecc",
+    "reports/squat_counter/retest_v2/before_controls.png": "c8005ff01752ba909aa6bde9f0704216b0a2bebb6baf0ef222e7a1974b1dbff1",
+    "reports/squat_counter/retest_v2/rule_comparison.json": "0e47df7c5e147e1fe9a957f9342edf60c806f88c7a12159de646ad739109b544",
+    "reports/squat_counter/ui_v2/browser_checks.json": "17fc6e352340d9e60ff9f798ec4ce64044e145976e5cf7542c73f0fc7f60b46e",
+    "reports/squat_counter/ui_v2/correction_controls.png": "caec1d36a4e7f76f609a1e04bf122b6859104bb71efd0b6c3f00910b34f6e6ae",
+    "reports/squat_counter/ui_v2/initial.png": "eac3b9678063bce77f552a5d76ccccdb77c4f3fad1072f4c8f9e824bd772a0c3",
+    "reports/squat_counter/ui_v2/mobile.png": "1be75821c8ca47556b542b202db9d7c51d9784dd8ce3a90f44584978109908a8",
+    "reports/squat_counter/ui_v2/mock_controls.png": "3b6a9fab6d0e3515af05496b21d6fd2e8738b0c1c4beeb49fd3184b96ea54d14",
+    "reports/squat_counter/ui_v2/unclear_real_model.png": "450e2c5fb45e584ddfefce659bb1497a4cbd44fa0baf7dbb2dac0dcaf05ef587",
+    "reports/squat_counter/ui_v2_integrated/browser_checks.json": "c56d56ab200b6a156f1625e38ca03795c3ae07ef018081c8b750011c6ebcb0f4",
+    "reports/squat_counter/ui_v2_integrated/correction_controls.png": "52e120e42cdf1f8e8b0b450131528162ef4ef46d2584b65a211fdc5c302d957b",
+    "reports/squat_counter/ui_v2_integrated/initial.png": "73e17ddea728cce999ef99ea6f3f35140e570476204cd68ee92ff43214012bbe",
+    "reports/squat_counter/ui_v2_integrated/mobile.png": "6ab9b47ed54f0280068a356272b67ed947bf0b68d6aa0d6a5117ec6c0db205f9",
+    "reports/squat_counter/ui_v2_integrated/mock_controls.png": "372b08c058b1a5872f1798af6eb18b698d52ee0515f71f91e3412546874e4aa7",
+    "reports/squat_counter/ui_v2_integrated/unclear_real_model.png": "19d47fc507fcf3aadea728105a7148f0c09fb5c187437459a386d4930a7f6c00"
+  }
+}

@@ -49,7 +49,7 @@ def download(page, frame):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--url", default="http://127.0.0.1:8521")
-    parser.add_argument("--output", type=Path, default=ROOT / "reports/squat_counter/ui_v1")
+    parser.add_argument("--output", type=Path, default=ROOT / "reports/squat_counter/ui_v2")
     parser.add_argument("--blank-video", type=Path, default=ROOT / "commit/squat_qa/blank.webm")
     args = parser.parse_args()
     args.output.mkdir(parents=True, exist_ok=True)
@@ -64,6 +64,7 @@ def main():
         page = browser.new_page(viewport={"width":1440,"height":1100})
         page.on("pageerror", lambda error: errors.append(str(error)))
         frame = open_component(page,args.url)
+        expect(frame.get_by_text("站位会在开始后自动检查，无需另找按钮。先侧身站直保持0.3秒；导入的视频会自动播放。",exact=True)).to_be_visible()
         expect(frame.locator("#file")).to_be_disabled()
         checks["consent_before_input"] = True
         page.screenshot(path=str(args.output/"initial.png"),full_page=True)
@@ -111,6 +112,7 @@ def main():
         expect(frame.locator("#pause")).to_be_enabled(timeout=90000)
         frame.locator("#pause").click()
         expect(frame.locator("#cameraStatus")).to_contain_text("识别已暂停")
+        expect(frame.locator("#feedback")).to_contain_text("先重新站直0.3秒")
         assert iframe.evaluate("window.testTracks.every(t=>t.readyState==='live')")
         frame.locator("#resume").click()
         expect(frame.locator("#pause")).to_be_enabled(timeout=30000)
@@ -118,6 +120,13 @@ def main():
         assert iframe.evaluate("window.testTracks.every(t=>t.readyState==='ended')")
         camera=download(page,frame)
         assert camera["model"]["inference_mode"]=="mediapipe"
+        assert float(frame.locator("#correctionTime").input_value()) > 0
+        frame.locator("#add").click()
+        camera_corrected=download(page,frame)
+        assert camera_corrected["corrections"][-1]["time_ms"] > 0
+        assert camera_corrected["automatic_count"]==camera["automatic_count"]
+        frame.locator("#undoCorrection").click()
+        checks["closed_camera_keeps_correction_source_clock"]=True
         checks["camera_pause_resume_end_and_preserved_model_metadata"]=True
         frame.locator("#openCamera").click()
         expect(frame.locator("#cameraStatus")).to_contain_text("开启",timeout=30000)
@@ -146,6 +155,11 @@ def main():
         expect(frame.locator("#autoCount")).to_have_text("1",timeout=30000)
         frame.locator("#pause").click()
         frame.locator("#retract").click();expect(frame.locator("#correctedCount")).to_have_text("0")
+        frame.locator("#correctionTime").fill("-1")
+        frame.locator("#add").click();expect(frame.locator("#correctedCount")).to_have_text("0")
+        expect(frame.locator("#correctionState")).to_contain_text("请输入")
+        checks["negative_manual_time_rejected"] = True
+        frame.locator("#correctionTime").fill("1.500")
         frame.locator("#add").click();expect(frame.locator("#correctedCount")).to_have_text("1")
         frame.locator("#undoCorrection").click();expect(frame.locator("#correctedCount")).to_have_text("0")
         frame.locator("#undoCorrection").click();expect(frame.locator("#correctedCount")).to_have_text("1")
@@ -155,7 +169,15 @@ def main():
         frame.locator("#resume").click()
         expect(frame.locator("#autoCount")).to_have_text("2",timeout=30000)
         expect(frame.locator("#feedback")).to_contain_text("已结束",timeout=15000)
+        expect(frame.locator("#feedback")).to_contain_text("无需再点结束")
+        checks["stance_pause_and_auto_end_explained"] = True
+        iframe = next(f for f in mocked.frames if "squat_counter" in f.url)
+        assert iframe.evaluate("Math.abs(document.getElementById('video').currentTime-8)<.01")
+        assert abs(float(frame.locator("#review").input_value())-8)<.01
+        expect(frame.locator("#correctionTime")).to_have_value("8.000")
+        checks["end_keeps_video_position_and_syncs_picker"] = True
         checks["review_resume_and_end_without_duplicate_counts"] = True
+        frame.locator(".count-panel").screenshot(path=str(args.output/"correction_controls.png"))
         frame.locator(".record-panel details summary").click()
         frame.locator("#participant").fill("自动检查，非同学")
         frame.locator("#taskCompleted").select_option(label="已完成")
@@ -166,6 +188,8 @@ def main():
         data=download(mocked,frame)
         assert data["automatic_count"]==2 and data["corrected_count"]==2
         assert len(data["corrections"])==4
+        assert data["corrections"][1]["time_ms"]==1500
+        checks["precise_correction_time_exported"] = True
         assert data["participant_answers"]["hints"] is None
         assert data["model"]["inference_mode"]=="mock_landmarks"
         checks["export_model_source_trace_and_locked_feedback"] = True
@@ -181,7 +205,7 @@ def main():
         mobile.screenshot(path=str(args.output/"mobile.png"),full_page=True)
         checks["no_uncaught_browser_errors"]=not errors
         result={"kind":"自动浏览器检查；空画面用真实CPU模型，动作与纠错使用明确标记的模拟关键点；无真人测试",
-                "page_version":"squat-counter-v1","browser":browser.version,"checks":checks,"page_errors":errors,
+                "page_version":frame.locator("#pageVersion").inner_text(),"browser":browser.version,"checks":checks,"page_errors":errors,
                 "real_blank_trace_frames":len(blank["frame_trace"]),"human_recognition_metrics":None}
         result["camera_input"]="Chromium synthetic camera; no human imagery"
         (args.output/"browser_checks.json").write_text(json.dumps(result,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")

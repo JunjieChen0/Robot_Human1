@@ -1,5 +1,5 @@
 // The browser and Node tests use this same counting rule. No image inference here.
-export const VERSION = "squat-counter-v1";
+export const VERSION = "squat-counter-v2";
 export const RULES = Object.freeze({standAngle: 160, downAngle: 100, stableMs: 300,
   maxGapMs: 500, minVisibility: 0.65});
 
@@ -45,7 +45,8 @@ export class SquatCounter {
     const zone = angle >= RULES.standAngle ? "stand" : angle <= RULES.downAngle ? "down" : "between";
     if (!this.candidate || this.candidate.zone !== zone) this.candidate = {zone, since: timeMs};
     let event = null;
-    if (timeMs - this.candidate.since >= RULES.stableMs) {
+    // Browser timestamp conversion can represent exactly 300ms as 299.999999999998ms.
+    if (timeMs - this.candidate.since + 1e-6 >= RULES.stableMs) {
       if (this.phase === "need_stand" && zone === "stand") {
         this.phase = "ready";
         this.reason = "";
