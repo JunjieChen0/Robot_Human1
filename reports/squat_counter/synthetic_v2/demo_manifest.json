@@ -1,0 +1,39 @@
+{
+  "kind": "课程演示元数据；合成素材及自动操作，不是同学测试或连续性能实验",
+  "local_only": true,
+  "local_relative_path": "commit/squat_synthetic_v2_intake_20261120/demo_reviewed/squat_counter_v2_demo_synthetic.mp4",
+  "sha256": "00af424cf8a79239f64c56eedb5ce743bf172193303bf7caf1dad9cd08d84dd9",
+  "duration_seconds": 111.0,
+  "size_bytes": 5080015,
+  "streams": [
+    {
+      "codec_name": "h264",
+      "width": 1440,
+      "height": 1200
+    }
+  ],
+  "source_sha256": [
+    "ef30e30d4b61fd52df7d63a3dbdd3ba57bc03a0dfa5417d995569dd45dfeb273",
+    "6f52693197d3a76e991323c00d53fd5435729eb1ec60a69e5f139281bc719178"
+  ],
+  "browser": "150.0.7871.127",
+  "normal_demo_automatic_count": 5,
+  "occlusion_demo_automatic_count": 2,
+  "input_note": "AI生成虚构人物与后期色块遮挡；摄像头为Chromium合成设备；持续字幕和片头披露；纠错为控件练习。",
+  "checks": {
+    "normal_pause_resume_demonstrated": true,
+    "raw_events_preserved_through_practice": true,
+    "practice_undone": true,
+    "add_retract_and_cancel_logged": true,
+    "camera_closed_by_control": true,
+    "no_page_errors": true
+  },
+  "full_mp4_decode_passed": true,
+  "visual_review_seconds": [
+    60,
+    90,
+    108
+  ],
+  "human_participants_added": 0,
+  "formal_recognition_metrics": null
+}

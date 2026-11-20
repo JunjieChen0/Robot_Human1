@@ -1,0 +1,857 @@
+{
+  "kind": "合成视频三条件、左右侧完整连续运行及人工候选时刻匹配；非真实环境性能结论",
+  "received_date_client": "2026-11-20",
+  "page_version": "squat-counter-v2",
+  "tolerance_ms_fixed_before_run": 1200,
+  "annotation_status": "pending_rule_adjudication",
+  "formal_recognition_metrics": null,
+  "sources": [
+    {
+      "name": "normal_light.mp4",
+      "sha256": "ef30e30d4b61fd52df7d63a3dbdd3ba57bc03a0dfa5417d995569dd45dfeb273",
+      "size_bytes": 4612660,
+      "ffprobe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "width": 1280,
+            "height": 720,
+            "r_frame_rate": "24/1",
+            "avg_frame_rate": "24/1",
+            "duration": "36.000000",
+            "nb_frames": "864"
+          }
+        ],
+        "format": {
+          "duration": "36.000000"
+        }
+      },
+      "synthetic": true,
+      "effects_and_splices": {
+        "title": "正常光照视频",
+        "file": "normal_light.mp4",
+        "duration_s": 36.0,
+        "fps": 24,
+        "frames": 864,
+        "start_stand": [
+          0.0,
+          2.5
+        ],
+        "end_stand": [
+          34.63,
+          36.0
+        ],
+        "reps": [
+          {
+            "n": 1,
+            "descent_start": 2.5,
+            "bottom": 4.2,
+            "stand": 6.13
+          },
+          {
+            "n": 2,
+            "descent_start": 8.4,
+            "bottom": 10.2,
+            "stand": 12.63
+          },
+          {
+            "n": 3,
+            "descent_start": 13.8,
+            "bottom": "16.8–20.5（保持）",
+            "stand": 22.0,
+            "hold": [
+              16.8,
+              20.5
+            ]
+          },
+          {
+            "n": 4,
+            "descent_start": 23.6,
+            "bottom": 26.0,
+            "stand": 27.96
+          },
+          {
+            "n": 5,
+            "descent_start": 30.4,
+            "bottom": 32.8,
+            "stand": 34.63
+          }
+        ],
+        "conditions": [
+          "全程正常均匀光照，无遮挡，侧面、全身入镜。"
+        ],
+        "splices": [
+          13.58,
+          22.96
+        ],
+        "notes": [
+          "第1、2次下蹲偏浅：躯干前倾明显，髋部略高于膝（大腿未到水平），手臂屈肘收在胸前；第3–5次接近大腿水平，手臂前平举。",
+          "13.58 秒为片段拼接点（人物处于站立），手臂位置有轻微跳变，不影响计数判断。",
+          "第3次保持区间按头部高度变化在 ±9 像素(720p)内判定，约 3.7 秒，略长于 3 秒。"
+        ],
+        "reps_count_annotated": 5
+      }
+    },
+    {
+      "name": "light_change.mp4",
+      "sha256": "f7b31a9a80336a015f339ce5bec88e8d60e1ef0439a29ae58046a29c2d59e188",
+      "size_bytes": 3589533,
+      "ffprobe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "width": 1280,
+            "height": 720,
+            "r_frame_rate": "24/1",
+            "avg_frame_rate": "24/1",
+            "duration": "27.666667",
+            "nb_frames": "664"
+          }
+        ],
+        "format": {
+          "duration": "27.666667"
+        }
+      },
+      "synthetic": true,
+      "effects_and_splices": {
+        "title": "光线变化视频",
+        "file": "light_change.mp4",
+        "duration_s": 27.67,
+        "fps": 24,
+        "frames": 664,
+        "start_stand": [
+          0.0,
+          1.3
+        ],
+        "end_stand": [
+          26.13,
+          27.67
+        ],
+        "reps": [
+          {
+            "n": 1,
+            "descent_start": 1.3,
+            "bottom": 2.8,
+            "stand": 3.88
+          },
+          {
+            "n": 2,
+            "descent_start": 6.3,
+            "bottom": 7.6,
+            "stand": 8.58
+          },
+          {
+            "n": 3,
+            "descent_start": 9.2,
+            "bottom": 10.5,
+            "stand": 11.67
+          },
+          {
+            "n": 4,
+            "descent_start": 14.0,
+            "bottom": "16.6–19.7（保持）",
+            "stand": 21.0,
+            "hold": [
+              16.6,
+              19.7
+            ]
+          },
+          {
+            "n": 5,
+            "descent_start": 23.6,
+            "bottom": 24.9,
+            "stand": 26.13
+          }
+        ],
+        "conditions": [
+          "0.0–4.0 秒：正常光照",
+          "4.0–6.0 秒：逐渐变暗（亮度 0 → −0.30）",
+          "6.0–9.5 秒：持续偏暗（亮度 −0.30，对比度 0.8；6.0 秒对比度有一次小的阶跃）",
+          "9.5 秒：突然变亮（模拟开灯），9.5–14.0 秒过曝（亮度 +0.20），白墙接近纯白，白色鞋子与背景融合",
+          "14.0–16.0 秒：逐渐恢复正常",
+          "18.0–19.0 秒：突然变暗 1 秒（亮度 −0.35，对比度 0.75），发生在第4次保持期间",
+          "19.0 秒至结尾：正常光照"
+        ],
+        "splices": [
+          13.04,
+          22.63
+        ],
+        "notes": [
+          "第2次整次在偏暗环境中完成；第3次下蹲开始后约 0.3 秒（9.5 秒）光线突变为过曝，这一次的最低点和起身都在过曝中。",
+          "第1–3次下蹲偏浅：髋部略高于膝，大腿未完全到水平。",
+          "第4次保持约 3.1 秒，保持期间 18.0–19.0 秒有一次 1 秒的突然变暗，人物仍可看清，但衣服、头发与背景对比降低。",
+          "光照变化为 ffmpeg 后期调亮度/对比度实现，不是生成画面里的真实灯光变化（没有阴影方向变化）。"
+        ],
+        "reps_count_annotated": 5
+      }
+    },
+    {
+      "name": "occlusion.mp4",
+      "sha256": "6f52693197d3a76e991323c00d53fd5435729eb1ec60a69e5f139281bc719178",
+      "size_bytes": 3292587,
+      "ffprobe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "width": 1280,
+            "height": 720,
+            "r_frame_rate": "24/1",
+            "avg_frame_rate": "24/1",
+            "duration": "26.541667",
+            "nb_frames": "637"
+          }
+        ],
+        "format": {
+          "duration": "26.541667"
+        }
+      },
+      "synthetic": true,
+      "effects_and_splices": {
+        "title": "局部遮挡视频",
+        "file": "occlusion.mp4",
+        "duration_s": 26.54,
+        "fps": 24,
+        "frames": 637,
+        "start_stand": [
+          0.0,
+          1.7
+        ],
+        "end_stand": [
+          25.21,
+          26.54
+        ],
+        "reps": [
+          {
+            "n": 1,
+            "descent_start": 1.7,
+            "bottom": 2.9,
+            "stand": 3.96,
+            "occluded": true
+          },
+          {
+            "n": 2,
+            "descent_start": 6.4,
+            "bottom": 7.6,
+            "stand": 8.63
+          },
+          {
+            "n": 3,
+            "descent_start": 8.8,
+            "bottom": 9.9,
+            "stand": 10.96
+          },
+          {
+            "n": 4,
+            "descent_start": 12.9,
+            "bottom": "15.3–18.7（保持）",
+            "stand": 19.75,
+            "hold": [
+              15.3,
+              18.7
+            ]
+          },
+          {
+            "n": 5,
+            "descent_start": 22.4,
+            "bottom": 24.0,
+            "stand": 25.21,
+            "occluded": true
+          }
+        ],
+        "conditions": [
+          "遮挡1：2.4–4.6 秒（2.2 秒），不透明深棕色方块（画面 x 470–770, y 300–560，1280×720 坐标）挡住髋、大腿和膝盖；头、肩、手臂、小腿和脚可见",
+          "遮挡2：23.0–25.0 秒（2.0 秒），不透明深棕色方块（x 500–780, y 540–700）挡住小腿下段、脚踝和脚；髋、膝可见",
+          "其余时间无遮挡，正常光照"
+        ],
+        "splices": [
+          12.0,
+          16.5,
+          21.5
+        ],
+        "notes": [
+          "第1次的最低点和恢复站立都发生在遮挡1期间，髋/膝看不见；3.96 秒的恢复站立时刻是根据可见的头部高度和小腿推断的，4.6 秒去掉遮挡时人物已站直，可确认这一次完整。",
+          "第2次和第3次几乎连在一起：第2次起身到 8.63 秒时头顶只比完全站直低约 10 像素(720p)，膝盖接近伸直，约 0.15 秒后（8.79 秒）就开始第3次下蹲，中间没有明显停顿。按接近站直算作第2次完成；如果模型要求完全站直才计数，这里可能被合并成一次，属于边界情况。",
+          "16.50 秒为保持中段的剪辑点：原片段保持约 5 秒，剪掉了中间约 2 秒静止帧，使保持约 3.4 秒；剪辑前后画面差异很小，但不是一个连续镜头。",
+          "第5次最低点（24.0 秒）在遮挡2期间，起身大部分也在遮挡期间，25.0 秒去掉遮挡，25.21 秒恢复站立时脚部已可见。",
+          "遮挡是 ffmpeg 后期叠加的纯色方块，不是真实物体。"
+        ],
+        "reps_count_annotated": 5
+      }
+    }
+  ],
+  "runs": [
+    {
+      "name": "normal_light",
+      "condition": "normal",
+      "side": "left",
+      "session_file": "normal_light/session.json",
+      "metadata_file": "normal_light/run_metadata.json",
+      "session_sha256": "65562bc777da9e39b141c45ce9d86a20e90a29edf0a58533b1adb80cb31487bb",
+      "raw_automatic_count": 0,
+      "auto_event_times_ms": [],
+      "processed_frames": 569,
+      "valid_frames": 0,
+      "invalid_frames": 569,
+      "invalid_reasons": {
+        "low_visibility": 569
+      },
+      "first_frame_ms": 4.007000000000001,
+      "last_frame_ms": 35974.517,
+      "maximum_frame_gap_ms": 194.181,
+      "gaps_above_500ms": 0,
+      "median_frame_gap_ms": 62.503999999998996,
+      "min_observed_valid_angle": null,
+      "max_observed_valid_angle": null,
+      "reference_matching": {
+        "kind": "人工候选时刻匹配，包含规则有效性待核动作；以下未匹配数不是正式误计/漏计",
+        "candidate_event_count": 5,
+        "matched_candidate_count": 0,
+        "unmatched_candidate_count": 5,
+        "unmatched_model_event_count": 0,
+        "unmatched_candidates": [
+          {
+            "source_id": "ef30e30d4b61fd52df7d63a3dbdd3ba57bc03a0dfa5417d995569dd45dfeb273",
+            "event_id": "normal_light-1",
+            "time_ms": 6130.0,
+            "condition": "normal"
+          },
+          {
+            "source_id": "ef30e30d4b61fd52df7d63a3dbdd3ba57bc03a0dfa5417d995569dd45dfeb273",
+            "event_id": "normal_light-2",
+            "time_ms": 12630.0,
+            "condition": "normal"
+          },
+          {
+            "source_id": "ef30e30d4b61fd52df7d63a3dbdd3ba57bc03a0dfa5417d995569dd45dfeb273",
+            "event_id": "normal_light-3",
+            "time_ms": 22000.0,
+            "condition": "normal"
+          },
+          {
+            "source_id": "ef30e30d4b61fd52df7d63a3dbdd3ba57bc03a0dfa5417d995569dd45dfeb273",
+            "event_id": "normal_light-4",
+            "time_ms": 27960.0,
+            "condition": "normal"
+          },
+          {
+            "source_id": "ef30e30d4b61fd52df7d63a3dbdd3ba57bc03a0dfa5417d995569dd45dfeb273",
+            "event_id": "normal_light-5",
+            "time_ms": 34630.0,
+            "condition": "normal"
+          }
+        ],
+        "unmatched_model_events": [],
+        "matches": [],
+        "candidate_to_feedback_samples": 0,
+        "candidate_to_feedback_median_ms": null,
+        "candidate_to_feedback_p95_ms": null,
+        "negative_estimate_samples": 0
+      },
+      "rule_validity_review_event_numbers": [
+        1,
+        2
+      ],
+      "rule_validity_review_note": "第1、2次下蹲偏浅，未另有独立角度及300毫秒确认记录；保留候选，不由模型输出反推真值。",
+      "formal_recognition_metrics": null
+    },
+    {
+      "name": "normal_light",
+      "condition": "normal",
+      "side": "right",
+      "session_file": "normal_light_right/session.json",
+      "metadata_file": "normal_light_right/run_metadata.json",
+      "session_sha256": "cf274c38a320bcb9cfd9f58d5a0826938c51e8f91832a6bf27b4043bcdb9b6a5",
+      "raw_automatic_count": 5,
+      "auto_event_times_ms": [
+        6483.925,
+        12754.442,
+        22441.392,
+        28378.789,
+        35065.797000000006
+      ],
+      "processed_frames": 572,
+      "valid_frames": 572,
+      "invalid_frames": 0,
+      "invalid_reasons": {},
+      "first_frame_ms": 5.582,
+      "last_frame_ms": 35940.856,
+      "maximum_frame_gap_ms": 173.028,
+      "gaps_above_500ms": 0,
+      "median_frame_gap_ms": 62.49699999999939,
+      "min_observed_valid_angle": 53.22241028479044,
+      "max_observed_valid_angle": 178.78771348142126,
+      "reference_matching": {
+        "kind": "人工候选时刻匹配，包含规则有效性待核动作；以下未匹配数不是正式误计/漏计",
+        "candidate_event_count": 5,
+        "matched_candidate_count": 5,
+        "unmatched_candidate_count": 0,
+        "unmatched_model_event_count": 0,
+        "unmatched_candidates": [],
+        "unmatched_model_events": [],
+        "matches": [
+          {
+            "candidate_id": "normal_light-1",
+            "candidate_time_ms": 6130.0,
+            "auto_id": "auto-1",
+            "auto_time_ms": 6483.925,
+            "candidate_to_feedback_estimate_ms": 402.8249999910595
+          },
+          {
+            "candidate_id": "normal_light-2",
+            "candidate_time_ms": 12630.0,
+            "auto_id": "auto-2",
+            "auto_time_ms": 12754.442,
+            "candidate_to_feedback_estimate_ms": 166.24199999701887
+          },
+          {
+            "candidate_id": "normal_light-3",
+            "candidate_time_ms": 22000.0,
+            "auto_id": "auto-3",
+            "auto_time_ms": 22441.392,
+            "candidate_to_feedback_estimate_ms": 483.29199999105913
+          },
+          {
+            "candidate_id": "normal_light-4",
+            "candidate_time_ms": 27960.0,
+            "auto_id": "auto-4",
+            "auto_time_ms": 28378.789,
+            "candidate_to_feedback_estimate_ms": 467.4890000029809
+          },
+          {
+            "candidate_id": "normal_light-5",
+            "candidate_time_ms": 34630.0,
+            "auto_id": "auto-5",
+            "auto_time_ms": 35065.797000000006,
+            "candidate_to_feedback_estimate_ms": 477.6970000059664
+          }
+        ],
+        "candidate_to_feedback_samples": 5,
+        "candidate_to_feedback_median_ms": 467.4890000029809,
+        "candidate_to_feedback_p95_ms": 482.1729999940406,
+        "negative_estimate_samples": 0
+      },
+      "rule_validity_review_event_numbers": [
+        1,
+        2
+      ],
+      "rule_validity_review_note": "第1、2次下蹲偏浅，未另有独立角度及300毫秒确认记录；保留候选，不由模型输出反推真值。",
+      "formal_recognition_metrics": null
+    },
+    {
+      "name": "light_change",
+      "condition": "light_change",
+      "side": "left",
+      "session_file": "light_change/session.json",
+      "metadata_file": "light_change/run_metadata.json",
+      "session_sha256": "5ca568c19fe4e45bf6d86367d585efc7046124141e667681cbde79e32bb85e94",
+      "raw_automatic_count": 0,
+      "auto_event_times_ms": [],
+      "processed_frames": 436,
+      "valid_frames": 0,
+      "invalid_frames": 436,
+      "invalid_reasons": {
+        "low_visibility": 436
+      },
+      "first_frame_ms": 2.439,
+      "last_frame_ms": 27619.132,
+      "maximum_frame_gap_ms": 187.363,
+      "gaps_above_500ms": 0,
+      "median_frame_gap_ms": 62.498999999999796,
+      "min_observed_valid_angle": null,
+      "max_observed_valid_angle": null,
+      "reference_matching": {
+        "kind": "人工候选时刻匹配，包含规则有效性待核动作；以下未匹配数不是正式误计/漏计",
+        "candidate_event_count": 5,
+        "matched_candidate_count": 0,
+        "unmatched_candidate_count": 5,
+        "unmatched_model_event_count": 0,
+        "unmatched_candidates": [
+          {
+            "source_id": "f7b31a9a80336a015f339ce5bec88e8d60e1ef0439a29ae58046a29c2d59e188",
+            "event_id": "light_change-1",
+            "time_ms": 3880.0,
+            "condition": "light_change"
+          },
+          {
+            "source_id": "f7b31a9a80336a015f339ce5bec88e8d60e1ef0439a29ae58046a29c2d59e188",
+            "event_id": "light_change-2",
+            "time_ms": 8580.0,
+            "condition": "light_change"
+          },
+          {
+            "source_id": "f7b31a9a80336a015f339ce5bec88e8d60e1ef0439a29ae58046a29c2d59e188",
+            "event_id": "light_change-3",
+            "time_ms": 11670.0,
+            "condition": "light_change"
+          },
+          {
+            "source_id": "f7b31a9a80336a015f339ce5bec88e8d60e1ef0439a29ae58046a29c2d59e188",
+            "event_id": "light_change-4",
+            "time_ms": 21000.0,
+            "condition": "light_change"
+          },
+          {
+            "source_id": "f7b31a9a80336a015f339ce5bec88e8d60e1ef0439a29ae58046a29c2d59e188",
+            "event_id": "light_change-5",
+            "time_ms": 26130.0,
+            "condition": "light_change"
+          }
+        ],
+        "unmatched_model_events": [],
+        "matches": [],
+        "candidate_to_feedback_samples": 0,
+        "candidate_to_feedback_median_ms": null,
+        "candidate_to_feedback_p95_ms": null,
+        "negative_estimate_samples": 0
+      },
+      "rule_validity_review_event_numbers": [
+        1,
+        2,
+        3
+      ],
+      "rule_validity_review_note": "第1至3次下蹲偏浅；9.5至14秒过曝使白鞋与背景难分。后期亮度/对比度处理不等于真实灯光变化。",
+      "formal_recognition_metrics": null
+    },
+    {
+      "name": "light_change",
+      "condition": "light_change",
+      "side": "right",
+      "session_file": "light_change_right/session.json",
+      "metadata_file": "light_change_right/run_metadata.json",
+      "session_sha256": "3875203753dd68db367ba3be576f9efc2de54fe78c09b13aa645e2ca4759c2d0",
+      "raw_automatic_count": 5,
+      "auto_event_times_ms": [
+        4325.211,
+        8950.068,
+        12074.991,
+        21379.943,
+        26567.225000000002
+      ],
+      "processed_frames": 437,
+      "valid_frames": 437,
+      "invalid_frames": 0,
+      "invalid_reasons": {},
+      "first_frame_ms": 6.274,
+      "last_frame_ms": 27629.804,
+      "maximum_frame_gap_ms": 194.14100000000002,
+      "gaps_above_500ms": 0,
+      "median_frame_gap_ms": 62.49700000000121,
+      "min_observed_valid_angle": 58.79664253631603,
+      "max_observed_valid_angle": 178.3936125157657,
+      "reference_matching": {
+        "kind": "人工候选时刻匹配，包含规则有效性待核动作；以下未匹配数不是正式误计/漏计",
+        "candidate_event_count": 5,
+        "matched_candidate_count": 5,
+        "unmatched_candidate_count": 0,
+        "unmatched_model_event_count": 0,
+        "unmatched_candidates": [],
+        "unmatched_model_events": [],
+        "matches": [
+          {
+            "candidate_id": "light_change-1",
+            "candidate_time_ms": 3880.0,
+            "auto_id": "auto-1",
+            "auto_time_ms": 4325.211,
+            "candidate_to_feedback_estimate_ms": 487.1110000059607
+          },
+          {
+            "candidate_id": "light_change-2",
+            "candidate_time_ms": 8580.0,
+            "auto_id": "auto-2",
+            "auto_time_ms": 8950.068,
+            "candidate_to_feedback_estimate_ms": 418.7679999880784
+          },
+          {
+            "candidate_id": "light_change-3",
+            "candidate_time_ms": 11670.0,
+            "auto_id": "auto-3",
+            "auto_time_ms": 12074.991,
+            "candidate_to_feedback_estimate_ms": 446.79099999701975
+          },
+          {
+            "candidate_id": "light_change-4",
+            "candidate_time_ms": 21000.0,
+            "auto_id": "auto-4",
+            "auto_time_ms": 21379.943,
+            "candidate_to_feedback_estimate_ms": 421.9429999999993
+          },
+          {
+            "candidate_id": "light_change-5",
+            "candidate_time_ms": 26130.0,
+            "auto_id": "auto-5",
+            "auto_time_ms": 26567.225000000002,
+            "candidate_to_feedback_estimate_ms": 479.12500000596265
+          }
+        ],
+        "candidate_to_feedback_samples": 5,
+        "candidate_to_feedback_median_ms": 446.79099999701975,
+        "candidate_to_feedback_p95_ms": 485.5138000059611,
+        "negative_estimate_samples": 0
+      },
+      "rule_validity_review_event_numbers": [
+        1,
+        2,
+        3
+      ],
+      "rule_validity_review_note": "第1至3次下蹲偏浅；9.5至14秒过曝使白鞋与背景难分。后期亮度/对比度处理不等于真实灯光变化。",
+      "formal_recognition_metrics": null
+    },
+    {
+      "name": "occlusion",
+      "condition": "occlusion",
+      "side": "left",
+      "session_file": "occlusion/session.json",
+      "metadata_file": "occlusion/run_metadata.json",
+      "session_sha256": "e946e07f3a1bd7ecc41c21991f21e7a2fa560bfd38b60b823fbb7a737ec113a5",
+      "raw_automatic_count": 0,
+      "auto_event_times_ms": [],
+      "processed_frames": 422,
+      "valid_frames": 0,
+      "invalid_frames": 422,
+      "invalid_reasons": {
+        "low_visibility": 420,
+        "no_pose": 2
+      },
+      "first_frame_ms": 0.482,
+      "last_frame_ms": 26478.089,
+      "maximum_frame_gap_ms": 208.128,
+      "gaps_above_500ms": 0,
+      "median_frame_gap_ms": 62.49800000000323,
+      "min_observed_valid_angle": null,
+      "max_observed_valid_angle": null,
+      "reference_matching": {
+        "kind": "人工候选时刻匹配，包含规则有效性待核动作；以下未匹配数不是正式误计/漏计",
+        "candidate_event_count": 5,
+        "matched_candidate_count": 0,
+        "unmatched_candidate_count": 5,
+        "unmatched_model_event_count": 0,
+        "unmatched_candidates": [
+          {
+            "source_id": "6f52693197d3a76e991323c00d53fd5435729eb1ec60a69e5f139281bc719178",
+            "event_id": "occlusion-1",
+            "time_ms": 3960.0,
+            "condition": "occlusion"
+          },
+          {
+            "source_id": "6f52693197d3a76e991323c00d53fd5435729eb1ec60a69e5f139281bc719178",
+            "event_id": "occlusion-2",
+            "time_ms": 8630.0,
+            "condition": "occlusion"
+          },
+          {
+            "source_id": "6f52693197d3a76e991323c00d53fd5435729eb1ec60a69e5f139281bc719178",
+            "event_id": "occlusion-3",
+            "time_ms": 10960.0,
+            "condition": "occlusion"
+          },
+          {
+            "source_id": "6f52693197d3a76e991323c00d53fd5435729eb1ec60a69e5f139281bc719178",
+            "event_id": "occlusion-4",
+            "time_ms": 19750.0,
+            "condition": "occlusion"
+          },
+          {
+            "source_id": "6f52693197d3a76e991323c00d53fd5435729eb1ec60a69e5f139281bc719178",
+            "event_id": "occlusion-5",
+            "time_ms": 25210.0,
+            "condition": "occlusion"
+          }
+        ],
+        "unmatched_model_events": [],
+        "matches": [],
+        "candidate_to_feedback_samples": 0,
+        "candidate_to_feedback_median_ms": null,
+        "candidate_to_feedback_p95_ms": null,
+        "negative_estimate_samples": 0
+      },
+      "rule_validity_review_event_numbers": [
+        1,
+        2,
+        3
+      ],
+      "rule_validity_review_note": "第1次站立时间由遮挡中估计，精度未提供；第2次8.63秒尚未完全站直，8.79秒已再下蹲，不足0.3秒的站立边界影响第2/3次如何计数。第4次保持中16.50秒有剪辑。",
+      "formal_recognition_metrics": null,
+      "sensitivity_excluding_candidate_2": {
+        "kind": "人工候选时刻匹配，包含规则有效性待核动作；以下未匹配数不是正式误计/漏计",
+        "candidate_event_count": 4,
+        "matched_candidate_count": 0,
+        "unmatched_candidate_count": 4,
+        "unmatched_model_event_count": 0,
+        "unmatched_candidates": [
+          {
+            "source_id": "6f52693197d3a76e991323c00d53fd5435729eb1ec60a69e5f139281bc719178",
+            "event_id": "occlusion-1",
+            "time_ms": 3960.0,
+            "condition": "occlusion"
+          },
+          {
+            "source_id": "6f52693197d3a76e991323c00d53fd5435729eb1ec60a69e5f139281bc719178",
+            "event_id": "occlusion-3",
+            "time_ms": 10960.0,
+            "condition": "occlusion"
+          },
+          {
+            "source_id": "6f52693197d3a76e991323c00d53fd5435729eb1ec60a69e5f139281bc719178",
+            "event_id": "occlusion-4",
+            "time_ms": 19750.0,
+            "condition": "occlusion"
+          },
+          {
+            "source_id": "6f52693197d3a76e991323c00d53fd5435729eb1ec60a69e5f139281bc719178",
+            "event_id": "occlusion-5",
+            "time_ms": 25210.0,
+            "condition": "occlusion"
+          }
+        ],
+        "unmatched_model_events": [],
+        "matches": [],
+        "candidate_to_feedback_samples": 0,
+        "candidate_to_feedback_median_ms": null,
+        "candidate_to_feedback_p95_ms": null,
+        "negative_estimate_samples": 0
+      },
+      "sensitivity_note": "仅展示若人工最终判定第2次不满足站立300毫秒时的匹配变化，不静默删事件，不确认其余事件有效。"
+    },
+    {
+      "name": "occlusion",
+      "condition": "occlusion",
+      "side": "right",
+      "session_file": "occlusion_right/session.json",
+      "metadata_file": "occlusion_right/run_metadata.json",
+      "session_sha256": "f1e893d6f11707bc0d1581838230949a2152d4ae3ed1fcad082dfdd142212ee3",
+      "raw_automatic_count": 2,
+      "auto_event_times_ms": [
+        11375.501999999999,
+        20145.908
+      ],
+      "processed_frames": 423,
+      "valid_frames": 390,
+      "invalid_frames": 33,
+      "invalid_reasons": {
+        "no_pose": 3,
+        "low_visibility": 30
+      },
+      "first_frame_ms": 2.056,
+      "last_frame_ms": 26520.659,
+      "maximum_frame_gap_ms": 179.503,
+      "gaps_above_500ms": 0,
+      "median_frame_gap_ms": 62.500499999999874,
+      "min_observed_valid_angle": 63.66278534638973,
+      "max_observed_valid_angle": 178.62194126763072,
+      "reference_matching": {
+        "kind": "人工候选时刻匹配，包含规则有效性待核动作；以下未匹配数不是正式误计/漏计",
+        "candidate_event_count": 5,
+        "matched_candidate_count": 2,
+        "unmatched_candidate_count": 3,
+        "unmatched_model_event_count": 0,
+        "unmatched_candidates": [
+          {
+            "source_id": "6f52693197d3a76e991323c00d53fd5435729eb1ec60a69e5f139281bc719178",
+            "event_id": "occlusion-1",
+            "time_ms": 3960.0,
+            "condition": "occlusion"
+          },
+          {
+            "source_id": "6f52693197d3a76e991323c00d53fd5435729eb1ec60a69e5f139281bc719178",
+            "event_id": "occlusion-2",
+            "time_ms": 8630.0,
+            "condition": "occlusion"
+          },
+          {
+            "source_id": "6f52693197d3a76e991323c00d53fd5435729eb1ec60a69e5f139281bc719178",
+            "event_id": "occlusion-5",
+            "time_ms": 25210.0,
+            "condition": "occlusion"
+          }
+        ],
+        "unmatched_model_events": [],
+        "matches": [
+          {
+            "candidate_id": "occlusion-3",
+            "candidate_time_ms": 10960.0,
+            "auto_id": "auto-1",
+            "auto_time_ms": 11375.501999999999,
+            "candidate_to_feedback_estimate_ms": 464.40200000595905
+          },
+          {
+            "candidate_id": "occlusion-4",
+            "candidate_time_ms": 19750.0,
+            "auto_id": "auto-2",
+            "auto_time_ms": 20145.908,
+            "candidate_to_feedback_estimate_ms": 437.8080000059599
+          }
+        ],
+        "candidate_to_feedback_samples": 2,
+        "candidate_to_feedback_median_ms": 451.1050000059595,
+        "candidate_to_feedback_p95_ms": 463.0723000059591,
+        "negative_estimate_samples": 0
+      },
+      "rule_validity_review_event_numbers": [
+        1,
+        2,
+        3
+      ],
+      "rule_validity_review_note": "第1次站立时间由遮挡中估计，精度未提供；第2次8.63秒尚未完全站直，8.79秒已再下蹲，不足0.3秒的站立边界影响第2/3次如何计数。第4次保持中16.50秒有剪辑。",
+      "formal_recognition_metrics": null,
+      "sensitivity_excluding_candidate_2": {
+        "kind": "人工候选时刻匹配，包含规则有效性待核动作；以下未匹配数不是正式误计/漏计",
+        "candidate_event_count": 4,
+        "matched_candidate_count": 2,
+        "unmatched_candidate_count": 2,
+        "unmatched_model_event_count": 0,
+        "unmatched_candidates": [
+          {
+            "source_id": "6f52693197d3a76e991323c00d53fd5435729eb1ec60a69e5f139281bc719178",
+            "event_id": "occlusion-1",
+            "time_ms": 3960.0,
+            "condition": "occlusion"
+          },
+          {
+            "source_id": "6f52693197d3a76e991323c00d53fd5435729eb1ec60a69e5f139281bc719178",
+            "event_id": "occlusion-5",
+            "time_ms": 25210.0,
+            "condition": "occlusion"
+          }
+        ],
+        "unmatched_model_events": [],
+        "matches": [
+          {
+            "candidate_id": "occlusion-3",
+            "candidate_time_ms": 10960.0,
+            "auto_id": "auto-1",
+            "auto_time_ms": 11375.501999999999,
+            "candidate_to_feedback_estimate_ms": 464.40200000595905
+          },
+          {
+            "candidate_id": "occlusion-4",
+            "candidate_time_ms": 19750.0,
+            "auto_id": "auto-2",
+            "auto_time_ms": 20145.908,
+            "candidate_to_feedback_estimate_ms": 437.8080000059599
+          }
+        ],
+        "candidate_to_feedback_samples": 2,
+        "candidate_to_feedback_median_ms": 451.1050000059595,
+        "candidate_to_feedback_p95_ms": 463.0723000059591,
+        "negative_estimate_samples": 0
+      },
+      "sensitivity_note": "仅展示若人工最终判定第2次不满足站立300毫秒时的匹配变化，不静默删事件，不确认其余事件有效。"
+    }
+  ],
+  "provenance_sha256": {
+    "squat_synthetic_human_reference.json": "494b037dc1034817cecf61af238c77d55cebdcc0de0c9e8c0761de0efa9c2e0a",
+    "squat_synthetic_annotations_received.json": "b8dfd4b76f25e39eb53f41b2083843882e4a7f2de11405b202bb05caee642aaa",
+    "squat_synthetic_human_reference.txt": "3ab262ad31c2c84dc5e7cfb7600b49db22d24f3245bd7f4bca171f4b018df436"
+  },
+  "limitations": [
+    "三段均为AI生成人物及剪辑输入；调光和遮挡为后期效果，不是独立真人样本或真实环境干预。",
+    "默认左侧先运行，发现关键点低可见度后补做全部右侧，保留全部六次，不将较好一侧冒充预先固定的唯一结果。",
+    "人工补充15个候选时刻与疑点；浅蹲角度/确认时长、遮挡估计及短站立边界尚未逐次裁定。",
+    "候选到反馈时间含稳定确认及处理至后续渲染回调估计；不是光电屏幕实测，负值保留；不等同正式反馈延迟。",
+    "三段基础动作及剪辑不同，条件间差异不能单独归因于亮度或遮挡；帧有效率也不是识别准确率。",
+    "本轮自动运行不增加同学数量，无真人改后复测；素材及联系图仅本地保存，公开原图来源和许可未提供。"
+  ]
+}

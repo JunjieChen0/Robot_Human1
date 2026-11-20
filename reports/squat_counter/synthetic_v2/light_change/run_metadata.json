@@ -1,0 +1,30 @@
+{
+  "kind": "自动连续技术运行；非同学操作记录，不自动确认标注有效性",
+  "code_commit": "45202c2cce807bd68674732821b19f6e018dc6ad",
+  "source_name": "light_change.mp4",
+  "source_sha256": "f7b31a9a80336a015f339ce5bec88e8d60e1ef0439a29ae58046a29c2d59e188",
+  "duration_seconds": 27.666667,
+  "browser": "150.0.7871.127",
+  "headless": true,
+  "side": "left",
+  "playback_rate": 1,
+  "wall_seconds_including_model_load": 29.175010599996313,
+  "checks": {
+    "source_hash_matches": true,
+    "real_cpu_model": true,
+    "page_v2": true,
+    "video_completed": true,
+    "no_manual_pause_or_correction": true,
+    "one_x_playback": true,
+    "trace_present": true,
+    "no_page_errors": true
+  },
+  "page_errors": [],
+  "permission_note": "自动勾选测试入口；素材来源及许可须另外登记，此勾选不构成许可证明。",
+  "source_code_sha256": {
+    "src/squat_frontend/app.mjs": "60d75312d9c997297c08f23d0f615644579be00447bae863d681f04e5f587366",
+    "src/squat_frontend/counter.mjs": "572ccb1161a60ef5b0bd219519e63fc222ce5f1ad0ccc8271db1de3e60c6d587",
+    "src/squat_frontend/pose_worker.mjs": "d8df9338ba0478e17839ead86d37b457eb3961a2325fcd2f8954949a1fb6dfd4",
+    "src/squat_frontend/asset_manifest.json": "c4c64aa9b13e3d1cca89f4fb31e20a0e276d4097a573952e8c47cc7ea41fd2e9"
+  }
+}

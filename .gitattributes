@@ -2,3 +2,8 @@ start_model_judgment.sh text eol=lf
 requirements-judgment.txt text eol=lf
 start_squat_counter.sh text eol=lf
 requirements-squat.txt text eol=lf
+
+# Preserve received bytes and continuous-run evidence hashes across platforms.
+user_test/squat_synthetic_annotations_received.json -text whitespace=cr-at-eol
+reports/squat_counter/synthetic_v2/*/session.json -text whitespace=cr-at-eol
+reports/squat_counter/synthetic_v2/*/run_metadata.json -text whitespace=cr-at-eol

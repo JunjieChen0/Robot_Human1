@@ -1,0 +1,29 @@
+{
+  "kind": "用户补充人工候选完成时刻；合成素材受控测试参照",
+  "received_date_client": "2026-11-20",
+  "source_text": "squat_synthetic_human_reference.txt",
+  "original_ai_annotation": "squat_synthetic_annotations_received.json",
+  "provenance": "用户确认已有人工复核，并在聊天中提供这15个时刻及不确定情况。逐次角度/稳定时长记录未提供，未据此确认全部15个都是既定规则下的有效完成事件。",
+  "time_basis": "以源视频第一帧为0秒；标注站立起点，不另加300毫秒确认时间。原AI标注自述约±0.1秒，人工补充未另给精度。",
+  "formal_metrics_status": "pending_rule_adjudication",
+  "videos": {
+    "normal_light": {
+      "condition": "normal",
+      "stand_seconds": [6.13, 12.63, 22.0, 27.96, 34.63],
+      "review_event_numbers": [1, 2],
+      "review_note": "第1、2次下蹲偏浅，未另有独立角度及300毫秒确认记录；保留候选，不由模型输出反推真值。"
+    },
+    "light_change": {
+      "condition": "light_change",
+      "stand_seconds": [3.88, 8.58, 11.67, 21.0, 26.13],
+      "review_event_numbers": [1, 2, 3],
+      "review_note": "第1至3次下蹲偏浅；9.5至14秒过曝使白鞋与背景难分。后期亮度/对比度处理不等于真实灯光变化。"
+    },
+    "occlusion": {
+      "condition": "occlusion",
+      "stand_seconds": [3.96, 8.63, 10.96, 19.75, 25.21],
+      "review_event_numbers": [1, 2, 3],
+      "review_note": "第1次站立时间由遮挡中估计，精度未提供；第2次8.63秒尚未完全站直，8.79秒已再下蹲，不足0.3秒的站立边界影响第2/3次如何计数。第4次保持中16.50秒有剪辑。"
+    }
+  }
+}

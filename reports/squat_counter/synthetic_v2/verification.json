@@ -1,0 +1,234 @@
+{
+  "kind": "本轮三条件合成视频与提交材料核验；不是正式识别评分",
+  "client_date": "2026-11-20",
+  "runtime_application_commit": "45202c2",
+  "tests": {
+    "related_python": {
+      "passed": 14,
+      "seconds": 8.46
+    },
+    "node_rules": {
+      "passed": 9
+    },
+    "continuous_run_checks": 48,
+    "full_81_python_suite_rerun": false,
+    "full_two_entry_ui_suite_rerun": false,
+    "debian_startup_rerun": false
+  },
+  "checks": {
+    "six_complete_runs_48_checks": true,
+    "six_session_hashes_match": true,
+    "original_annotation_bytes_match": true,
+    "all_gaps_below_500ms": true,
+    "formal_metrics_not_fabricated": true,
+    "15_human_candidates": true,
+    "two_python_scripts_parse": true,
+    "three_holds_without_repeat": true,
+    "application_model_and_frozen_study_unchanged": true,
+    "old_media_rows_preserved_and_three_appended": true,
+    "six_rule_trace_replays_match": true,
+    "no_raw_media_in_changes": true,
+    "no_deletions": true,
+    "local_document_links_resolve": true,
+    "generated_svg_valid_xml": true,
+    "staged_whitespace_check_passed": true,
+    "existing_output_rejected": true
+  },
+  "trace_replay": [
+    {
+      "run": "light_change",
+      "events": 0,
+      "phase_mismatches": 0,
+      "event_times_identical": true
+    },
+    {
+      "run": "light_change_right",
+      "events": 5,
+      "phase_mismatches": 0,
+      "event_times_identical": true
+    },
+    {
+      "run": "normal_light",
+      "events": 0,
+      "phase_mismatches": 0,
+      "event_times_identical": true
+    },
+    {
+      "run": "normal_light_right",
+      "events": 5,
+      "phase_mismatches": 0,
+      "event_times_identical": true
+    },
+    {
+      "run": "occlusion",
+      "events": 0,
+      "phase_mismatches": 0,
+      "event_times_identical": true
+    },
+    {
+      "run": "occlusion_right",
+      "events": 2,
+      "phase_mismatches": 0,
+      "event_times_identical": true
+    }
+  ],
+  "local_links_checked": 126,
+  "files_changed": [
+    ".gitattributes",
+    "CHANGELOG.md",
+    "README.md",
+    "docs/squat_model_sources.md",
+    "reports/squat_counter/README.md",
+    "reports/squat_counter/synthetic_v2/README.md",
+    "reports/squat_counter/synthetic_v2/demo_manifest.json",
+    "reports/squat_counter/synthetic_v2/light_change/run_metadata.json",
+    "reports/squat_counter/synthetic_v2/light_change/session.json",
+    "reports/squat_counter/synthetic_v2/light_change_right/run_metadata.json",
+    "reports/squat_counter/synthetic_v2/light_change_right/session.json",
+    "reports/squat_counter/synthetic_v2/normal_light/run_metadata.json",
+    "reports/squat_counter/synthetic_v2/normal_light/session.json",
+    "reports/squat_counter/synthetic_v2/normal_light_right/run_metadata.json",
+    "reports/squat_counter/synthetic_v2/normal_light_right/session.json",
+    "reports/squat_counter/synthetic_v2/occlusion/run_metadata.json",
+    "reports/squat_counter/synthetic_v2/occlusion/session.json",
+    "reports/squat_counter/synthetic_v2/occlusion_right/run_metadata.json",
+    "reports/squat_counter/synthetic_v2/occlusion_right/session.json",
+    "reports/squat_counter/synthetic_v2/right_side_traces.png",
+    "reports/squat_counter/synthetic_v2/right_side_traces.svg",
+    "reports/squat_counter/synthetic_v2/summary.json",
+    "reports/squat_counter/synthetic_v2/verification.json",
+    "scripts/analyze_squat_video_sessions.py",
+    "scripts/run_squat_video_session.py",
+    "user_test/squat_counter_test_guide.md",
+    "user_test/squat_media_register.csv",
+    "user_test/squat_synthetic_annotations_received.json",
+    "user_test/squat_synthetic_human_reference.json",
+    "user_test/squat_synthetic_human_reference.txt"
+  ],
+  "file_hashes": {
+    ".gitattributes": {
+      "sha256": "356a115922a06b12f0f43370300da7ce499203550cedd3d29a4a1b05f5ae6e58",
+      "mode": "lf_normalized_text"
+    },
+    "CHANGELOG.md": {
+      "sha256": "8849ce29f1ad4931296697625b7e4372f599c6a99878be8d0a4d273d515f754f",
+      "mode": "lf_normalized_text"
+    },
+    "README.md": {
+      "sha256": "dcf0a0aa2df6a0d45be893707e8b057bfb775634df17d2e60a5ad9b7edc6a02b",
+      "mode": "lf_normalized_text"
+    },
+    "docs/squat_model_sources.md": {
+      "sha256": "524bb63e2142881ec5d43f360cbba706e98d2595a7a3f483eb816c613acde07c",
+      "mode": "lf_normalized_text"
+    },
+    "reports/squat_counter/README.md": {
+      "sha256": "dbabb7ebc3fa000e38e201f17ebc48a787b8325ff5a64ff799b85985f47493f7",
+      "mode": "lf_normalized_text"
+    },
+    "reports/squat_counter/synthetic_v2/README.md": {
+      "sha256": "ee6f5e8aa748dab51cf4a28ced2dd222a663735229556f3261a761eabe6541f8",
+      "mode": "lf_normalized_text"
+    },
+    "reports/squat_counter/synthetic_v2/demo_manifest.json": {
+      "sha256": "a50e2a929283a1f3e97de21839f9991c560251ab9658d35ed81c683abf39ca10",
+      "mode": "lf_normalized_text"
+    },
+    "reports/squat_counter/synthetic_v2/light_change/run_metadata.json": {
+      "sha256": "f18589c139dfff46cc7136329e28b7ff37115b018fa91faddfd3ada1897b07a1",
+      "mode": "raw_bytes"
+    },
+    "reports/squat_counter/synthetic_v2/light_change/session.json": {
+      "sha256": "5ca568c19fe4e45bf6d86367d585efc7046124141e667681cbde79e32bb85e94",
+      "mode": "raw_bytes"
+    },
+    "reports/squat_counter/synthetic_v2/light_change_right/run_metadata.json": {
+      "sha256": "819ef769dec5396cb49ae8d7b0008d751898b026cc03b63d91077d96072a8cdd",
+      "mode": "raw_bytes"
+    },
+    "reports/squat_counter/synthetic_v2/light_change_right/session.json": {
+      "sha256": "3875203753dd68db367ba3be576f9efc2de54fe78c09b13aa645e2ca4759c2d0",
+      "mode": "raw_bytes"
+    },
+    "reports/squat_counter/synthetic_v2/normal_light/run_metadata.json": {
+      "sha256": "14048dbd1bd888c1811868dd01933e9c18d14b77f323b560d3477c152876ff32",
+      "mode": "raw_bytes"
+    },
+    "reports/squat_counter/synthetic_v2/normal_light/session.json": {
+      "sha256": "65562bc777da9e39b141c45ce9d86a20e90a29edf0a58533b1adb80cb31487bb",
+      "mode": "raw_bytes"
+    },
+    "reports/squat_counter/synthetic_v2/normal_light_right/run_metadata.json": {
+      "sha256": "7e6d3f5ea7cec10ae006404838891aec3882aa0b29b86386f9d022c08d547833",
+      "mode": "raw_bytes"
+    },
+    "reports/squat_counter/synthetic_v2/normal_light_right/session.json": {
+      "sha256": "cf274c38a320bcb9cfd9f58d5a0826938c51e8f91832a6bf27b4043bcdb9b6a5",
+      "mode": "raw_bytes"
+    },
+    "reports/squat_counter/synthetic_v2/occlusion/run_metadata.json": {
+      "sha256": "ec70aace8dc2034b924c7b66300c7ff716fc189b3bb36e4b5d67d026d18cb55a",
+      "mode": "raw_bytes"
+    },
+    "reports/squat_counter/synthetic_v2/occlusion/session.json": {
+      "sha256": "e946e07f3a1bd7ecc41c21991f21e7a2fa560bfd38b60b823fbb7a737ec113a5",
+      "mode": "raw_bytes"
+    },
+    "reports/squat_counter/synthetic_v2/occlusion_right/run_metadata.json": {
+      "sha256": "6a57018dc0aae89fc66ae6059a26e2b526dabe45d4847f80ff551cceff04cf7e",
+      "mode": "raw_bytes"
+    },
+    "reports/squat_counter/synthetic_v2/occlusion_right/session.json": {
+      "sha256": "f1e893d6f11707bc0d1581838230949a2152d4ae3ed1fcad082dfdd142212ee3",
+      "mode": "raw_bytes"
+    },
+    "reports/squat_counter/synthetic_v2/right_side_traces.png": {
+      "sha256": "8dd5d7a9caeff8ccac2020cfd856ee49f62801fc0b917879ffdea4baa2f443a8",
+      "mode": "raw_bytes"
+    },
+    "reports/squat_counter/synthetic_v2/right_side_traces.svg": {
+      "sha256": "749f58bb86ff43674e430d6f98418d7c3c81876b92bfe2f48ce5d2e72cc83347",
+      "mode": "lf_normalized_text"
+    },
+    "reports/squat_counter/synthetic_v2/summary.json": {
+      "sha256": "d819835ca24c0ec79437ef4f5ef3edef917ea423c90098ca84d96c0fe19aa33a",
+      "mode": "lf_normalized_text"
+    },
+    "scripts/analyze_squat_video_sessions.py": {
+      "sha256": "f7d8c77784fad4209a5ddcbf3a4c255582744442855bd2a7ab2380b1858c5367",
+      "mode": "lf_normalized_text"
+    },
+    "scripts/run_squat_video_session.py": {
+      "sha256": "393ee6a7627359eb5c979fb13ceae58f9a4e5e5b077486fc02f4fc528bc5b80c",
+      "mode": "lf_normalized_text"
+    },
+    "user_test/squat_counter_test_guide.md": {
+      "sha256": "b12605e6090a5a29def82c3c59f917b93cd7760e0e6a446dff5775518d75c7fb",
+      "mode": "lf_normalized_text"
+    },
+    "user_test/squat_media_register.csv": {
+      "sha256": "6a1132a7dd49fe9e53cba063398905f49af90a5b27c6f5bc955fafcbd666a3f3",
+      "mode": "lf_normalized_text"
+    },
+    "user_test/squat_synthetic_annotations_received.json": {
+      "sha256": "b8dfd4b76f25e39eb53f41b2083843882e4a7f2de11405b202bb05caee642aaa",
+      "mode": "raw_bytes"
+    },
+    "user_test/squat_synthetic_human_reference.json": {
+      "sha256": "494b037dc1034817cecf61af238c77d55cebdcc0de0c9e8c0761de0efa9c2e0a",
+      "mode": "lf_normalized_text"
+    },
+    "user_test/squat_synthetic_human_reference.txt": {
+      "sha256": "3ab262ad31c2c84dc5e7cfb7600b49db22d24f3245bd7f4bca171f4b018df436",
+      "mode": "lf_normalized_text"
+    }
+  },
+  "hash_note": "原标注、原会话与元数据由.gitattributes -text固定字节；其余文本按LF归一化核对Git blob。核验JSON自身不自哈希。",
+  "formal_recognition_metrics": null,
+  "human_retest_participants_added": 0,
+  "pending": [
+    "浅蹲深度与300毫秒有效性、遮挡估计和连做边界逐次裁定",
+    "真实环境泛化验证",
+    "原始生成图片及旧素材来源补充"
+  ]
+}

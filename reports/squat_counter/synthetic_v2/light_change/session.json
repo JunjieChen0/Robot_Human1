@@ -1,0 +1,4008 @@
+{
+  "page_version": "squat-counter-v2",
+  "record_type": "参与者自报及浏览器操作记录；非自动判分",
+  "session": {
+    "id": "87245d6a-b359-4196-8fe6-8efeb2303208",
+    "started_at": "2026-11-20T10:43:37.441Z",
+    "ended_at": "2026-11-20T10:44:05.152Z",
+    "source": {
+      "kind": "video",
+      "name": "light_change.mp4",
+      "sha256": "f7b31a9a80336a015f339ce5bec88e8d60e1ef0439a29ae58046a29c2d59e188",
+      "size_bytes": 3589533,
+      "duration_ms": 27666.667,
+      "consent_confirmed": true
+    },
+    "rules": {
+      "standAngle": 160,
+      "downAngle": 100,
+      "stableMs": 300,
+      "maxGapMs": 500,
+      "minVisibility": 0.65,
+      "side": "left"
+    },
+    "model": {
+      "package": "@mediapipe/tasks-vision",
+      "version": "0.10.32",
+      "variant": "pose_landmarker_lite/float16/1",
+      "sha256": "59929e1d1ee95287735ddd833b19cf4ac46d29bc7afddbbf6753c459690d574a",
+      "delegate": "CPU",
+      "inference_mode": "mediapipe"
+    },
+    "end_reason": "video_finished"
+  },
+  "source": {
+    "kind": "video",
+    "name": "light_change.mp4",
+    "sha256": "f7b31a9a80336a015f339ce5bec88e8d60e1ef0439a29ae58046a29c2d59e188",
+    "size_bytes": 3589533,
+    "duration_ms": 27666.667,
+    "consent_confirmed": true
+  },
+  "model": {
+    "package": "@mediapipe/tasks-vision",
+    "version": "0.10.32",
+    "variant": "pose_landmarker_lite/float16/1",
+    "sha256": "59929e1d1ee95287735ddd833b19cf4ac46d29bc7afddbbf6753c459690d574a",
+    "delegate": "CPU",
+    "inference_mode": "mediapipe"
+  },
+  "rules": {
+    "standAngle": 160,
+    "downAngle": 100,
+    "stableMs": 300,
+    "maxGapMs": 500,
+    "minVisibility": 0.65,
+    "side": "left"
+  },
+  "automatic_count": 0,
+  "corrected_count": 0,
+  "auto_events": [],
+  "corrections": [],
+  "frame_trace": [
+    {
+      "time_ms": 2.439,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.40086793899536133,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 189.802,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.40086793899536133,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 252.218,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.4023318588733673,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 314.767,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.39011725783348083,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 379.637,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.384186327457428,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 439.965,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.38212850689888,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 502.2180000000001,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.38212850689888,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 564.767,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.38212850689888,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 627.205,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3751566708087921,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 689.686,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3686397969722748,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 752.19,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3976682424545288,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 814.64,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.35383474826812744,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 877.166,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3618430197238922,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 939.723,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.4010644853115082,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 1002.3219999999999,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.38536620140075684,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 1064.767,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.37034985423088074,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 1127.218,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.32702189683914185,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 1189.689,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3243226408958435,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 1252.1970000000001,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.2818428874015808,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 1314.67,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.29263612627983093,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 1377.123,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3136163651943207,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 1439.68,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.40875518321990967,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 1502.3139999999999,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3808887004852295,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 1564.778,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3604062795639038,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 1627.326,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.31177887320518494,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 1689.758,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.26132455468177795,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 1752.232,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.25091350078582764,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 1814.842,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.23749980330467224,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 1877.1770000000001,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.2203557789325714,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 1939.674,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.22075796127319336,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 2004.515,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.2052088975906372,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 2064.714,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.22121906280517578,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 2127.23,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.249752938747406,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 2189.849,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.2710445821285248,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 2252.153,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.280458927154541,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 2316.6769999999997,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.29234665632247925,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 2377.221,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.2814041078090668,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 2439.6110000000003,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.27085191011428833,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 2502.232,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.2685002386569977,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 2564.7400000000002,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.24867089092731476,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 2627.2639999999997,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.26619696617126465,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 2689.7419999999997,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.2560490071773529,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 2752.2039999999997,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.2503669261932373,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 2814.613,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.2377437949180603,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 2877.184,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.23332622647285461,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 2939.565,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.23512844741344452,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 3002.0989999999997,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.24139317870140076,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 3064.644,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.24885211884975433,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 3127.11,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.24433720111846924,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 3189.6420000000003,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.26889652013778687,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 3252.289,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.2761090397834778,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 3314.6659999999997,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.2412426769733429,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 3377.15,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.20671722292900085,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 3439.667,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.19584624469280243,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 3502.223,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.2580011188983917,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 3564.647,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.29262542724609375,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 3627.098,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.31114494800567627,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 3689.5769999999998,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.2954684793949127,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 3752.1270000000004,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.34263455867767334,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 3814.59,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3466116487979889,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 3877.0660000000003,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.37204357981681824,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 3940.5809999999997,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.34018585085868835,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 4002.054,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.2920273542404175,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 4067.2430000000004,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3315129578113556,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 4134.0599999999995,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3671492636203766,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 4196.639,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3562689423561096,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 4258.981000000001,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.34401074051856995,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 4321.554,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.32963383197784424,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 4385.767000000001,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.2889186441898346,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 4446.676,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3046334981918335,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 4509.11,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.35797467827796936,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 4571.553,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.34946972131729126,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 4633.997,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.342416375875473,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 4696.516,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.33670592308044434,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 4759.144,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.34315189719200134,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 4821.541,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3208174705505371,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 4884.090999999999,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3347504436969757,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 4947.269,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3432503044605255,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 5009.196,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3587065041065216,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 5071.508,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.35217002034187317,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 5133.9220000000005,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.33314070105552673,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 5196.495,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.33890318870544434,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 5258.948,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3312716782093048,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 5321.43,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.33041223883628845,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 5384.7699999999995,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3256200850009918,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 5446.478,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3232312798500061,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 5509.089999999999,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3269714415073395,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 5571.511,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3345341682434082,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 5634.0560000000005,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.330274760723114,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 5697.403,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.34554409980773926,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 5759.125,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.36677712202072144,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 5821.543000000001,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3789973556995392,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 5883.924999999999,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.4000001549720764,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 5946.5380000000005,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.35190945863723755,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 6008.966,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.35145947337150574,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 6071.4439999999995,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.39266788959503174,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 6134.035,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3983112871646881,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 6196.54,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.33940616250038147,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 6258.954,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.330118328332901,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 6321.354,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.382029265165329,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 6383.909,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.39014360308647156,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 6446.437000000001,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3912358283996582,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 6508.9439999999995,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.39301514625549316,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 6571.451,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.2864823341369629,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 6633.991,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.26983192563056946,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 6696.421,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.2866966128349304,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 6758.941,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.2528018355369568,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 6821.5019999999995,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.22385002672672272,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 6884.042,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.21661823987960815,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 6946.5380000000005,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.1940721571445465,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 7009.994,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.2252061367034912,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 7071.4839999999995,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.2720475494861603,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 7133.918000000001,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.25983530282974243,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 7196.523,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.268278568983078,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 7259.0560000000005,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.2822238504886627,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 7321.64,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.26399096846580505,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 7383.962,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.27924007177352905,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 7446.4839999999995,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.28194329142570496,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 7509.255999999999,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.33605000376701355,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 7571.557000000001,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.33441847562789917,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 7634.242,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.31950822472572327,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 7696.382,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3053072392940521,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 7759.0070000000005,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.29400885105133057,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 7821.524,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3100392520427704,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 7883.9800000000005,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.27641040086746216,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 7946.383,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3011299967765808,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 8008.882,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.2846788465976715,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 8071.42,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.24086225032806396,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 8133.972999999999,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.1826344132423401,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 8196.310000000001,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.18376386165618896,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 8258.900000000001,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.21763119101524353,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 8321.424,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.26889654994010925,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 8383.909,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.25368574261665344,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 8446.48,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.282265305519104,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 8508.960000000001,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.38699495792388916,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 8571.339,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3998074531555176,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 8633.945000000002,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.38253024220466614,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 8696.259,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.38198813796043396,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 8758.832,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3261362910270691,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 8821.292,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3802816867828369,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 8883.87,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.34989696741104126,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 8946.278,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.37523558735847473,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 9008.899,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.38814496994018555,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 9071.34,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.4404760003089905,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 9134.365000000002,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3408651053905487,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 9196.502,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.36041808128356934,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 9258.965999999999,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3179854452610016,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 9321.521,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.29483267664909363,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 9383.982,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.29291439056396484,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 9446.399,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.30857840180397034,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 9508.856,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.2682926058769226,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 9571.365,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.26746445894241333,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 9633.868,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.24900789558887482,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 9696.379,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.23260845243930817,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 9758.917,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.23427410423755646,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 9821.259,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.2282985895872116,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 9883.706,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.26217788457870483,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 9946.414,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.2433042824268341,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 10008.747,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.2321147918701172,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 10071.266,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.23459944128990173,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 10133.692,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.2002689093351364,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 10196.302,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.20231865346431732,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 10262.559,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.20650702714920044,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 10328.328000000001,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.20578844845294952,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 10390.756,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.21133005619049072,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 10453.307999999999,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.2270050197839737,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 10515.715999999999,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.22392909228801727,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 10578.277,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.20143423974514008,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 10640.756,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.1975501924753189,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 10703.252,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.22394996881484985,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 10765.675,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.19431491196155548,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 10828.168,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.2043728530406952,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 10890.635,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.23129931092262268,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 10953.205,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.2144014537334442,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 11015.712000000001,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.22410763800144196,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 11078.146,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.2330079823732376,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 11140.58,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.2543022632598877,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 11203.146999999999,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.2169874906539917,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 11265.643,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.24133162200450897,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 11328.074,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.23390087485313416,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 11390.631000000001,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.29150933027267456,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 11453.283000000001,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.2803918719291687,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 11515.777999999998,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3333315849304199,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 11585.800000000001,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3783864974975586,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 11682.282000000001,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.41479986906051636,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 11744.866999999998,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.33371174335479736,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 11807.241,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3478246331214905,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 11869.792,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3737299144268036,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 11932.284,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3321683704853058,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 11994.766,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3414902985095978,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 12057.306,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.31502071022987366,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 12119.773000000001,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.36341825127601624,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 12182.21,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.35091081261634827,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 12245.445,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.33565300703048706,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 12335.088000000002,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3461715579032898,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 12418.377,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3572138845920563,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 12480.99,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.338765412569046,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 12543.512,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3449159860610962,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 12605.902,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.34758660197257996,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 12668.392000000002,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3572176992893219,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 12730.942000000001,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.35076212882995605,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 12793.648,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3449731171131134,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 12855.861,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3485667109489441,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 12918.421,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3441951870918274,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 12980.864,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.34319913387298584,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 13043.357,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3507315516471863,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 13105.850999999999,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.32954132556915283,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 13168.345000000001,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.33316996693611145,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 13230.829,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3187347948551178,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 13293.35,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3196830749511719,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 13355.878999999999,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.31193825602531433,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 13418.509,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.35117650032043457,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 13522.571,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.33653026819229126,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 13605.801,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3464379608631134,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 13668.229,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3394912779331207,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 13730.818,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3231378495693207,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 13793.222,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3012676239013672,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 13855.732,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.38172024488449097,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 13918.221000000001,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3576946556568146,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 13980.731,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.28787896037101746,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 14043.224,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3826678693294525,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 14105.791,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.34776222705841064,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 14168.324999999999,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.30663445591926575,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 14230.793,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3060885965824127,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 14293.292,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.2920543849468231,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 14355.693000000001,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.28973037004470825,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 14418.175,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.27845433354377747,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 14480.681,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.26944106817245483,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 14543.321,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.2476542443037033,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 14606.452000000001,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.2465379685163498,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 14710.007,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.22715145349502563,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 14793.316,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.20055559277534485,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 14855.951,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.18762215971946716,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 14918.259,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.18263669312000275,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 14980.77,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.19142334163188934,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 15043.734,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.18609946966171265,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 15105.876,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.21280837059020996,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 15168.22,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.2303357869386673,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 15230.73,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.23056721687316895,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 15293.233,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.2358701080083847,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 15355.707,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.2606697380542755,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 15418.179,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.24199138581752777,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 15480.788999999999,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.26582521200180054,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 15543.165,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.24118368327617645,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 15605.881,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.2337370067834854,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 15668.353,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.2300092875957489,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 15730.651,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.1986909955739975,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 15796.842,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.1967805176973343,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 15897.955,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.1762494593858719,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 15987.666000000001,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.1719118058681488,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 16050.142999999998,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.19086983799934387,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 16112.703,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.27107492089271545,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 16175.132999999998,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.23656617105007172,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 16237.63,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.23497317731380463,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 16300.046999999999,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.256441205739975,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 16362.597000000002,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.2298208773136139,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 16425.108,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.19469870626926422,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 16487.568,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.19679145514965057,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 16550.615,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.20468322932720184,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 16612.558,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.17944534122943878,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 16675.094,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.17532776296138763,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 16737.691000000003,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.1854042261838913,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 16800.124,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.18894194066524506,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 16862.61,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.18164975941181183,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 16925.088,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.1874372512102127,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 16987.659,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.18360106647014618,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 17050.033,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.18609027564525604,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 17112.546,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.1886136829853058,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 17175.073,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.1684906780719757,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 17237.601000000002,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.17701776325702667,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 17300.173000000003,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.18090985715389252,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 17362.576,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.18006061017513275,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 17425.099,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.18529093265533447,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 17487.521,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.19244053959846497,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 17549.990999999998,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.18320055305957794,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 17612.501,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.17811082303524017,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 17675.070000000003,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.16643112897872925,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 17737.479,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.16519604623317719,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 17800.165,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.16856649518013,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 17862.549000000003,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.18335938453674316,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 17925.033,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.18195313215255737,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 17987.596,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.18197908997535706,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 18050.077,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.1820409595966339,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 18112.493000000002,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.18199390172958374,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 18175.073,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.17927564680576324,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 18237.576,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.18359686434268951,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 18299.987999999998,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.18279394507408142,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 18362.479,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.17566537857055664,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 18424.992,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.19711551070213318,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 18487.493000000002,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.18744303286075592,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 18550.013,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.1742994338274002,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 18612.492,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.1748611181974411,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 18675.055,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.1760784089565277,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 18737.568,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.1732516884803772,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 18799.995,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.1976955533027649,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 18862.536,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.17563559114933014,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 18925.016,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.18482457101345062,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 18988.665999999997,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.18901871144771576,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 19050.057,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.188473179936409,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 19112.535,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.18017737567424774,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 19175.013,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.17163202166557312,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 19237.577999999998,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.18106763064861298,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 19300.099,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.17490041255950928,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 19362.531,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.17766274511814117,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 19424.969999999998,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.18179760873317719,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 19487.456000000002,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.17603667080402374,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 19550.184999999998,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.1736462116241455,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 19612.600000000002,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.18408432602882385,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 19675.02,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.18166205286979675,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 19737.513,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.18441520631313324,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 19800.062,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.19198307394981384,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 19862.643,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.16595324873924255,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 19925.142,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.19592031836509705,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 19987.58,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.17226266860961914,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 20050.221,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.18450430035591125,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 20112.774999999998,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.1923486441373825,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 20175.073,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.18904896080493927,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 20237.563000000002,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.2172899693250656,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 20300.039,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.24096377193927765,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 20362.533,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.22164589166641235,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 20425.189,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.21030135452747345,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 20487.521,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.240486279129982,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 20550.082,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.21061965823173523,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 20612.514,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.21268635988235474,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 20675.025,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.22563761472702026,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 20737.493000000002,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.25386953353881836,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 20801.811,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3372085988521576,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 20862.552,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.34157082438468933,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 20924.961,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.4088018238544464,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 20987.511000000002,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3850950300693512,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 21049.953999999998,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.37156614661216736,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 21112.518,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3384074866771698,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 21175.073999999997,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.34111282229423523,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 21240.834,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.32082289457321167,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 21307.885,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.32683485746383667,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 21369.444000000003,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3360247015953064,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 21431.936,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3012186586856842,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 21494.43,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.30545276403427124,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 21556.857,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.34474635124206543,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 21619.402000000002,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3923773765563965,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 21681.886,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3871127665042877,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 21744.37,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3730672299861908,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 21806.836,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.36727145314216614,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 21869.433,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3691090941429138,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 21931.814,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3923605680465698,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 21994.319,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3895008862018585,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 22056.86,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.34159398078918457,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 22119.271999999997,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.32212865352630615,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 22181.853,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3398408591747284,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 22244.37,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.33225762844085693,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 22306.851000000002,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3312492072582245,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 22369.344,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3437056541442871,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 22432.859,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3382318317890167,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 22494.317,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3342071771621704,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 22556.957000000002,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.39742496609687805,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 22619.384000000002,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.385653555393219,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 22681.901,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3623890280723572,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 22744.394,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.36586427688598633,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 22806.852,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3706166744232178,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 22869.388,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3709276616573334,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 22931.84,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3665792644023895,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 22994.288,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.38409850001335144,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 23056.799000000003,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3739064037799835,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 23119.213,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.4070031940937042,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 23184.068,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3758329153060913,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 23244.314,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3719974458217621,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 23306.87,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3651743233203888,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 23369.32,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.333507776260376,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 23431.788,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3343828618526459,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 23494.319,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3381928503513336,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 23556.857999999997,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.31149032711982727,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 23620.251,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.2662629187107086,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 23681.811,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.33644363284111023,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 23744.334,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.38380029797554016,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 23806.837000000003,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.34572574496269226,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 23869.279,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.29618600010871887,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 23931.689,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.23525045812129974,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 23994.888,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.2200748771429062,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 24056.8,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.20234166085720062,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 24119.209000000003,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.2118779420852661,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 24181.723,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.24173620343208313,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 24244.303,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.2522957921028137,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 24306.761000000002,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.24325929582118988,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 24369.219,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.22498328983783722,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 24431.723,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.18396316468715668,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 24494.303,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.17042675614356995,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 24556.903,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.18531401455402374,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 24619.341,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.16160722076892853,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 24681.791,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.18023964762687683,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 24744.260000000002,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.17162661254405975,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 24807.377,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.18072718381881714,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 24869.213,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.15616457164287567,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 24931.662,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.1609129011631012,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 24994.39,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.15786264836788177,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 25056.683,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.1576080471277237,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 25119.154000000002,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.16103136539459229,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 25181.626,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.16437849402427673,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 25244.242,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.1988382488489151,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 25306.730000000003,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.2020415961742401,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 25369.325,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.18723233044147491,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 25431.681999999997,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.17620772123336792,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 25494.198,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.2362665832042694,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 25556.718,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.22695708274841309,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 25619.140000000003,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3188019096851349,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 25681.742,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.28931939601898193,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 25744.194,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.24438251554965973,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 25806.711,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.23411034047603607,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 25869.18,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.27335381507873535,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 25931.702999999998,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.28541815280914307,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 25994.134,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.39739760756492615,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 26056.631,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.4384303092956543,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 26119.170000000002,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3640267550945282,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 26181.679,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3732054829597473,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 26245.396,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.35865482687950134,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 26306.658,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.38519829511642456,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 26369.133,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3746865391731262,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 26431.656,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.30703097581863403,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 26494.158,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.36853867769241333,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 26556.608,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.37757086753845215,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 26619.224,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.38658636808395386,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 26681.56,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3720715045928955,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 26744.074,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.35833972692489624,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 26806.565,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3822154700756073,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 26869.140000000003,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.38734009861946106,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 26931.553,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.39348819851875305,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 26994.041,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.32809364795684814,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 27056.556,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.32677963376045227,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 27119.104,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.32953208684921265,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 27181.638,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3876955509185791,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 27244.219,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.4037128984928131,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 27306.586,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3862740993499756,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 27369.082,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.3903248906135559,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 27431.582,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.38803544640541077,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 27494.043,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.38875988125801086,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 27556.560999999998,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.39415764808654785,
+      "points": null,
+      "phase": "need_stand"
+    },
+    {
+      "time_ms": 27619.132,
+      "valid": false,
+      "reason": "low_visibility",
+      "angle": null,
+      "visibility": 0.4063176214694977,
+      "points": null,
+      "phase": "need_stand"
+    }
+  ],
+  "actions": [
+    {
+      "kind": "start",
+      "time_ms": 0.266,
+      "wall_time_iso": "2026-11-20T10:43:37.483Z"
+    },
+    {
+      "kind": "video_finished",
+      "time_ms": 27666.667,
+      "wall_time_iso": "2026-11-20T10:44:05.152Z"
+    },
+    {
+      "kind": "export",
+      "time_ms": 27666.667,
+      "wall_time_iso": "2026-11-20T10:44:05.825Z"
+    }
+  ],
+  "participant_answers": null,
+  "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/150.0.0.0 Safari/537.36",
+  "feedback_timing": "feedback_time_ms = source frame time + pipeline elapsed to subsequent render callback; software estimate at 1x playback, not optical measurement"
+}

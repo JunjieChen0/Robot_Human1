@@ -1,6 +1,6 @@
 # WeightTrend（暂定名）
 
-> **视觉交互新作业：深蹲计数与纠错助手v2。** 同学按[启动说明](user_test/squat_counter_quickstart.md)运行 `bash start_squat_counter.sh`，独立入口无需健康模型，浏览器CPU推理。三名同学的v1原记录已收齐，已依据反馈修复并完成[同片段技术前后检查](user_test/squat_counter_before_after.md)。三种条件的连续识别指标及最终演示仍待补；没有声称真人改后理解率提升。未测试同学先只阅读启动说明。
+> **视觉交互新作业：深蹲计数与纠错助手v2。** 同学按[启动说明](user_test/squat_counter_quickstart.md)运行 `bash start_squat_counter.sh`，独立入口无需健康模型，浏览器CPU推理。三名同学的v1原记录已收齐，已依据反馈修复并完成[同片段技术前后检查](user_test/squat_counter_before_after.md)。另完成[三条件合成视频连续测试及本地演示](reports/squat_counter/synthetic_v2/README.md)：六次左右侧运行与人工候选匹配均保留；部分动作规则有效性和真实场景验证待补，不宣称准确率或真人改后理解率提升。未测试同学先只阅读启动说明。
 
 > **参加“模型判断”测试的同学：** 请先阅读[Linux下载与启动说明](user_test/model_judgment_remote_quickstart.md)，下载源码后运行 `bash start_model_judgment.sh`。首次自动安装页面依赖，无需训练模型；请先完成任务，再阅读下方实验结论。
 
