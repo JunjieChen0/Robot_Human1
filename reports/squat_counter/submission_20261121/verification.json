@@ -1,0 +1,42 @@
+{
+  "kind": "待人工复核提交材料核验；不是正式识别评分",
+  "client_date": "2026-11-21",
+  "application_version": "squat-counter-v2",
+  "source_evidence_commit": "045e0f0",
+  "tests": {
+    "related_python_passed": 14,
+    "related_python_seconds": 11.4,
+    "node_rules_passed": 9,
+    "zip_actual_browser_checks": 8,
+    "full_81_suite_rerun": false,
+    "debian_startup_rerun": false
+  },
+  "checks": {
+    "hypothesis_A_matches_frozen_candidate_results": true,
+    "hypothesis_B_rechecks_false_and_missed_counts": true,
+    "all_15_review_items_pending": true,
+    "application_model_and_original_study_unchanged": true,
+    "two_python_scripts_parse": true,
+    "source_zip_hashes_and_runtime_passed": true,
+    "pdf_7_pages_chinese_and_numbering": true,
+    "pdf_poppler_all_pages_visually_reviewed": true,
+    "pdf_mupdf_representative_pages_visually_reviewed": true
+  },
+  "pdf": {
+    "local_relative_path": "commit/深蹲计数作业_20261121_待人工复核/01_作业报告_待人工复核.pdf",
+    "sha256": "45503aecea1df91ba54f2973d6d496e25ff9fc769ca33ef33cc8e4c38ed57b9b",
+    "bytes": 710629,
+    "pages": 7
+  },
+  "source_zip": {
+    "sha256": "b17eedbf9b414b84a3e71f9d0a56167f712330c0093399ecc009fdda3ba01873",
+    "bytes": 110315,
+    "files": 38
+  },
+  "formal_recognition_metrics": null,
+  "human_participants_added": 0,
+  "pending_human_decisions": 15,
+  "local_bundle": "commit/深蹲计数作业_20261121_待人工复核",
+  "archive_integrity_record": "commit/深蹲计数作业_20261121_待人工复核.delivery.json",
+  "privacy": "视频、人物联系图和含影像的提交包仅本地留存，不上传公开GitHub。"
+}

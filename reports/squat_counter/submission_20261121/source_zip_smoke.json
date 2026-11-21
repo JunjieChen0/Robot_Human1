@@ -1,0 +1,46 @@
+{
+  "kind": "下载ZIP、含空格路径、无Git上下文的技术验收；非同学测试或识别性能样本",
+  "client_date": "2026-11-21",
+  "source_zip_sha256": "b17eedbf9b414b84a3e71f9d0a56167f712330c0093399ecc009fdda3ba01873",
+  "source_zip_bytes": 110315,
+  "source_files": 38,
+  "environment": {
+    "os": "Windows",
+    "python_server": "3.11.15",
+    "streamlit": "1.65.0",
+    "browser": "150.0.7871.127"
+  },
+  "source_git_commit": null,
+  "application_version": "squat-counter-v2",
+  "checks": {
+    "zip_crc_ok": true,
+    "shell_lf": true,
+    "all_source_hashes_match": true,
+    "no_git_context": true,
+    "real_cpu_export": true,
+    "zero_blank_counts": true,
+    "no_human_feedback_filled": true
+  },
+  "run_checks": {
+    "source_hash_matches": true,
+    "real_cpu_model": true,
+    "page_v2": true,
+    "video_completed": true,
+    "no_manual_pause_or_correction": true,
+    "one_x_playback": true,
+    "trace_present": true,
+    "no_page_errors": true
+  },
+  "model_source_hashes": {
+    "src/squat_frontend/app.mjs": "60d75312d9c997297c08f23d0f615644579be00447bae863d681f04e5f587366",
+    "src/squat_frontend/counter.mjs": "572ccb1161a60ef5b0bd219519e63fc222ce5f1ad0ccc8271db1de3e60c6d587",
+    "src/squat_frontend/pose_worker.mjs": "d8df9338ba0478e17839ead86d37b457eb3961a2325fcd2f8954949a1fb6dfd4",
+    "src/squat_frontend/asset_manifest.json": "fd5f25cedba21e74e9c3ae299ff73fa214b6b64b286583b9de2524a22220a000"
+  },
+  "input": "程序生成8秒空画面",
+  "processed_frames": 125,
+  "cached_assets_verified": 8,
+  "fresh_model_download": false,
+  "debian_startup_rerun": false,
+  "human_participants_added": 0
+}

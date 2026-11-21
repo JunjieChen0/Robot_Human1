@@ -4,6 +4,7 @@ import argparse
 import hashlib
 import json
 from pathlib import Path
+import shutil
 import subprocess
 import time
 
@@ -59,9 +60,14 @@ def main():
             "trace_present": bool(session["frame_trace"]),
             "no_page_errors": not errors,
         }
+        commit = None
+        if (ROOT/".git").exists() and shutil.which("git"):
+            revision = subprocess.run(["git", "rev-parse", "HEAD"], cwd=ROOT, capture_output=True, text=True)
+            if revision.returncode == 0:
+                commit = revision.stdout.strip()
         metadata = {
             "kind": "自动连续技术运行；非同学操作记录，不自动确认标注有效性",
-            "code_commit": subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip(),
+            "code_commit": commit,
             "source_name": args.video.name, "source_sha256": source_hash,
             "duration_seconds": duration, "browser": browser.version,
             "headless": True, "side": args.side, "playback_rate": 1,
