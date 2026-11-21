@@ -24,8 +24,8 @@
   },
   "pdf": {
     "local_relative_path": "commit/深蹲计数作业_20261121_待人工复核/01_作业报告_待人工复核.pdf",
-    "sha256": "45503aecea1df91ba54f2973d6d496e25ff9fc769ca33ef33cc8e4c38ed57b9b",
-    "bytes": 710629,
+    "sha256": "b3da859fa60c47b22eadfb44521adc4e6aaf328f3ef248319c74de550499bea6",
+    "bytes": 710524,
     "pages": 7
   },
   "source_zip": {
@@ -38,5 +38,15 @@
   "pending_human_decisions": 15,
   "local_bundle": "commit/深蹲计数作业_20261121_待人工复核",
   "archive_integrity_record": "commit/深蹲计数作业_20261121_待人工复核.delivery.json",
-  "privacy": "视频、人物联系图和含影像的提交包仅本地留存，不上传公开GitHub。"
+  "privacy": "视频、人物联系图和含影像的提交包仅本地留存，不上传公开GitHub。",
+  "appearance_revision": {
+    "client_date": "2026-11-21",
+    "change": "按PDF批注去掉全部表格表头浅蓝底色，统一白底",
+    "previous_pdf_sha256": "45503aecea1df91ba54f2973d6d496e25ff9fc769ca33ef33cc8e4c38ed57b9b",
+    "all_7_pages_text_identical": true,
+    "page_count_and_pagination_unchanged": true,
+    "former_light_blue_vector_fills_removed": true,
+    "rendered_pages_visually_reviewed": 7,
+    "application_tests_rerun_for_style_change": false
+  }
 }
