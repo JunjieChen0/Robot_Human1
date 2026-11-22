@@ -1,5 +1,5 @@
 {
-  "kind": "待人工复核提交材料核验；不是正式识别评分",
+  "kind": "课程提交材料核验；含AI辅助复核与不确定事件，不是独立人工真值评分",
   "client_date": "2026-11-21",
   "application_version": "squat-counter-v2",
   "source_evidence_commit": "045e0f0",
@@ -9,23 +9,35 @@
     "node_rules_passed": 9,
     "zip_actual_browser_checks": 8,
     "full_81_suite_rerun": false,
-    "debian_startup_rerun": false
+    "debian_startup_rerun": false,
+    "current_revision": {
+      "squat_evaluation_passed": 12,
+      "uncertain_assignment_checks_passed": 32,
+      "bundled_analysis_reproduced": true,
+      "application_ui_or_model_inference_rerun": false,
+      "debian_startup_rerun": false
+    }
   },
   "checks": {
     "hypothesis_A_matches_frozen_candidate_results": true,
     "hypothesis_B_rechecks_false_and_missed_counts": true,
-    "all_15_review_items_pending": true,
     "application_model_and_original_study_unchanged": true,
     "two_python_scripts_parse": true,
     "source_zip_hashes_and_runtime_passed": true,
     "pdf_7_pages_chinese_and_numbering": true,
-    "pdf_poppler_all_pages_visually_reviewed": true,
-    "pdf_mupdf_representative_pages_visually_reviewed": true
+    "original_blank_template_15_items_still_pending": true,
+    "pdf_mupdf_all_pages_visually_reviewed": true,
+    "pdf_poppler_all_pages_rendered": true,
+    "pdf_poppler_representative_pages_visually_reviewed": true,
+    "ai_review_15_items_completed": true,
+    "original_participant_records_and_human_reference_unchanged": true,
+    "all_32_uncertain_assignments_checked": true,
+    "previous_package_unchanged": true
   },
   "pdf": {
-    "local_relative_path": "commit/深蹲计数作业_20261121_待人工复核/01_作业报告_待人工复核.pdf",
-    "sha256": "58c7377afa63ac5b833dd86d394c131ae58a4f8bb8426ec8eecca7a028849432",
-    "bytes": 507261,
+    "local_relative_path": "commit/深蹲计数作业_20261121_提交版/01_作业报告.pdf",
+    "sha256": "f825158ea57a40eadedfd6c509373f6e98c496b2fb416d54cb990c7eff3b65e8",
+    "bytes": 504990,
     "pages": 7
   },
   "source_zip": {
@@ -36,9 +48,9 @@
   "formal_recognition_metrics": null,
   "human_participants_added": 0,
   "pending_human_decisions": 15,
-  "local_bundle": "commit/深蹲计数作业_20261121_待人工复核",
-  "archive_integrity_record": "commit/深蹲计数作业_20261121_待人工复核.delivery.json",
-  "privacy": "视频、人物联系图和含影像的提交包仅本地留存，不上传公开GitHub。",
+  "local_bundle": "commit/深蹲计数作业_20261121_提交版",
+  "archive_integrity_record": "commit/深蹲计数作业_20261121_提交版.delivery.json",
+  "privacy": "影像、复核源帧和含本人姓名/学号的报告仅放本地课程提交包，不上传公开GitHub。",
   "appearance_revision": {
     "client_date": "2026-11-21",
     "change": "按PDF批注去掉全部表格表头浅蓝底色，统一白底",
@@ -47,7 +59,8 @@
     "page_count_and_pagination_unchanged": true,
     "former_light_blue_vector_fills_removed": true,
     "rendered_pages_visually_reviewed": 7,
-    "application_tests_rerun_for_style_change": false
+    "application_tests_rerun_for_style_change": false,
+    "scope": "此前表头改色的历史检查，不描述本轮正文内容"
   },
   "monochrome_revision": {
     "client_date": "2026-11-21",
@@ -62,6 +75,24 @@
     "caption_changed_to_line_types": true,
     "rendered_pages_visually_reviewed": 7,
     "original_color_evidence_images_unchanged": true,
-    "application_tests_rerun_for_style_change": false
+    "application_tests_rerun_for_style_change": false,
+    "scope": "此前黑白样式转换的历史检查，不描述本轮正文内容"
+  },
+  "ai_assisted_review": {
+    "completed_items": 15,
+    "valid": 7,
+    "invalid": 1,
+    "uncertain": 7,
+    "human_rule_adjudication_added": false,
+    "formal_recognition_metrics": null,
+    "machine_results": "assisted_review_metrics.json",
+    "review_sha256": "94b6b006128a4c24f35f07c87e72766ad4162bbb7cedf5dad48ba41735376103"
+  },
+  "provenance_update": "组织者补充：视频及首帧素材由同组同学提供；原剪辑、AI生成和后期效果属性保留。",
+  "current_pdf_appearance": {
+    "all_native_text_black": true,
+    "all_embedded_images_grayscale": true,
+    "all_7_pages_rgb_channels_equal": true,
+    "rendered_pages_visually_reviewed": 7
   }
 }

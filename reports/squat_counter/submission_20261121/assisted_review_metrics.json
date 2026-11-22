@@ -1,0 +1,511 @@
+{
+  "kind": "用户人工候选参照与AI辅助有效性复核的误差范围；不是独立人工真值评分",
+  "client_date": "2026-11-21",
+  "page_version": "squat-counter-v2",
+  "new_model_inference": false,
+  "new_human_participants": 0,
+  "human_rule_adjudication_added": false,
+  "review_sha256": "94b6b006128a4c24f35f07c87e72766ad4162bbb7cedf5dad48ba41735376103",
+  "matching_tolerance_ms": 1200,
+  "formal_recognition_metrics": null,
+  "results": [
+    {
+      "video": "normal_light",
+      "side": "left",
+      "condition": "normal",
+      "session_sha256": "65562bc777da9e39b141c45ce9d86a20e90a29edf0a58533b1adb80cb31487bb",
+      "review_valid_count": 3,
+      "review_invalid_count": 0,
+      "review_uncertain_count": 2,
+      "raw_automatic_count": 0,
+      "false_count_range": [
+        0,
+        0
+      ],
+      "missed_count_range": [
+        3,
+        5
+      ],
+      "valid_review_event_matches": [],
+      "valid_review_event_feedback_samples": 0,
+      "valid_review_event_feedback_median_ms": null,
+      "valid_review_event_feedback_p95_ms": null,
+      "negative_feedback_samples": 0,
+      "all_uncertain_assignments": [
+        {
+          "uncertain_assumed_valid": [],
+          "assumed_valid_count": 3,
+          "matched_count": 0,
+          "false_count": 0,
+          "missed_count": 3
+        },
+        {
+          "uncertain_assumed_valid": [
+            "normal_light-2"
+          ],
+          "assumed_valid_count": 4,
+          "matched_count": 0,
+          "false_count": 0,
+          "missed_count": 4
+        },
+        {
+          "uncertain_assumed_valid": [
+            "normal_light-1"
+          ],
+          "assumed_valid_count": 4,
+          "matched_count": 0,
+          "false_count": 0,
+          "missed_count": 4
+        },
+        {
+          "uncertain_assumed_valid": [
+            "normal_light-1",
+            "normal_light-2"
+          ],
+          "assumed_valid_count": 5,
+          "matched_count": 0,
+          "false_count": 0,
+          "missed_count": 5
+        }
+      ]
+    },
+    {
+      "video": "normal_light",
+      "side": "right",
+      "condition": "normal",
+      "session_sha256": "cf274c38a320bcb9cfd9f58d5a0826938c51e8f91832a6bf27b4043bcdb9b6a5",
+      "review_valid_count": 3,
+      "review_invalid_count": 0,
+      "review_uncertain_count": 2,
+      "raw_automatic_count": 5,
+      "false_count_range": [
+        0,
+        2
+      ],
+      "missed_count_range": [
+        0,
+        0
+      ],
+      "valid_review_event_matches": [
+        {
+          "truth_id": "normal_light-3",
+          "auto_id": "auto-3",
+          "truth_time_ms": 22000.0,
+          "auto_time_ms": 22441.392,
+          "feedback_delay_ms": 483.29199999105913
+        },
+        {
+          "truth_id": "normal_light-4",
+          "auto_id": "auto-4",
+          "truth_time_ms": 27960.0,
+          "auto_time_ms": 28378.789,
+          "feedback_delay_ms": 467.4890000029809
+        },
+        {
+          "truth_id": "normal_light-5",
+          "auto_id": "auto-5",
+          "truth_time_ms": 34630.0,
+          "auto_time_ms": 35065.797000000006,
+          "feedback_delay_ms": 477.6970000059664
+        }
+      ],
+      "valid_review_event_feedback_samples": 3,
+      "valid_review_event_feedback_median_ms": 477.6970000059664,
+      "valid_review_event_feedback_p95_ms": 482.73249999254983,
+      "negative_feedback_samples": 0,
+      "all_uncertain_assignments": [
+        {
+          "uncertain_assumed_valid": [],
+          "assumed_valid_count": 3,
+          "matched_count": 3,
+          "false_count": 2,
+          "missed_count": 0
+        },
+        {
+          "uncertain_assumed_valid": [
+            "normal_light-2"
+          ],
+          "assumed_valid_count": 4,
+          "matched_count": 4,
+          "false_count": 1,
+          "missed_count": 0
+        },
+        {
+          "uncertain_assumed_valid": [
+            "normal_light-1"
+          ],
+          "assumed_valid_count": 4,
+          "matched_count": 4,
+          "false_count": 1,
+          "missed_count": 0
+        },
+        {
+          "uncertain_assumed_valid": [
+            "normal_light-1",
+            "normal_light-2"
+          ],
+          "assumed_valid_count": 5,
+          "matched_count": 5,
+          "false_count": 0,
+          "missed_count": 0
+        }
+      ]
+    },
+    {
+      "video": "light_change",
+      "side": "left",
+      "condition": "light_change",
+      "session_sha256": "5ca568c19fe4e45bf6d86367d585efc7046124141e667681cbde79e32bb85e94",
+      "review_valid_count": 2,
+      "review_invalid_count": 0,
+      "review_uncertain_count": 3,
+      "raw_automatic_count": 0,
+      "false_count_range": [
+        0,
+        0
+      ],
+      "missed_count_range": [
+        2,
+        5
+      ],
+      "valid_review_event_matches": [],
+      "valid_review_event_feedback_samples": 0,
+      "valid_review_event_feedback_median_ms": null,
+      "valid_review_event_feedback_p95_ms": null,
+      "negative_feedback_samples": 0,
+      "all_uncertain_assignments": [
+        {
+          "uncertain_assumed_valid": [],
+          "assumed_valid_count": 2,
+          "matched_count": 0,
+          "false_count": 0,
+          "missed_count": 2
+        },
+        {
+          "uncertain_assumed_valid": [
+            "light_change-3"
+          ],
+          "assumed_valid_count": 3,
+          "matched_count": 0,
+          "false_count": 0,
+          "missed_count": 3
+        },
+        {
+          "uncertain_assumed_valid": [
+            "light_change-2"
+          ],
+          "assumed_valid_count": 3,
+          "matched_count": 0,
+          "false_count": 0,
+          "missed_count": 3
+        },
+        {
+          "uncertain_assumed_valid": [
+            "light_change-2",
+            "light_change-3"
+          ],
+          "assumed_valid_count": 4,
+          "matched_count": 0,
+          "false_count": 0,
+          "missed_count": 4
+        },
+        {
+          "uncertain_assumed_valid": [
+            "light_change-1"
+          ],
+          "assumed_valid_count": 3,
+          "matched_count": 0,
+          "false_count": 0,
+          "missed_count": 3
+        },
+        {
+          "uncertain_assumed_valid": [
+            "light_change-1",
+            "light_change-3"
+          ],
+          "assumed_valid_count": 4,
+          "matched_count": 0,
+          "false_count": 0,
+          "missed_count": 4
+        },
+        {
+          "uncertain_assumed_valid": [
+            "light_change-1",
+            "light_change-2"
+          ],
+          "assumed_valid_count": 4,
+          "matched_count": 0,
+          "false_count": 0,
+          "missed_count": 4
+        },
+        {
+          "uncertain_assumed_valid": [
+            "light_change-1",
+            "light_change-2",
+            "light_change-3"
+          ],
+          "assumed_valid_count": 5,
+          "matched_count": 0,
+          "false_count": 0,
+          "missed_count": 5
+        }
+      ]
+    },
+    {
+      "video": "light_change",
+      "side": "right",
+      "condition": "light_change",
+      "session_sha256": "3875203753dd68db367ba3be576f9efc2de54fe78c09b13aa645e2ca4759c2d0",
+      "review_valid_count": 2,
+      "review_invalid_count": 0,
+      "review_uncertain_count": 3,
+      "raw_automatic_count": 5,
+      "false_count_range": [
+        0,
+        3
+      ],
+      "missed_count_range": [
+        0,
+        0
+      ],
+      "valid_review_event_matches": [
+        {
+          "truth_id": "light_change-4",
+          "auto_id": "auto-4",
+          "truth_time_ms": 21000.0,
+          "auto_time_ms": 21379.943,
+          "feedback_delay_ms": 421.9429999999993
+        },
+        {
+          "truth_id": "light_change-5",
+          "auto_id": "auto-5",
+          "truth_time_ms": 26130.0,
+          "auto_time_ms": 26567.225000000002,
+          "feedback_delay_ms": 479.12500000596265
+        }
+      ],
+      "valid_review_event_feedback_samples": 2,
+      "valid_review_event_feedback_median_ms": 450.534000002981,
+      "valid_review_event_feedback_p95_ms": 476.2659000056645,
+      "negative_feedback_samples": 0,
+      "all_uncertain_assignments": [
+        {
+          "uncertain_assumed_valid": [],
+          "assumed_valid_count": 2,
+          "matched_count": 2,
+          "false_count": 3,
+          "missed_count": 0
+        },
+        {
+          "uncertain_assumed_valid": [
+            "light_change-3"
+          ],
+          "assumed_valid_count": 3,
+          "matched_count": 3,
+          "false_count": 2,
+          "missed_count": 0
+        },
+        {
+          "uncertain_assumed_valid": [
+            "light_change-2"
+          ],
+          "assumed_valid_count": 3,
+          "matched_count": 3,
+          "false_count": 2,
+          "missed_count": 0
+        },
+        {
+          "uncertain_assumed_valid": [
+            "light_change-2",
+            "light_change-3"
+          ],
+          "assumed_valid_count": 4,
+          "matched_count": 4,
+          "false_count": 1,
+          "missed_count": 0
+        },
+        {
+          "uncertain_assumed_valid": [
+            "light_change-1"
+          ],
+          "assumed_valid_count": 3,
+          "matched_count": 3,
+          "false_count": 2,
+          "missed_count": 0
+        },
+        {
+          "uncertain_assumed_valid": [
+            "light_change-1",
+            "light_change-3"
+          ],
+          "assumed_valid_count": 4,
+          "matched_count": 4,
+          "false_count": 1,
+          "missed_count": 0
+        },
+        {
+          "uncertain_assumed_valid": [
+            "light_change-1",
+            "light_change-2"
+          ],
+          "assumed_valid_count": 4,
+          "matched_count": 4,
+          "false_count": 1,
+          "missed_count": 0
+        },
+        {
+          "uncertain_assumed_valid": [
+            "light_change-1",
+            "light_change-2",
+            "light_change-3"
+          ],
+          "assumed_valid_count": 5,
+          "matched_count": 5,
+          "false_count": 0,
+          "missed_count": 0
+        }
+      ]
+    },
+    {
+      "video": "occlusion",
+      "side": "left",
+      "condition": "occlusion",
+      "session_sha256": "e946e07f3a1bd7ecc41c21991f21e7a2fa560bfd38b60b823fbb7a737ec113a5",
+      "review_valid_count": 2,
+      "review_invalid_count": 1,
+      "review_uncertain_count": 2,
+      "raw_automatic_count": 0,
+      "false_count_range": [
+        0,
+        0
+      ],
+      "missed_count_range": [
+        2,
+        4
+      ],
+      "valid_review_event_matches": [],
+      "valid_review_event_feedback_samples": 0,
+      "valid_review_event_feedback_median_ms": null,
+      "valid_review_event_feedback_p95_ms": null,
+      "negative_feedback_samples": 0,
+      "all_uncertain_assignments": [
+        {
+          "uncertain_assumed_valid": [],
+          "assumed_valid_count": 2,
+          "matched_count": 0,
+          "false_count": 0,
+          "missed_count": 2
+        },
+        {
+          "uncertain_assumed_valid": [
+            "occlusion-5"
+          ],
+          "assumed_valid_count": 3,
+          "matched_count": 0,
+          "false_count": 0,
+          "missed_count": 3
+        },
+        {
+          "uncertain_assumed_valid": [
+            "occlusion-1"
+          ],
+          "assumed_valid_count": 3,
+          "matched_count": 0,
+          "false_count": 0,
+          "missed_count": 3
+        },
+        {
+          "uncertain_assumed_valid": [
+            "occlusion-1",
+            "occlusion-5"
+          ],
+          "assumed_valid_count": 4,
+          "matched_count": 0,
+          "false_count": 0,
+          "missed_count": 4
+        }
+      ]
+    },
+    {
+      "video": "occlusion",
+      "side": "right",
+      "condition": "occlusion",
+      "session_sha256": "f1e893d6f11707bc0d1581838230949a2152d4ae3ed1fcad082dfdd142212ee3",
+      "review_valid_count": 2,
+      "review_invalid_count": 1,
+      "review_uncertain_count": 2,
+      "raw_automatic_count": 2,
+      "false_count_range": [
+        0,
+        0
+      ],
+      "missed_count_range": [
+        0,
+        2
+      ],
+      "valid_review_event_matches": [
+        {
+          "truth_id": "occlusion-3",
+          "auto_id": "auto-1",
+          "truth_time_ms": 10960.0,
+          "auto_time_ms": 11375.501999999999,
+          "feedback_delay_ms": 464.40200000595905
+        },
+        {
+          "truth_id": "occlusion-4",
+          "auto_id": "auto-2",
+          "truth_time_ms": 19750.0,
+          "auto_time_ms": 20145.908,
+          "feedback_delay_ms": 437.8080000059599
+        }
+      ],
+      "valid_review_event_feedback_samples": 2,
+      "valid_review_event_feedback_median_ms": 451.1050000059595,
+      "valid_review_event_feedback_p95_ms": 463.0723000059591,
+      "negative_feedback_samples": 0,
+      "all_uncertain_assignments": [
+        {
+          "uncertain_assumed_valid": [],
+          "assumed_valid_count": 2,
+          "matched_count": 2,
+          "false_count": 0,
+          "missed_count": 0
+        },
+        {
+          "uncertain_assumed_valid": [
+            "occlusion-5"
+          ],
+          "assumed_valid_count": 3,
+          "matched_count": 2,
+          "false_count": 0,
+          "missed_count": 1
+        },
+        {
+          "uncertain_assumed_valid": [
+            "occlusion-1"
+          ],
+          "assumed_valid_count": 3,
+          "matched_count": 2,
+          "false_count": 0,
+          "missed_count": 1
+        },
+        {
+          "uncertain_assumed_valid": [
+            "occlusion-1",
+            "occlusion-5"
+          ],
+          "assumed_valid_count": 4,
+          "matched_count": 2,
+          "false_count": 0,
+          "missed_count": 2
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "范围穷举每项不确定动作的有效/无效组合，固定本次AI辅助明确项；不是置信区间。",
+    "AI视觉筛查没有独立人工量角，不确定项不强行定性；明确项仍是AI辅助判断。",
+    "延迟只列暂定有效且匹配的事件，使用用户原站立起点；时间精度未另确认，非光电屏幕实测。",
+    "材料为AI生成及后期处理视频，不支持真实场景泛化结论；未增加同学或真人改后测试。"
+  ]
+}

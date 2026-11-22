@@ -1,0 +1,384 @@
+{
+  "kind": "AI辅助动作有效性复核；结合用户人工候选时刻及备注，非新增人工标注或同学测试",
+  "schema_version": 1,
+  "reviewer_type": "AI assistant",
+  "review_date_client": "2026-11-21",
+  "human_time_reference": "squat_synthetic_human_reference.json",
+  "original_blank_template_unchanged": true,
+  "method": "查看未叠加模型关键点的源视频取帧。24fps，最低点前后9帧窗口跨度333.3毫秒；站立起点后约125毫秒起的9帧窗口。对照可见姿态与用户备注，不读取MediaPipe角度作真值。未独立人工量角，阈值附近和遮挡项保留不确定。",
+  "rules": {
+    "down_max_deg": 100,
+    "stand_min_deg": 160,
+    "stable_ms": 300
+  },
+  "new_human_participants": 0,
+  "human_rule_adjudication_added": false,
+  "formal_metrics_ready": false,
+  "decision_counts": {
+    "valid": 7,
+    "invalid": 1,
+    "uncertain": 7
+  },
+  "events": [
+    {
+      "video": "normal_light",
+      "source_sha256": "ef30e30d4b61fd52df7d63a3dbdd3ba57bc03a0dfa5417d995569dd45dfeb273",
+      "event_id": "normal_light-1",
+      "candidate_stand_ms": 6130,
+      "decision": "uncertain",
+      "decision_basis": "AI_visual_screening_with_user_notes",
+      "down_source_frames": [
+        97,
+        105
+      ],
+      "stand_source_frames": [
+        150,
+        158
+      ],
+      "window_span_ms": 333.333,
+      "window_evidence_local_only": true,
+      "down_stability_evidence": "下蹲姿态在9帧窗口中较稳定，但偏浅且髋关节位置受衣物影响；未独立量角，不能确认夹角全程≤100度。",
+      "stand_stability_evidence": "源视频候选起点后9帧窗口中腿部恢复伸展并保持；原候选起点及其精度不改写。",
+      "time_uncertainty_ms": null,
+      "review_note": "髋高于膝不等于本规则下必定无效，也不能因模型计数而认定有效；保留不确定。",
+      "down_evidence_in_local_bundle": "media/ai_review_evidence/normal_light_1_down.png",
+      "stand_evidence_in_local_bundle": "media/ai_review_evidence/normal_light_1_stand.png"
+    },
+    {
+      "video": "normal_light",
+      "source_sha256": "ef30e30d4b61fd52df7d63a3dbdd3ba57bc03a0dfa5417d995569dd45dfeb273",
+      "event_id": "normal_light-2",
+      "candidate_stand_ms": 12630,
+      "decision": "uncertain",
+      "decision_basis": "AI_visual_screening_with_user_notes",
+      "down_source_frames": [
+        241,
+        249
+      ],
+      "stand_source_frames": [
+        306,
+        314
+      ],
+      "window_span_ms": 333.333,
+      "window_evidence_local_only": true,
+      "down_stability_evidence": "下蹲姿态在9帧窗口中较稳定，但偏浅且髋关节位置受衣物影响；未独立量角，不能确认夹角全程≤100度。",
+      "stand_stability_evidence": "源视频候选起点后9帧窗口中腿部恢复伸展并保持；原候选起点及其精度不改写。",
+      "time_uncertainty_ms": null,
+      "review_note": "髋高于膝不等于本规则下必定无效，也不能因模型计数而认定有效；保留不确定。",
+      "down_evidence_in_local_bundle": "media/ai_review_evidence/normal_light_2_down.png",
+      "stand_evidence_in_local_bundle": "media/ai_review_evidence/normal_light_2_stand.png"
+    },
+    {
+      "video": "normal_light",
+      "source_sha256": "ef30e30d4b61fd52df7d63a3dbdd3ba57bc03a0dfa5417d995569dd45dfeb273",
+      "event_id": "normal_light-3",
+      "candidate_stand_ms": 22000,
+      "decision": "valid",
+      "decision_basis": "AI_visual_screening_with_user_notes",
+      "down_source_frames": [
+        440,
+        448
+      ],
+      "stand_source_frames": [
+        531,
+        539
+      ],
+      "window_span_ms": 333.333,
+      "window_evidence_local_only": true,
+      "down_stability_evidence": "9帧窗口中可见明显屈膝，姿态变化小，视觉支持下蹲稳定超过300毫秒；未给出独立人工量角值。",
+      "stand_stability_evidence": "源视频候选起点后9帧窗口中腿部恢复伸展并保持；原候选起点及其精度不改写。",
+      "time_uncertainty_ms": null,
+      "review_note": "暂定有效仅表示本次AI辅助筛查支持，不能写成独立人工裁定。",
+      "down_evidence_in_local_bundle": "media/ai_review_evidence/normal_light_3_down.png",
+      "stand_evidence_in_local_bundle": "media/ai_review_evidence/normal_light_3_stand.png"
+    },
+    {
+      "video": "normal_light",
+      "source_sha256": "ef30e30d4b61fd52df7d63a3dbdd3ba57bc03a0dfa5417d995569dd45dfeb273",
+      "event_id": "normal_light-4",
+      "candidate_stand_ms": 27960,
+      "decision": "valid",
+      "decision_basis": "AI_visual_screening_with_user_notes",
+      "down_source_frames": [
+        620,
+        628
+      ],
+      "stand_source_frames": [
+        674,
+        682
+      ],
+      "window_span_ms": 333.333,
+      "window_evidence_local_only": true,
+      "down_stability_evidence": "9帧窗口中可见明显屈膝，姿态变化小，视觉支持下蹲稳定超过300毫秒；未给出独立人工量角值。",
+      "stand_stability_evidence": "源视频候选起点后9帧窗口中腿部恢复伸展并保持；原候选起点及其精度不改写。",
+      "time_uncertainty_ms": null,
+      "review_note": "暂定有效仅表示本次AI辅助筛查支持，不能写成独立人工裁定。",
+      "down_evidence_in_local_bundle": "media/ai_review_evidence/normal_light_4_down.png",
+      "stand_evidence_in_local_bundle": "media/ai_review_evidence/normal_light_4_stand.png"
+    },
+    {
+      "video": "normal_light",
+      "source_sha256": "ef30e30d4b61fd52df7d63a3dbdd3ba57bc03a0dfa5417d995569dd45dfeb273",
+      "event_id": "normal_light-5",
+      "candidate_stand_ms": 34630,
+      "decision": "valid",
+      "decision_basis": "AI_visual_screening_with_user_notes",
+      "down_source_frames": [
+        783,
+        791
+      ],
+      "stand_source_frames": [
+        834,
+        842
+      ],
+      "window_span_ms": 333.333,
+      "window_evidence_local_only": true,
+      "down_stability_evidence": "9帧窗口中可见明显屈膝，姿态变化小，视觉支持下蹲稳定超过300毫秒；未给出独立人工量角值。",
+      "stand_stability_evidence": "源视频候选起点后9帧窗口中腿部恢复伸展并保持；原候选起点及其精度不改写。",
+      "time_uncertainty_ms": null,
+      "review_note": "暂定有效仅表示本次AI辅助筛查支持，不能写成独立人工裁定。",
+      "down_evidence_in_local_bundle": "media/ai_review_evidence/normal_light_5_down.png",
+      "stand_evidence_in_local_bundle": "media/ai_review_evidence/normal_light_5_stand.png"
+    },
+    {
+      "video": "light_change",
+      "source_sha256": "f7b31a9a80336a015f339ce5bec88e8d60e1ef0439a29ae58046a29c2d59e188",
+      "event_id": "light_change-1",
+      "candidate_stand_ms": 3880,
+      "decision": "uncertain",
+      "decision_basis": "AI_visual_screening_with_user_notes",
+      "down_source_frames": [
+        63,
+        71
+      ],
+      "stand_source_frames": [
+        96,
+        104
+      ],
+      "window_span_ms": 333.333,
+      "window_evidence_local_only": true,
+      "down_stability_evidence": "下蹲姿态在9帧窗口中较稳定，但偏浅且髋关节位置受衣物影响；未独立量角，不能确认夹角全程≤100度。",
+      "stand_stability_evidence": "源视频候选起点后9帧窗口中腿部恢复伸展并保持；原候选起点及其精度不改写。",
+      "time_uncertainty_ms": null,
+      "review_note": "髋高于膝不等于本规则下必定无效，也不能因模型计数而认定有效；保留不确定。",
+      "down_evidence_in_local_bundle": "media/ai_review_evidence/light_change_1_down.png",
+      "stand_evidence_in_local_bundle": "media/ai_review_evidence/light_change_1_stand.png"
+    },
+    {
+      "video": "light_change",
+      "source_sha256": "f7b31a9a80336a015f339ce5bec88e8d60e1ef0439a29ae58046a29c2d59e188",
+      "event_id": "light_change-2",
+      "candidate_stand_ms": 8580,
+      "decision": "uncertain",
+      "decision_basis": "AI_visual_screening_with_user_notes",
+      "down_source_frames": [
+        178,
+        186
+      ],
+      "stand_source_frames": [
+        209,
+        217
+      ],
+      "window_span_ms": 333.333,
+      "window_evidence_local_only": true,
+      "down_stability_evidence": "下蹲姿态在9帧窗口中较稳定，但偏浅且髋关节位置受衣物影响；未独立量角，不能确认夹角全程≤100度。",
+      "stand_stability_evidence": "源视频候选起点后9帧窗口中腿部恢复伸展并保持；原候选起点及其精度不改写。",
+      "time_uncertainty_ms": null,
+      "review_note": "髋高于膝不等于本规则下必定无效，也不能因模型计数而认定有效；保留不确定。",
+      "down_evidence_in_local_bundle": "media/ai_review_evidence/light_change_2_down.png",
+      "stand_evidence_in_local_bundle": "media/ai_review_evidence/light_change_2_stand.png"
+    },
+    {
+      "video": "light_change",
+      "source_sha256": "f7b31a9a80336a015f339ce5bec88e8d60e1ef0439a29ae58046a29c2d59e188",
+      "event_id": "light_change-3",
+      "candidate_stand_ms": 11670,
+      "decision": "uncertain",
+      "decision_basis": "AI_visual_screening_with_user_notes",
+      "down_source_frames": [
+        248,
+        256
+      ],
+      "stand_source_frames": [
+        283,
+        291
+      ],
+      "window_span_ms": 333.333,
+      "window_evidence_local_only": true,
+      "down_stability_evidence": "下蹲姿态在9帧窗口中较稳定，但偏浅且髋关节位置受衣物影响；未独立量角，不能确认夹角全程≤100度。",
+      "stand_stability_evidence": "源视频候选起点后9帧窗口中腿部恢复伸展并保持；原候选起点及其精度不改写。",
+      "time_uncertainty_ms": null,
+      "review_note": "髋高于膝不等于本规则下必定无效，也不能因模型计数而认定有效；保留不确定。",
+      "down_evidence_in_local_bundle": "media/ai_review_evidence/light_change_3_down.png",
+      "stand_evidence_in_local_bundle": "media/ai_review_evidence/light_change_3_stand.png"
+    },
+    {
+      "video": "light_change",
+      "source_sha256": "f7b31a9a80336a015f339ce5bec88e8d60e1ef0439a29ae58046a29c2d59e188",
+      "event_id": "light_change-4",
+      "candidate_stand_ms": 21000,
+      "decision": "valid",
+      "decision_basis": "AI_visual_screening_with_user_notes",
+      "down_source_frames": [
+        440,
+        448
+      ],
+      "stand_source_frames": [
+        507,
+        515
+      ],
+      "window_span_ms": 333.333,
+      "window_evidence_local_only": true,
+      "down_stability_evidence": "9帧窗口中可见明显屈膝，姿态变化小，视觉支持下蹲稳定超过300毫秒；未给出独立人工量角值。",
+      "stand_stability_evidence": "源视频候选起点后9帧窗口中腿部恢复伸展并保持；原候选起点及其精度不改写。",
+      "time_uncertainty_ms": null,
+      "review_note": "暂定有效仅表示本次AI辅助筛查支持，不能写成独立人工裁定。",
+      "down_evidence_in_local_bundle": "media/ai_review_evidence/light_change_4_down.png",
+      "stand_evidence_in_local_bundle": "media/ai_review_evidence/light_change_4_stand.png"
+    },
+    {
+      "video": "light_change",
+      "source_sha256": "f7b31a9a80336a015f339ce5bec88e8d60e1ef0439a29ae58046a29c2d59e188",
+      "event_id": "light_change-5",
+      "candidate_stand_ms": 26130,
+      "decision": "valid",
+      "decision_basis": "AI_visual_screening_with_user_notes",
+      "down_source_frames": [
+        594,
+        602
+      ],
+      "stand_source_frames": [
+        630,
+        638
+      ],
+      "window_span_ms": 333.333,
+      "window_evidence_local_only": true,
+      "down_stability_evidence": "9帧窗口中可见明显屈膝，姿态变化小，视觉支持下蹲稳定超过300毫秒；未给出独立人工量角值。",
+      "stand_stability_evidence": "源视频候选起点后9帧窗口中腿部恢复伸展并保持；原候选起点及其精度不改写。",
+      "time_uncertainty_ms": null,
+      "review_note": "暂定有效仅表示本次AI辅助筛查支持，不能写成独立人工裁定。",
+      "down_evidence_in_local_bundle": "media/ai_review_evidence/light_change_5_down.png",
+      "stand_evidence_in_local_bundle": "media/ai_review_evidence/light_change_5_stand.png"
+    },
+    {
+      "video": "occlusion",
+      "source_sha256": "6f52693197d3a76e991323c00d53fd5435729eb1ec60a69e5f139281bc719178",
+      "event_id": "occlusion-1",
+      "candidate_stand_ms": 3960,
+      "decision": "uncertain",
+      "decision_basis": "AI_visual_screening_with_user_notes",
+      "down_source_frames": [
+        66,
+        74
+      ],
+      "stand_source_frames": [
+        98,
+        106
+      ],
+      "window_span_ms": 333.333,
+      "window_evidence_local_only": true,
+      "down_stability_evidence": "最低点窗口中的髋/膝（第1次）或踝（第5次）被后期色块覆盖，不能从可见证据确认完整二维夹角和稳定时长。",
+      "stand_stability_evidence": "候选起点后窗口髋/膝仍被挡住；4.6秒后可见站立，无法确认3.96秒准确起点。",
+      "time_uncertainty_ms": null,
+      "review_note": "保留为不确定事件，不删除也不直接记作漏计。第1次3.96秒原为遮挡中估计，未新增时间精度。",
+      "down_evidence_in_local_bundle": "media/ai_review_evidence/occlusion_1_down.png",
+      "stand_evidence_in_local_bundle": "media/ai_review_evidence/occlusion_1_stand.png"
+    },
+    {
+      "video": "occlusion",
+      "source_sha256": "6f52693197d3a76e991323c00d53fd5435729eb1ec60a69e5f139281bc719178",
+      "event_id": "occlusion-2",
+      "candidate_stand_ms": 8630,
+      "decision": "invalid",
+      "decision_basis": "AI_visual_screening_and_user_reported_short_stand",
+      "down_source_frames": [
+        178,
+        186
+      ],
+      "stand_source_frames": [
+        210,
+        218
+      ],
+      "window_span_ms": 333.333,
+      "window_evidence_local_only": true,
+      "down_stability_evidence": "9帧窗口中可见明显屈膝，姿态变化小，视觉支持下蹲稳定超过300毫秒；未给出独立人工量角值。",
+      "stand_stability_evidence": "用户标注近站立起点8.63秒、再次下蹲8.79秒，相差160毫秒；源帧202至213（8.4167至8.875秒）可见膝仍弯曲并很快再次下降。按该起点口径不足300毫秒，暂定不额外记1次。",
+      "time_uncertainty_ms": null,
+      "review_note": "这是按现有用户时刻及视觉筛查的暂定无效判断，不是独立量角；第2和3候选按一个持续周期，在第3候选处完成。",
+      "down_evidence_in_local_bundle": "media/ai_review_evidence/occlusion_2_down.png",
+      "stand_evidence_in_local_bundle": "media/ai_review_evidence/occlusion_2_stand.png"
+    },
+    {
+      "video": "occlusion",
+      "source_sha256": "6f52693197d3a76e991323c00d53fd5435729eb1ec60a69e5f139281bc719178",
+      "event_id": "occlusion-3",
+      "candidate_stand_ms": 10960,
+      "decision": "valid",
+      "decision_basis": "AI_visual_screening_with_user_notes",
+      "down_source_frames": [
+        234,
+        242
+      ],
+      "stand_source_frames": [
+        266,
+        274
+      ],
+      "window_span_ms": 333.333,
+      "window_evidence_local_only": true,
+      "down_stability_evidence": "9帧窗口中可见明显屈膝，姿态变化小，视觉支持下蹲稳定超过300毫秒；未给出独立人工量角值。",
+      "stand_stability_evidence": "源视频候选起点后9帧窗口中腿部恢复伸展并保持；原候选起点及其精度不改写。",
+      "time_uncertainty_ms": null,
+      "review_note": "与第2候选合为一个持续周期，在10.96秒候选处完成；不要求在第2、3次下蹲之间重复建立不存在的站立准备。",
+      "down_evidence_in_local_bundle": "media/ai_review_evidence/occlusion_3_down.png",
+      "stand_evidence_in_local_bundle": "media/ai_review_evidence/occlusion_3_stand.png"
+    },
+    {
+      "video": "occlusion",
+      "source_sha256": "6f52693197d3a76e991323c00d53fd5435729eb1ec60a69e5f139281bc719178",
+      "event_id": "occlusion-4",
+      "candidate_stand_ms": 19750,
+      "decision": "valid",
+      "decision_basis": "AI_visual_screening_with_user_notes",
+      "down_source_frames": [
+        404,
+        412
+      ],
+      "stand_source_frames": [
+        477,
+        485
+      ],
+      "window_span_ms": 333.333,
+      "window_evidence_local_only": true,
+      "down_stability_evidence": "9帧窗口中可见明显屈膝，姿态变化小，视觉支持下蹲稳定超过300毫秒；未给出独立人工量角值。",
+      "stand_stability_evidence": "源视频候选起点后9帧窗口中腿部恢复伸展并保持；原候选起点及其精度不改写。",
+      "time_uncertainty_ms": null,
+      "review_note": "16.50秒保持中存在剪辑；复核窗口16.8333至17.1667秒位于剪辑之后。只评价编辑后视频中的计数行为，不推断一次连续真人动作。",
+      "down_evidence_in_local_bundle": "media/ai_review_evidence/occlusion_4_down.png",
+      "stand_evidence_in_local_bundle": "media/ai_review_evidence/occlusion_4_stand.png"
+    },
+    {
+      "video": "occlusion",
+      "source_sha256": "6f52693197d3a76e991323c00d53fd5435729eb1ec60a69e5f139281bc719178",
+      "event_id": "occlusion-5",
+      "candidate_stand_ms": 25210,
+      "decision": "uncertain",
+      "decision_basis": "AI_visual_screening_with_user_notes",
+      "down_source_frames": [
+        572,
+        580
+      ],
+      "stand_source_frames": [
+        608,
+        616
+      ],
+      "window_span_ms": 333.333,
+      "window_evidence_local_only": true,
+      "down_stability_evidence": "最低点窗口中的髋/膝（第1次）或踝（第5次）被后期色块覆盖，不能从可见证据确认完整二维夹角和稳定时长。",
+      "stand_stability_evidence": "源视频候选起点后9帧窗口中腿部恢复伸展并保持；原候选起点及其精度不改写。",
+      "time_uncertainty_ms": null,
+      "review_note": "25秒后能看见站立，但不足以反向证实遮挡中的完整下蹲；不直接记作漏计。",
+      "down_evidence_in_local_bundle": "media/ai_review_evidence/occlusion_5_down.png",
+      "stand_evidence_in_local_bundle": "media/ai_review_evidence/occlusion_5_stand.png"
+    }
+  ]
+}
