@@ -24,8 +24,8 @@
   },
   "pdf": {
     "local_relative_path": "commit/深蹲计数作业_20261121_待人工复核/01_作业报告_待人工复核.pdf",
-    "sha256": "b3da859fa60c47b22eadfb44521adc4e6aaf328f3ef248319c74de550499bea6",
-    "bytes": 710524,
+    "sha256": "58c7377afa63ac5b833dd86d394c131ae58a4f8bb8426ec8eecca7a028849432",
+    "bytes": 507261,
     "pages": 7
   },
   "source_zip": {
@@ -47,6 +47,21 @@
     "page_count_and_pagination_unchanged": true,
     "former_light_blue_vector_fills_removed": true,
     "rendered_pages_visually_reviewed": 7,
+    "application_tests_rerun_for_style_change": false
+  },
+  "monochrome_revision": {
+    "client_date": "2026-11-21",
+    "change": "全文字体及链接为黑色，底纹白色，线条和PDF内图表截图灰度；图注改按线型说明",
+    "previous_pdf_sha256": "b3da859fa60c47b22eadfb44521adc4e6aaf328f3ef248319c74de550499bea6",
+    "all_native_text_black": true,
+    "embedded_images_grayscale": true,
+    "embedded_image_count": 3,
+    "rendered_rgb_channels_equal_all_pages": true,
+    "page_count": 7,
+    "other_text_and_numbers_identical": true,
+    "caption_changed_to_line_types": true,
+    "rendered_pages_visually_reviewed": 7,
+    "original_color_evidence_images_unchanged": true,
     "application_tests_rerun_for_style_change": false
   }
 }
