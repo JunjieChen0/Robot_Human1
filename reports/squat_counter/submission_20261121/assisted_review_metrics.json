@@ -1,11 +1,13 @@
 {
   "kind": "用户人工候选参照与AI辅助有效性复核的误差范围；不是独立人工真值评分",
-  "client_date": "2026-11-21",
+  "client_date": "2026-11-24",
+  "finalized_date_client": "2026-11-25",
+  "submission_status": "finalized_with_disclosed_uncertainty",
   "page_version": "squat-counter-v2",
   "new_model_inference": false,
   "new_human_participants": 0,
   "human_rule_adjudication_added": false,
-  "review_sha256": "94b6b006128a4c24f35f07c87e72766ad4162bbb7cedf5dad48ba41735376103",
+  "review_sha256": "d127774f551f7d86385a6142e568909f2ce081ae4c38ae0192b86740430c12c6",
   "matching_tolerance_ms": 1200,
   "formal_recognition_metrics": null,
   "results": [
@@ -31,6 +33,62 @@
       "valid_review_event_feedback_median_ms": null,
       "valid_review_event_feedback_p95_ms": null,
       "negative_feedback_samples": 0,
+      "scoped_ai_review_counts": {
+        "matched_valid": 0,
+        "missed_valid": 3,
+        "false_auto": 0,
+        "unresolved_auto": 0,
+        "unresolved_possible_miss": 2,
+        "not_counted_as_separate_cycle": 0
+      },
+      "candidate_event_audit": [
+        {
+          "event_id": "normal_light-1",
+          "decision": "uncertain",
+          "candidate_stand_ms": 6130,
+          "outcome": "unresolved_possible_miss",
+          "auto_id": null,
+          "auto_time_ms": null,
+          "feedback_delay_ms": null
+        },
+        {
+          "event_id": "normal_light-2",
+          "decision": "uncertain",
+          "candidate_stand_ms": 12630,
+          "outcome": "unresolved_possible_miss",
+          "auto_id": null,
+          "auto_time_ms": null,
+          "feedback_delay_ms": null
+        },
+        {
+          "event_id": "normal_light-3",
+          "decision": "valid",
+          "candidate_stand_ms": 22000,
+          "outcome": "missed_valid",
+          "auto_id": null,
+          "auto_time_ms": null,
+          "feedback_delay_ms": null
+        },
+        {
+          "event_id": "normal_light-4",
+          "decision": "valid",
+          "candidate_stand_ms": 27960,
+          "outcome": "missed_valid",
+          "auto_id": null,
+          "auto_time_ms": null,
+          "feedback_delay_ms": null
+        },
+        {
+          "event_id": "normal_light-5",
+          "decision": "valid",
+          "candidate_stand_ms": 34630,
+          "outcome": "missed_valid",
+          "auto_id": null,
+          "auto_time_ms": null,
+          "feedback_delay_ms": null
+        }
+      ],
+      "unmatched_automatic_events": [],
       "all_uncertain_assignments": [
         {
           "uncertain_assumed_valid": [],
@@ -113,6 +171,62 @@
       "valid_review_event_feedback_median_ms": 477.6970000059664,
       "valid_review_event_feedback_p95_ms": 482.73249999254983,
       "negative_feedback_samples": 0,
+      "scoped_ai_review_counts": {
+        "matched_valid": 3,
+        "missed_valid": 0,
+        "false_auto": 0,
+        "unresolved_auto": 2,
+        "unresolved_possible_miss": 0,
+        "not_counted_as_separate_cycle": 0
+      },
+      "candidate_event_audit": [
+        {
+          "event_id": "normal_light-1",
+          "decision": "uncertain",
+          "candidate_stand_ms": 6130,
+          "outcome": "unresolved_auto",
+          "auto_id": "auto-1",
+          "auto_time_ms": 6483.925,
+          "feedback_delay_ms": 402.8249999910595
+        },
+        {
+          "event_id": "normal_light-2",
+          "decision": "uncertain",
+          "candidate_stand_ms": 12630,
+          "outcome": "unresolved_auto",
+          "auto_id": "auto-2",
+          "auto_time_ms": 12754.442,
+          "feedback_delay_ms": 166.24199999701887
+        },
+        {
+          "event_id": "normal_light-3",
+          "decision": "valid",
+          "candidate_stand_ms": 22000,
+          "outcome": "matched_valid",
+          "auto_id": "auto-3",
+          "auto_time_ms": 22441.392,
+          "feedback_delay_ms": 483.29199999105913
+        },
+        {
+          "event_id": "normal_light-4",
+          "decision": "valid",
+          "candidate_stand_ms": 27960,
+          "outcome": "matched_valid",
+          "auto_id": "auto-4",
+          "auto_time_ms": 28378.789,
+          "feedback_delay_ms": 467.4890000029809
+        },
+        {
+          "event_id": "normal_light-5",
+          "decision": "valid",
+          "candidate_stand_ms": 34630,
+          "outcome": "matched_valid",
+          "auto_id": "auto-5",
+          "auto_time_ms": 35065.797000000006,
+          "feedback_delay_ms": 477.6970000059664
+        }
+      ],
+      "unmatched_automatic_events": [],
       "all_uncertain_assignments": [
         {
           "uncertain_assumed_valid": [],
@@ -173,6 +287,62 @@
       "valid_review_event_feedback_median_ms": null,
       "valid_review_event_feedback_p95_ms": null,
       "negative_feedback_samples": 0,
+      "scoped_ai_review_counts": {
+        "matched_valid": 0,
+        "missed_valid": 2,
+        "false_auto": 0,
+        "unresolved_auto": 0,
+        "unresolved_possible_miss": 3,
+        "not_counted_as_separate_cycle": 0
+      },
+      "candidate_event_audit": [
+        {
+          "event_id": "light_change-1",
+          "decision": "uncertain",
+          "candidate_stand_ms": 3880,
+          "outcome": "unresolved_possible_miss",
+          "auto_id": null,
+          "auto_time_ms": null,
+          "feedback_delay_ms": null
+        },
+        {
+          "event_id": "light_change-2",
+          "decision": "uncertain",
+          "candidate_stand_ms": 8580,
+          "outcome": "unresolved_possible_miss",
+          "auto_id": null,
+          "auto_time_ms": null,
+          "feedback_delay_ms": null
+        },
+        {
+          "event_id": "light_change-3",
+          "decision": "uncertain",
+          "candidate_stand_ms": 11670,
+          "outcome": "unresolved_possible_miss",
+          "auto_id": null,
+          "auto_time_ms": null,
+          "feedback_delay_ms": null
+        },
+        {
+          "event_id": "light_change-4",
+          "decision": "valid",
+          "candidate_stand_ms": 21000,
+          "outcome": "missed_valid",
+          "auto_id": null,
+          "auto_time_ms": null,
+          "feedback_delay_ms": null
+        },
+        {
+          "event_id": "light_change-5",
+          "decision": "valid",
+          "candidate_stand_ms": 26130,
+          "outcome": "missed_valid",
+          "auto_id": null,
+          "auto_time_ms": null,
+          "feedback_delay_ms": null
+        }
+      ],
+      "unmatched_automatic_events": [],
       "all_uncertain_assignments": [
         {
           "uncertain_assumed_valid": [],
@@ -288,6 +458,62 @@
       "valid_review_event_feedback_median_ms": 450.534000002981,
       "valid_review_event_feedback_p95_ms": 476.2659000056645,
       "negative_feedback_samples": 0,
+      "scoped_ai_review_counts": {
+        "matched_valid": 2,
+        "missed_valid": 0,
+        "false_auto": 0,
+        "unresolved_auto": 3,
+        "unresolved_possible_miss": 0,
+        "not_counted_as_separate_cycle": 0
+      },
+      "candidate_event_audit": [
+        {
+          "event_id": "light_change-1",
+          "decision": "uncertain",
+          "candidate_stand_ms": 3880,
+          "outcome": "unresolved_auto",
+          "auto_id": "auto-1",
+          "auto_time_ms": 4325.211,
+          "feedback_delay_ms": 487.1110000059607
+        },
+        {
+          "event_id": "light_change-2",
+          "decision": "uncertain",
+          "candidate_stand_ms": 8580,
+          "outcome": "unresolved_auto",
+          "auto_id": "auto-2",
+          "auto_time_ms": 8950.068,
+          "feedback_delay_ms": 418.7679999880784
+        },
+        {
+          "event_id": "light_change-3",
+          "decision": "uncertain",
+          "candidate_stand_ms": 11670,
+          "outcome": "unresolved_auto",
+          "auto_id": "auto-3",
+          "auto_time_ms": 12074.991,
+          "feedback_delay_ms": 446.79099999701975
+        },
+        {
+          "event_id": "light_change-4",
+          "decision": "valid",
+          "candidate_stand_ms": 21000,
+          "outcome": "matched_valid",
+          "auto_id": "auto-4",
+          "auto_time_ms": 21379.943,
+          "feedback_delay_ms": 421.9429999999993
+        },
+        {
+          "event_id": "light_change-5",
+          "decision": "valid",
+          "candidate_stand_ms": 26130,
+          "outcome": "matched_valid",
+          "auto_id": "auto-5",
+          "auto_time_ms": 26567.225000000002,
+          "feedback_delay_ms": 479.12500000596265
+        }
+      ],
+      "unmatched_automatic_events": [],
       "all_uncertain_assignments": [
         {
           "uncertain_assumed_valid": [],
@@ -388,6 +614,62 @@
       "valid_review_event_feedback_median_ms": null,
       "valid_review_event_feedback_p95_ms": null,
       "negative_feedback_samples": 0,
+      "scoped_ai_review_counts": {
+        "matched_valid": 0,
+        "missed_valid": 2,
+        "false_auto": 0,
+        "unresolved_auto": 0,
+        "unresolved_possible_miss": 2,
+        "not_counted_as_separate_cycle": 1
+      },
+      "candidate_event_audit": [
+        {
+          "event_id": "occlusion-1",
+          "decision": "uncertain",
+          "candidate_stand_ms": 3960,
+          "outcome": "unresolved_possible_miss",
+          "auto_id": null,
+          "auto_time_ms": null,
+          "feedback_delay_ms": null
+        },
+        {
+          "event_id": "occlusion-2",
+          "decision": "invalid",
+          "candidate_stand_ms": 8630,
+          "outcome": "not_counted_as_separate_cycle",
+          "auto_id": null,
+          "auto_time_ms": null,
+          "feedback_delay_ms": null
+        },
+        {
+          "event_id": "occlusion-3",
+          "decision": "valid",
+          "candidate_stand_ms": 10960,
+          "outcome": "missed_valid",
+          "auto_id": null,
+          "auto_time_ms": null,
+          "feedback_delay_ms": null
+        },
+        {
+          "event_id": "occlusion-4",
+          "decision": "valid",
+          "candidate_stand_ms": 19750,
+          "outcome": "missed_valid",
+          "auto_id": null,
+          "auto_time_ms": null,
+          "feedback_delay_ms": null
+        },
+        {
+          "event_id": "occlusion-5",
+          "decision": "uncertain",
+          "candidate_stand_ms": 25210,
+          "outcome": "unresolved_possible_miss",
+          "auto_id": null,
+          "auto_time_ms": null,
+          "feedback_delay_ms": null
+        }
+      ],
+      "unmatched_automatic_events": [],
       "all_uncertain_assignments": [
         {
           "uncertain_assumed_valid": [],
@@ -463,6 +745,62 @@
       "valid_review_event_feedback_median_ms": 451.1050000059595,
       "valid_review_event_feedback_p95_ms": 463.0723000059591,
       "negative_feedback_samples": 0,
+      "scoped_ai_review_counts": {
+        "matched_valid": 2,
+        "missed_valid": 0,
+        "false_auto": 0,
+        "unresolved_auto": 0,
+        "unresolved_possible_miss": 2,
+        "not_counted_as_separate_cycle": 1
+      },
+      "candidate_event_audit": [
+        {
+          "event_id": "occlusion-1",
+          "decision": "uncertain",
+          "candidate_stand_ms": 3960,
+          "outcome": "unresolved_possible_miss",
+          "auto_id": null,
+          "auto_time_ms": null,
+          "feedback_delay_ms": null
+        },
+        {
+          "event_id": "occlusion-2",
+          "decision": "invalid",
+          "candidate_stand_ms": 8630,
+          "outcome": "not_counted_as_separate_cycle",
+          "auto_id": null,
+          "auto_time_ms": null,
+          "feedback_delay_ms": null
+        },
+        {
+          "event_id": "occlusion-3",
+          "decision": "valid",
+          "candidate_stand_ms": 10960,
+          "outcome": "matched_valid",
+          "auto_id": "auto-1",
+          "auto_time_ms": 11375.501999999999,
+          "feedback_delay_ms": 464.40200000595905
+        },
+        {
+          "event_id": "occlusion-4",
+          "decision": "valid",
+          "candidate_stand_ms": 19750,
+          "outcome": "matched_valid",
+          "auto_id": "auto-2",
+          "auto_time_ms": 20145.908,
+          "feedback_delay_ms": 437.8080000059599
+        },
+        {
+          "event_id": "occlusion-5",
+          "decision": "uncertain",
+          "candidate_stand_ms": 25210,
+          "outcome": "unresolved_possible_miss",
+          "auto_id": null,
+          "auto_time_ms": null,
+          "feedback_delay_ms": null
+        }
+      ],
+      "unmatched_automatic_events": [],
       "all_uncertain_assignments": [
         {
           "uncertain_assumed_valid": [],

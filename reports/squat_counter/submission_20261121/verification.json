@@ -1,82 +1,65 @@
 {
-  "kind": "课程提交材料核验；含AI辅助复核与不确定事件，不是独立人工真值评分",
-  "client_date": "2026-11-21",
+  "kind": "最终提交核验；人工候选与AI判读分开，保留无法判断项",
+  "client_date": "2026-11-25",
+  "submission_status": "finalized_with_disclosed_uncertainty",
   "application_version": "squat-counter-v2",
   "source_evidence_commit": "045e0f0",
   "tests": {
-    "related_python_passed": 14,
-    "related_python_seconds": 11.4,
-    "node_rules_passed": 9,
-    "zip_actual_browser_checks": 8,
+    "python_app_and_evaluation": {
+      "passed": 14,
+      "seconds": 17.28,
+      "run_date_client": "2026-11-24",
+      "command": "python -B -m pytest tests/test_squat_app.py tests/test_squat_evaluation.py -q -p no:cacheprovider --tb=short"
+    },
+    "node_rules": {
+      "passed": 9,
+      "run_date_client": "2026-11-24",
+      "command": "node --test tests/test_squat_counter.mjs"
+    },
+    "browser": {
+      "passed": 15,
+      "run_date_client": "2026-11-25",
+      "record": "final_ui_checks.json",
+      "scope": "真实CPU空画面；动作与纠错用标记的模拟关键点，摄像头用Chromium合成输入"
+    },
+    "uncertain_assignments_checked": 32,
+    "bundled_analysis_reproduced": true,
     "full_81_suite_rerun": false,
-    "debian_startup_rerun": false,
-    "current_revision": {
-      "squat_evaluation_passed": 12,
-      "uncertain_assignment_checks_passed": 32,
-      "bundled_analysis_reproduced": true,
-      "application_ui_or_model_inference_rerun": false,
-      "debian_startup_rerun": false
-    }
+    "three_condition_model_inference_rerun": false,
+    "debian_startup_rerun": false
   },
   "checks": {
-    "hypothesis_A_matches_frozen_candidate_results": true,
-    "hypothesis_B_rechecks_false_and_missed_counts": true,
-    "application_model_and_original_study_unchanged": true,
-    "two_python_scripts_parse": true,
-    "source_zip_hashes_and_runtime_passed": true,
-    "pdf_7_pages_chinese_and_numbering": true,
-    "original_blank_template_15_items_still_pending": true,
-    "pdf_mupdf_all_pages_visually_reviewed": true,
-    "pdf_poppler_all_pages_rendered": true,
-    "pdf_poppler_representative_pages_visually_reviewed": true,
-    "ai_review_15_items_completed": true,
-    "original_participant_records_and_human_reference_unchanged": true,
-    "all_32_uncertain_assignments_checked": true,
-    "previous_package_unchanged": true
+    "original_participant_and_human_reference_preserved": true,
+    "model_application_and_frozen_sessions_preserved": true,
+    "previous_archive_preserved": true,
+    "all_15_candidates_audited_for_each_side": true,
+    "prior_ranges_and_delays_unchanged": true,
+    "source_zip_crc_and_shell_permissions": true,
+    "markdown_links_valid": true,
+    "demo_111_seconds_full_decode_passed": true
   },
   "pdf": {
-    "local_relative_path": "commit/深蹲计数作业_20261121_提交版/01_作业报告.pdf",
-    "sha256": "f825158ea57a40eadedfd6c509373f6e98c496b2fb416d54cb990c7eff3b65e8",
-    "bytes": 504990,
-    "pages": 7
+    "local_relative_path": "commit/深蹲计数作业_20261125_最终提交版/01_作业报告.pdf",
+    "sha256": "a370a3a10ac4e60f60b079e2e9364f70e2b90c0156abd34e43581aac394837f2",
+    "bytes": 520100,
+    "pages": 8
+  },
+  "current_pdf_appearance": {
+    "all_native_text_black": true,
+    "all_embedded_images_grayscale": true,
+    "all_8_pages_rendered_rgb_equal": true,
+    "mupdf_pages_visually_reviewed": 8,
+    "poppler_pages_rendered": 8,
+    "poppler_representative_pages_visually_reviewed": [
+      1,
+      4,
+      8
+    ]
   },
   "source_zip": {
     "sha256": "b17eedbf9b414b84a3e71f9d0a56167f712330c0093399ecc009fdda3ba01873",
     "bytes": 110315,
     "files": 38
-  },
-  "formal_recognition_metrics": null,
-  "human_participants_added": 0,
-  "pending_human_decisions": 15,
-  "local_bundle": "commit/深蹲计数作业_20261121_提交版",
-  "archive_integrity_record": "commit/深蹲计数作业_20261121_提交版.delivery.json",
-  "privacy": "影像、复核源帧和含本人姓名/学号的报告仅放本地课程提交包，不上传公开GitHub。",
-  "appearance_revision": {
-    "client_date": "2026-11-21",
-    "change": "按PDF批注去掉全部表格表头浅蓝底色，统一白底",
-    "previous_pdf_sha256": "45503aecea1df91ba54f2973d6d496e25ff9fc769ca33ef33cc8e4c38ed57b9b",
-    "all_7_pages_text_identical": true,
-    "page_count_and_pagination_unchanged": true,
-    "former_light_blue_vector_fills_removed": true,
-    "rendered_pages_visually_reviewed": 7,
-    "application_tests_rerun_for_style_change": false,
-    "scope": "此前表头改色的历史检查，不描述本轮正文内容"
-  },
-  "monochrome_revision": {
-    "client_date": "2026-11-21",
-    "change": "全文字体及链接为黑色，底纹白色，线条和PDF内图表截图灰度；图注改按线型说明",
-    "previous_pdf_sha256": "b3da859fa60c47b22eadfb44521adc4e6aaf328f3ef248319c74de550499bea6",
-    "all_native_text_black": true,
-    "embedded_images_grayscale": true,
-    "embedded_image_count": 3,
-    "rendered_rgb_channels_equal_all_pages": true,
-    "page_count": 7,
-    "other_text_and_numbers_identical": true,
-    "caption_changed_to_line_types": true,
-    "rendered_pages_visually_reviewed": 7,
-    "original_color_evidence_images_unchanged": true,
-    "application_tests_rerun_for_style_change": false,
-    "scope": "此前黑白样式转换的历史检查，不描述本轮正文内容"
   },
   "ai_assisted_review": {
     "completed_items": 15,
@@ -84,15 +67,19 @@
     "invalid": 1,
     "uncertain": 7,
     "human_rule_adjudication_added": false,
-    "formal_recognition_metrics": null,
-    "machine_results": "assisted_review_metrics.json",
-    "review_sha256": "94b6b006128a4c24f35f07c87e72766ad4162bbb7cedf5dad48ba41735376103"
+    "review_sha256": "d127774f551f7d86385a6142e568909f2ce081ae4c38ae0192b86740430c12c6",
+    "machine_results": "assisted_review_metrics.json"
   },
-  "provenance_update": "组织者补充：视频及首帧素材由同组同学提供；原剪辑、AI生成和后期效果属性保留。",
-  "current_pdf_appearance": {
-    "all_native_text_black": true,
-    "all_embedded_images_grayscale": true,
-    "all_7_pages_rgb_channels_equal": true,
-    "rendered_pages_visually_reviewed": 7
-  }
+  "formal_recognition_metrics": null,
+  "human_participants_added": 0,
+  "unresolved_event_count": 7,
+  "local_bundle": "commit/深蹲计数作业_20261125_最终提交版",
+  "archive_integrity_record": "commit/深蹲计数作业_20261125_最终提交版.delivery.json",
+  "limitations": [
+    "用户提供人工候选时刻；有效性由AI助手判读，无法判断项保留范围，未新增独立人工有效性裁定。",
+    "生成及后期素材只支持这些输入上的行为描述；不宣称真实场景泛化。",
+    "延迟是源时间加渲染回调耗时的估计，包含确认偏移；三位同学原自评保持。"
+  ],
+  "provenance_update": "视频及首帧素材由同组同学提供；原剪辑、AI生成及后期效果披露保留。",
+  "privacy": "影像及含姓名学号的报告仅在本地课程提交包，公开仓库不包含。"
 }

@@ -44,6 +44,34 @@ def main():
                     "matched_count": scored["matched_count"], "false_count": scored["false_count"],
                     "missed_count": scored["missed_count"]})
             certain = score(valid)
+            # Keep uncertain candidates visible; do not silently count their matches as correct.
+            candidate_score = score(events)
+            matched = {m["truth_id"]: m for m in candidate_score["matches"]}
+            event_audit = []
+            for event in events:
+                match = matched.get(event["event_id"])
+                decision = event["decision"]
+                if decision == "uncertain":
+                    outcome = "unresolved_auto" if match else "unresolved_possible_miss"
+                elif decision == "invalid":
+                    outcome = "false_auto" if match else "not_counted_as_separate_cycle"
+                else:
+                    outcome = "matched_valid" if match else "missed_valid"
+                event_audit.append({"event_id": event["event_id"], "decision": decision,
+                    "candidate_stand_ms": event["candidate_stand_ms"], "outcome": outcome,
+                    "auto_id": match["auto_id"] if match else None,
+                    "auto_time_ms": match["auto_time_ms"] if match else None,
+                    "feedback_delay_ms": match["feedback_delay_ms"] if match else None})
+            # For these frozen sessions each prediction is near at most one candidate.
+            # Otherwise an inclusive-candidate match cannot safely classify the individual event.
+            assert all(sum(abs(a["time_ms"] - e["candidate_stand_ms"]) <= 1200 for e in events) <= 1
+                       for a in session["auto_events"])
+            scoped = {key: sum(e["outcome"] == key for e in event_audit) for key in
+                      ("matched_valid", "missed_valid", "false_auto", "unresolved_auto",
+                       "unresolved_possible_miss", "not_counted_as_separate_cycle")}
+            scoped["false_auto"] += len(candidate_score["unmatched_auto"])
+            assert scoped["matched_valid"] + scoped["false_auto"] + scoped["unresolved_auto"] == len(session["auto_events"])
+            assert scoped["matched_valid"] + scoped["missed_valid"] == len(valid)
             results.append({"video": name, "side": side, "condition": item["condition"],
                 "session_sha256": hashlib.sha256(session_path.read_bytes()).hexdigest(),
                 "review_valid_count": len(valid), "review_invalid_count": sum(e["decision"] == "invalid" for e in events),
@@ -55,9 +83,14 @@ def main():
                 "valid_review_event_feedback_median_ms": certain["feedback_delay_median_ms"],
                 "valid_review_event_feedback_p95_ms": certain["feedback_delay_p95_ms"],
                 "negative_feedback_samples": certain["negative_delay_samples"],
+                "scoped_ai_review_counts": scoped, "candidate_event_audit": event_audit,
+                "unmatched_automatic_events": candidate_score["unmatched_auto"],
                 "all_uncertain_assignments": combinations})
     output = {"kind": "用户人工候选参照与AI辅助有效性复核的误差范围；不是独立人工真值评分",
-        "client_date": "2026-11-21", "page_version": "squat-counter-v2", "new_model_inference": False,
+        "client_date": review.get("final_review_date_client", review["review_date_client"]),
+        "finalized_date_client": review.get("finalized_date_client"),
+        "submission_status": "finalized_with_disclosed_uncertainty",
+        "page_version": "squat-counter-v2", "new_model_inference": False,
         "new_human_participants": 0, "human_rule_adjudication_added": False,
         "review_sha256": hashlib.sha256(review_path.read_bytes()).hexdigest(),
         "matching_tolerance_ms": 1200, "formal_recognition_metrics": None, "results": results,

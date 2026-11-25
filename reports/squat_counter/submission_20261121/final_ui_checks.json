@@ -1,0 +1,27 @@
+{
+  "kind": "自动浏览器检查；空画面用真实CPU模型，动作与纠错使用明确标记的模拟关键点；无真人测试",
+  "page_version": "squat-counter-v2",
+  "browser": "150.0.7871.127",
+  "checks": {
+    "consent_before_input": true,
+    "real_cpu_model_blank_abstains": true,
+    "cancelled_camera_request_releases_late_tracks": true,
+    "closed_camera_keeps_correction_source_clock": true,
+    "camera_pause_resume_end_and_preserved_model_metadata": true,
+    "camera_close_releases_tracks": true,
+    "negative_manual_time_rejected": true,
+    "corrections_keep_raw_events_and_are_reversible": true,
+    "stance_pause_and_auto_end_explained": true,
+    "end_keeps_video_position_and_syncs_picker": true,
+    "review_resume_and_end_without_duplicate_counts": true,
+    "precise_correction_time_exported": true,
+    "export_model_source_trace_and_locked_feedback": true,
+    "mobile_no_component_overflow": true,
+    "no_uncaught_browser_errors": true
+  },
+  "page_errors": [],
+  "real_blank_trace_frames": 24,
+  "human_recognition_metrics": null,
+  "camera_input": "Chromium synthetic camera; no human imagery",
+  "client_date": "2026-11-25"
+}
